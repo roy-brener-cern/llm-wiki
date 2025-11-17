@@ -1,0 +1,1762 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+<script type="text/javascript" src="/twiki/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="/twiki/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="/twiki/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<link rel="stylesheet" href="https://twiki.cern.ch/twiki/pub/TWiki/ImagePlugin/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="https://twiki.cern.ch/twiki/pub/TWiki/ImageGalleryPlugin/style.css" type="text/css" media="all" />
+<title> EventLoop &lt; AtlasProtected &lt; TWiki</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="icon" href="/twiki/pub/AtlasProtected/WebPreferences/favicon_new.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/twiki/pub/AtlasProtected/WebPreferences/favicon_new.ico" type="image/x-icon" />
+<link rel="alternate" href="https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/EventLoop?t=1763376384" type="application/x-wiki" title="Edit EventLoop" />
+<link rel="edit" href="https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/EventLoop?t=1763376384" title="Edit EventLoop" />
+<meta name="SCRIPTURLPATH" content="/twiki/bin" />
+<meta name="SCRIPTSUFFIX" content="" />
+<meta name="TEXT_JUMP" content="Jump" />
+<meta name="TEXT_SEARCH" content="Search" />
+<meta name="TEXT_NUM_TOPICS" content="Number of topics:" />
+<meta name="TEXT_MODIFY_SEARCH" content="Modify search" />
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/twiki/bin/view/AtlasProtected/WebRss" />
+<base href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EventLoop"></base>
+<!--BEHAVIOURCONTRIB--><script type="text/javascript" src="/twiki/pub/TWiki/BehaviourContrib/behaviour.compressed.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiWindow.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiEvent.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiHTML.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiForm.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/PatternSkin/pattern.js"></script>
+<style type="text/css" media="all">
+@import url('/twiki/pub/TWiki/TWikiTemplates/base.css');
+</style>
+<style type="text/css" media="all">
+#patternTopBar,
+#patternClearHeaderCenter,
+#patternClearHeaderLeft,
+#patternClearHeaderRight,
+#patternTopBarContentsOuter,
+#patternTopBarContents {
+	height:64px; /* top bar height; make room for header columns */
+	overflow:hidden;
+}
+#patternOuter {
+	margin-left:14em;
+}
+#patternLeftBar {
+	width:14em;
+	margin-left:-14em;
+}
+</style>
+<style type="text/css" media="all">
+@import url('/twiki/pub/TWiki/PatternSkin/layout.css');
+@import url('/twiki/pub/TWiki/PatternSkin/style.css');
+@import url('/twiki/pub/TWiki/PatternSkin/colors.css');
+</style>
+<style type="text/css" media="all">
+	/* Styles that are set using variables */
+	.patternBookView .twikiTopRow,
+	.patternWebIndicator a img,
+	.patternWebIndicator a:hover img {
+		background-color:#0b048c ;
+	}
+	#patternTopBarContents { background-image:url(/twiki/pub/TWiki/PatternSkin/TWiki_header.gif); background-repeat:no-repeat;}
+	
+	.patternBookView {
+		border-color:#0b048c ;
+	}
+	.patternPreviewPage #patternMain {
+		/* uncomment to set the preview image */
+		/*background-image:url("/twiki/pub/TWiki/PreviewBackground/preview2bg.gif");*/
+	}
+	
+</style><style type="text/css" media="all">
+
+
+
+</style>
+<style type="text/css" media="all">
+	@import url("/twiki/pub/TWiki/PatternSkin/print.css");
+</style>
+<!--[if IE]><style type="text/css" media="screen">
+pre {
+	overflow-x:auto;
+	padding-bottom:expression(this.scrollWidth > this.offsetWidth ? 16 : 0);
+}
+</style>
+<![endif]-->
+<!--[if lte IE 6]> 
+<style type="text/css">
+#patternLeftBar {
+	position:relative; /* IE 5.5 needs this or the contents won't show outside the parent container on print. IE 6.0 needs it only during printable copy! */
+}
+</style><![endif]-->
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiStyles.js"></script>
+
+<script src="https://twiki.cern.ch/twiki/pub/TWiki/ChecklistPlugin/itemstatechange.js" language="javascript" type="text/javascript"></script><!--GENERATED_HEADERS--><!-- CERNSEARCHBAR_CSS --> <link rel='stylesheet' href='/twiki/pub/TWiki/CernSearchBar/CernSearchBar.css' type='text/css' media='all' /></head>
+<body class="patternViewPage">
+<a name="PageTop"></a>
+<div id="patternScreen">
+<div id="patternPageShadow">
+<div id="patternPage">
+<div id="patternWrapper"><div id="patternOuter">
+<div id="patternFloatWrap">
+<div id="patternMain"><div id="patternClearHeaderCenter"></div>
+<div id="patternMainContents"><div class="patternTop"><span class="patternHomePath twikiLeft"><a class="twikiLink" href="/twiki/bin/view/Main/WebHome">TWiki</a><span class='twikiSeparator'>&gt;</span><img src="/twiki/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" border="0" alt="" width="13" height="13" style="background-color:#0b048c " />&nbsp;<a href="/twiki/bin/view/AtlasProtected/WebHome">AtlasProtected Web</a><span class='twikiSeparator'>&gt;</span><a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AtlasPhysics">AtlasPhysics</a><span class='twikiSeparator'>&gt;</span><a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisSoftwareGroup">AnalysisSoftwareGroup</a><span class='twikiSeparator'>&gt;</span><a class="twikiLink" href="/twiki/bin/view/AtlasProtected/PATUserAnalysisTools">PATUserAnalysisTools</a><span class='twikiSeparator'>&gt;</span><a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EventLoop" title='Topic revision: 123 (2018-07-24 - 14:37:38)'>EventLoop</a> <span class='patternRevInfo'>(2018-07-24, <a class="twikiLink" href="/twiki/bin/view/Main/NilsKrumnack">NilsKrumnack</a>)</span></span><!-- /patternHomePath--><span class="patternToolBar twikiRight"><span><a href='https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/EventLoop?t=1763376384;nowysiwyg=1' rel='nofollow' title='Edit this topic text' accesskey='e'><img src='/twiki/pub/TWiki/TWikiDocGraphics/uweb-o14.gif' width='14' height='14' border='0' alt='' /> <span class='twikiAccessKey'>E</span>dit</a></span><span><a href='/twiki/bin/attach/AtlasProtected/EventLoop' rel='nofollow' title='Attach an image or document to this topic' accesskey='a'><span class='twikiAccessKey'>A</span>ttach</a></span><span><a href='/twiki/bin/genpdf/AtlasProtected/EventLoop' rel='nofollow' title='Create a PDF file for the topic' accesskey='f'><span class='twikiAccessKey'>P</span>DF</a></span></span><!-- /patternToolBar--><br class="twikiClear" /></div><!--/patternTop--><div class="twikiContentHeader"></div><div class="patternContent"><div class="patternTopic"> 
+<h1><a name="EventLoop"></a> EventLoop </h1>
+<p />
+<div style="background-color: #F5F5F5; padding: 5px">
+<b><span style="color:#FFFFFF; background:#FF0000">New!</span></b>
+ Users of <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> are invited to join the egroup <strong><em>atlas-sw-asg-root-tools</em></strong> for announcements of updates and discussions of future development. 
+<br />
+For regular support questions please write to atlas-sw-pat-help or atlas-adc-dist-analysis-help (GRID specifics). 
+</div>
+<p />
+<hr />
+<p />
+<div class="twikiToc"> <ul>
+<li> <a href="#Introduction">Introduction</a>
+</li> <li> <a href="#Using_the_EventLoop_package">Using the EventLoop package</a> <ul>
+<li> <a href="#Checking_out_the_EventLoop_packa">Checking out the EventLoop package</a>
+</li> <li> <a href="#Writing_an_algorithm">Writing an algorithm</a>
+</li> <li> <a href="#Submitting_a_job">Submitting a job</a> <ul>
+<li> <a href="#Submitting_a_Job_in_Batch_Mode">Submitting a Job in Batch Mode</a>
+</li></ul> 
+</li> <li> <a href="#The_worker_object_and_services">The worker object and services</a>
+</li> <li> <a href="#Using_AsgTools_Messaging">Using AsgTools Messaging</a>
+</li> <li> <a href="#Accessing_the_input_data">Accessing the input data</a> <ul>
+<li> <a href="#Basic_access_using_TTree_and_ent">Basic access using TTree and entry number</a>
+</li> <li> <a href="#Access_the_Data_Through_D3PDRead">Access the Data Through D3PDReader</a>
+</li> <li> <a href="#Access_the_Data_Through_xAOD_EDM">Access the Data Through xAOD EDM</a> <ul>
+<li> <a href="#Turn_off_the_xAOD_Summary_Access">Turn off the xAOD Summary Access Report</a>
+</li></ul> 
+</li> <li> <a href="#Access_the_Data_Through_MultiDra">Access the Data Through MultiDraw</a>
+</li> <li> <a href="#Accessing_Meta_Data">Accessing Meta-Data</a>
+</li> <li> <a href="#Processing_Per_File_Meta_Data">Processing Per-File Meta-Data</a>
+</li> <li> <a href="#Accessing_the_Trigger_Configurat">Accessing the Trigger Configuration Tree</a>
+</li></ul> 
+</li> <li> <a href="#Creating_histograms">Creating histograms</a>
+</li> <li> <a href="#Creating_output_n_tuples">Creating output n-tuples</a> <ul>
+<li> <a href="#xAOD_outputs"> xAOD outputs</a>
+</li> <li> <a href="#Writing_N_Tuples_Directly_to_XRo">Writing N-Tuples Directly to XRootD</a>
+</li> <li> <a href="#Manually_Creating_an_N_tuple">Manually Creating an N-tuple</a>
+</li></ul> 
+</li> <li> <a href="#Other_outputs">Other outputs</a> <ul>
+<li> <a href="#Solution_for_TPileupReweighting"> Solution for TPileupReweighting</a>
+</li></ul> 
+</li> <li> <a href="#Moving_the_Submission_Directory">Moving the Submission Directory</a>
+</li> <li> <a href="#Further_Job_Configuration">Further Job Configuration</a> <ul>
+<li> <a href="#Omitting_Events_for_Test_Runs">Omitting Events for Test Runs</a>
+</li> <li> <a href="#Using_TTreeCache">Using TTreeCache</a> <ul>
+<li> <a href="#Using_TTreeCache_with_D3PDReader">Using TTreeCache with D3PDReader</a>
+</li></ul> 
+</li> <li> <a href="#Automatically_Removing_Submissio">Automatically Removing Submission Directories</a>
+</li> <li> <a href="#Collecting_Performance_Statistic">Collecting Performance Statistics With xAODs</a>
+</li> <li> <a href="#Printing_Cache_Statistics_For_Ea">Printing Cache Statistics For Each File</a>
+</li> <li> <a href="#Retrying_File_Opening">Retrying File Opening</a>
+</li></ul> 
+</li> <li> <a href="#Removing_Duplicate_Events">Removing Duplicate Events</a> <ul>
+<li> <a href="#Removing_Duplicate_Events_Within">Removing Duplicate Events Within Each Subjob</a>
+</li> <li> <a href="#Checking_For_Duplicate_Events_Ac">Checking For Duplicate Events Across Subjobs</a>
+</li> <li> <a href="#Removing_Duplicate_Events_Across">Removing Duplicate Events Across Subjobs</a>
+</li> <li> <a href="#Limitations">Limitations</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Converting_existing_code_to_Even">Converting existing code to EventLoop</a> <ul>
+<li> <a href="#Converting_MakeClass_based_code">Converting MakeClass based code</a> <ul>
+<li> <a href="#Special_Precautions_for_std_vect">Special Precautions for std::vector Variables (and Other Object Types)</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Using_the_Different_Drivers">Using the Different Drivers</a> <ul>
+<li> <a href="#Direct_Driver">Direct Driver</a>
+</li> <li> <a href="#PROOF_Driver">!PROOF Driver</a> <ul>
+<li> <a href="#PROOF_Farm_Support">PROOF Farm Support</a>
+</li> <li> <a href="#PROOF_Performance_Data">PROOF Performance Data</a>
+</li></ul> 
+</li> <li> <a href="#Batch_System_Drivers">Batch System Drivers</a> <ul>
+<li> <a href="#Changing_the_number_of_files_per">Changing the number of files per worker</a>
+</li> <li> <a href="#Splitting_Jobs_Based_on_the_Numb">Splitting Jobs Based on the Number of Events</a>
+</li> <li> <a href="#Special_Options_for_Special_Loca">Special Options for Special Locations</a>
+</li></ul> 
+</li> <li> <a href="#Grid_Driver">Grid Driver</a> <ul>
+<li> <a href="#Passing_Non_Standard_Options_to">Passing Non-Standard Options to the Grid Driver</a>
+</li> <li> <a href="#Processing_multiple_datasets_in">Processing multiple datasets in one JEDI task</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Adding_a_new_Driver_to_the_Event">Adding a new Driver to the EventLoop Package</a> <ul>
+<li> <a href="#The_Driver_Class">The Driver Class</a> <ul>
+<li> <a href="#The_doSubmit_Function">The doSubmit Function</a>
+</li></ul> 
+</li> <li> <a href="#The_Worker_Class">The Worker Class</a>
+</li> <li> <a href="#The_Steering_Code">The Steering Code</a>
+</li> <li> <a href="#The_Unit_Test">The Unit Test</a>
+</li></ul> 
+</li> <li> <a href="#To_Do_List">To Do List</a>
+</li></ul> 
+</div>     <!-- this line is optional -->
+<p />
+<p />
+<h1><a name="Introduction"></a> Introduction </h1>
+<p />
+The purpose of the <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> package is to relieve the user of the burden of writing his own event loop.  For the user this has a number of advantages: <ul>
+<li> The steering code for running on a local batch cluster or the grid can be technically complicated, particularly when creating and managing output datasets.  Furthermore this code has to be updated somewhat regularly, to keep up with changes to the grid infrastructure, etc.  The <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> package shifts that burden from the individual analyzer to the <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> package maintainer.
+</li> <li> Since the same package provides the interfaces for different architectures it is fairly straightforward to change from running on your local machine, to your local batch system or the grid.  For the analyzer that means that if his analysis evolves and he needs more computing power it is very little effort to just move his jobs to a new site.
+</li> <li> When running on the grid, individual job failures are relatively common.  The grid driver in the <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> package is developed and maintained by the grid community with the express purpose of allowing automatic recovery from common job failure modes.  For the analyzer that means he has to spend less time retrying failed jobs manually.
+</li></ul> 
+<p />
+The main drawback of using the <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> package is that you have to restructure your code a little bit.  How much you have to do, depends on how your code looks like now.  The main points are: <ul>
+<li> Since you no longer run your own event loop, you have to encapsulate your code inside a class that can then be called from the <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> package.  If you have been using TTree::MakeClass this may be a new concept, if you have been using TTree::MakeSelector or another event loop package, then this concept will already be familiar to you.
+</li> <li> The build is being handled by <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/RootCore">RootCore</a>, meaning your analysis code has to be inside one (or several) <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/RootCore">RootCore</a> packages.  This is necessary, because <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/RootCore">RootCore</a> is besides cmt the only build system we have that builds out of the box at all the different sites that your code may run on.
+</li> <li> The samples are provided through the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/SampleHandler">SampleHandler</a> package.  How much use you make of the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/SampleHandler">SampleHandler</a> package is up to you.  You can use it to also manage your samples, or simply create the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/SampleHandler">SampleHandler</a> objects when you initialize the event loop.  <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/SampleHandler">SampleHandler</a> was chosen to describe the samples, because we had to pick a way and <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/SampleHandler">SampleHandler</a> is both: generic and an official PAT package.
+</li> <li> The submission has to happen through a (py-)root script.  This has to happen, because you are supposed to configure your objects before handing them over to <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a>.  While this may be a change for some people it was deemed the easiest solution.  The alternative would have been to pass in a configuration file that your objects can read, but that would have created extra work for many users who are not currently set up to read configuration files.
+</li></ul> 
+<p />
+There are a number of solutions that provide similar services to <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a>.  On the one hand there is athena, on the other hand there are a number of user packages doing these things, most notably SFrame.  While they have a lot in common, they also differ in certain points.  <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> has the following features, which at least in this combination are not available in other products: <ul>
+<li> <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> is an official PAT project.  This means that future support and maintenance rests on a somewhat better base than for projects that people maintain in private.  It also means that the <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> package is likely to be integrated better with other PAT packages.
+</li> <li> <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> supports running on the local machine, PROOF lite, PROOF clusters, batch systems and the grid.  Most other solutions only work on a subset of these.  It should be noted though that most users only use a subset, so they may not care.
+</li> <li> <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> is a very focused package.  All it does is running the event loop, and doesn't try to provide a solution for configuring jobs or reading event data into memory.  This gives the user the freedom to choose how he wants to do those tasks independently from choosing how to run the event loop.
+</li> <li> <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> is designed to be extendable to new environments.  Everything that is specific to a certain architecture is factored out into two or three classes.  If you want to add another one, you only have to add these classes for your specific case.
+</li> <li> <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> is fairly lightweight and flexible.  It should be comparatively easy to take existing code and switch it over to using <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a>.  This should be true both for end user code and other frameworks that want to offload the burden of running the event loop.
+</li> <li> <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> is hopefully easy to learn and use.  The general goal is that a user should be able to learn how to use <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> in less than an hour, and be able to incorporate <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> into a new package in less than 20 minutes, less than 10 if you already use <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/SampleHandler">SampleHandler</a> to manage your samples.  If you find this unrealistic, please contact me and I try to see if I can somehow reduce the effort required further.  Specific suggestions are of course also welcome.
+</li> <li> <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> doesn't require the user to copy any source files into his own area and modify them.  While this may not seem like much, there is an inherent work load once the user takes over control of files.  Essentially changes no longer get propagated to him automatically and instead he has to integrate them manually.
+</li></ul> 
+<p />
+<h1><a name="Using_the_EventLoop_package"></a> Using the <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> package </h1>
+<p />
+<h2><a name="Checking_out_the_EventLoop_packa"></a> Checking out the <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> package </h2>
+<p />
+First you have to convert your existing code to use <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/RootCore">RootCore</a>, if you haven't done so already.  Instructions on how to do this can be found in the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/RootCore">RootCore</a> documentation.  Next you have to check out the <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> package.  Please don't do this inside your analysis package (it may confuse <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/RootCore">RootCore</a>), but apart from that you just have to type:
+<pre>
+  rc checkout_pkg atlasoff/PhysicsAnalysis/D3PDTools/RootCoreUtils/tags
+  rc checkout_pkg atlasoff/PhysicsAnalysis/D3PDTools/SampleHandler/tags
+  rc checkout_pkg atlasoff/PhysicsAnalysis/D3PDTools/EventLoop/tags
+</pre>
+<p />
+For certain tasks you will also need <code>EventLoopAlgs</code>:
+<pre>
+  rc checkout_pkg atlasoff/PhysicsAnalysis/D3PDTools/EventLoopAlgs/tags
+</pre>
+<p />
+<p />
+Now rerun <code>find_packages.sh</code> and recompile:
+<pre>
+  rc find_packages
+  rc compile
+</pre>
+<p />
+<h2><a name="Writing_an_algorithm"></a> Writing an algorithm </h2>
+<p />
+To use the <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> package you need to create an algorithm that runs in your <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a>.  If you don't already have a package create one (with the package skeleton maker):
+<pre>
+  mkdir MyPackage
+  rc make_skeleton MyPackage
+</pre>
+<p />
+Next use the algorithm skeleton maker to create a new algorithm class:
+<pre>
+  $ROOTCOREBIN/user_scripts/EventLoop/make_skeleton MyPackage MyAlgorithm
+</pre>
+You can also create and edit the files manually, but this makes sure you get a complete algorithm class, and it also modifies <code>Makefile.RootCore</code> and <code>LinkDef.h</code> appropriately.
+<p />
+Now just recompile to pick up your new algorithm:
+<pre>
+  rc find_packages
+  rc compile
+</pre>
+You only have to do the <code>find_packages.sh</code> once, but the <code>compile.sh</code> you have to call every time you change your algorithm.
+<p />
+<h2><a name="Submitting_a_job"></a> Submitting a job </h2>
+<p />
+Note, these instructions are on how to do it from CINT/C++.  You can also do it from python in an analogous way.  To submit a job to your batch system, you first have to create an object describing the job:
+<pre>
+  EL::Job job;
+</pre>
+<p />
+Next you have to add a <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/SampleHandler">SampleHandler</a> to the sample (see the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/SampleHandler">SampleHandler</a> documentation for instructions on how to create a <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/SampleHandler">SampleHandler</a>):
+<pre>
+  job.sampleHandler (mySampleHandler);
+</pre>
+<p />
+Then create your algorithm and add it to the job.  You can repeat that to add multiple algorithms, but the general expectation is that most users will only have a single algorithm:
+<pre>
+  MyAlgorithm *alg = new MyAlgorithm;
+  // do whatever configuration of the algorithm you want
+  job.algsAdd (alg);
+</pre>
+<p />
+Then create a driver object describing where you want to run your job (this particular driver embeds execution directly into the job):
+<pre>
+  DirectDriver driver;
+  // configure the driver as needed
+  driver.submit (job, "uniqueDirectoryForOutput");
+</pre>
+<p />
+At this point the driver will create the directory <code>uniqueDirectoryForOutput</code>.  Every time you submit a job you need to specify a new unique directory.  That directory contains information about the job that you submitted, as well as all the output that got send back to the submission node.
+<p />
+<h3><a name="Submitting_a_Job_in_Batch_Mode"></a> Submitting a Job in Batch Mode </h3>
+<p />
+In some cases the above behavior may not be quite satisfactory.  If you are running on a large sample on your local batch cluster you may not want to simply sit there and wait until the job is finished.  Instead you may want to log out go and go home, and work on it the next day.  To be able to do that, you need to break the above into two separate parts.  One part, which submits the job to the batch system and another which retrieves the output.
+<p />
+The submission part looks almost the same as above, but this will return control immediately:
+<pre>
+  driver.submitOnly (job, "uniqueDirectoryForOutput");
+</pre>
+<p />
+Now when it comes to retrieving it, you call the wait method:
+<pre>
+  EL::Driver::wait ("uniqueDirectoryForOutput");
+</pre>
+<p />
+Or if you do want to use it from a shell script you can type:
+<pre>
+  el_wait uniqueDirectoryForOutput
+</pre>
+<p />
+The <code>wait</code> function will actually wait until all output is collected.  If you just want to check whether all the desired output is there, you can call <code>retrieve</code> instead of <code>wait</code>.  This will check the output that is available, but it will not wait until the job is complete.  It should be noted that using <code>wait</code> can be more efficient, since it allows the driver to retrieve and merge output as it arrives, whereas if you only call <code>retrieve</code> (or <code>wait</code>) on a finished job it can take a substantial amount of time for merging.
+<p />
+<img src="/twiki/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <strong>Warning:</strong> If you update your EventLoop package between submit and retrieve, it may break the retrieval procedure if there have been changes in how the data is laid out on disk.
+<p />
+<h2><a name="The_worker_object_and_services"></a> The worker object and services </h2>
+<p />
+In <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> the basic concept is that you configure your algorithms on the submission node and then send them off to run on the worker nodes.  When running on the worker nodes, you have to interact with the <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> package to access your input data and to write out your output data.  From within your algorithm you can access the worker object through <code>wk()</code>.  However, this can only happen on the worker nodes, i.e. from within the methods <code>changeInput</code>, <code>initialize</code>, <code>execute</code> and <code>finalize</code>.
+<p />
+The worker object is shared between all the algorithms, and can be used to communicate between algorithms.  To access another algorithms look it up by name using <code>wk()-&gt;getAlg()</code> (you'll have to modify that algorithm to return a name via <code>GetName()</code>).  The main caveat here is that you need to make sure that you configure your algorithms in the right order, or you will get funny results.  This mechanism is used to implement features in <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> that would be services in Athena.  For a simple implementation example look at the <code>FormulaSvc</code> in the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/MultiDraw">MultiDraw</a> package.
+<p />
+<h2><a name="Using_AsgTools_Messaging"></a> Using <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AsgTools">AsgTools</a> Messaging </h2>
+<p />
+Since <code>EventLoop-00-01-16</code> you can also use <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> with the messaging macros from <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AsgTools">AsgTools</a>.
+<p />
+To do so, include
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>#<B><FONT COLOR="#5F9EA0">include</FONT></B> <B><FONT COLOR="#BC8F8F">&lt;AsgTools/MsgStream.h&gt;</FONT></B>
+#<B><FONT COLOR="#5F9EA0">include</FONT></B> <B><FONT COLOR="#BC8F8F">&lt;AsgTools/MsgStreamMacros.h&gt;</FONT></B></pre>
+<!-- end SyntaxHighlightingPlugin -->
+in your source file.
+<p />
+Then you can type things like:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#0000FF">ATH_MSG_INFO</FONT></B> (<B><FONT COLOR="#BC8F8F">&quot;info message&quot;</FONT></B>);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+You can set the message level via:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>alg-&gt;setMsgLevel (MSG::INFO);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+<p />
+<h2><a name="Accessing_the_input_data"></a> Accessing the input data </h2>
+<p />
+One of the design parameters of <code>EventLoop</code> is that it should equally well support whatever way the user chooses to access the input data.  However, it is typically not possible to use multiple methods within the same job, i.e. you have to pick one and stick with it for all algorithms.  A quick overview of methods: <ul>
+<li> basic access using TTree and entry number:  most basic way of reading data.  doesn't require extra software.  only allows one algorithm per job.  often slower and/or more fragile than other methods.
+</li> <li> D3PDReader: official ASG solution for reading data in run 1.
+</li> <li> xAOD EDM: official ASG solution for reading data in run 2
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/MultiDraw">MultiDraw</a> formulas: allows access through TTree::Draw like formulas.  can be used together with any other access method.
+</li></ul> 
+<p />
+If your favorite way of reading data is not on this list, shoot me a mail and I'll try to work with you on putting it in.  If you are undecided on which way to use, give a try to D3PDReader/xAOD EDM, which is designed to give you the best possible performance in most situations without the need to fine tune it for your analysis.
+<p />
+<h3><a name="Basic_access_using_TTree_and_ent"></a> Basic access using TTree and entry number </h3>
+<p />
+This is the most basic way of reading in the data and will be familiar to people who have used root before.  You have to connect the branches to your variables in <code>changeInput</code>:
+<pre>
+EL::StatusCode MyAlgorithm :: changeInput (bool firstFile)
+{
+  TTree *tree = wk()->tree();
+  tree->SetBranchStatus ("*", 0);
+  tree->SetBranchStatus ("var1", 1);
+  tree->SetBranchAddress ("var1", &var1);
+  tree->SetBranchStatus ("var2", 1);
+  tree->SetBranchAddress ("var2", &var2);
+  // repeat for all variables you use
+  return EL::StatusCode::SUCCESS;
+};
+</pre>
+Then you have to read in the variables in <code>execute</code>:
+<pre>
+EL::StatusCode MyAlgorithm :: execute ()
+{
+  wk()->tree()->GetEntry (wk()->treeEntry());
+  // actual event processing
+};
+</pre>
+<p />
+The <code>SetBranchStatus</code> statements are technically not necessary, but if you use them and connect only to the branches you need you can often gain a substantial amount of speed.  If you don't quite know how this technique works, check out the official TTree documentation at <a href="http://root.cern.ch/root/html/TTree" target="_blank">http://root.cern.ch/root/html/TTree<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+<p />
+<strong>Warning:  If you use this technique, you can almost certainly not use more than one algorithm per job.  The issue is that you tie your TTree object to the algorithm object.  So using a second algorithm would attempt to tie your TTree to multiple algorithms, which almost certainly will not work.</strong>
+<p />
+<h3><a name="Access_the_Data_Through_D3PDRead"></a> Access the Data Through D3PDReader </h3>
+<p />
+<img src="/twiki/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <strong>warning:</strong> This requires your D3PDReader package to be called D3PDReader and your Event class to be called Event.  Otherwise <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> won't be able to find the package.
+<p />
+If you want to use the D3PDReader with <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> it is actually very straightforward.  First create a D3PDReader package and then rerun <code>find_packages.sh</code> and <code>compile.sh</code> (standard <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/RootCore">RootCore</a> procedure):
+<pre>
+  rc find_packages
+  rc compile
+</pre>
+<p />
+Then when setting up your job object, you need to tell it that you are using D3PDReader before you add your algorithms:
+<pre>
+  Job job;
+  job.useD3PDReader();
+  job.algsAdd (alg);
+</pre>
+<p />
+Then add a pointer to the D3PDReader to your algorithm class:
+<pre>
+    /// description: the event we are reading from
+  private:
+    D3PDReader::Event *m_event; //!
+</pre>
+<p />
+And in your <code>initialize</code> method, set that member:
+<pre>
+EL::StatusCode MyAlgorithm :: initialize ()
+{
+  m_event = wk()->d3pdreader();
+  // further initialization stuff
+  return EL::StatusCode::SUCCESS;
+};
+</pre>
+<p />
+<h3><a name="Access_the_Data_Through_xAOD_EDM"></a> Access the Data Through xAOD EDM </h3>
+<p />
+<img src="/twiki/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <strong>warning:</strong> This requires you to have the xAOD classes installed.  The easiest way to achieve this is to build with an analysis release 2.X or later.
+<p />
+<img src="/twiki/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <strong>warning:</strong> This currently requires you to call xAOD::Init() manually before starting <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a>.  We are currently working on getting this called automatically, but that is not implemented yet.  Until that happens you can't really run over xAODs in batch.
+<p />
+Then when setting up your job object, you need to tell it that you are using an xAOD before you add your algorithms:
+<pre>
+  Job job;
+  job.useXAOD();
+  job.algsAdd (alg);
+</pre>
+<p />
+Then add a pointer to the xAOD::TEvent to your algorithm class:
+<pre>
+    /// description: the event we are reading from
+  private:
+    xAOD::TEvent *m_event; //!
+</pre>
+<p />
+And in your <code>initialize</code> method, set that member:
+<pre>
+EL::StatusCode MyAlgorithm :: initialize ()
+{
+  m_event = wk()->xaodEvent();
+  // further initialization stuff
+  return EL::StatusCode::SUCCESS;
+};
+</pre>
+<p />
+The xAOD classes have two mechanisms to read from a file, branch wise or class wise.  In branch wise mode the first time you access a variable from the xAOD in an event, it reads the corresponding branch.  For class wise mode it works the same, except that if you read one of the "core" variables from an object, it reads all of the "core" variables.  This is primarily needed for making shallow copies work.  The expectation is that xAODs made for analysis will not really have any "core" variables for objects, so it should not incur a performance penalty for a "typical" analysis workflow.  The mode can be selected using one of the following:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>job.options()-&gt;setString (EL::Job::optXaodAccessMode, EL::Job::optXaodAccessMode_branch);
+job.options()-&gt;setString (EL::Job::optXaodAccessMode, EL::Job::optXaodAccessMode_class);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+If neither is selected, <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> will select one for you.  Currently that is class-mode, but this may change at some point in the future.
+<p />
+<h4><a name="Turn_off_the_xAOD_Summary_Access"></a> Turn off the xAOD Summary Access Report </h4>
+<p />
+At the end of the job the xAOD classes send a report to a central server that contains information of how the xAODs were accessed, allowing us to optimize future versions of the xAOD.  Generally this is desirable and should be causing no problems.  However, sometimes it does, and in those cases you can turn off the reporting like this:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>job.options()-&gt;setDouble (EL::Job::optXAODSummaryReport, 0);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+<p />
+<p />
+<h3><a name="Access_the_Data_Through_MultiDra"></a> Access the Data Through <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/MultiDraw">MultiDraw</a> </h3>
+<p />
+The details of how to write an algorithm to use <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/MultiDraw">MultiDraw</a> formulas is described on the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/MultiDraw">MultiDraw</a> Twiki, so the reader should check there.  Here are only a couple of quick notes: <ul>
+<li> Due to its implementation <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/MultiDraw">MultiDraw</a> formulas can be combined with any other way of accessing the data.  This means that you can keep reading the data in the usual way and just use the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/MultiDraw">MultiDraw</a> formulas when you want to pass in an expression through configuration instead of hardcoding it into your source code.
+</li> <li> While it is called a formula services, you can also use this service for passing in simple variable names, e.g. the name of the variable containing your MC weight.  This is typically a lot simpler than trying to parse text fields in C++ yourself.
+</li> <li> While it is not required, it is recommended that you check whether the formula evaluated properly.
+</li> <li> Reading data through <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/MultiDraw">MultiDraw</a> is inherently slower than reading the data directly and then writing a C++ expression.  The advantage of <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/MultiDraw">MultiDraw</a> is run-time flexibility, but it comes at a price in speed.
+</li></ul> 
+<p />
+<h3><a name="Accessing_Meta_Data"></a> Accessing Meta-Data </h3>
+<p />
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PD">D3PDs</a> and many other n-tuple files have in-file meta-data.  The format of this meta-data varies wildly, but one thing in common is that you have to read them directly from the file and then combine them with the event-data yourself.  The most convenient way to access the input file, is through the <code>inputFile()</code> method:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>TFile *file = wk()-&gt;inputFile();</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+<h3><a name="Processing_Per_File_Meta_Data"></a> Processing Per-File Meta-Data </h3>
+<p />
+There is some meta-data that you need to process for each individual input file, even those containing no events, e.g. the list of lumi-blocks contained.  Starting with <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a>-00-00-75 any such processing can be done in the fileExecute() function of your algorithm:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>EL::StatusCode MyAlg :: fileExecute ()
+{
+  <I><FONT COLOR="#B22222">// Here you do everything that needs to be done exactly once for every
+</FONT></I>  <I><FONT COLOR="#B22222">// single file, e.g. collect a list of all lumi-blocks processed
+</FONT></I>  <B><FONT COLOR="#A020F0">return</FONT></B> EL::StatusCode::SUCCESS;
+}</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+<img src="/twiki/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <strong>warning:</strong> This is currently not implemented for PROOF (you will miss empty files).  If you want to use it in PROOF let me know and I'll put in PROOF support.  
+<p />
+<h3><a name="Accessing_the_Trigger_Configurat"></a> Accessing the Trigger Configuration Tree </h3>
+<p />
+You can access the trigger configuration tree inside <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> via:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>TTree *trigConfTree = wk()-&gt;triggerConfig();</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+Or alternatively, you can use the more manual way:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>TTree *trigConfTree = dynamic_cast&lt;TTree*&gt;(wk()-&gt;inputFile()-&gt;Get(<B><FONT COLOR="#BC8F8F">&quot;physicsMeta/TrigConfTree&quot;</FONT></B>));</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+<p />
+<p />
+<h2><a name="Creating_histograms"></a> Creating histograms </h2>
+<p />
+One of the main things you will want to do in most of your jobs is create and fill histograms.  This is also fairly straightforward.  Typically you will create your histograms in <code>initialize</code>:
+<pre>
+EL::StatusCode MyAlgorithm :: initialize ()
+{
+  hist = new TH1F ("histogramName", "histogram title", nbins, lowEdge, highEdge);
+  wk()->addOutput (hist);
+  // further initialization stuff
+  return EL::StatusCode::SUCCESS;
+};
+</pre>
+<p />
+Then you fill the histograms in <code>execute</code>:
+<pre>
+EL::StatusCode MyAlgorithm :: execute ()
+{
+  // do whatever processing you need to do
+
+  hist->Fill (value);
+  return EL::StatusCode::SUCCESS;
+};
+</pre>
+<p />
+<a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> will take care of collecting the histograms from all the worker nodes, merging them and saving them on the submission node.  Once your job is finished you can find them inside the unique directory you created at job submission.  There is a different file for each sample you submitted (<code>hist-label.root</code>), but you can also access them through a sample handler that has been created for the histograms, e.g.:
+<pre>
+  SH::SampleHandler sh;
+  sh.load ("uniqueDirectory/hist");
+  sh.get ("sampleName")->readHist ("histogramName");
+</pre>
+<p />
+A couple of notes: <ul>
+<li> you can call <code>addOutput</code> from <code>initialize</code>, <code>execute</code>, <code>finalize</code> or <code>changeInput</code>, whatever you prefer
+</li> <li> you should not add the same histogram more than once within the same sub-job
+</li> <li> the worker object takes ownership of the histogram, do no call delete on the pointer
+</li> <li> the histogram needs to be created on the heap, i.e. you need to call <code>new TH1* (...)</code> in your code, otherwise the worker can not take ownership
+</li> <li> you should create the histograms with the same binning in every sub-job, or the merging step will run into trouble
+</li> <li> it is safe not to create all the histograms in every sub-job, but if a histogram is not created in any of your sub-jobs for a particular sample, it won't be in the output file.  if that is a possibility your macro reading the file should check for that.
+</li> <li> you can also merge custom classes, if you provide the same facilities as used for PROOF (see the <a href="http://root.cern.ch/drupal/content/merging-customized-classes" target="_blank">PROOF documentation<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>).  however, my personal recommendation is to store your data in histograms as much as possible in order to avoid dealing with these issues.
+</li></ul> 
+<p />
+<h2><a name="Creating_output_n_tuples"></a> Creating output n-tuples </h2>
+<p />
+Creating output n-tuples is a little more complicated than just plain histograms, because of their (potential) size.  The strategy taken by the <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> package is to store them directly on the storage element of your local batch system.  Only if no such element exists are the n-tuples copied back to the submission node.  This approach has the following advantages: <ul>
+<li> Since the output are n-tuples you probably want to run over them in another event loop, probably using the same batch system.  In most cases the submission node is not designed to serve data to dozens if not hundreds of worker node processes.
+</li> <li> Copying potentially large files over the network back to the submission node is a potentially slow process, particularly if you are running on the grid.
+</li> <li> The submission node will often not have enough disk space to store large quantities of n-tuples, which would make it very awkward to run over larger datasets.
+</li></ul> 
+<p />
+The easiest way to do that is to use the <code>NTupleSvc</code> in EventLoopAlgs for that.  For that you need to make sure that you have the EventLoopAlgs package checked out as described in the introduction.  You need to make sure your package depends on <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/EventLoopAlgs?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">EventLoopAlgs</a></span>, i.e. in your <code>cmt/Makefile.RootCore</code> you should have:
+<pre>
+  PACKAGE_DEP = ... EventLoopAlgs
+</pre>
+<p />
+You will also need the following includes inside your code:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>#<B><FONT COLOR="#5F9EA0">include</FONT></B> <B><FONT COLOR="#BC8F8F">&lt;EventLoopAlgs/NTupleSvc.h&gt;</FONT></B>
+#<B><FONT COLOR="#5F9EA0">include</FONT></B> <B><FONT COLOR="#BC8F8F">&lt;EventLoopAlgs/AlgSelect.h&gt;</FONT></B></pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+As a first step create an n-tuple service object and add it to your job.  This has to happen before you add any algorithms that use that particular service:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>EL::OutputStream output  (<B><FONT COLOR="#BC8F8F">&quot;output&quot;</FONT></B>);
+    job.outputAdd (output);
+    <B><FONT COLOR="#5F9EA0">EL</FONT></B>::NTupleSvc *ntuple = <B><FONT COLOR="#A020F0">new</FONT></B> EL::NTupleSvc (<B><FONT COLOR="#BC8F8F">&quot;output&quot;</FONT></B>);
+    <I><FONT COLOR="#B22222">// configure ntuple object
+</FONT></I>    job.algsAdd (ntuple);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+The string <code>outputLabel</code> is just an arbitrary name, that identifies this particular output.  If you create multiple outputs in the same job each of them needs to be given a different label.  In the future, some drivers may allow you to specify further options as part of the <code>OutputStream</code> object.
+<p />
+You can request certain variables to be copied over directly from the input tree.  You can also specify branches using expressions.  Do this before you add the service to the job:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>ntuple-&gt;copyBranch (<B><FONT COLOR="#BC8F8F">&quot;RunNumber&quot;</FONT></B>);
+    ntuple-&gt;copyBranch (<B><FONT COLOR="#BC8F8F">&quot;EventNumber&quot;</FONT></B>);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+To select the events you want to use, you can use a selection algorithm:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>EL::AlgSelect *select = <B><FONT COLOR="#A020F0">new</FONT></B> EL::AlgSelect (<B><FONT COLOR="#BC8F8F">&quot;output&quot;</FONT></B>);
+    select-&gt;addCut (<B><FONT COLOR="#BC8F8F">&quot;el_n&gt;=0&quot;</FONT></B>);
+    job.algsAdd (select);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+If you specify multiple cuts you might also want to create a histogram containing the cut flow:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>select-&gt;histName (<B><FONT COLOR="#BC8F8F">&quot;cut_flow&quot;</FONT></B>);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+You can also directly access and manipulate the <code>NTupleSvc</code> from inside your algorithm:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>EL::NTupleSvc *ntuple = EL::getNTupleSvc (wk(), <B><FONT COLOR="#BC8F8F">&quot;output&quot;</FONT></B>);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+If you want you can add a new branch (you should do this in <code>initialize</code>):
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>ntuple-&gt;tree()-&gt;Branch (<B><FONT COLOR="#BC8F8F">&quot;myvar&quot;</FONT></B>, &amp;myvar, <B><FONT COLOR="#BC8F8F">&quot;myvar/F&quot;</FONT></B>);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+Or you can manually select the events you want to keep (you should do this in <code>execute</code>):
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>ntuple-&gt;setFilterPassed ();</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+A couple of notes: <ul>
+<li> If you are not quite familiar with how to create a <code>TTree</code> or how the <code>TTree::Branch</code> statements work, please check out the <a href="http://root.cern.ch/root/html/TTree" target="_blank">TTree documentation<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+</li> <li> While in most cases you will store a single TTree in each file, you can store whatever you want.  You can store multiple trees, or other kinds of objects.
+</li> <li> If you want, you can always copy your files back to the submission node (or another machine) manually.  If you don't know how, contact me and I'll try to figure it out with you.
+</li> <li> There is discussion of offering a merge option for n-tuple files.  This is meant to allow you to replace a large number of small n-tuples with a small number of large n-tuples, which are faster to process.  If you are interested in this option, contact me and I'll see if can get it implemented for you.
+</li></ul> 
+<p />
+<h3><a name="xAOD_outputs"></a> xAOD outputs </h3>
+<p />
+If you want to store xAOD objects in the <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/OutputStream?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">OutputStream</a></span>, you should create it like this:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>EL::OutputStream output  (<B><FONT COLOR="#BC8F8F">&quot;output&quot;</FONT></B>, <B><FONT COLOR="#BC8F8F">&quot;xAOD&quot;</FONT></B>);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+This will cause the files to be merged using xAODMerge on the grid. <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisBase">AnalysisBase</a>-2.1.35 or later is needed to use this option. If you do not store any xAOD meta data, you can instead give the option "xAODNoMeta" which will use a faster merging option.
+<p />
+<h3><a name="Writing_N_Tuples_Directly_to_XRo"></a> Writing N-Tuples Directly to <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/XRootD?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">XRootD</a></span> </h3>
+<p />
+If you are using the <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/DirectDriver?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">DirectDriver</a></span> or <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/BatchDriver?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">BatchDriver</a></span>, you can also write your output n-tuples directly onto an xrootd server.  For that to work, you just have to make a slight modification to how you declare the <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/OutputStream?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">OutputStream</a></span>:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>EL::OutputStream output (<B><FONT COLOR="#BC8F8F">&quot;label&quot;</FONT></B>);
+output.output (<B><FONT COLOR="#A020F0">new</FONT></B> SH::DiskOutputXRD (<B><FONT COLOR="#BC8F8F">&quot;root://myserver/dir/&quot;</FONT></B>));
+job.outputAdd (output);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+<h3><a name="Manually_Creating_an_N_tuple"></a> Manually Creating an N-tuple </h3>
+<p />
+If you don't want to use the n-tuple service, you can also create the n-tuple manually.  For that the first thing you have to do to create an output n-tuple is to configure your job to create one.  This can be done at the same time as creating the algorithms, but I recommend you do it in the <code>setupJob</code> method of your algorithm.  That way it gets automatically configured whenever the algorithm gets used.  The actual syntax for this is:
+<pre>
+EL::StatusCode MyAlgorithm :: setupJob (EL::Job& job)
+{
+  OutputStream out ("outputLabel");
+  job.outputAdd (out);
+  return EL::StatusCode::SUCCESS;
+};
+</pre>
+<p />
+On each worker node <code>EventLoop</code> will create an output file for you.  You can access it through the output label.  Traditionally you would do that in the <code>initialize</code> member function, and create a new output <code>TTree</code> there:
+<pre>
+EL::StatusCode MyAlgorithm :: initialize ()
+{
+  TFile *file = wk()->getOutputFile ("outputLabel");
+  tree = new TTree ("tree", "output tree");
+  tree->SetDirectory (file);
+  tree->Branch ("var1", &var1, "var1/F");
+  tree->Branch ("var2", &var2, "var2/I");
+  // further branch statements and other configuration
+  return EL::StatusCode::SUCCESS;
+};
+</pre>
+<p />
+Then in the <code>execute</code> function you have to fill the output variable and call <code>TTree::Fill</code> for the events you want to save:
+<pre>
+void MyAlgorithm :: execute ()
+{
+  // do other event processing stuff and fill output variables
+  tree->Fill ();
+  return EL::StatusCode::SUCCESS;
+};
+</pre>
+<p />
+<p />
+<h2><a name="Other_outputs"></a> Other outputs </h2>
+You should avoid having your algorithm create any kind of output without making it know to <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a>, otherwise it might be lost e.g. when running on the grid. Always use the <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/OutputStreams?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">OutputStreams</a></span>, see below for an example: 
+<p />
+<h3><a name="Solution_for_TPileupReweighting"></a> Solution for <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TPileupReweighting?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TPileupReweighting</a></span> </h3>
+To create the reweighting files, do the following:
+<p />
+In the setupJob method, create an output stream:
+<pre>
+job.outputAdd(EL::OutputStream("outFile"));
+</pre>
+<p />
+In the finalize method:
+<pre>
+my_PileupTool->WriteToFile(wk()->getOutputFile("outFile"));
+</pre>
+<p />
+<h2><a name="Moving_the_Submission_Directory"></a> Moving the Submission Directory </h2>
+<p />
+Sometimes you feel the need to move the <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> submission directory, typically because you changed your mind on where things should be stored.  To do that, you first need to wait until <strong>all</strong> your jobs from that submission finished, otherwise the results will be undefined and probably bad.  Then you need to move the directory to where you want.  Then you call updateLocation on the new location:
+<pre>
+  mv submitDir newDir
+  root -l -b -q "$ROOTCOREBIN/user_scripts/EventLoop/updateLocation.C (\"newDir\")"
+</pre>
+<p />
+Or you can also call it from inside root:
+<pre>
+  EL::Driver::updateLocation ("newDir")
+</pre>
+<p />
+Please note that this is only supported since <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a>-00-00-39.  If you want to move a submission directory created with an older version of <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> you can try to create a file <code>submitDir/location</code>, which contains the exact location of the submission directory <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> used internally.  The easiest way to check that is to open up one of the contained sample handlers and print out the content.
+<p />
+<h2><a name="Further_Job_Configuration"></a> Further Job Configuration </h2>
+<p />
+Apart from the basic job configuration, each driver can support a variety of custom options, as can the algorithms.  The job and the driver object both have an option field that can be used for that purpose.  While running the job those options get merged into the sample meta-data, with the job options taking precedence over the driver options, and the actual sample meta-data taking precedence over both.  For options that have to be set for the entire job the sample meta-data is ignored.
+<p />
+The practical motivation for this is that it allows you to set options for your entire job, but then override them for specific samples.  Here are some examples of how to set options:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>sample-&gt;setMetaDouble (<B><FONT COLOR="#BC8F8F">&quot;option&quot;</FONT></B>, value);
+sh.get(<B><FONT COLOR="#BC8F8F">&quot;sampleName&quot;</FONT></B>)-&gt;setMetaDouble (<B><FONT COLOR="#BC8F8F">&quot;option&quot;</FONT></B>, value);
+sh.setMetaDouble (<B><FONT COLOR="#BC8F8F">&quot;option&quot;</FONT></B>, value);
+job.options()-&gt;setDouble (<B><FONT COLOR="#BC8F8F">&quot;option&quot;</FONT></B>, value);
+driver.options()-&gt;setDouble (<B><FONT COLOR="#BC8F8F">&quot;option&quot;</FONT></B>, value);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+For most of the standard options, the names of the options are defined in the class EL::Job.  So if you have a slow day, you may want to browse through the header file <code>EventLoop/Job.hh</code>.  Most of the driver specific options are described below with the individual drivers.  Collected here are some more generic options
+<p />
+<h3><a name="Omitting_Events_for_Test_Runs"></a> Omitting Events for Test Runs </h3>
+<p />
+During debugging runs you often face the situation that you would rather not process all events in a sample in order to save some time.  Most commonly you just want to limit the number of events per sample to process (supported for <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/DirectDriver?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">DirectDriver</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/ProofDriver?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">ProofDriver</a></span>):
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>job.options()-&gt;setDouble (EL::Job::optMaxEvents, 1000);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+Or you are debugging a particular event that gives you trouble and you may want to skip the events leading up to that event (supported for <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/DirectDriver?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">DirectDriver</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/ProofDriver?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">ProofDriver</a></span>):
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>job.options()-&gt;setDouble (EL::Job::optSkipEvents, 10000);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+<h3><a name="Using_TTreeCache"></a> Using <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TTreeCache?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TTreeCache</a></span> </h3>
+<p />
+<span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TTreeCache?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TTreeCache</a></span> is a mechanism for speeding up the reading of files, particularly over the network.  To turn <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TTreeCache?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TTreeCache</a></span> on, you first need to select a cache size (in this case 10MB):
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>job.options()-&gt;setDouble (EL::Job::optCacheSize, 10*1024*1024);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+By default, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TTreeCache?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TTreeCache</a></span> looks at the first 10 events of a file to determine your access pattern and then uses that to optimize access for the rest.  If you want to, you can change that number to suit your needs:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>job.options()-&gt;setDouble (EL::Job::optCacheLearnEntries, 20);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+<h4><a name="Using_TTreeCache_with_D3PDReader"></a> Using <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TTreeCache?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TTreeCache</a></span> with D3PDReader </h4>
+<p />
+If you are using D3PDReader you can use more sophisticated methods for predicting your access patterns.  For that you should turn on the <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/PerfStats?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">PerfStats</a></span> monitoring of your actual access patterns:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>job.options()-&gt;setDouble (EL::Job::optD3PDReadStats, 1);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+This will put a <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/D3PDPerfStats?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">D3PDPerfStats</a></span> objects inside each of your output histogram files.  You can access the name of that object through the variable <code>EL::Job::optD3PDReadStats</code>.  You can either use the statistics from a particularly representative sample, merge the objects from all the samples (e.g. via "=hadd hist.root submitDir/hist-*.root="), or even go through the trouble of matching each sample with its own <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/D3PDPerfStats?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">D3PDPerfStats</a></span>.  If you want to use the <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/D3PDPerfStats?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">D3PDPerfStats</a></span> object to optimize subsequent jobs you need to add it to the sample meta-data or the job options.  So far you have to do that manually, but if you ask me for it, I may provide a utility function to do it.
+<p />
+D3PDReader provides a number of options for optimizing <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TTreeCache?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TTreeCache</a></span>, which you can look up in their documentation.  You can pick one of the following depending on your situation:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>job.options()-&gt;setDouble (EL::Job::optD3PDCacheMinEvent, 10);
+job.options()-&gt;setDouble (EL::Job::optD3PDCacheMinEventFraction, 0.1);
+job.options()-&gt;setDouble (EL::Job::optD3PDCacheMinByte, 10000);
+job.options()-&gt;setDouble (EL::Job::optD3PDCacheMinByteFraction, 0.1);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+<p />
+<h3><a name="Automatically_Removing_Submissio"></a> Automatically Removing Submission Directories </h3>
+<p />
+So this is something that I definitely do <strong>not</strong> recommend, but I get asked for it regularly, so here it is.  If you set
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>job.options()-&gt;setDouble (EL::Job::optRemoveSubmitDir, 1);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+then it will remove any old submit directory before creating a new one.  I should point out that this is fairly dangerous, as the old submission directory (typically) contains all the output from your last job, which will get completely clobbered this way.
+<p />
+<h3><a name="Collecting_Performance_Statistic"></a> Collecting Performance Statistics With xAODs </h3>
+<p />
+If you are using xAODs you can monitor your jobs data-access patterns:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>job.options()-&gt;setDouble (EL::Job::optXAODPerfStats, 1);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+This should put the access statistics into your histogram file, as well as print out the statistics at the end of the job.
+<p />
+<img src="/twiki/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <strong>warning:</strong> This feature hasn't been tested yet, beyond checking that it compiles.  I rushed it in to allow the distributed-i/o team to do some more precise measurements.  You need at least <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a>-00-00-97.
+<p />
+<h3><a name="Printing_Cache_Statistics_For_Ea"></a> Printing Cache Statistics For Each File </h3>
+<p />
+If you are interested in performance measurements you can print out the TTree cache statistics at the end of each file:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>job.options()-&gt;setDouble (EL::Job::optPrintPerFileStats, 1);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+<img src="/twiki/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <strong>warning:</strong> This feature hasn't been tested yet, beyond checking that it compiles and produces some outputs.  I rushed it in to allow the distributed-i/o team to do some more precise measurements.  You need at least <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a>-00-00-98.
+<p />
+<p />
+<h3><a name="Retrying_File_Opening"></a> Retrying File Opening </h3>
+<p />
+Some users have trouble where opening a file fails due to transient errors.  For that case there is the option to retry opening the file after a brief pause.  You can set the number of retries like this:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>job.options()-&gt;setDouble (EL::Job::optRetries, 3);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+If you want to customize the wait period, you can do that too.
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>job.options()-&gt;setDouble (EL::Job::optRetriesWait, 900);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+Please note that the wait period is randomized and this is the upper limit (in seconds).  The reason for the randomization is that if the transient failure is that too many jobs try to open a file at once, you do not want all of them to retry at the same time as they probably overload the server again.
+<p />
+Please note that this only works for <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/DirectDriver?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">DirectDriver</a></span> and <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/BatchDriver?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">BatchDriver</a></span>.  It needs at least <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/SampleHandler">SampleHandler</a>-00-00-98, <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a>-00-01-19.
+<p />
+<p />
+<h2><a name="Removing_Duplicate_Events"></a> Removing Duplicate Events </h2>
+<p />
+Some datasets contain duplicate events, as such it is often wise to check whether your datasets contains duplicate events and if necessary remove them.  To that end, starting with <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/EventLoopAlgs?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">EventLoopAlgs</a></span>-00-00-30 we provide the algorithm <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/DuplicateChecker?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">DuplicateChecker</a></span> that provides such functionalities.  This is mostly a stop-gap measure until the official ASG solution using <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/EventIndex?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">EventIndex</a></span> is in place.
+<p />
+<img src="/twiki/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> <strong>WARNING:</strong> <img src="/twiki/pub/TWiki/TWikiDocGraphics/warning.gif" width="16" height="16" alt="Warning, important" title="Warning, important" border="0" /> This will not fix any meta-data that was constructed incorporating those duplicate events.  This is a fundamental issue of any duplicate event removal procedure, and this is no exception.  In other words, you better make sure that you either don't include duplicate events into your meta-data in the first place, or that their presence doesn't affect your result.
+<p />
+<h3><a name="Removing_Duplicate_Events_Within"></a> Removing Duplicate Events Within Each Subjob </h3>
+<p />
+In the simplest case you just add this algorithm to your list of algorithms:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>EL::DuplicateChecker duplicates = <B><FONT COLOR="#A020F0">new</FONT></B> EL::DuplicateChecker;
+job.algsAdd (duplicates);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+It is important that you add it <strong>before</strong> any other algorithms, because this will essentially tell <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> to skip any subsequent algorithms in the case a duplicate event is encountered.
+<p />
+This will remove duplicate events within each sub-job.  However, if your job is split into multiple sub-jobs then the same (duplicate) event may be able to sneak in.  Still, if you only have a single sub-job per sample (e.g. you use <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/DirectDriver?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">DirectDriver</a></span>) or if you know that all duplicates get processed by the same sub-job this is good enough.
+<p />
+<h3><a name="Checking_For_Duplicate_Events_Ac"></a> Checking For Duplicate Events Across Subjobs </h3>
+<p />
+If you want to be really sure that you don't have any duplicate events at all you can instruct the checker to write out the necessary event information:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>EL::DuplicateChecker duplicates = <B><FONT COLOR="#A020F0">new</FONT></B> EL::DuplicateChecker;
+duplicates-&gt;setOutputTreeName (<B><FONT COLOR="#BC8F8F">&quot;duplicate_info&quot;</FONT></B>);
+job.algsAdd (duplicates);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+This will create a tree <code>duplicate_info</code> inside your <strong>histogram</strong> output stream.  The choice of name is up to you, just pick something that doesn't collide with anything else.
+<p />
+Then after your jobs are finished you can run a basic checker on that tree:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#228B22">bool</FONT></B> good = EL::DuplicateChecker::processSummary (submitdir, <B><FONT COLOR="#BC8F8F">&quot;duplicate_info&quot;</FONT></B>)</pre>
+<!-- end SyntaxHighlightingPlugin -->
+Where <code>submitdir</code> is the name of the submission directory and <code>duplicate_info</code> is the tree name you configured during submission.
+<p />
+In case everything is Ok, i.e. every event was processed once and none twice, <code>good</code> is set to true.  Otherwise it is set to <code>false</code> and the problems are printed on the screen.  It also creates a file <code>duplicates</code> inside the submission directory that contains a list of all duplicates event (independent of whether we filtered them out or not).
+<p />
+<h3><a name="Removing_Duplicate_Events_Across"></a> Removing Duplicate Events Across Subjobs </h3>
+<p />
+Suppose that you found that you have duplicate events distributed across subjobs, you'd probably still want to filter them out.  One option is to switch to <code>DirectDriver</code> and just process everything in a single big job.  Another is to configure the duplicate checker with an explicit list of duplicate events to filter out:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>EL::DuplicateChecker duplicates = <B><FONT COLOR="#A020F0">new</FONT></B> EL::DuplicateChecker;
+duplicates-&gt;addKnownDuplicatesFile (<B><FONT COLOR="#BC8F8F">&quot;duplicates&quot;</FONT></B>);
+job.algsAdd (duplicates);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+This will then just assume that all the listed events are duplicates, so they will be filtered out no-matter-what.  It also includes the sample name with each event, so a single file can describe the duplicates for <strong>all</strong> your samples.
+<p />
+Ideally you'd want to generate that file using <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/EventIndex?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">EventIndex</a></span>, which can do that automatically for you for every dataset.  However, as an alternative, you can also take the <code>duplicates</code> file we generated in the last step.  In fact you could submit an extra <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> job running only EL::DuplicateChecker to create that file (as it only reads a few fields in <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/EventInfo?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">EventInfo</a></span> it should be reasonably fast, but I've done no benchmarks).
+<p />
+<h3><a name="Limitations"></a> Limitations </h3>
+<p />
+There are a couple of limitations to the duplicate checker: <ul>
+<li> it doesn't repair any meta-data corrupted by the presence of duplicate events.  if you have only few duplicates it probably won't matter, if you have a lot of them you are probably screwed.
+</li> <li> the output tree can grow to a large size if you have a <strong>lot</strong> of events.  in my tests it was about 5 bytes per event, but that may be too optimistic.  for large datasets you may need to put the output stream in a regular output stream instead of the histogram stream.  if you run into that limitation let me know and I'll add an option for that.  I may also be able to shave a bit off the per-event size if needed
+</li> <li> the <code>processSummary()</code> function may not scale well to a <strong>lot</strong> of events as well, i.e. it may get really slow.  if you hit that limitation, contact me and I see if I can speed it up (there may be a similar issue with the in-job filtering of duplicate events as well, but it normally has to deal with fewer events)
+</li> <li> the way the <code>duplicates</code> file is stored and handled assumes that we only have a small number of duplicates.  if you instead have a large number of duplicates, you may run into trouble.  this would unfortunately require some redesign to fix
+</li> <li> currently this only works for xAODs.  support for n-tuples would be possible, though it may take some work. if requested I could look into it
+</li></ul> 
+<p />
+<p />
+<p />
+<h1><a name="Converting_existing_code_to_Even"></a> Converting existing code to <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> </h1>
+<p />
+In all likelihood you already have an existing analysis setup.  In this section I will try to give you some advice on how to convert your existing code.  Of course every situation is different, so you may or may not find that this advice works in your situation.    However, you should feel free to contact me for further advice, or suggestions on how to improve this section.
+<p />
+Please note that you should either make a backup of your analysis code or work on a copy of the code.  There are things that can get wrong in the conversion and you don't want to be stuck with a wrecked analysis.  Also, if you haven't done so already, please convert your analysis for compilation in <code>RootCore</code>.
+<p />
+<h2><a name="Converting_MakeClass_based_code"></a> Converting <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MakeClass?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MakeClass</a></span> based code </h2>
+<p />
+This section is for you, if you started your analysis by calling <code>MakeClass</code> on your n-tuple.  Unfortunately this kind of code is somewhat more difficult to convert, since you don't have your code organized as an algorithm.  However, in most cases it should still be quite feasible to convert it into an algorithm without too much effort.  For the rest of this section I assume that your class is named <code>MyClass</code>.
+<p />
+First perform a couple of fixes in the header file.  Derive your class from the Algorithm class, i.e.:
+<pre>
+#include &lt;EventLoop/Algorithm.h&gt;
+class MyClass : public EL::Algorithm {
+</pre>
+Also add a couple more entries to the class:
+<pre>
+  // these are the functions from Algorithm
+  virtual EL::StatusCode setupJob (EL::Job& job);
+  virtual EL::StatusCode changeInput (bool firstFile);
+  virtual EL::StatusCode initialize ();
+  virtual EL::StatusCode execute ();
+  virtual EL::StatusCode finalize ();
+
+  // this is needed to distribute the algorithm to the workers
+  ClassDef(MyClass, 1);
+</pre>
+And comment out / remove the <code>Loop</code> function, because we will have to split it up:
+<pre>
+   //virtual void     Loop();
+</pre>
+If there are any std::vector variables, make sure you add a <code>//!</code> in the end to protect them from CINT (otherwise you will experience random crashes), e.g.:
+<pre>
+  std::vector *el_pt; //!
+</pre>
+In the constructor you have to comment out / remove everything that relates to opening a file, i.e. it should look something like this:
+<pre>
+MyClass::MyClass(TTree *tree)
+{
+// if parameter tree is not specified (or zero), connect the file
+// used to generate this class and read the Tree.
+//   if (tree == 0) {
+//      TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("src-eventloop/EventLoop/data/test_ntuple.root");
+//      if (!f) {
+//         f = new TFile("src-eventloop/EventLoop/data/test_ntuple.root");
+//      }
+//      tree = (TTree*)gDirectory->Get("physics");
+//
+//   }
+//   Init(tree);
+}
+</pre>
+And you have to fix the destructor to leave the input tree alone (comment out the delete statement):
+<pre>
+MyClass::~MyClass()
+{
+   if (!fChain) return;
+   //delete fChain->GetCurrentFile();
+}
+</pre>
+<p />
+Now for the hard part:  In the source file, you need to split up the <code>Loop</code> function into several functions.  This will be the tricky part.  If you start out, your <code>Loop</code> functions will look something like this:
+<pre>
+void MyClass::Loop()
+{
+   if (fChain == 0) return;
+
+   // code segment 1: your initialization code sits here
+
+   Long64_t nentries = fChain->GetEntriesFast();
+
+   Long64_t nbytes = 0, nb = 0;
+   for (Long64_t jentry=0; jentry<nentries;jentry++) {
+      Long64_t ientry = LoadTree(jentry);
+      if (ientry < 0) break;
+      nb = fChain->GetEntry(jentry);   nbytes += nb;
+      // if (Cut(ientry) < 0) continue;
+
+      // code segment 2: your per-event code sits here
+   }
+
+   // code segment 3: your post-processing code sits here
+}
+</pre>
+<p />
+First of all add
+<pre>
+#include &lt;EventLoop/StatusCode.h&gt;
+#include &lt;EventLoop/Worker.h&gt;
+</pre>
+which is needed so you can override the Algorithm functions and access the data on the worker node.  And add a <code>changeInput</code> function that takes care of connecting to the tree whenever the file changes:
+<pre>
+EL::StatusCode MyAlgorithm :: changeInput (bool firstFile)
+{
+  Init (wk()->tree());
+  return EL::StatusCode::SUCCESS;
+};
+</pre>
+<p />
+First let us take care of code segment 1.  Suppose it looks like this:
+<pre>
+  TFile *outputFile = new TFile ("output.root", "RECREATE");
+  TH1 *hist = new TH1F ("hist", "hist", 10, 0, 1);
+</pre>
+Any code for creating output files should just be removed, <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> will take care of that for you.  Any variables defined in this code segment probably have to go into the class itself.  Please note that any variables you put into the header file will have to be protected with a <code>//!</code>.  The only exception to this are variables that contain configuration parameters.  In this case that means put this statement into your header file:
+<pre>
+  TH1 *hist; //!
+</pre>
+Then the code itself has to be put into a newly created <code>initialize</code> method.  Any histograms you create have to be added to the output list as well:
+<pre>
+EL::StatusCode MyAlgorithm :: initialize ()
+{
+  hist = new TH1F ("hist", "hist", 10, 0, 10);
+  wk()->addOutput (hist);
+  return EL::StatusCode::SUCCESS;
+};
+</pre>
+Please make sure that you don't redefine any variables you have moved to the header file, i.e. don't write <code>TH1 *hist</code>.  Your code will compile, but it won't work and most likely crash.  If you are creating an output n-tuple, please look at the section on how to create an output n-tuple.
+<p />
+Code segment 2 is essentially what will go into your <code>execute</code> method.  We just get rid of the for loop altogether (handled by <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a>), and can use a simplified version of the <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/GetEntry?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">GetEntry</a></span> call:
+<pre>
+EL::StatusCode MyAlgorithm :: execute ()
+{
+  wk()->tree()->GetEntry (wk()->treeEntry());
+
+  // put code segment 2 right here
+};
+</pre>
+If you call <code>GetEntry</code> on the branches instead of the tree, you can do the same here.
+<p />
+Code segment 3 is somewhat tricky.  It may contain some code that should go into a <code>finalize</code> function, but most likely you have to move it into your steering macro.  If you don't create a <code>finalize</code> function here, either create an empty one, or remove it from the header file.  Actually even better than moving the code into your steering macro, move it into a separate macro that reads the output file.  That way you can change the macro and re-run it without re-running the entire event loop.  Either way, when adapting this code, you have to read the histogram in from the output file before you can use it.  E.g. the code
+<pre>
+  hist->Draw ();
+</pre>
+would change into
+<pre>
+  TFile *file = new TFile ("jobDir/hist-sample.root", "READ");
+  TH1 *hist = (TH1*) file->Get ("hist");
+  hist->Draw ();
+};
+</pre>
+<p />
+Now let's change the steering code to call <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> instead, e.g. let's say it looks like this now:
+<pre>
+  TChain chain ("physics");
+  // initialize chain
+
+  MyClass t (&chain);
+  t.Loop();
+</pre>
+Then it would change to:
+<pre>
+  TChain chain ("physics");
+  // initialize chain
+
+  EL::Job job;
+  SH::SampleHandler sh;
+  sh.add (SH::makeFromTChain ("sample", chain));
+  job.sampleHandler (sh);
+  job.algsAdd (new MyClass);
+  DirectDriver driver;
+  driver.submit (job);
+</pre>
+<p />
+That's it.  If you did everything right, you should now have some analysis code that runs (locally) and does what it did before.  However, now you can swap out the driver and run on your local batch system if you want to do so.  If you have the time, you might want to clean up your code a little more.
+<p />
+<h3><a name="Special_Precautions_for_std_vect"></a> Special Precautions for std::vector Variables (and Other Object Types) </h3>
+<p />
+If you are reading in std::vector variables from a TTree you may find that your code now inexplicably crashes.  One possible reason is that in your code the member variables you are reading into are not properly initialized.  Double check your code and change the corresponding lines from:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>stdvector&lt;<B><FONT COLOR="#228B22">float</FONT></B>&gt; *jets_selected_pt; <I><FONT COLOR="#B22222">//!
+</FONT></I></pre>
+<!-- end SyntaxHighlightingPlugin -->
+to
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>std::vector&lt;<B><FONT COLOR="#228B22">float</FONT></B>&gt; *jets_selected_pt = nullptr; <I><FONT COLOR="#B22222">//!
+</FONT></I></pre>
+<!-- end SyntaxHighlightingPlugin -->
+Or alternatively initialize them in the constructor, but personally I prefer doing so in the header file, as it is easier to check that you indeed initialized all members properly.
+<p />
+<p />
+<h1><a name="Using_the_Different_Drivers"></a> Using the Different Drivers </h1>
+<p />
+<h2><a name="Direct_Driver"></a> Direct Driver </h2>
+<p />
+<h2><a name="PROOF_Driver"></a> !PROOF Driver </h2>
+<p />
+For PROOF lite the PROOF driver is very straightforward to use.  Simply specify the PROOF driver:
+<pre>
+  ProofDriver driver;
+</pre>
+<p />
+This will run your job in PROOF-lite mode, which will take advantage of all the CPU cores that your machine has available.  For a modern machine this may increase your performance considerably, in some cases by as much as an order of magnitude.
+<p />
+If you want to limit the number of worker processes PROOF uses, you can specify it through the member variable <code>numWorkers</code>, e.g.:
+<pre>
+  driver.numWorkers = 4;
+</pre>
+<p />
+<h3><a name="PROOF_Farm_Support"></a> PROOF Farm Support </h3>
+<p />
+To use a PROOF farm you have to add a couple more configuration options:
+<pre>
+// this is the name of the PROOF master
+driver.proofMaster = "nameOfProofMaster";
+// when running on a PROOF farm we do not return the n-tuples to the master, but keep them on the storage element
+driver.returnFiles = false;
+// by default the PROOF driver only makes a .par file usable by PROOF-lite, this will make one suitable for use on a farm
+driver.makeParOptions = "";
+</pre>
+<p />
+Also, you will need to end your program like this (or it will crash):
+<pre>
+gSystem->Exit (0);
+</pre>
+This has nothing to do with <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a>, but is a feature/bug in PROOF.
+<p />
+Please note that if you create an output n-tuple on the farm, it will stay on your farms storage element.  You can still access it normally through the output sample handler in your submit directory, but there won't be any files in the submit data directory.
+<p />
+<h3><a name="PROOF_Performance_Data"></a> PROOF Performance Data </h3>
+<p />
+If you want, you can ask the proof driver to write out the performance tree (and some associated histograms):
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>job.options()-&gt;setDouble (EL::Job::optPerfTree, 1);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+<h2><a name="Batch_System_Drivers"></a> Batch System Drivers </h2>
+<p />
+Using a (supported) batch system works essentially like using the other drivers, all you have to do is to create the proper driver:
+<pre>
+CondorDriver driver;
+TorqueDriver driver;
+LSFDriver driver;
+LLDriver driver; // load leveler
+GEDriver driver; // grid engine (this is separate from actual grid submission)
+</pre>
+<p />
+You will normally have to execute some commands on the worker nodes to set up root.  You have to add those commands to the driver:
+<pre>
+driver.shellInit = "some commands for setting up root on the nodes";
+</pre>
+<p />
+If you need extra flags for submitting to your batch system you will also need to specify them (you can either do this through <code>job.options</code> or <code>driver.options</code>):
+<pre>
+job.options()->setString (EL::Job::optSubmitFlags, "-x -y -z");
+</pre>
+For condor, you can specify extra lines to place into the condor configuration:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>job.options()-&gt;setString (EL::Job::optCondorConf, <B><FONT COLOR="#BC8F8F">&quot;parameter = value&quot;</FONT></B>);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+The LSFDriver contains a special hack to make it work on inexplicably, that may cause problems at other sites.  You can disable it via:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>job.options()-&gt;setBool (EL::Job::optResetShell, false);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+<p />
+<p />
+<p />
+There are a couple of limitations at the moment.  These limitations are not fundamental, but mostly exist because nobody entered a feature request to fix them.  In particular I assume that the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/RootCore">RootCore</a> installation is on a shared filesystem available on all worker nodes.  Furthermore I assume that the output directory is located in a directory that can directly be written to by all the worker nodes.  On most clusters this can be achieved by placing them in the home directory.
+<p />
+If you find that you need a driver for a different batch system or need extensions to the driver for your batch system, let me know and I will try to help.  Adding support for new batch systems turned out fairly easy and straightforward, I just added the support for torque in under 3 hours.  Depending on what you ask for, I may need a login to your cluster so that I can test the code.
+<p />
+<h3><a name="Changing_the_number_of_files_per"></a> Changing the number of files per worker </h3>
+<p />
+Sometimes when you run on a large number of files, you don't want to have a separate worker process running for each file.  This is mostly to avoid overhead: <ul>
+<li> Each job started on the batch system has a certain overhead.  If jobs are too short a large fraction of time is spend on starting and stopping jobs.
+</li> <li> All the output histograms have to be merged on the submission node.  The time this takes is directly proportional to the number of jobs submitted.  If you have a many small jobs on a large batch system this step can take up more time then actually running in batch.
+</li> <li> If you produce output n-tuples, each job will produce a separate output n-tuple file.  Processing these output n-tuples afterwards can be inefficient if the individual n-tuple files themselves are very small.  It should be noted that this can also be alleviated by merging the output afterwards.
+</li></ul> 
+<p />
+Whether this affects you is hard to say in general, and there is a tradeoff in that if you have too many small jobs you may be unable to utilize your entire batch system.  However, if you run a lot of short jobs and suspect that this affects you, you can try changing the number of files per job and see whether this improves things.
+<p />
+You can do this for the whole job by calling:
+<pre>
+job.options()->setDouble (EL::Job::optFilesPerWorker, 5);
+</pre>
+<p />
+And if you decide that there is a sample that needs a different number of files per job, you can use:
+<pre>
+sample->setMetaDouble (EL::Job::optFilesPerWorker, 10);
+</pre>
+<p />
+<h3><a name="Splitting_Jobs_Based_on_the_Numb"></a> Splitting Jobs Based on the Number of Events </h3>
+<p />
+If you run = inexplicably = on your sample handler it will scan the number of events in each root file and store them in the sample handler.
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#0000FF">SH::scanNEvents</FONT></B> (sh);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+If you then submit the sample handler to the batch driver it will split jobs so that all jobs have approximately equal number of events.
+<p />
+If you want, you can also configure your job to take a particular number of events per job:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>sh.setMetaDouble (EL::Job::optEventsPerWorker, 5000);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+This will cause the batch driver to spawn just enough jobs so that no job has more than 5000 events.  If you want to, you can also set this separately for each sample:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>sh.setMetaDouble (<B><FONT COLOR="#BC8F8F">&quot;sampleName&quot;</FONT></B>, EL::Job::optEventsPerWorker, 10000);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+This can be helpful if you have different processing speeds or acceptance rates for different samples.
+<p />
+<h3><a name="Special_Options_for_Special_Loca"></a> Special Options for Special Locations </h3>
+<p />
+For running <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/CondorDriver?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">CondorDriver</a></span> on NAF at several German institutes, the following option is reported to make it work:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>sh.setMetaString (EL::Job::optCondorConf, <B><FONT COLOR="#BC8F8F">&quot;+MyProject = \&quot;af-atlas\&quot;\nshould_transfer_files = NO&quot;</FONT></B>);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+The should_transfer_files indicates that the user job files do not need to be copied over, but instead gets picked up via the shared file system.
+<p />
+<p />
+<h2><a name="Grid_Driver"></a> Grid Driver </h2>
+<p />
+The grid drivers currently resides in their own package. It can be downloaded from SVN: 
+<p />
+<pre>
+rc checkout_pkg atlasoff/PhysicsAnalysis/D3PDTools/EventLoopGrid/tags
+</pre>
+<p />
+The basic solution for running on the grid is the prun driver. To use it you must first set up prun <strong>with JEDI support</strong> and dq2 clients:
+<p />
+<pre>
+localSetupDQ2Client --quiet
+voms-proxy-init -voms atlas
+localSetupPandaClient currentJedi --noAthenaCheck
+</pre>
+<p />
+Note: At least the dq2 part should normally be done <strong>before setting up ROOT or an ASG release</strong> or there is a risk of configuration clashes. 
+<p />
+To submit jobs to the grid, create an instance of the prun driver.
+<p />
+<pre>
+EL::PrunDriver driver;
+</pre>
+<p />
+<p />
+Optionally, you can specify how to name the grid output datasets. The naming is based on a simple rule, which you specify like so:
+<pre>
+driver.options()->setString("nc_outputSampleName", "user.amadsen.test.%in:name[2]%");
+</pre>
+<p />
+This string should always begin with "user.yourgridnickname." to be consistent with dq2 naming rules. The rest of the string is arbitrary, and some substitutions can be used to derive the name from each input sample. %nickname% will be replaced with your grid nickname. %in:name% will be replaced with the name of the input sample. %in:name[n]% will be replaced with the n:th field of the input name, split by '.'. %in:metastring% will be replaced with the value of the (string) meta data field metastring of the input sample.
+<p />
+For example, using the string above "user.amadsen.test.%in:name[2]%", the output sample created from the input sample
+"mc11_7TeV.105200.T1_McAtNlo_Jimmy.merge.NTUP_TOP.e835_s1272_s1274_r3043_r2993_p834"
+will be called user.amadsen.test.105200.
+<p />
+<p />
+Job configuration is done using the meta data system, so options can be set on a per sample basis:
+<pre>
+driver.options()->setString(EL::Job::optGridNFilesPerJob,  "MAX"); //By default, split in as few jobs as possible
+sh.get("data12_8TeV.00202668.physics_Muons.merge.NTUP_COMMON.r4065_p1278_p1562/")->SetMetaDouble(EL::Job::optGridNFilesPerJob, 1); //For this particular sample, split into one job per input file
+driver.options()->setDouble(EL::Job::optGridMergeOutput, 1); //run merging jobs for all samples before downloading (recommended) 
+</pre>
+<p />
+The full list of supported options are: 
+EL::Job::optGridDestSE, 
+EL::Job::optGridSite, 
+EL::Job::optGridCloud, 
+EL::Job::optRootVer, 
+EL::Job::optCmtConfig, 
+EL::Job::optGridExcludedSite, 
+EL::Job::optGridNGBPerJob, 
+EL::Job::optGridMemory, 
+EL::Job::optGridMaxCpuCount, 
+EL::Job::optGridNFiles, 
+EL::Job::optGridNFilesPerJob, 
+EL::Job::optGridNJobs, 
+EL::Job::optGridMaxFileSize, 
+EL::Job::optGridMaxNFilesPerJob, 
+EL::Job::optTmpDir, 
+EL::Job::optGridUseChirpServer, 
+EL::Job::optGridExpress, 
+EL::Job::optGridNoSubmit, 
+EL::Job::optGridDisableAutoRetry, 
+EL::Job::optGridMergeOutput. 
+For full explanation of each option, see the prun documentation (prun --help).
+<p />
+The grid drivers work with <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/SampleGrid?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">SampleGrid</a></span> samples. A scanDQ2() function is available to create these:
+<pre>
+SH::SampleHandler sh;
+SH::scanDQ2 (sh, "user.krumnack.pat_tutorial_*.v1");
+sh.setMetaString ("nc_tree", "MyFirstD3PD");
+</pre> 
+<p />
+Please see the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/SampleHandler">SampleHandler</a> documentation for more information. Note that you can specify a subset of files in a dataset or container by setting the meta data string nc_grid_filter to for example "*.root*" to process only root files in a dataset also containing log files. (The last wildcard is significant as files may often be named e.g. something.root.1!)
+<p />
+<p />
+Create your Job object as usual and then submit it:
+<p />
+<pre>
+driver.submit(job, "uniqueJobDirectory");
+</pre>
+<p />
+<p />
+A more advanced solution for running on the grid is the Ganga based <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/GridDriver">GridDriver</a>. This driver works a bit differently, it uses the Ganga Service to keep monitoring jobs and downloading output in the background <strong>even if you log out</strong>. This can be handy for very long running jobs. To use it, replace EL::PrunDriver driver with:
+<p />
+<pre>
+EL::GridDriver driver;
+</pre>
+<p />
+<blockquote>
+<img src="/twiki/pub/TWiki/TWikiDocGraphics/warning.gif" alt="ALERT!" title="ALERT!" width="16" height="16" border="0" /> <strong>Before running for the first time:</strong> The <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/GridDriver">GridDriver</a> uses ganga, which currently needs to create a few configuration defaults before it can be run for the first time. If you have never used ganga before, start it once in interactive mode before using the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/GridDriver">GridDriver</a>:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#A020F0">export</FONT></B> ATLAS_LOCAL_ROOT_BASE=/cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase
+source ${ATLAS_LOCAL_ROOT_BASE}/user/atlasLocalSetup.sh
+localSetupGanga
+ganga</pre>
+<!-- end SyntaxHighlightingPlugin -->
+Answer the questions, then press ctrl+d to exit. You only need to do this <strong>once</strong> on each computer where you want to use the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/GridDriver">GridDriver</a>. 
+</blockquote>
+<p />
+Instead of metadata options, the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/GridDriver">GridDriver</a> is configured using member variables (this might change in the future): 
+<p />
+<pre>
+driver.outputSampleName = "user.amadsen.test.%in:name[2]%";
+</pre>
+<p />
+Note that the submit command can take a minute or two to complete. Even then, not all jobs will start immediately. The driver employs <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/GangaService?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">GangaService</a></span> which will continue to run in the background and submit the jobs over a period of time. It will also automatically restart any jobs that fail a maximum of 4 times, and download the output of completed jobs. This process will continue unattended for 24 hours even if you quit ROOT or even log out of your session. If your jobs are not completed by then, it will be restarted whenever you come back to call retrieve() or wait(). Note however that while the output files are cached locally, they are not actually merged and made available in the job directory until you call retrieve() or wait(). Note also that, as with all batch drivers, only the histogram files are downloaded by the grid driver, output streams are left on the grid. You may download them manually using  <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/SampleHandler">SampleHandler</a>.  
+<p />
+<h3><a name="Passing_Non_Standard_Options_to"></a> Passing Non-Standard Options to the Grid Driver </h3>
+<p />
+In case the option you need to use is not available as an explicit option, you can pass it as a generic option:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>job.options()-&gt;setString (EL::Job::optSubmitFlags, <B><FONT COLOR="#BC8F8F">&quot;-x -y -z&quot;</FONT></B>);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+For options that are supported by <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> it is preferred to pass them via the explicit option instead of the generic mechanism, as it makes <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> aware of what options you chose and gives it the opportunity to do extra actions (if required).
+<p />
+<h3><a name="Processing_multiple_datasets_in"></a> Processing multiple datasets in one JEDI task </h3>
+<p />
+Note that Panda accepts a comma separated list of datasets as input. This allows us to speed up job submission of multiple datasets that should all be processed with the same meta data. To set up such a task, you can do:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>std::unique_ptr&lt;SH::SampleGrid&gt; sample(<B><FONT COLOR="#A020F0">new</FONT></B> SH::SampleGrid(<B><FONT COLOR="#BC8F8F">&quot;AllMyData&quot;</FONT></B>));
+   sample-&gt;meta()-&gt;setString(SH::MetaFields::gridName, <B><FONT COLOR="#BC8F8F">&quot;data15_13TeV.periodA-J.physics_Main.PhysCont.DAOD_EXOT14.grp15_v01_p9999,data16_13TeV.periodA-L.physics_Main.PhysCont.DAOD_EXOT14.grp16_v01_p9999&quot;</FONT></B>);
+   sample-&gt;meta()-&gt;setString(SH::MetaFields::gridFilter, SH::MetaFields::gridFilter_default);
+   sh.add(sample.release());</pre>
+<!-- end SyntaxHighlightingPlugin -->
+where sh is your sample handler. This should be sufficient for data, but for MC samples we usually want a way to keep track of which output came from which input sample. With the <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/PrunDriver?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">PrunDriver</a></span> we can use the option described above to pass in some extra flags that will help with that:   
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>job.options()-&gt;setString (EL::Job::optSubmitFlags, <B><FONT COLOR="#BC8F8F">&quot;--addNthFieldOfInDSToLFN=1,2,3 --useContElementBoundary&quot;</FONT></B>);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+Here, useContElementBoundary ensures that only files that come from the same input dataset are processed together, and the numbers after addNthFieldOfInDSToLFN will add (in this case) the first, second and third part of the name of that input dataset to the names of the produced output files. Note that this only really makes sense if you submitOnly(), as the retrieve command would just add all the histograms back together again. 
+<p />
+<p />
+<h1><a name="Adding_a_new_Driver_to_the_Event"></a> Adding a new Driver to the <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> Package </h1>
+<p />
+<strong>This section should not be relevant to the typical user.  It documents the details of how to implement a new driver to make the <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> package work in a new environment.  If this is what you are trying to do, it may be a good idea to contact me up-front with the details of what you are trying to do, so I can give you some additional guidance.</strong>
+<p />
+The first decision you have to make is whether your driver should be a part of the <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> package or live in a separate package.  That's really up to you, but so far I am keeping everything in one package for simplicity.  However, even if you keep your driver in a separate package, there are probably some changes that need to be made to the <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> package anyway.
+<p />
+The basic driver design will consist of three or four components: <ul>
+<li> A class deriving from the Driver class which runs all the code that needs to run on the submission node.
+</li> <li> A class deriving from the Worker class which runs all the code that needs to be run on the worker node.
+</li> <li> Some steering code which sets up your worker object on the worker node.
+</li> <li> Optional: A unit test which the user can run to check that the driver actually works in his setup.
+</li></ul> 
+<p />
+This part of the <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> design is still very fluid.  As we add more drivers some of the interfaces may change to accommodate their needs.  That is one of the reasons why it is better if I know which drivers are out there, so that I can go and fix them if I break things.  Anyway, this also means that you can request changes to the way <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> works behind the scenes to make your driver implementation easier.
+<p />
+When designing your driver, you have the choice of storing additional information inside the unique submission directory, as long as it doesn't collide with any "official" files put there.  If your files are fairly large you may consider removing them after the job has finished in order to save space.
+<p />
+<h2><a name="The_Driver_Class"></a> The Driver Class </h2>
+<p />
+The Driver class provides an interface for code that runs on the submission node.  As such your class needs to derive from that class and override its virtual functions.  So far the only virtual function is <code>doSubmit</code>, which is called when submitting a new job.
+<p />
+Depending on the nature of your driver, you may also want to add further configuration options.  These can go either into your Driver class itself, or into the driver-independent Job class.  Which of the two is preferable mostly depends on whether this is something you expect the user to set on a job-by-job basis, or something that they would want to keep the same for all their jobs.  A combination is also possible, with a field in the Driver class that can be overridden by a field in the Job class.  Configuration options that affect output datasets have the additional option of going into <code>OutputStream</code>.
+<p />
+Notes: <ul>
+<li> Sometime soon the <code>doSubmit</code> method will be split into a <code>doSubmit</code> and <code>doGather</code> method, which allows drivers to disconnect from a running job and then reconnect at a later stage.
+</li> <li> So far the only error handling strategy we have is to abort if a user algorithm reports an error and then resubmit.  While this can be somewhat inefficient it is the way most users operate anyway.  However, this does not include batch system errors, and you are certainly encouraged to add automatic retries where appropriate.
+</li></ul> 
+<p />
+<h3><a name="The_doSubmit_Function"></a> The <code>doSubmit</code> Function </h3>
+<p />
+The basic functionality of the <code>doSubmit</code> method can be summarized like this: <ul>
+<li> Persistify the information from the <code>Job</code> object that will be needed on the worker node.  This is mostly the list of algorithms, but also the actual samples being run over (for meta-data access), and potentially the list of output datasets.
+</li> <li> Pack up the persistified information and the current installation of <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/RootCore">RootCore</a> for delivery to the batch system.
+</li> <li> Loop over all the input samples to determine which datasets to run over and submit your job for those datasets.  This can be a separate submission for each dataset, or one joint submission for all datasets.  The later is typically more efficient.
+</li> <li> Wait for the job to finish.
+</li> <li> For each input sample add the histogram outputs for the different sub-jobs together into a single file <code>location/hist-sample.root</code>.  The root tool <code>hadd</code> can be used for merging.
+</li> <li> For each input sample and each output dataset create a Sample object that describes how to access the output files created.  Then create a separate <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/SampleHandler">SampleHandler</a> object for each output dataset that contains the samples going with that output dataset.  Store those output datasets as <code>location/out-label</code>.
+</li></ul> 
+<p />
+When writing your driver you will have to interact fairly heavily with the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/SampleHandler">SampleHandler</a> package.  This package is still fairly new and not much utilized, which means that we can still fix things that seem broken or impractical.  As a first thing you have to decide how your samples will be represented.  If what you need is a list of files, call <code>makeTChain</code> or <code>makeTDSet</code> to get the list.  If on the other hand your system is aware of datasets, you may want to use <code>SampleGrid</code> objects and store the information in the meta-data.  You may have to define the appropriate meta-data fields if they don't exist already.
+<p />
+For your output datasets the preferred method is not to copy them back to the submission node, but directly to a storage element (see reasons in the section on output datasets above).  For you that means that you should try to figure out how to do that.  Once you have done that, you need to figure out how to access those files and create a new <code>Sample</code> object to do so.  In most cases this will be a <code>SampleLocal</code> or a <code>SampleGrid</code> object, but if your storage element is sufficiently special you may need a whole new <code>Sample</code> class.  If that is the case, I can help with that.
+<p />
+Now your output histograms have to go a separate way from your output datasets.  How this works depends on your batch system.  Most batch systems send some information back to the submission node, so you can just include it there.  Once all of them have arrived, you can use <code>hadd</code> to combine the output histogram files into a single one.  Or if you want, you can also try to add together histogram files as they arrive.  The later saves some time when running with a large number of sub-jobs.
+<p />
+Notes: <ul>
+<li> There is another class <code>SampleComposite</code> that needs to be supported, but is not supported right now.  From a practical perspective a <code>SampleComposite</code> holds an entire <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/SampleHandler">SampleHandler</a> that you then need to run over and combine.  Not too much changes for you, except that you may have to combine histogram and output files over multiple datasets.  I hope to address this issue soon.
+</li> <li> If you want, for efficiency sake, you can send out a stripped down version of the sample to the worker nodes, containing only meta-data.
+</li></ul> 
+<p />
+<h2><a name="The_Worker_Class"></a> The Worker Class </h2>
+<p />
+The worker class contains the code that actually runs on the worker node.  As such, it is both in control of running the job as well as providing all the hooks the user algorithms need to access their inputs and outputs.  To facilitate that, the <code>Worker</code> base class contains a fair amount of functionality itself and does some translating between the algorithms and the implementation of the derived classes.
+<p />
+When initializing the <code>Worker</code> object you have to do a couple of things: <ul>
+<li> Pass the meta-data for the sample being worked on and the output list into the base class constructor.
+</li> <li> Open an output file for each output dataset and register it with the base class.
+</li> <li> Create all the algorithms and register them with the base class.
+</li></ul> 
+<p />
+Then when actually running you have to do a couple of things per event, and in this order: <ul>
+<li> If you opened a new file, call <code>Worker::tree(tree)</code> with the new input tree.
+</li> <li> Call <code>Worker::treeEntry(entry)</code> with the index of the tree entry currently processed.
+</li> <li> If you opened a new file, call <code>Worker::algsChangeInput()</code>, which will notify the algorithms that a new input file is available.  It is important that this happens after you register both the tree and the next entry to process.
+</li> <li> Call <code>Worker::algsExecute</code> to tell algorithms to do the actual processing of the event.
+</li></ul> 
+<p />
+After a <code>Worker</code> object has finished its processing events, it needs to do a couple more things: <ul>
+<li> It should call <code>Worker::algsFinalize</code> to tell all algorithms that they are finished processing and need to perform any final work left.
+</li> <li> Then it should save the output list somewhere, so that it can be transported back to the user.
+</li> <li> It should copy the output files to the appropriate storage element.
+</li></ul> 
+<p />
+Notes: <ul>
+<li> The output list can be written to a file using <code>Driver::saveOutput</code>.  This is a public static function, so it can be called by either the Driver or the Worker.
+</li> <li> I may at some point merge <code>algsChangeInput</code> into <code>algsExecute</code>, simplifying the process by one step.
+</li> <li> Right now errors are reported through exceptions.  If that proves impractical we can think of other ways of doing so.
+</li> <li> If you want to process multiple input samples on the same worker node you should create a new Worker object for each of them, as they will have to create different output objects.
+</li></ul> 
+<p />
+<h2><a name="The_Steering_Code"></a> The Steering Code </h2>
+<p />
+What you need for your steering code will be highly system dependent.  You probably need a shell script that runs on the worker and a binary that creates your <code>Worker</code> object.  For creating that binary you can just add another if clause to the <code>util/event_loop_worker.cxx</code> source file.  Please don't add a lot of code to that file, just call a function that does everything for your particular driver.  Or you can add a completely new binary if you choose.  I prefer not to do that, since I don't want to have a large number of binaries sitting in my path.
+<p />
+<h2><a name="The_Unit_Test"></a> The Unit Test </h2>
+<p />
+I'm still working out, how best to do the unit test.  For now take a look at <code>test/ut_driver_direct.cxx</code>, which shows how I do it now.  However, I am not really happy with it, so it is probably going to change.
+<p />
+<h1><a name="To_Do_List"></a> To Do List </h1>
+<p /> <ul>
+<li> add support for <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/SampleComposite?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">SampleComposite</a></span>
+</li> <li> output dataset support in PROOF
+</li> <li> grid support
+</li> <li> support for asynchronous submission, i.e. submit the job in one session and retrieve it in another
+</li> <li> python based algorithms
+</li> <li> mechanism for creating driver objects through a label/name
+</li> <li> efficient .par file support for PROOF.  this includes supporting a different .par file name for each job, as well as having a separate .par files for user packages (as opposed to release packages).
+</li> <li> support for at least one batch system as an example (probably lxbatch)
+</li> <li> provide example of how to convert a <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/MakeSelector">MakeSelector</a> based analysis (and TSelector based in general)
+</li> <li> provide an algorithm that does <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PD">D3PD</a> skimming for the user.  such an algorithm would have to properly merge (and skim) meta-data as well.
+</li> <li> provide an option to delete a preexisting output directory automatically
+</li> <li> recheck auto-configuration whenever the package list updates
+</li> <li> some form of event picking service would be nice, i.e. you select events in one job and then run a second job just on those
+</li> <li> add a constructor to the algorithm skeleton
+</li> <li> document output directory and histograms
+</li> <li> rework the unit test to be more flexible
+</li> <li> provide support for lxbatch
+</li> <li> improve .par file support for PROOF
+</li> <li> add option-objects to <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/OutputStream?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">OutputStream</a></span> and Job
+</li> <li> add meta-data to <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/OutputStream?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">OutputStream</a></span>
+</li> <li> allow calling skeleton maker from anywhere
+</li> <li> provide incremental output of histograms, to allow the user checking intermediate results
+</li> <li> allow running for only n events (for tests, etc.)
+</li> <li> improve the basic batch driver so that it is able to work in more environments
+</li> <li> there is a race condition in the batch driver that should be eliminated
+</li> <li> make a driver to work at the geneva Tier 3
+</li> <li> provide better error messages when methods return <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/StatusCode?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">StatusCode</a></span>::FAILURE
+</li> <li> provide a mechanism to move the <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> submit directory (once the job is finished)
+</li> <li> allow algorithms to set the meta-data in output sample handlers
+</li> <li> copy back all log files to submission directory when running in batch
+</li> <li> support for writing output n-tuples directly into xrootd (or other) mass storage
+</li> <li> support for <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/NTupleSvc?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">NTupleSvc</a></span> to copy meta-data, as well as branches
+</li> <li> support for <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/NTupleSvc?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">NTupleSvc</a></span> to write branches from <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/MultiDraw">MultiDraw</a> formulas
+</li> <li> support for <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/NTupleSvc?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">NTupleSvc</a></span> to write branches from white board, once one is implemented
+</li> <li> make a standalone worker: the basic idea being that even if the user wants to maintain control of the <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a>, he should still be able to run <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> algorithms other people give him.
+</li> <li> verify that it is possible to run more than one <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/NTupleSvc?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">NTupleSvc</a></span> at a time
+</li> <li> add a service that allows to get branches safely while using other data interfaces, i.e. it checks whether the branch is connected to anything and if not, it connects it for you to memory of adequate size
+</li> <li> allow batch drivers to split jobs by events, not files
+</li> <li> allow drivers to write files directly into storage elements
+</li> <li> allow batch drivers to work with a read-only shared file system
+</li> <li> allow batch drivers to work without a shared file system
+</li> <li> properly handle empty samples, i.e. samples with no files
+</li> <li> handle the log files for batch drivers better
+</li> <li> support automatic registration of output datasets on Tier 3 with the grid
+</li> <li> support remote job submission:  Attila has a setup where he submits his PROOF jobs remotely and then collects the outputs.
+</li> <li> provide an algorithm to run mclimitCore in batch
+</li> <li> make <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> unit tests follow standard mechanisms
+</li> <li> make <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/DirectDriver?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">DirectDriver</a></span> use an adaptive progress counter, i.e. one that prints every 5 seconds
+</li> <li> add EOS support to <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/SampleHandler">SampleHandler</a>/EventLoop
+</li> <li> make a message in wait() when it tries another retrieve
+</li> <li> allow the skeleton maker to make algorithms that are already configured to use D3PDReader
+</li> <li> make sure that I use initialize/histInitialize appropriately in the tutorial
+</li> <li> add common header files to algorithm skeletons
+</li> <li> allow PROOF to write out histograms through a file instead of the output list (in case the user has a very large number of histograms).  this will then be merged using hadd, as the files arrive.
+</li> <li> allow PROOF to reconnect for every sample (for debugging)
+</li> <li> improve job organization for batch driver by naming the jobs
+</li> <li> print out more debugging output if grid submission fails
+</li> <li> provide a more elegant histogram manager
+</li> <li> switch tutorial to a new configuration mechanism
+</li> <li> track <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> use on the grid and provide a <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/AthSummary?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">AthSummary</a></span>.txt
+</li> <li> allow accessing the sample name from the algorithm
+</li> <li> provide an example of a steering script in python
+</li> <li> allow make_skeleton.sh to make an algorithm with a manual streamer
+</li> <li> make a skeleton with a manual streamer
+</li> <li> make sure that none of the drivers just runs silently (it can be disconcerting to some users)
+</li></ul> 
+<p />
+<p />
+<!-- <strong>*********************************************************</strong> -->
+<!-- Do NOT remove the remaining lines, but add requested info as appropriate -->
+<!-- <strong>*********************************************************</strong> -->
+<p />
+<hr />
+<!-- For significant updates to the topic, consider adding your 'signature' (beneath this editing box) -->
+<strong>Major updates</strong>:<br />
+-- <a class="twikiLink" href="/twiki/bin/view/Main/NilsKrumnack">NilsKrumnack</a> - 24-Jan-2012
+<p />
+<!-- Person responsible for the page: 
+Either leave as is - the creator's name will be inserted; 
+Or replace the complete REVINFO tag (including percentages symbols) with a name in the form <a class="twikiLink" href="/twiki/bin/view/Main/TwikiUsersName">TwikiUsersName</a> -->
+Responsible: <a class="twikiLink" href="/twiki/bin/view/Main/NilsKrumnack">NilsKrumnack</a> <br />
+<!-- Once this page has been reviewed, please add the name and the date e.g. <a class="twikiLink" href="/twiki/bin/view/Main/StephenHaywood">StephenHaywood</a> - 31 Oct 2006 -->
+Last reviewed by: <strong>Never reviewed</strong> </div><!-- /patternTopic-->
+<div class="twikiContentFooter"></div></div><!-- /patternContent-->
+<div class="clear"></div>
+<a name="topic-actions"></a><div class="patternTopicActions"><div class="patternTopicAction"><span class="patternActionButtons"><span style=''><span><a href='https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/EventLoop?t=1763376385;nowysiwyg=1' rel='nofollow' title='Edit this topic text' accesskey='e'><img src='/twiki/pub/TWiki/TWikiDocGraphics/uweb-o14.gif' width='14' height='14' border='0' alt='' /> <span class='twikiAccessKey'>E</span>dit</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span></span><span style=''><span><a href='/twiki/bin/attach/AtlasProtected/EventLoop' rel='nofollow' title='Attach an image or document to this topic' accesskey='a'><span class='twikiAccessKey'>A</span>ttach</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span></span><span><a href='/twiki/bin/view/AtlasProtected/EventLoop?cover=print' rel='nofollow' title='Printable version of this topic' accesskey='p'><span class='twikiAccessKey'>P</span>rint version</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span><span><a href='/twiki/bin/oops/AtlasProtected/EventLoop?template=oopshistory' rel='nofollow' title='View total topic history' accesskey='h'><span class='twikiAccessKey'>H</span>istory</a></span>: r123&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/EventLoop?rev1=123;rev2=122" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/EventLoop?rev=122" rel="nofollow">r122</a>&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/EventLoop?rev1=122;rev2=121" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/EventLoop?rev=121" rel="nofollow">r121</a>&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/EventLoop?rev1=121;rev2=120" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/EventLoop?rev=120" rel="nofollow">r120</a>&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/EventLoop?rev1=120;rev2=119" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/EventLoop?rev=119" rel="nofollow">r119</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span><a href='/twiki/bin/oops/AtlasProtected/EventLoop?template=backlinksweb' rel='nofollow' title='Search the AtlasProtected Web for topics that link to here' accesskey='b'><span class='twikiAccessKey'>B</span>acklinks</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span><a href='/twiki/bin/view/AtlasProtected/EventLoop?raw=on' rel='nofollow' title='View raw text without formatting' accesskey='r'><span class='twikiAccessKey'>R</span>aw View</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span style=''><span><a href='https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/EventLoop?t=1763376385;nowysiwyg=0' rel='nofollow' title='WYSIWYG editor' accesskey='w'>WYSIWYG</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span></span><span><a href='/twiki/bin/oops/AtlasProtected/EventLoop?template=oopsmore&amp;param1=123&amp;param2=123' rel='nofollow' title='Delete or rename this topic; set parent topic; view and compare revisions' accesskey='m'><span class='twikiAccessKey'>M</span>ore topic actions</a></span></span></div><!--/patternTopicAction--></div><!--/patternTopicActions-->
+<div class="patternInfo twikiGrayText"><div class="patternRevInfo">Topic revision: r123 - 2018-07-24 <a href="https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/EventLoop?t=1763376385;nowysiwyg=1" target="_top">-</a> <a class="twikiLink" href="/twiki/bin/view/Main/NilsKrumnack">NilsKrumnack</a></div><!-- /patternRevInfo--></div><!-- /patternInfo-->
+</div><!-- /patternMainContents-->
+</div><!-- /patternMain--><div id="patternLeftBar"><div id="patternClearHeaderLeft"></div>
+<div id="patternLeftBarContents"><div class="patternLoginActions"><span style="padding: 0 0 0 20px; word-wrap:break-word; display:block;"><img src="https://twiki.cern.ch/twiki/pub/TWiki/TWikiDocGraphics/person.gif" style="position:absolute; margin: 0 0 0 -20px;" /> <span class="twikiNewLink"><a href="/twiki/bin/edit/Main/RoySchimmelBrener?topicparent=AtlasProtected.EventLoop;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">RoySchimmelBrener</a></span></span>  <img src="/twiki/pub/TWiki/TWikiDocGraphics/lock.gif" width="16" height="16" alt="Lock" title="Lock" border="0" /> <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EventLoop?logout=1">Log Out</a></div><div class="patternWebIndicator"> <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="/twiki/bin/view/AtlasProtected/WebHome"><img src="/twiki/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" width="13" height="13" alt="Web background" title="Web background" border="0" /> AtlasProtected</a>
+</li></ul> 
+</div> <ul>
+<li> <strong><a href="https://atlas-collaboration.web.cern.ch" target="_blank"><span style="color: blue">ATLAS Collaboration</span><img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a></strong>
+</li></ul> 
+<hr /> <ul>
+<li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/WebHome"><span style="color: #0000ff"> ATLAS TWiki</span></verbatim></a></strong>
+</li> <li> <strong><a class="twikiCurrentWebHomeLink twikiLink" href="/twiki/bin/view/AtlasProtected/WebHome"><span style="color: #0000ff"> ATLAS Protected</span></verbatim></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasComputing/WebHome"><span style="color: #0000ff"> ATLAS Computing </span></verbatim></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasPublic/WebHome"><span style="color: #0000ff"> Public Results </span></verbatim></a></strong>
+</li></ul> 
+<hr /> <ul>
+<li> <strong><a href="https://its.cern.ch/jira/secure/CreateIssueDetails!init.jspa?pid=22679&amp;issuetype=3&amp;summary=Problem+with+EventLoop+TWiki+topic&amp;description=The+topic+https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/EventLoop+has+an+issue.+Describe+it+below:&amp;reporter=rbrener" target="_blank"><span style="color: #ff0000"> Report outdated page </span></verbatim><img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a></strong>
+</li> <li> <strong><a href="mailto&#58;atlas&#45;twiki&#45;support&#64;cern&#46;ch"><span style="color: #ff0000"> Twiki-Support </span></verbatim></a></strong>
+</li></ul> 
+<hr />
+<p /> <ul>
+ <li>
+ <ul>
+<li> <strong><a href="https://twiki.cern.ch/twiki/bin/view/AtlasPublic" target="_top"><span style="color: navy;"> Public Results </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AtlasPhysics"><span style="color: navy;"> Physics </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/AtlasDetectors"><span style="color: navy;"> Detectors </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/AtlasTrigger"><span style="color: navy;"> Trigger </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasComputing/WebHome"><span style="color: navy;"> Computing </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/DataPreparation"><span style="color: navy;"> Data Preparation </span></a></strong>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/Atlas/DocumentationManagement">Documentation Help</a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/Atlas/AtlasGlossary">Glossary</a>
+</li></ul> 
+</li></ul> 
+<p />
+<div class="twikiLeftBarBase">
+  <a href="/twiki/bin/edit/AtlasProtected/EventLoopLeftBar?templatetopic=AtlasProtected.WebLeftBarTemplate">Create</a> a LeftBar for this page
+</div>
+<p />
+<hr />
+<span style="color: #008000"> <img src='https://twiki.cern.ch/twiki/pub/TWiki/TWikiDocGraphics/searchtopic.gif'> <strong><a href="https://search.cern.ch/Pages/TwikiResults.aspx?k=generic2%3AATLAS" target="_blank">TWiki Search<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a></strong> </span></verbatim>
+<hr />
+<p />
+<!-- <ul>
+ <li>
+ <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="/twiki/bin/view/AtlasProtected/WebHome">AtlasProtected Wiki</a>
+</li></ul> 
+</li></ul> 
+-->
+</div><!-- /patternLeftBarContents--></div><!-- /patternLeftBar-->
+</div><!-- /patternFloatWrap-->
+<div class="clear">&nbsp;</div>
+</div><!-- /patternOuter--></div><!-- /patternWrapper--><div id="patternTopBar"><div id="patternTopBarContents"><table border="0" cellpadding="0" cellspacing="0" style="width:100%; margin-top:12px;">
+<tr><td valign="middle"><span id="twikiLogo" class="twikiImage"><a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/WebHome"><img src="/twiki/pub/AtlasPublic/AtlasTWikiLogos/AtlasTwikiProtectedLogo.png" border="0" alt="CERN" style="border:none;" /></a></span></td>
+<td align="right" valign="top" class="patternMetaMenu">
+ <ul>
+<li> <form name="jumpForm" action="/twiki/bin/view/AtlasProtected/EventLoop"><input id="jumpFormField" type="text" class="twikiInputField" name="topic" value="" size="18" /><noscript>&nbsp;<input type="submit" class="twikiButton" size="5" name="submit" value="Jump" />&nbsp;</noscript>   </form>
+</li> <li> <form name="quickSearchForm" action="https://search.cern.ch/Pages/TwikiResults.aspx" target="search" class="cernTWikiSearch">    <ul class="engineList" style="background-image: url('https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/arrow.png');">        <li class="active" id="twikisearch">            <img src="https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/twikisearchicon.gif" alt="TWiki Search Icon" />            <span class="engineDescription">TWiki Search</span>        </li>        <!-- Due to a security incident <a href="https://cern.service-now.com/service-portal?id=outage&amp;n=OTG0156848" target="_blank">OTG0156848<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>, the legacy CERN Search Service has been shut down        <li id="cernsearch">            <img src="https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/cernsearchicon.png" alt="Cern Search Icon" />            <span class="engineDescription">Cern Search</span>        </li>         -->        <li id="googlesearch">            <img class="engine" src="https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/googlesearchicon.png" alt="Google Search Icon" />            <span class="engineDescription">Google Search</span>        </li>    </ul>    <input type="text" class="twikiInputField" id="quickSearchBox" name="k" value="" size="18" /> <br />    <input type="radio" name="scope" value=Atlas checked />     <span class="webScopeDescription">Atlas</span>    <input type="radio" name="scope" value="AllWebs" />    <span class="allWebsScopeDescription">All webs</span>    <input type='hidden' name='autologin' value='1'/>     <noscript>        &nbsp; <input type="submit" size="5" class="twikiButton" name="submit" value="Search"/>&nbsp;    </noscript>
+</li></ul> 
+</form>
+<p />
+<p />
+<!-- <pre> -->
+<script language="javascript">
+<!--
+$(function() {
+    // We use the current web name to form the redirect in the TWiki search
+    var currentWeb = undefined;
+    // If the web starts with alice* atlas* cms* or lhcb* (case-insensitive),
+    // the "Web search" should be altered so that AtlasFoo => Atlas
+    var specialWeb = undefined;
+    // Remembering what the user have entered into the searchbox to after
+    // he has selected a new search engine from the dropdown
+    var searchPhrase = '';
+
+    // --- BEGIN: CONFIGURABLE LIST FOR SUBWEB SEARCH ---
+    // List of webs for which sub-web searching should be enabled
+    var subWebSearchWebs = ['AtlasProtected', 'AtlasComputing', 'Atlas'];
+    // --- END: CONFIGURABLE LIST FOR SUBWEB SEARCH ---
+
+    // --- ORIGINAL WEB DETECTION LOGIC ---
+    // We want to store the current web for later use.
+    var currentWebSearch = window.location.pathname.match(/\/([A-Z][^\/]+)/);
+    if (currentWebSearch != null) {
+        currentWeb = currentWebSearch[1];
+
+        // Do we have a special kind of web? If so, the web search should be altered a little to fetch more broader results.
+        var specialWebSearch = currentWeb.match(/^(alice|atlas|cms|lhcb)/i);
+        if (specialWebSearch != null) {
+            var lowercaseToCorrect = {
+                'alice' : 'Alice',
+                'atlas' : 'Atlas',
+                'cms'   : 'CMS',
+                'lhcb'  : 'LHCb'
+            };
+            specialWeb = lowercaseToCorrect[specialWebSearch[1].toLowerCase()];
+            $('span.webScopeDescription').text(specialWeb);
+        }
+    } else {
+        currentWeb = 'DefaultWeb';
+    }
+
+    // --- BEGIN: SUBWEB LOGIC TO EXTRACT SUBWEB PATH (EXCLUDING TOPIC) ---
+    var subWebSearchWebs = ['AtlasProtected', 'AtlasComputing', 'Atlas'];
+    // Build regex to match web/subweb path and topic
+    var subWebsPattern = new RegExp(
+        '/((' + subWebSearchWebs.join('|') + ')(?=(?:/|$))(?:/[A-Za-z0-9_]+)*)/([A-Za-z0-9_]+)$'
+    );
+    var subWebMatch = window.location.pathname.match(subWebsPattern);
+    if (subWebMatch) {
+        // subWebMatch[1] is the full web/subweb path (e.g. "AtlasComputing/AtlasComputingArchive")
+        // subWebMatch[3] is the topic (e.g. "WebHome")
+        currentWeb = subWebMatch[1];
+        specialWeb = currentWeb;
+        $('span.webScopeDescription').text(specialWeb);
+    }
+    // --- END: SUBWEB LOGIC TO EXTRACT SUBWEB PATH (EXCLUDING TOPIC) ---
+
+    // Do we have a favourite search engine in localStorage? We set Twiki search as default anyways
+    if (window.localStorage) {
+        // var storedEngine = localStorage.getItem('defaultSearchEngine');
+        // console.log('stored engine preference: ' + storedEngine);
+        var storedEngine = 'twikisearch';
+        var storedEngineLi = $('.cernTWikiSearch li#' + storedEngine);
+        if (!storedEngineLi.hasClass('active')) {
+            changeActiveSearchEngine(storedEngineLi);
+        }
+        if (storedEngine == 'twikisearch') {
+            $('input[name=scope][value=AllWebs]').attr('disabled','disabled');
+            $('.allWebsScopeDescription').addClass('disabled');
+        }
+    }
+    
+    // Toggle the searchEngines list on and off on click
+    $('.cernTWikiSearch ul.engineList').click(function(e) {
+        e.stopPropagation();
+        if ($(this).hasClass('open')) {
+            $(this).removeClass('open');
+        } else {
+            $(this).addClass('open');
+        }
+    });
+
+    // Stupid IE8 hack because the click handler on ul.engineList does not work properly there.
+    if ($.browser.msie && document.documentMode && document.documentMode < 9) {
+        $('.cernTWikiSearch #quickSearchBox').focus(function(e) {
+            $('.cernTWikiSearch ul.engineList').removeClass('open');
+        });
+    }
+    
+    // Handle clicks on one of the search engines
+    $('.cernTWikiSearch ul.engineList li').click(function(e) {
+        // If we clicked on a <li> that does not has class 'active', it means this should become active and swap places with this.
+        if (!$(this).hasClass('active')) {
+            changeActiveSearchEngine($(this));
+        }  
+        if ($(this).parent().hasClass('open')) {
+            $('.cernTWikiSearch #quickSearchBox').val(searchPhrase);
+            $('.cernTWikiSearch #quickSearchBox').focus();                          
+        }
+        if ($(this).attr('id') == 'twikisearch') {
+            var allWebsRadio = $('input[name=scope][value=AllWebs]');
+            allWebsRadio.attr('disabled','disabled');
+            allWebsRadio.siblings('input[type=radio]').attr('checked',true)
+            $('.allWebsScopeDescription').addClass('disabled');
+        } else {
+            $('input[name=scope][value=AllWebs]').attr('disabled','');
+            $('.allWebsScopeDescription').removeClass('disabled');
+        }
+    });
+    
+    // Show the engine description text on hover
+    $('.engineList.open li').live('hover',function() {
+        var displayText = $(this).find('span.engineDescription').text();
+        $('.cernTWikiSearch #quickSearchBox').val(displayText);
+    });
+
+
+    // The form is submitted, now let's do the search.
+    $('.cernTWikiSearch').submit(function(e) {
+        e.preventDefault();
+
+        var scope = $('input[name=scope]:checked', $(this)).val();
+        if (scope != 'AllWebs' && specialWeb !== undefined) {
+            scope = specialWeb;
+        }
+        var val = $('.cernTWikiSearch #quickSearchBox').val();
+        var engine = $('.engineList li.active').attr('id')
+        
+        switch (engine) {
+            case 'googlesearch':
+                window.open('https://google.com/search?q=site:' + encodeURIComponent('https://twiki.cern.ch') + (scope != 'AllWebs' ? ' ' + scope : '') + ' ' + val);
+                break;
+            case 'cernsearch':
+                window.open('https://search.cern.ch/Pages/TwikiResults.aspx?k=' + val + (scope != 'AllWebs' ? ' cernscope:' + scope : '') + '&autologin=1');
+                break;
+            case 'twikisearch':
+                window.open(window.location.pathname.replace(/\/[A-Z].+$/,'') + '/' + currentWeb + '/WebSearch?search=' + val + '&scope=all');
+                break;
+        default:
+            break;
+        }
+        
+        // Save the search engine. If the user reloads the page he should get the last one used.
+        if (window.localStorage) { 
+            console.log('store engine preference: ' + engine);
+            localStorage.setItem('defaultSearchEngine',engine);
+        }
+    });
+    
+    // Save the search phrase on every key up
+    $('.cernTWikiSearch #quickSearchBox').keyup(function() {
+        searchPhrase = $(this).val();
+    });
+    
+    // If a user clicks outside the search engine list, the search engine list should be closed.
+    $('html').click(function() {
+        if ($('.engineList').hasClass('open')) {
+            $('.engineList').removeClass('open');
+            $('.cernTWikiSearch #quickSearchBox').val(searchPhrase);
+        }
+    });
+});
+
+// We want to change the active search engine
+function changeActiveSearchEngine(engineLi) {
+    var activeEngine = engineLi.siblings(':first');
+    engineLi.detach().insertBefore(activeEngine);
+    activeEngine.removeClass('active');
+    engineLi.addClass('active');
+    if (engineLi.attr('id') == 'twikiSearch') {
+        deactivateAllWebsOption();
+    }
+}
+
+// The user has chosen twiki search (or the preference was stored in localStorage). 
+// We will then disable the 'All Webs' option since this will time out.
+function deactivateAllWebsOption() {
+}
+
+// Helper method to check input attribute browser compability
+function checkInputAttributeSupport(attribute) {
+    var i = document.createElement("input");
+    return typeof i.placeholder !== 'undefined';
+}
+//-->
+</script>
+<!-- </pre> --> <ul>
+<li> 
+</li></ul> 
+</td></tr></table></div></div><!-- /patternTopBar--><div id="patternBottomBar"><div id="patternBottomBarContents"><div id="patternWebBottomBar"><div class="twikiCopyright"><span class="twikiRight"> <a href="http://twiki.org/"><img src="/twiki/pub/TWiki/TWikiLogos/T-badge-88x31.gif" alt="This site is powered by the TWiki collaboration platform" width="88" height="31" title="This site is powered by the TWiki collaboration platform" border="0" /></a></span><span class="twikiRight" style="padding:0 10px 0 10px"> <a href="http://www.perl.org/"><img src="/twiki/pub/TWiki/TWikiLogos/perl-logo-88x31.gif" alt="Powered by Perl" width="88" height="31" title="Powered by Perl" border="0" /></a></span>Copyright &amp;© 2008-2025 by the contributing authors. All material on this collaboration platform is the property of the contributing authors. <br />  or Ideas, requests, problems regarding TWiki? use <a href="https://discourse.web.cern.ch/c/collaborative-editing/wikis/12">Discourse</a> or <a href='https://twiki.cern.ch/twiki/bin/view/Main/ServiceNow'>Send feedback</a> </div><!--/twikiCopyright--></div><!--/patternWebBottomBar--></div><!-- /patternBottomBarContents--></div><!-- /patternBottomBar-->
+</div><!-- /patternPage-->
+</div><!-- /patternPageShadow-->
+</div><!-- /patternScreen-->
+<p />
+<p />
+<p />
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+	 var u="https://webanalytics.web.cern.ch/";
+	 _paq.push(['setTrackerUrl', u+'matomo.php']);
+	 _paq.push(['setSiteId', '5']);
+	 var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	 g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+<p />
+</body></html>

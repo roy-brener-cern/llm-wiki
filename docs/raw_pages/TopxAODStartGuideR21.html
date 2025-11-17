@@ -1,0 +1,1613 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+<script type="text/javascript" src="/twiki/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="/twiki/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="/twiki/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<link rel="stylesheet" href="https://twiki.cern.ch/twiki/pub/TWiki/ImagePlugin/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="https://twiki.cern.ch/twiki/pub/TWiki/ImageGalleryPlugin/style.css" type="text/css" media="all" />
+<title> TopxAODStartGuideR21 &lt; AtlasProtected &lt; TWiki</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="icon" href="/twiki/pub/AtlasProtected/WebPreferences/favicon_new.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/twiki/pub/AtlasProtected/WebPreferences/favicon_new.ico" type="image/x-icon" />
+<link rel="alternate" href="https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/TopxAODStartGuideR21?t=1763376474" type="application/x-wiki" title="Edit TopxAODStartGuideR21" />
+<link rel="edit" href="https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/TopxAODStartGuideR21?t=1763376474" title="Edit TopxAODStartGuideR21" />
+<meta name="SCRIPTURLPATH" content="/twiki/bin" />
+<meta name="SCRIPTSUFFIX" content="" />
+<meta name="TEXT_JUMP" content="Jump" />
+<meta name="TEXT_SEARCH" content="Search" />
+<meta name="TEXT_NUM_TOPICS" content="Number of topics:" />
+<meta name="TEXT_MODIFY_SEARCH" content="Modify search" />
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/twiki/bin/view/AtlasProtected/WebRss" />
+<base href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/TopxAODStartGuideR21"></base>
+<!--BEHAVIOURCONTRIB--><script type="text/javascript" src="/twiki/pub/TWiki/BehaviourContrib/behaviour.compressed.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiWindow.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiEvent.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiHTML.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiForm.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/PatternSkin/pattern.js"></script>
+<style type="text/css" media="all">
+@import url('/twiki/pub/TWiki/TWikiTemplates/base.css');
+</style>
+<style type="text/css" media="all">
+#patternTopBar,
+#patternClearHeaderCenter,
+#patternClearHeaderLeft,
+#patternClearHeaderRight,
+#patternTopBarContentsOuter,
+#patternTopBarContents {
+	height:64px; /* top bar height; make room for header columns */
+	overflow:hidden;
+}
+#patternOuter {
+	margin-left:14em;
+}
+#patternLeftBar {
+	width:14em;
+	margin-left:-14em;
+}
+</style>
+<style type="text/css" media="all">
+@import url('/twiki/pub/TWiki/PatternSkin/layout.css');
+@import url('/twiki/pub/TWiki/PatternSkin/style.css');
+@import url('/twiki/pub/TWiki/PatternSkin/colors.css');
+</style>
+<style type="text/css" media="all">
+	/* Styles that are set using variables */
+	.patternBookView .twikiTopRow,
+	.patternWebIndicator a img,
+	.patternWebIndicator a:hover img {
+		background-color:#0b048c ;
+	}
+	#patternTopBarContents { background-image:url(/twiki/pub/TWiki/PatternSkin/TWiki_header.gif); background-repeat:no-repeat;}
+	
+	.patternBookView {
+		border-color:#0b048c ;
+	}
+	.patternPreviewPage #patternMain {
+		/* uncomment to set the preview image */
+		/*background-image:url("/twiki/pub/TWiki/PreviewBackground/preview2bg.gif");*/
+	}
+	
+</style><style type="text/css" media="all">
+
+
+
+</style>
+<style type="text/css" media="all">
+	@import url("/twiki/pub/TWiki/PatternSkin/print.css");
+</style>
+<!--[if IE]><style type="text/css" media="screen">
+pre {
+	overflow-x:auto;
+	padding-bottom:expression(this.scrollWidth > this.offsetWidth ? 16 : 0);
+}
+</style>
+<![endif]-->
+<!--[if lte IE 6]> 
+<style type="text/css">
+#patternLeftBar {
+	position:relative; /* IE 5.5 needs this or the contents won't show outside the parent container on print. IE 6.0 needs it only during printable copy! */
+}
+</style><![endif]-->
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiStyles.js"></script>
+
+<script src="https://twiki.cern.ch/twiki/pub/TWiki/ChecklistPlugin/itemstatechange.js" language="javascript" type="text/javascript"></script><!--GENERATED_HEADERS--><!-- CERNSEARCHBAR_CSS --> <link rel='stylesheet' href='/twiki/pub/TWiki/CernSearchBar/CernSearchBar.css' type='text/css' media='all' /></head>
+<body class="patternViewPage">
+<a name="PageTop"></a>
+<div id="patternScreen">
+<div id="patternPageShadow">
+<div id="patternPage">
+<div id="patternWrapper"><div id="patternOuter">
+<div id="patternFloatWrap">
+<div id="patternMain"><div id="patternClearHeaderCenter"></div>
+<div id="patternMainContents"><div class="patternTop"><span class="patternHomePath twikiLeft"><a class="twikiLink" href="/twiki/bin/view/Main/WebHome">TWiki</a><span class='twikiSeparator'>&gt;</span><img src="/twiki/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" border="0" alt="" width="13" height="13" style="background-color:#0b048c " />&nbsp;<a href="/twiki/bin/view/AtlasProtected/WebHome">AtlasProtected Web</a><span class='twikiSeparator'>&gt;</span><a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AtlasPhysics">AtlasPhysics</a><span class='twikiSeparator'>&gt;</span><a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TopWorkingGroup">TopWorkingGroup</a><span class='twikiSeparator'>&gt;</span><a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TopReconstructionGroup">TopReconstructionGroup</a><span class='twikiSeparator'>&gt;</span><a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/TopxAODStartGuideR21" title='Topic revision: 281 (2024-07-08 - 11:23:10)'>TopxAODStartGuideR21</a> <span class='patternRevInfo'>(2024-07-08, <span class="twikiNewLink"><a href="/twiki/bin/edit/Main/SteffenKorn?topicparent=AtlasProtected.TopxAODStartGuideR21;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">SteffenKorn</a></span>)</span></span><!-- /patternHomePath--><span class="patternToolBar twikiRight"><span><a href='https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/TopxAODStartGuideR21?t=1763376474;nowysiwyg=1' rel='nofollow' title='Edit this topic text' accesskey='e'><img src='/twiki/pub/TWiki/TWikiDocGraphics/uweb-o14.gif' width='14' height='14' border='0' alt='' /> <span class='twikiAccessKey'>E</span>dit</a></span><span><a href='/twiki/bin/attach/AtlasProtected/TopxAODStartGuideR21' rel='nofollow' title='Attach an image or document to this topic' accesskey='a'><span class='twikiAccessKey'>A</span>ttach</a></span><span><a href='/twiki/bin/genpdf/AtlasProtected/TopxAODStartGuideR21' rel='nofollow' title='Create a PDF file for the topic' accesskey='f'><span class='twikiAccessKey'>P</span>DF</a></span></span><!-- /patternToolBar--><br class="twikiClear" /></div><!--/patternTop--><div class="twikiContentHeader"></div><div class="patternContent"><div class="patternTopic"> <!-- This is the default ATLAS template. 
+Please modify it in the sections indicated to create your topic. In particular, notice that at the bottom there are some sections that must be filled for publicly accessible pages.
+If you have any comments/complaints about this template, please email atlas-twiki-support -at- cern dot ch
+<p />
+By default the title is the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/WikiWord">WikiWord</a> used to create this topic
+if you want to modify it to something more meaningful, just replace <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/TopxAODStartGuideR21">TopxAODStartGuideR21</a> below with i.e "My Topic"
+<code><b>=======</b></code>  you can remove the lines above <code><b>=========================================</b></code> -->
+<span style="color: #ff0000"> <strong>This twiki is outdated! The new documentation can be found</strong> <a href="https://top-reco.docs.cern.ch/" target="_blank">https://top-reco.docs.cern.ch/<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </span></verbatim>
+<p />
+<h1><a name="TopxAODStartGuideR21"></a> TopxAODStartGuideR21 </h1>
+<p />
+<div class="twikiToc"> <ul>
+<li> <a href="#Introduction"> Introduction</a>
+</li> <li> <a href="#Announcement_problem_with_the_gr"> Announcement: problem with the grid submission scripts</a> <ul>
+<li> <a href="#Option_A_copy_the_submission_scr"> Option A: copy the submission scripts locally</a>
+</li> <li> <a href="#Option_B_Solving_the_issue_for_o"> Option B: Solving the issue for older releases with a sparse checkout</a> <ul>
+<li> <a href="#If_you_don_t_have_any_local_pack"> If you don't have any local package (i.e. you never did a sparse checkout and you don't have an athena folder)</a>
+</li> <li> <a href="#If_you_already_have_something_in"> If you already have something in the sparse checkout (you have already some packages in the athena folder)</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#1_First_time_setup_of_AnalysisTo">1  First time setup of AnalysisTop</a> <ul>
+ <li>
+ <ul>
+<li> <a href="#If_you_want_to_change_the_releas"> If you want to change the release you're using</a>
+</li> <li> <a href="#If_your_setup_becomes_messed_up"> If your setup becomes messed up</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#2_Running_locally">2  . Running locally</a> <ul>
+<li> <a href="#2_1_Make_a_flat_ntuple_containin">2.1  Make a flat ntuple containing only calibrated and selected objects</a>
+</li> <li> <a href="#2_2_Test_input_files">2.2  Test input files</a>
+</li></ul> 
+</li> <li> <a href="#3_I_was_elected_to_lead_not_to_r">3  "I was elected to lead, not to read"</a> <ul>
+<li> <a href="#3_1_Command_line_options">3.1  Command line options</a>
+</li> <li> <a href="#3_2_Configuration_options">3.2  Configuration options</a> <ul>
+<li> <a href="#Number_of_events_to_run_over"> Number of events to run over</a>
+</li> <li> <a href="#First_events_to_run_over"> First events to run over</a>
+</li> <li> <a href="#Modify_output_file_name"> Modify output file name</a>
+</li> <li> <a href="#Good_Runs_Lists"> Good Runs Lists</a>
+</li> <li> <a href="#PRW_and_Lumicalc_files"> PRW and Lumicalc files</a>
+</li> <li> <a href="#FullSim_vs_AFII"> FullSim vs. AFII</a>
+</li> <li> <a href="#Physics_Objects"> Physics Objects</a> <ul>
+<li> <a href="#MET"> MET</a>
+</li> <li> <a href="#Muons"> Muons</a>
+</li> <li> <a href="#Soft_Muons_use_release_21_2_101"> Soft Muons (use release&gt;=21.2.101)</a> <ul>
+<li> <a href="#Truth_origin_of_the_soft_muons_a"> Truth origin of the soft muons (available from AB 21.2.106 on)</a>
+</li></ul> 
+</li> <li> <a href="#Small_R_Jets"> Small-R Jets</a> <ul>
+<li> <a href="#IMPORTANT_b_tagging_related_chan"> IMPORTANT b-tagging related changes for small-R jets configuration</a>
+</li></ul> 
+</li> <li> <a href="#Large_R_jets"> Large-R jets</a>
+</li></ul> 
+</li> <li> <a href="#BadBatman"> BadBatman</a>
+</li> <li> <a href="#JVT_WP"> JVT WP</a>
+</li> <li> <a href="#fJVT_WP"> fJVT WP</a>
+</li> <li> <a href="#Forward_electrons_available_sinc"> Forward electrons (available since AnalysisTop 21.2.80)</a>
+</li> <li> <a href="#B_tagging_showering_algorithm_an"> B-tagging showering algorithm and TopDataPreparation</a>
+</li> <li> <a href="#Systematics"> Systematics</a>
+</li> <li> <a href="#Other_systematic_options"> Other systematic options</a> <ul>
+<li> <a href="#Jets"> Jets</a>
+</li> <li> <a href="#Jet_calibrations_for_analyses_us"> Jet calibrations for analyses using boosted vector bosons or jet reclustering</a>
+</li> <li> <a href="#Large_R_jet"> Large-R jet</a> <ul>
+<li> <a href="#LC_Topo_large_R_jet"> LC-Topo large-R jet</a>
+</li> <li> <a href="#TCC_large_R_jet"> TCC large-R jet</a>
+</li> <li> <a href="#Large_R_Jet_Tagging_SF_Uncertain"> Large-R Jet Tagging SF Uncertainties</a>
+</li></ul> 
+</li> <li> <a href="#Jet_Ghost_Tracks"> Jet Ghost Tracks</a>
+</li> <li> <a href="#Quark_Gluon_fraction_in_Jets_Unc"> Quark/Gluon fraction in Jets Uncertainties</a> <ul>
+<li> <a href="#AT_repository_for_q_g_fractions"> AT repository for q/g fractions</a>
+</li></ul> 
+</li> <li> <a href="#Jet_response_plots"> Jet response plots</a>
+</li> <li> <a href="#Egamma"> Egamma</a>
+</li> <li> <a href="#B_tagging_eigenvector_uncertaint"> B-tagging eigenvector uncertainties.</a>
+</li> <li> <a href="#Store_per_jet_btag_SFs"> Store per-jet btag SFs</a>
+</li></ul> 
+</li> <li> <a href="#Example_of_systematic_variation"> Example of systematic variation on scale factors</a> <ul>
+<li> <a href="#Tau"> Tau</a>
+</li> <li> <a href="#Electrons"> Electrons</a>
+</li> <li> <a href="#Photons"> Photons</a>
+</li></ul> 
+</li> <li> <a href="#Truth_options"> Truth options</a>
+</li> <li> <a href="#Exploting_loose_physics_objects"> Exploting loose physics objects definitions</a>
+</li> <li> <a href="#Fakes_control_region_determinati"> Fakes control region determination</a>
+</li></ul> 
+</li></ul> 
+</li></ul> 
+</div>     <!-- this line is optional -->
+<p />
+<p />
+<h1><a name="Introduction"></a> Introduction </h1>
+<p />
+AnalysisTop is a general purpose xAOD analysis framework. It is highly configurable and well supported, with a strong team of liaisons within the top reconstruction group who are plugged into every CP group. These liaisons have a responsibility to maintain the code and ensure that the latest CP recommendations are implemented. AnalysisTop will calibrate all physics objects (including systematic variations), apply user-defined physics object cuts, apply overlap removal and then apply user-defined event level cuts. It is able to save to flat ntuples (xAOD in the future), with users able to define the content of the output.
+<p />
+Historically, AnalysisTop was built as a standalone release, but since December 2019 it became part of the AnalysisBase release (since release 21.2.98).
+<p />
+From the <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/AnalysisTop21" target="_top">Release 21</a> release page it is possible to get the list of most relevant recent changes to the AT code, otherwise you can see here <a href="https://gitlab.cern.ch/atlas/athena/merge_requests/" target="_blank">full list of merge requests<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>. The list of packages compiled in AnalysisBase are found in the <a href="https://gitlab.cern.ch/atlas/athena/blob/master/Projects/AnalysisBase/package_filters.txt" target="_blank">package filter file for the project<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>. It takes a long time to compile all of those locally and on the grid, so pre-compiled versions are regularly build and deployed on cvmfs, making AnalysisBase accessible to any cvmfs connected computer. This means that it is available on all grid nodes. Additionally, all nightly builds are installed in cvmfs and available at grid sites. AnalysisTop has a dedicated <a href="https://its.cern.ch/jira/browse/ANALYSISTO/?selectedTab=com.atlassian.jira.jira-projects-plugin:summary-panel" target="_blank">JIRA<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>, please report any bugs and feature requests here. Source code can be browsed in <a href="https://gitlab.cern.ch/atlas/athena/tree/21.2/PhysicsAnalysis/TopPhys/xAOD" target="_blank">Git<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>. Updates to AnalysisTop can be followed by subscribing to the AnalysisTop <a href="https://gitlab.cern.ch/atlas/athena/labels" target="_blank">labels<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+<p />
+This TWiki described how to use AnalysisTop without modifying any central athena package. If you are interested in modifying <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisTop">AnalysisTop</a> packages, have a look at the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisTopGuideToUpdatingAthena">AnalysisTopGuideToUpdatingAthena</a> twiki page.
+You can however extend Analysistop without touching the central code, for example by adding a Custom Saver which saves some additional variables. This is explained below in this page or in the tutorials. List of AnalysisTop tutorial can be found at <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/AnalysisTopTutorials" target="_top">AnalysisTopTutorials</a>: the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TopRun2WorkshopPreTutorial2020">TopRun2WorkshopPreTutorial2020</a> is very detailed and can be very helpful for newcomers.
+<p />
+<h1><a name="Announcement_problem_with_the_gr"></a> Announcement: problem with the grid submission scripts </h1>
+<p />
+If you're using the grid submission scripts provided with AnalysisTop (see below or in the tutorial), you may see an errore like:
+<p />
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>DANGER DANGER DANGER
+Could not find rucio.client.Client. If you use setupATLAS (you should) <B><FONT COLOR="#A020F0">then</FONT></B>
+<B><FONT COLOR="#BC8F8F">&quot;localSetupRucioClients&quot;</FONT></B> and run this again</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+This is due to a recent change in rucio, unfortunately making the old script not usable.
+<strong>The simplest solution is to use releases &gt;=21.2.125 (which will become available soon), where the error is solved</strong>.
+<p />
+If you need to keep using a previous release, you'll need a workaround to be able to still use the scripts. We list here some possibilities.
+<p />
+<h2><a name="Option_A_copy_the_submission_scr"></a> Option A: copy the submission scripts locally </h2>
+<p />
+In the folder where you have the python scripts you use for the submission (e.g. <code>01SubmitToGrid_Tutorial.py</code>), do "cp -r  /cvmfs/atlas.cern.ch/repo/sw/software/21.2/AnalysisBase/21.2.125/InstallArea/x86_64-centos7-gcc8-opt/python/TopExamples/ ."
+to copy the most recent version of the central python scripts locally.
+<p />
+This is the simplest solution, but you'll have to check in the future if new changes to the submission scripts happen in the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisBase">AnalysisBase</a> release, to make sure you're always using up-to-date submission scripts.
+<p />
+<h2><a name="Option_B_Solving_the_issue_for_o"></a> Option B: Solving the issue for older releases with a sparse checkout </h2>
+<p />
+You'll need a working area prepared with a sparse checkout, following e.g. the instructions <a class="twikiAnchorLink" href="/twiki/bin/view/AtlasProtected/SettingUpAnalysisTop#2_Manually_setting_up_an_Analysi">here</a> but checking out just the <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TopExamples?topicparent=AtlasProtected.TopxAODStartGuideR21;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TopExamples</a></span> package. There are two different cases below:
+<p />
+<h3><a name="If_you_don_t_have_any_local_pack"></a> If you don't have any local package (i.e. you never did a sparse checkout and you don't have an athena folder) </h3>
+<p />
+First of all, if you never forked athena, do that (see <a class="twikiAnchorLink" href="/twiki/bin/view/AtlasProtected/SettingUpAnalysisTop#2_1_2_Fork_Athena">twiki</a>, follow also the Add the ATLAS Robot step).
+<p />
+Then, prepare a backup of your working directory just in case any mistake happens in this procedure.
+<p />
+Then, inside your working directory, you'll need to do:
+<p />
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>setupATLAS
+lsetup git
+git atlas init-workdir -b 21.2 https://:@gitlab.cern.ch:8443/atlas/athena.git <I><FONT COLOR="#B22222">#this will create a folder called &quot;athena/&quot;
+</FONT></I><B><FONT COLOR="#A020F0">cd</FONT></B> athena
+git atlas addpkg TopExamples
+git checkout release/21.2.XXX <I><FONT COLOR="#B22222">#use the release you prefer
+</FONT></I>git checkout upstream/21.2 PhysicsAnalysis/TopPhys/xAOD/TopExamples</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+If you have a Custom Saver e.g. in the <code>source/</code> folder, move it to the <code>athena/</code>. You should be now able to remove the <code>source/</code> folder safely (check carefully if you still have something there before doing that though).
+then remove the build directory you have already, and do:
+<p />
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#A020F0">cd</FONT></B> build
+asetup AnalysisBase,21.2.XXX,here</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+then inside the <code>build</code> directory you can compile with:
+<p />
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>cmake ../athena/Projects/WorkDir
+cmake --build ./
+source */setup.sh</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+<h3><a name="If_you_already_have_something_in"></a> If you already have something in the sparse checkout (you have already some packages in the athena folder) </h3>
+<p />
+You'll need to add <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TopExamples?topicparent=AtlasProtected.TopxAODStartGuideR21;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TopExamples</a></span> in you athena folder; from that folder, do:
+<p />
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>setupATLAS
+lsetup git
+git atlas addpkg TopExamples
+<I><FONT COLOR="#B22222">#git checkout release/21.2.XXX #you should have this already set, so this shouldn't be needed in principle, unless you want to change the release you're using
+</FONT></I>git checkout upstream/21.2 PhysicsAnalysis /TopPhys/xAOD/TopExamples</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+Then remove the build directory, recreate it and recompile as usual (as described above for the other case).
+<p />
+<h1><a name="1_First_time_setup_of_AnalysisTo"></a> 1  First time setup of AnalysisTop </h1>
+<p />
+Following instructions are provided for one of the most up-to-date version of AnalysisTop, but please verify on the <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/AnalysisTop" target="_top">release notes</a> of any additional package that might be required to fix most recently discovered bugs. Login to lxplus.cern.ch or any cvmfs machine you have at you local institute. Full inofrmation on all suggested method to setup AnalysisTop are on the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/SettingUpAnalysisTop">SettingUpAnalysisTop</a> twiki page.
+<p />
+<strong>important: starting from release 21.2.98, you have to setup <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisBase">AnalysisBase</a> instead of <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisTop">AnalysisTop</a></strong>
+<p />
+<!-- The following are included from <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/SettingUpAnalysisTop" target="_top">https://twiki.cern.ch/twiki/bin/view/AtlasProtected/SettingUpAnalysisTop</a> -->
+<p />
+<p />
+<p />
+First create the directory structure
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>mkdir MyAnalysis
+<B><FONT COLOR="#A020F0">cd</FONT></B> MyAnalysis
+mkdir build source</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+Then do the basic ATLAS setup
+<p />
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>setupATLAS
+lsetup git</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+Setup the analysis release you want in the source directory
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#A020F0">cd</FONT></B> source
+asetup AnalysisBase,21.2.XXX,here <I><FONT COLOR="#B22222">#adjust the release number to the one you want to use, you can find here https://twiki.cern.ch/twiki/bin/view/AtlasProtected/AnalysisTop21 the most recent ones
+</FONT></I></pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+You should notice a file called CMakeLists.txt has been created in the directory. Go back to the home directory:
+<p />
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#A020F0">cd</FONT></B> ..</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+Then open a file called <code>setup.sh</code> and add the following lines to that:
+<p />
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>setupATLAS --quiet
+lsetup git
+<B><FONT COLOR="#A020F0">cd</FONT></B> source/
+asetup --restore
+<B><FONT COLOR="#A020F0">cd</FONT></B> ../build
+source */setup.sh
+<B><FONT COLOR="#A020F0">cd</FONT></B> ..
+<I><FONT COLOR="#B22222">#lsetup panda
+</FONT></I><I><FONT COLOR="#B22222">#lsetup pyami
+</FONT></I><I><FONT COLOR="#B22222">#voms-proxy-init --voms atlas
+</FONT></I></pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+(note: rucio cannot be setup together with an <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisRelease">AnalysisRelease</a>, if you need that you'll need to work in a separate terminal/shell)
+<p />
+this will be used the next times you will start working in this area (uncomment the last lines if you plan to use the GRID and if you have a valid certificate for that).
+<p />
+<p />
+<p />
+<p />
+<p />
+Let's prepare some compilation scripts. Go to the work directory MyAnalysis ("cd .." if you're still inside source/ from the previous step).
+<p />
+Open a file called <code>full_compile.sh</code> and add the following lines:
+<p />
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#A020F0">cd</FONT></B> build
+cmake ../source
+cmake --build ./
+source */setup.sh
+<B><FONT COLOR="#A020F0">cd</FONT></B> ..</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+and then give the command:
+<p />
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>source full_compile.sh</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+You can also prepare another script called <code>quick_compile.sh</code>, with the following lines
+<p />
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#A020F0">cd</FONT></B> build
+cmake --build ./
+source */setup.sh
+<B><FONT COLOR="#A020F0">cd</FONT></B> ..</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+You will have to use the <code>source full_compile.sh</code> for the first compilation and every time you add new classes or change package dependencies; if you just modify the code of existing files, you can just do <code>source quick_compile.sh</code>.
+<p />
+<p />
+<p />
+<p />
+Each time you open a new shell you just need to repeat these steps
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#A020F0">cd</FONT></B> MyAnalysis <I><FONT COLOR="#B22222">#or any path to go to the workdir you created
+</FONT></I>source setup.sh</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+<p />
+<p />
+<p />
+<p />
+<h3><a name="If_you_want_to_change_the_releas"></a> If you want to change the release you're using </h3>
+<p />
+Let's say you started using a given release, but you want to change it at some point. Start with a fresh shell, it's always a good idea. Go in the source/ folder and setup the new release you want to use:
+<p />
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#A020F0">cd</FONT></B> MyAnalysis/source <I><FONT COLOR="#B22222">#or whatever the path is to the source/ folder of your working directory
+</FONT></I>setupATLAS --quiet
+asetup AnalysisBase,21.2.YYY
+<B><FONT COLOR="#A020F0">cd</FONT></B>..</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+then remove your build directory and recreate it, then do a full recompilation, finally do the usual setup:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>rm -rf build/
+mkdir build
+source full_compile.sh
+source setup.sh</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+<h3><a name="If_your_setup_becomes_messed_up"></a> If your setup becomes messed up </h3>
+<p />
+If you see weird linking problems or other strange errors, one of the first quick tests you can do is removing the build directory and re-creating it:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>rm -rf build/
+mkdir build
+source full_compile.sh
+source setup.sh</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+<p />
+<p />
+<h1><a name="2_Running_locally"></a> 2  . Running locally </h1>
+<p />
+<h2><a name="2_1_Make_a_flat_ntuple_containin"></a> 2.1  Make a flat ntuple containing only calibrated and selected objects </h2>
+<p />
+The main program is top-xaod and if everything is correctly setup, it should be already available in your path. It takes the input and applies the CP corrections and object selection. After that it does the event-level cuts specified in the configuration file, with only calibrated and selected objects written out, and only for those events that pass the selection.
+<p />
+It will also calculate scale factors for electrons, muons and b-tagging. The nominal scale factors are written for each 4-momentum shifting systematic, while for the nominal calibration you also get the various scale factors systematics (ID up/down etc etc). More information can be found in the corresponding CP TWiki pages (start <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TopReconstructionGroup">here</a>).
+<p />
+<h2><a name="2_2_Test_input_files"></a> 2.2  Test input files </h2>
+<p />
+If you want to test the code, have a look at the list of recommended top samples <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TopDerivationMC16MergedList" target="_top">MC16 samples</a>.
+Pick a dataset you want to use in your test run. e.g this ttbar nonallhad dataset.
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>mc16_13TeV.410470.PhPy8EG_A14_ttbar_hdamp258p75_nonallhad.deriv.DAOD_TOPQ1.e6337_s3126_r9364_p3629</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+then download one file
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>rucio download --nrandom 1 mc16_13TeV.410470.PhPy8EG_A14_ttbar_hdamp258p75_nonallhad.deriv.DAOD_TOPQ1.e6337_s3126_r9364_p3629</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+and save the downloaded file path to a txt file, e.g. test_file_mc16a.txt.
+<p />
+<h1><a name="3_I_was_elected_to_lead_not_to_r"></a> 3  "I was elected to lead, not to read" </h1>
+<p />
+To jump straight in, we can try to run on some events from the MC ttbar sample. The code needs for that a list of input files and a steering file.
+You can get the steering file from AnalysisTop examples, environmental variable "$AnalysisBase_DIR" (or "$AnalysisTop_DIR" if you're still using <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisTop">AnalysisTop</a> for old realeses) is set when you set up AnalysisTop. You can use your own test file to run on that you created in the previous step, "test_file_mc16a.txt",
+or simply use a provided test file from AnalysisTop.
+<p />
+Please type in the following now:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#A020F0">cd</FONT></B> ~/MyAnalysis/run/
+top-xaod $AnalysisBase_DIR/data/TopAnalysis/validation-cuts.txt $AnalysisBase_DIR/data/TopAnalysis/input-mc-rel21.txt</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+While the event selection is running, have a look into validation-cuts.txt. There are ten different cut flows: three dilepton and two lepton+jets channels, each of them defined once for 2015 and once for 2016 data.
+<p />
+When completed, there will be a flat ntuple file called output.root which can be opened with root.
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>root -l output.root
+new TBrowser()</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+One folder per channel is available, with stored the cutflow and more histograms for the events that survived the selection. For example ejets folder contains events passing electron+jets requirements, with all objects and event information like weights, missing et, etc.
+<p />
+The trees contain the information of all selections, stored together in branches, and allows for further analysis of the event. For each selection enabled there is a boolean variable that tells if the event passed the specific selection or not. One tree for each active systematic uncertainty is created. The tree called nominal is the basic one without variations.
+<p />
+<h2><a name="3_1_Command_line_options"></a> 3.1  Command line options </h2>
+<p />
+As you have seen in the previous example, the executable called top-xaod ( <a href="https://gitlab.cern.ch/atlas/athena/blob/21.2/PhysicsAnalysis/TopPhys/xAOD/TopAnalysis/util/top-xaod.cxx" target="_blank">source code<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>) takes exactly two command line arguments, both of which are file names of text files. The first is the configuration information, the second is a list of input files.
+<p />
+Feel free to take a look inside $AnalysisBase_DIR/data/TopAnalysis/ dir to find out other examples of configuration cut files:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>less $AnalysisBase_DIR/data/TopAnalysis/dil-cuts.txt</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+or input files:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>less $AnalysisBase_DIR/data/TopAnalysis/input-data.txt</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+We deliberately limit the command line options. All settings are handled in the configuration file. We do not want a hybrid system where settings can also be applied via the command line.
+<p />
+To locally test an event selection, a local copy of the steering file is needed. E.g.
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>cp $AnalysisBase_DIR/data/TopAnalysis/validation-cuts.txt .</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+See below for how to handle some of the available options.
+<p />
+To compare the old and new selection, a script is provided:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>mkdir comparison_plots
+$AnalysisBase_DIR/user_scripts/TopAnalysis/validation.py comparison_plots/ output.root output-modifiedSelection.root</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+It is then possible to browse through the plots with:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>firefox comparison_plots/index.html </pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+<h2><a name="3_2_Configuration_options"></a> 3.2  Configuration options </h2>
+<p />
+AnalysisTop can be configured in many different ways, with everything controlled through text files. As the number of different options was growing and growing, rather than force everyone to change their configuration files every time we add a new feature, many options have default values and do not need to be specified. There is a complete list of the options currently available in the <a href="https://gitlab.cern.ch/atlas/athena/blob/21.2/PhysicsAnalysis/TopPhys/xAOD/TopConfiguration/Root/ConfigurationSettings.cxx" target="_blank">gitlab link<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>. A description of commonly used ones follows.
+<p />
+<h3><a name="Number_of_events_to_run_over"></a> Number of events to run over </h3>
+<p />
+This is very useful for debugging and developing your code. E.g. to just test some new feature on first few events:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>NEvents 20</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+<h3><a name="First_events_to_run_over"></a> First events to run over </h3>
+<p />
+This is very useful for debugging and developing your code. E.g. to just test a bug occurring at a specific event, especially if late in a large file:
+<sticky><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>FirstEvent 100</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+<h3><a name="Modify_output_file_name"></a> Modify output file name </h3>
+<p />
+Change the default to your favorite name:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>OutputFilename output.root</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+<h3><a name="Good_Runs_Lists"></a> Good Runs Lists </h3>
+<p />
+GRL files are stored in CVMFS.
+<p />
+This <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TopGroupDataDerivationList#Lumicalc_GRL_and_PRW_files" target="_top">twiki</a> shows the recommended way how apply the GRL selection
+<p />
+Hopefully latest GRL xml files should be available there, eventually you can download it from here <a class="twikiLink" href="/twiki/bin/view/Atlas/SpecialRunsIn2015">SpecialRunsIn2015</a>. With your new GRL file, you can:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>GRLDir MyAwesomeAnalysis
+GRLFile SomeGRLFile.xml</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+<h3><a name="PRW_and_Lumicalc_files"></a> PRW and Lumicalc files </h3>
+<p />
+To perform pileup reweighting (at least) two files are needed. One contains the information about the average mu distribution in your MC (see <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/ExtendedPileupReweighting#Generating_PRW_config_files" target="_top">Generating PRW config files</a>) and one containing the information about the average mu distribution in data, which can be generated from a GRL ( <a href="https://atlas-lumicalc.cern.ch/" target="_blank">Luminosity Calculator<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>).
+PRW files are stored in CVMFS.
+<p />
+This <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TopGroupDataDerivationList#Lumicalc_GRL_and_PRW_files" target="_top">twiki</a> stores the most up-to-date recommended configurations
+<p />
+Mode information about the PRW files is provided in this <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TopPileupReweightingFilesMC16" target="_top">link</a>.
+<p />
+<h3><a name="FullSim_vs_AFII"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/FullSim?topicparent=AtlasProtected.TopxAODStartGuideR21;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">FullSim</a></span> vs. AFII </h3>
+<p />
+If you use
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>UseAodMetaData True</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+the information about the simulation will be taken from the metadata automatically. If this fails, the code will then rely on "IsAFII" key:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>IsAFII True</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+<h3><a name="Physics_Objects"></a> Physics Objects </h3>
+<p />
+The object collection name needs to be specified, otherwise AnalysisTop won't run with that object. So if you want to turn off muons for whatever reason, just specify
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>MuonCollectionName None</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+From the <a href="https://gitlab.cern.ch/atlas/athena/blob/21.2/PhysicsAnalysis/TopPhys/xAOD/TopConfiguration/Root/ConfigurationSettings.cxx" target="_blank">ConfigurationSettings<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> should be easy to figure out the available kinematic cuts, working points and default values.
+For example these are the "defaults" (but each analysis may use different WPs)
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>ElectronID TightLH
+ElectronIDLoose LooseAndBLayerLH
+ElectronIsolation Gradient
+ElectronIsolationLoose None
+ElectronPt 25000.
+ElectronVetoLArCrack True
+...
+
+MuonQuality Medium
+MuonQualityLoose Medium
+MuonIsolation FCTight_FixedRad
+MuonIsolationLoose None
+MuonPt 25000.
+MuonEta 2.5
+...</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+Please be aware that the definitions used here will always affect the MET and the Overlap Removal, e.g. even if you're not using explicitely muons in your analysis, the definition you have for muons in your config file will be used for calculating the MET in the event ( see <a class="twikiCurrentTopicLink twikiAnchorLink" href="/twiki/bin/view/AtlasProtected/TopxAODStartGuideR21#MET">here</a>) and for the Overlap Removal procedure.
+<p />
+More information on the implementation of the physics objects in AnalysisTop are provided <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TopRecoObjTwikiModel">in this twiki</a>.
+<p />
+<h4><a name="MET"></a> MET </h4>
+<p />
+MET (i.e. the transverse missing energy) is rebuilt using the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/METUtilities">METMaker</a> in all events. This uses information from objects present in the event: for this reason, even if an analysis is not using some specific objects, it's important to use a sensible definition of such objects in the AT config file. For example, an analysis which is not explicitely using muons, will still find different MET values depending on the muon definitions (e.g. <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MuonQuality?topicparent=AtlasProtected.TopxAODStartGuideR21;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MuonQuality</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MuonPt?topicparent=AtlasProtected.TopxAODStartGuideR21;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MuonPt</a></span>...) used in the config file; also not using at all a given object collection (e.g. setting <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MuonCollectionName?topicparent=AtlasProtected.TopxAODStartGuideR21;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MuonCollectionName</a></span> None) will impact the MET wrt using muons with some definition.
+<p />
+For releases &gt;=21.2.127 and &lt;=21.2.146 a <a href="https://indico.cern.ch/event/968097/contributions/4074358/attachments/2137498/3600580/News%20from%20Top%20Reconstruction%2005_11_2020.pdf" target="_blank">bug<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> lead to the METMaker <strong>not being initialized when fJVT was not used (which is the default)</strong>. As a consequence pT and <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/JVT">JVT</a> cuts are not setup for jets. This leads to different MET values.
+<h4><a name="Muons"></a> Muons </h4>
+<p />
+Since release 21.2.118 <em>doExtraSmearing</em> and <em>do2StationsHighPt</em> options have been added with <a href="https://gitlab.cern.ch/atlas/athena/-/merge_requests/31475" target="_blank">this MR<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+Names have been changed to <em>MuonDoExtraSmearingHighPt</em> and <em>MuonDoSmearing2stationHighPt</em> for releases &gt;=21.2.121.
+<p />
+More information will be provided on <a class="twikiAnchorLink" href="/twiki/bin/view/AtlasProtected/TopRecoObjTwikiModel#Muons">this twiki</a>.
+<p />
+<h4><a name="Soft_Muons_use_release_21_2_101"></a> Soft Muons (use release&gt;=21.2.101) </h4>
+<p />
+<a href="https://gitlab.cern.ch/atlas/athena/merge_requests/27156" target="_blank">MR27156<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>, available from <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisTop">AnalysisTop</a> release 21.2.96 on (but with a significant bug that will be fixed from release .101), introduced the possibility of running on soft muons. In practice this means that a second collection of muons, with a different selection wrt to that used for "prompt muons", is saved in the output ntuples.
+The following options can be used in the configuration file:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>UseSoftMuons True <I><FONT COLOR="#B22222">#default is False
+</FONT></I>SoftMuonQuality Tight <I><FONT COLOR="#B22222">#LowPt, Loose, Medium, Tight
+</FONT></I>SoftMuonPt 4000.
+SoftMuonEta 2.4
+SoftMuonDRJet 0.4 <I><FONT COLOR="#B22222">#can be set to 999 if no selection has to be applied here
+</FONT></I></pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+The options are quite self-explanatory. The <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/SoftMuonDRJet?topicparent=AtlasProtected.TopxAODStartGuideR21;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">SoftMuonDRJet</a></span> represent the upper <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/DeltaR?topicparent=AtlasProtected.TopxAODStartGuideR21;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">DeltaR</a></span> cut which is applied between soft muons and selected jets; this is useful because the typical use case for soft muons is to select muons inside jets. The cut can be however set to an arbitrary large number in case no matching between soft muons and jets is required. The DR matching with jets is done usin pseudorapidity by default, unless the <code>SoftMuonDRJetUseRapidity True</code> option is used in the config file (this option is available in recent releases).
+<strong>Currently it's not possible to apply isolation or TTVA cuts on soft muons.</strong>
+<p />
+It is possible to apply a request on the number of soft muons in the event in the selections in the config file with a line like:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>SOFTMU_N 6500 &gt;= 1</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+The soft muon 4-vector, d0, d0sig, z0*sintheta, truth origin, truth type, isPrompt variables are saved. Also reconstruction SFs are saved FOR EACH soft muon, to allow then the user to do what he/she wants with that. <strong>Note that soft muons SFs have to be manually applied by users and ARE NOT included in the event-level leptonic SFs</strong>. In the nominal output tree, systematic variation of the soft muons SFs are also stored. Isolation and TTVA scale factors are not stored for soft muons, since isolation and TTVA cuts are currently not applied on them.
+In systematic trees corresponding to muon momentum calibration uncertanties, soft muons momenta are varied (as well as prompt muons ones as usual).
+<p />
+Additional variables for soft muons can be added in <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/CustomEventSaver?topicparent=AtlasProtected.TopxAODStartGuideR21;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">CustomEventSaver</a></span>. Selected soft muons are available from the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TopEvent">TopEvent</a>: event.m_softmuons collection.
+<p />
+<h5><a name="Truth_origin_of_the_soft_muons_a"></a> Truth origin of the soft muons (available from AB 21.2.106 on) </h5>
+<p />
+<a href="https://gitlab.cern.ch/atlas/athena/merge_requests/29088" target="_blank">MR29088<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> added the possibility of writing in output information on the origin of a soft muon.
+<p />
+The following options are added to the config files for AT:
+<p /> <ul>
+<li> SoftMuonAdditionalTruthInfo True/False (default: False) -&gt; decide if you want to store additional truth information on the particle-level origin for soft muons (see TopParticleLevel/TruthTools.h)
+</li> <li> SoftMuonAdditionalTruthInfoCheckPartonOrigin True/False (default: False) -&gt; Decide if you want to store additional truth information on the parton-level origin for soft muons (see TopParticleLevel/TruthTools.h, this makes sense only if also SoftMuonAdditionalTruthInfo is True)
+</li> <li> SoftMuonAdditionalTruthInfoDoVerbose True/False (default: False) -&gt; produce debug printouts for these options
+</li></ul> 
+<p />
+since these options are by default disabled, the standard user won't experience any change to the AT behaviour. If these options are used, the following output is added to the output reco-level ntuples:
+<p /> <ul>
+<li> softmu_parton_origin_flag -&gt; flag with information on the partonic origin of the soft muon, see the corresponding enum
+</li></ul> 
+in TopParticleLevel/TruthTools.h <ul>
+<li> softmu_particle_origin_flag -&gt; flag with information on the particle origin of the soft muon, see the corresponding enum
+</li></ul> 
+in TopParticleLevel/TruthTools.h <ul>
+<li> softmu_parent_pdgid -&gt; pdg ID of the direct mother of the soft muon
+</li> <li> softmu_b_hadron_parent_pdgid -&gt; pdg ID of the B hadron originating the muon for B-&gt;mu, B-&gt;C-&gt;mu, B-&gt;tau-&gt;mu, B-&gt;C-&gt;tau-&gt;mu decays
+</li> <li> softmu_c_hadron_parent_pdgid -&gt; pdg ID of the C hadron originating the muon for C-&gt;mu, C-&gt;tau-&gt;mu, B-&gt;C-&gt;mu, B-&gt;C-&gt;tau-&gt;mu decays
+</li></ul> 
+<p />
+Decorations such as SG::AuxElement::Accessor<const xAOD::TruthParticle*> Mother("truthMotherLink") and analougous truthBMotherLink, truthCMotherLink (and more) are added to the soft muon, in case one user wants to retrieve links to these particles in a CustomSaver.
+A <const xAOD::TruthParticle*>("truthMuonLink") decoration is also added to the reconstructed-level soft muons, to easily retrieve the associated truth muon.
+<p />
+This code has been tested with Pythia8, Herwig7 and Sherpa samples. Due to loop in ancestors history in Sherpa, the parton information option cannot be used with Sherpa; there are protections based on the number of iterations when running through particle ancestors to protect from such loops, inspired to the analogous protections used in the MCTruthClassifier.
+<p />
+<h4><a name="Small_R_Jets"></a> Small-R Jets </h4>
+<p />
+Small radius jets collection to be used is specified using the option
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>JetCollectionName AntiKt4EMTopoJets</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+where <code>AntiKt4EMTopoJets</code> and <code>AntiKt4EMPFlowJets</code> are the two currently supported options. Note that it is not possible to run AT without small-R jets, i.e specifying <code>None</code> is not supported.
+<p />
+<h5><a name="IMPORTANT_b_tagging_related_chan"></a> IMPORTANT b-tagging related changes for small-R jets configuration </h5>
+<p />
+For derivations with tag p3954 or higher (corresponding to derivation cache release &gt;=21.2.72.0), the Flavour Tagging group has changed the structure of storing b-tagging information in the derivations to enable possibility of re-training flavour tagging algorithms. This affects all analysis frameworks including <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisTop">AnalysisTop</a>. If you are using the above derivation release or newer, you must specify in the top-xaod config an extended jet collection name:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>JetCollectionName AntiKt4EMTopoJets_BTagging201810</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+Where the supported options are <code>AntiKt4EMTopoJets_BTagging201810</code>, <code>AntiKt4EMPFlowJets_BTagging201810</code> (EMPFlow jets with b-tagging algorithms trained on EMTopo) and <code>AntiKt4EMPFlowJets_BTagging201903</code> (new, dedicated re-training of b-tagging algorithms on PFlow jets).
+<p />
+Internally, AT will check the <code>JetCollectionName</code> and the derivation release from AODMetadata and throw an error if you try to use the new jet collection name configuration with older derivation release or vice-versa. <strong>Note that it is highly recommended to set option <code>UseAodMetaData True</code> so that AT reads this kind of meta-data from the derivation files.</strong>
+<p />
+If you are interested in the technical details on the updated derivation structure of storage of jets and b-tagging information, see <a href="https://indico.cern.ch/event/836130/contributions/3504999/attachments/1884841/3106548/2019-07-23-FTAGPlenary.pdf" target="_blank">these slides<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+<p />
+Since AnalysisTop 21.2.95 - you can choose which CDI file to use for your analysis. This is important as new derivations (p-tag &gt;= p39XX) work only with the new CDI files. For example you can use:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>BTagCDIPath xAODBTaggingEfficiency/13TeV/2019-21-13TeV-MC16-CDI-2019-10-07_v1.root <I><FONT COLOR="#B22222">#this is just an example here
+</FONT></I></pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+However, the older ptags (e.g. p3832) will work only with the older CDI file (set as default), and the old style JetCollectionName.
+<p />
+AnalysisTop by default will use the most updated one available at the time the release was built. When you use different CDI file that the default, a flashy warning will be printed.
+<p />
+<strong>Whatever you do, i.e. setting the CDI file manually or using the defaul one, always make sure to check carefully you're doing what you really intend to do.</strong> We keep updated information on the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TopRecoObjTwikiModel">TopRecoObjTwikiModel</a> page.
+<p />
+<h4><a name="Large_R_jets"></a> Large-R jets </h4>
+<p />
+If the user wants to use LC-Topo jet, he/she should do:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>LargeJetCollectionName AntiKt10LCTopoTrimmedPtFrac5SmallR20Jets</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+while if the user wants to use TCC jet, he/she should do:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>LargeJetCollectionName AntiKt10TrackCaloClusterTrimmedPtFrac5SmallR20Jets</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+Some useful information about TCC jet can found in these <a href="https://indico.cern.ch/event/675559/contributions/2803106/attachments/1564376/2466906/VVJJ2.pdf" target="_blank">slides<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>, and this <a href="https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PUBNOTES/ATL-PHYS-PUB-2017-015/" target="_blank">document<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<p />
+<h3><a name="BadBatman"></a> BadBatman </h3>
+<p />
+Since AnalysisTop 21.2.73 (May 2019), an option to remove events in data flagged with BadBatman (see JetMET <a class="twikiAnchorLink" href="/twiki/bin/view/AtlasProtected/HowToCleanJetsR21#IsBadBatMan_Event_Flag_and_EMEC">TWiki</a>) is available. If you want to apply the BadBatman cleaning use
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>UseBadBatmanCleaning True</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+By default, no BadBatman cleaning is applied.
+The cleaning is applied during the JETCLEAN selection step.
+If you turn on the cleaning, it is by default applied to 2015 and 2016 data events. You can also specify a custom range of run numbers where the cleaning is applied by using
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>BadBatmanCleaningRange XXXX:YYYY </pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+The run numbers cannot include run numbers for 2017 as the cleaning should not be applied to 2017 data taking (cannot include 325713-348835).
+<p />
+If you apply the cleaning read the JetMET twiki!
+You will need to adjust luminosity value and its uncertainty.
+<p />
+<h3><a name="JVT_WP"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/JVT">JVT</a> WP </h3>
+<p />
+It is now possible since AnalysisTop 21.2.74 (May 2019) to specify the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/JVT">JVT</a> WP. It is by default set to "Default" (sets Tight for PFlow jets and Medium for EMTopo jets) but this can be changed using
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>JVTWP Tight</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+The available options can be found <a class="twikiAnchorLink" href="/twiki/bin/view/AtlasProtected/PileupJetRecommendations#Working_points">here</a>.
+<p />
+<h3><a name="fJVT_WP"></a> fJVT WP </h3>
+<p />
+It is possible since AnalysisTop 21.2.127 (June 2020) to specify the fJVT WP for forward jets, |eta| &gt; 2.5. It is by default set to "None" which does not run any fJVT tools but can be set to Tight (recommended) or Medium to match the Tight/Loose working points defined <a class="twikiAnchorLink" href="/twiki/bin/view/AtlasProtected/PileupJetRecommendations#Forward_region_recommended_worki">here</a>. These options include use of the updated Hard-Scatter SFs released in May 2020 to build nominal and systematic fJVT weights, available in the output nominal tree.
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>ForwardJVTWP Tight</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+<strong>IMPORTANT: The fJVT calculation for PFlow jets needs to be done at derivation level, this functionality was added in derivation release 21.2.97.0 so users MUST use <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/ForwardJVTWP?topicparent=AtlasProtected.TopxAODStartGuideR21;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">ForwardJVTWP</a></span> None if they want to use PFlow jets with an earlier derivation release</strong>
+<p />
+An additional boolean option is also present:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>ForwardJVTinMETCalculation False <I><FONT COLOR="#B22222">#(True, False [default])
+</FONT></I></pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+This allows the fJVT decision to be used within the METmaker to improve the MET resolution. As this option can be used for analyses with a central-only jet selection this can be set independently of the fJVTWP option, in which case the Tight WP will be used, and SFs will <strong>NOT</strong> be applied.
+<p />
+More information on using the different fJVT options can be found <a href="https://gitlab.cern.ch/atlas/athena/-/merge_requests/33742" target="_blank">here<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<p />
+<h3><a name="Forward_electrons_available_sinc"></a> Forward electrons (available since AnalysisTop 21.2.80) </h3>
+<p />
+<strong>IMPORTANT: Recently, a bug has been found in the configuration of the forward electron identification. All recommendations related to forward electrons are therefore not valid, and forward electrons should not be used in analysis until further notice.</strong> See announcement on the hn-atlas-top-reconstruction mailing list on 25/7/19 09:47 CERN time. Further news on this topic will be announced on the same mailing list.
+<p />
+From AnalysisTop 21.2.80 (July 2019) Forward electrons have been included in AnalysisTop  ( <a href="https://gitlab.cern.ch/atlas/athena/merge_requests/23841" target="_blank">MR23841<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>). By default they're not included when running AT, they can be used with the following options in the config file:
+<p />
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>FwdElectronCollectionName ForwardElectrons <I><FONT COLOR="#B22222">#(default is None)
+</FONT></I>FwdElectronID Tight <I><FONT COLOR="#B22222">#(Loose, Medium, Tight [default])
+</FONT></I>FwdElectronIDLoose Tight <I><FONT COLOR="#B22222">#(Loose, Medium, Tight [default])
+</FONT></I>FwdElectronPt 25000. <I><FONT COLOR="#B22222">#(25000. is default)
+</FONT></I></pre>
+<!-- end SyntaxHighlightingPlugin -->&lt;/sticky&gt;
+<p />
+It must be noted that their SFs ARE NOT inlcuded in the standard leptonSFs, but there are separate SF weights for them which should be taken into account when using Forward electrons.
+<p />
+<span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/FwdElectrons?topicparent=AtlasProtected.TopxAODStartGuideR21;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">FwdElectrons</a></span> can be requested in selections with e.g.: FWDEL_N 22000 &gt;= 1. It must be noted though that this statement will only have effect at reconstructed level: at truth level there is no distinction between forward and "standard" electrons, so this statement in the selection is designed to always be true at truth level. <em>TruthElectronPt</em> and <em>TruthElectronEta</em> options in the config file can be used to specify what is the pt/eta range considered for electrons at truth level.
+<p />
+<h3><a name="B_tagging_showering_algorithm_an"></a> B-tagging showering algorithm and <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TopDataPreparation?topicparent=AtlasProtected.TopxAODStartGuideR21;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TopDataPreparation</a></span> </h3>
+<p />
+B-tagging SFs are derived by default on Powheg+Pythia8 samples. Since for other showering algorithms they can differ, the b-tagging group provides MC/MC SFs, see <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/BTagCalib2017">b-tagging twiki</a>.
+When running on a MC sample, <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisTop">AnalysisTop</a> thus needs to know what is the showering algorithm used by the sample, so that the appropriate MC/MC b-tagging SFs can be applied. This information is retrieved from a <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TopDataPreparation?topicparent=AtlasProtected.TopxAODStartGuideR21;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TopDataPreparation</a></span> (TDP) file read from the cvmfs area /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/dev/AnalysisTop/TopDataPreparation . The file is copied every few hours in that area from the one included in <a href="https://gitlab.cern.ch/atlasphys-top/reco/sample-xsections" target="_blank">this git repository<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>. That TDP file contains lines like:
+<p />
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>410470 396.87 1.1398 pythia8</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+with the first column being the DSID, the second the MC xsec times the filter efficiency, the third is the k-factor, and the fourth one is the showering algorithm used in the sample.
+<p />
+For <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisTop">AnalysisTop</a> releases &lt;=21.2.83, the TDP file used by default from <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisTop">AnalysisTop</a> is XSection-MC15-13TeV.data; the allowed showering algorithms are pythia8, herwig/herwigpp (same MC/MC SFs are applied for both), sherpa (applied MC/MC SFs for sherpa 2.2), sherpa21 (sherpa 2.1, MC/MC SFs ARE NOT AVAILABLE, THESE ARE SET TO 1). For aMCatNLO+Pythia8 samples, MC/MC SFs are set to 1 (so the same SFs as for Powheg+Pythia8 samples are used).
+<p />
+For <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisTop">AnalysisTop</a> releases &gt;=21.2.84, the TDP file used by default from <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisTop">AnalysisTop</a> is XSection-MC16-13TeV.data; in this case amcatnlopythia8 is added as a possible showering, and therefore appopriate MC/MC SFs are used for aMCatNLO+Pythia8 samples.
+<p />
+In order to request the addition of a sample to the TDP file, please open a JIRA ticket on the <a href="https://its.cern.ch/jira/projects/ANALYSISTO/summary" target="_blank">AnalysisTop board<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+<p />
+Which TDP file is used by <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisTop">AnalysisTop</a> can be changed in the configuration file with the option TDPPath. By default this option is <em>TDPPath dev/AnalysisTop/TopDataPreparation/XSection-MC15-13TeV.data</em> for releases &lt;=21.2.83, and <em>TDPPath dev/AnalysisTop/TopDataPreparation/XSection-MC16-13TeV.data</em> for releases &gt;=21.2.84. Users using the MC16-13 <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TeV">TeV</a> campaign will most likely not need to set this option, and just use the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisTop">AnalysisTop</a> default.
+<p />
+More info on the topic are in the <a class="twikiAnchorLink" href="/twiki/bin/view/AtlasProtected/TopRun2WorkshopPreTutorial2020#9_The_TopDataPreparation_file_cr">AT tutorial</a>
+<p />
+<h3><a name="Systematics"></a> Systematics </h3>
+<p />
+A lot of thought was given to systematics in the AnalysisTop design. We only calibrate objects once, and re-use these objects multiple times. This cuts down the number of calculations required and results in faster execution times and a lot of flexibility.
+<p />
+For example, using the Full NP JES model (see below) you will end up with around 150 systematics TTrees. Each of these systematics will be using the nominal electrons and muons. We share these nominal electrons and muons with all the jet systematics. In fact, we only calibrate (CPU-expensive) the jets once, we copy (CPU-cheap) the calibrated jets and smear these 150 times. Other methods of doing systematics, like a simple for loop over a list of known systematics, will typically perform 150 calibrations of the nominal electrons and muons, which we think is a waste of time.
+<p />
+In your configuration file you should see
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>Systematics Nominal</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+Change this to
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>Systematics All</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+and you will get everything. For people who want something in between, then you can specify:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>Systematics AllElectrons</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+And similarly for AllPhotons, AllMuons, AllTaus, AllSmallRJets, AllLargeRJets, AllTrackJets, AllGhostTrack and AllMET
+<p />
+You can even specify exact systematics, like:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>Systematics MUONS_SCALE__1up</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+and you will get a file with the nominal and MUONS_SCALE__1up TTrees. You can form comma separated lists, so:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>Systematics MUONS_SCALE__1up,EG_RESOLUTION_ALL__1down</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+will give you all 4 of these systematics as well as the nominal. Please note that we do not control the names assigned to the systematics, this comes directly from the CP groups.
+<p />
+Since 21.2.105, it is possible to use * as wildcard to select systematics. Example:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>Systematics MUONS_*__1up</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+will give you all shifts up for muons.
+<p />
+The additional parameter DoSysts allows you to select which lepton objects definition to use: Tight, Loose or Both (default). In combination with the DoTight and DoLoose parameters, which allow to run only the corresponding nominal trees, you could for instance keep a loose selection for fake estimation while running and saving systematic variations only from the tight nominal TTree by adding the following lines to your config file:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>DoTight Both
+DoLoose Both
+DoSysts Tight</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+<h3><a name="Other_systematic_options"></a> Other systematic options </h3>
+<h4><a name="Jets"></a> Jets </h4>
+<p />
+The Jet Energy Scale (JES) model group currently <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/JetUncertainties" target="_top">recommends</a> either using all nuisance parameters (leading to roughly 150 TTrees), 30 nuisance parameters, 20 nuisance parameters or 4 nuisance parameters different strongly-reduced sets. The default settings in AnalysisTop is to run all nuisance parameter which is equivalent to have
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>JetUncertainties_NPModel AllNuisanceParameters </pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+To run the 30 NP JES parametrization, do:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>JetUncertainties_NPModel CategoryReduction</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+Note that you need to use this option if you want to combine results with CMS.
+<p />
+Other options are (20 NP):
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>JetUncertainties_NPModel GlobalReduction</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+and (4 NP)
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>JetUncertainties_NPModel StrongReduction</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+When using StrongReduction, this will produce trees for all 4 scenarios. These must be compared to show there is no sensitivity to correlations in your given selection. Once this has been shown, you can use the first scenario using  
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>JetUncertainties_NPModel SR_Scenario1</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+StrongReduction should only be used for analyses which are insensitive to JES. Such analyses cannot be used in combinations. Please see <a class="twikiAnchorLink" href="/twiki/bin/view/AtlasProtected/JetUncertaintiesRel21Summer2018SmallR#JES_strong_reductions">here</a> for more detailed information.
+<p />
+You can set bunch spacing with:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>JetUncertainties_BunchSpacing 25ns</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+Jet Energy Resolution. The default is to run in the "full" mode, which will produce both the MC smeared and <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/PseudoData?topicparent=AtlasProtected.TopxAODStartGuideR21;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">PseudoData</a></span> smeared systematic trees. There are different option available:  "All", "All_PseudoData", "Full", "Full_PseudoData" and "Simple". The different number of NPs is given in in this <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/JetUncertaintiesRel21Summer2018SmallR">Twiki</a>. You can specify the JER mode with:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>JetJERSmearingModel Full_PseudoData</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+How to use the <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/FullJER?topicparent=AtlasProtected.TopxAODStartGuideR21;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">FullJER</a></span> scheme is described in <a href="https://indico.cern.ch/event/1051376/contributions/4420484/attachments/2270608/3856133/jer.pdf" target="_blank">this presentation<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+For the variations you should use
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>UP_Template = Nominal + up_MCsmear - upPDsmear
+DN_Template = Nominal + dn_MCsmear - dnPDsmear</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+<span style="color: #ff0000">Warning</span></verbatim>: Not all combinations of JES and JER modes are available. List of available combinations can be found in this <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/JetUncertaintiesRel21Summer2018SmallR">Twiki</a>.
+<p />
+<span style="color: #ff0000">NB</span></verbatim>: In AnalysisTop versions &lt; 21.2.44 the default option for JER provides only 1 NP.
+<p />
+Jet mass scale (JMS). The default is to run in the "None" mode, which does not use the small-R JMS recommendations described in <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/JetUncertaintiesRel21Spring2021SmallRJMS">JetUncertaintiesRel21Spring2021SmallRJMS</a>. There are two more options available: "JMS_frozen", The shape and magnitude of the uncertainties at m/pT = 0.25 are also used for m/pT &gt; 0.25 (done for each component). "JMS_scaled", The magnitude of the uncertainties at m/pT = 0.25 is scaled linearly with increasing m/pT. Both configurations should be tested to ensure that analyses are not sensitive to the differences in uncertainties provided by these two configurations for jets with m/pT &gt; 0.25.
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>JetJMSOption JMS_frozen</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+<h4><a name="Jet_calibrations_for_analyses_us"></a> Jet calibrations for analyses using boosted vector bosons or jet reclustering </h4>
+<p />
+As of August 2019, there are new Jet Mass Scale calibrations for R=0.4 PFlow and EMTopo jets. These are useful to analyses wanting to use the jet mass to identify extremely boosted vector bosons (or other particles) where all the decay products are contained within a single R=0.4 jet. This calibration will also affect analyses using jet reclustering.
+<p />
+Since <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisTop">AnalysisTop</a> 21.2.162, the JMS calibration can be enabled by setting <code>JetCalibSequence</code> option to <code>JMS</code>.
+<p />
+<h4><a name="Large_R_jet"></a> Large-R jet </h4>
+<p />
+<h5><a name="LC_Topo_large_R_jet"></a> LC-Topo large-R jet </h5>
+<p />
+The uncertainties for LC-Topo large-R jets are configured though by setting two independent parameters: <code>LargeRJetUncertainties_JESJERJMS_NPModel</code> and <code>LargeRJetUncertainties_JMR_NPModel</code>. The first parameter controls options for JES, JER, and JMS uncertainties as outlined in the most recent <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/JetUncertaintiesRel21ConsolidatedLargeRScaleRes" target="_top">JES/JER/JMS recommendation</a>. Supported JES variations include all all (170) nuisance parameters, category reduction (24 nuisance parameters), or global reduction (14 nuisance parameters). Supported JER variations include all (16) nuisance parameters and smears both MC and data, full (12 nuisance parameters) that also smears both MC and data, or simple (12 nuisance parameters) that smears only MC. Supported JMS variations include all (30) nuisance parameters, full (18 nuisance parameters), and simple (13 nuisance parameters). The default settings in AnalysisTop is to run category reductions for JES, full for JER, and full for JMS, which is equivalent to setting
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>LargeRJetUncertainties_JESJERJMS_NPModel CategoryJES_FullJER_FullJMS</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+For comparison, to run using the global reduction nuisance set of parameters for JES, the simple set of nuisance parameters for JER, and the full JMS nuisance parameter scheme, do:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>LargeRJetUncertainties_JESJERJMS_NPModel GlobalJES_SimpleJER_FullJMS</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+All available JES, JER, and JMS configurations are listed below: <ul>
+<li> <code>AllJES _AllJER_AllJMS</code>
+</li> <li> <code>CategoryJES _FullJER_FullJMS</code> (default)
+</li> <li> <code>CategoryJES _FullJER_SimpleJMS</code>
+</li> <li> <code>CategoryJES _SimpleJER_FullJMS</code>
+</li> <li> <code>CategoryJES _SimpleJER_SimpleJMS</code>
+</li> <li> <code>GlobalJES _FullJER_FullJMS</code>
+</li> <li> <code>GlobalJES _FullJER_SimpleJMS</code>
+</li> <li> <code>GlobalJES _SimpleJER_FullJMS</code>
+</li> <li> <code>GlobalJES _SimpleJER_SimpleJMS</code>
+</li></ul> 
+The second parameter controls options for the JMR uncertainties as outline in the most recent <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/FFJetSmearingTool" target="_top">JMS recommendation</a>. Supported JMR variations include a full (10 nuisance parameters) scheme or a simple flat 20% uncertainty (1 nuisance parameter). The default settings in AnalysisTop is to run using the full JMR nuisance parameter scheme, which is equivalent to setting
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>LargeRJetUncertainties_JMR_NPModel FullJMR_COMB</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+All available JMR configurations are listed below: <ul>
+<li> <code>FullJMR_COMB</code> (default)<span class="WYSIWYG_TT"><br /></span>
+</li> <li> <code>SimpleJMR_COMB</code>
+</li></ul> 
+<p />
+To treat MC as pseudo-data, and thus only apply JER smearing to large-R jets, do:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>LargeRSysts_TreatMCasPseudodata True</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+Note that if the user specify the same option in <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/JetUncertainties">JetUncertainties</a> as in LargeRJetUncertainties, only one tree will be generated for each nuisance parameter, thus correlating the large-R jet JES to the small-R jet JES. Finally, users should be aware that the use of 'global reduction' or 'simple' nuisance parameter schemes complicates or limits potential for later analysis combinations (both within ATLAS or with CMS).
+<p />
+The JES and JMS calibration for LC-Topo large-R jets has 3 options in the <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/ApplyJetCalibrationR21#R_1_0_LCTopo_trimmed_jets" target="_top">recommendation</a>, Combined mass, calorimeter mass and track-assisted mass. But in the current version of JetUncertaintiesTool, the second and the third option is temporarily disabled. This is saying that all 3 of them can be used in the nominal tree but only the calorimeter mass can be used for uncertainties now.
+<p />
+The default option in AnalysisTop is calorimeter mass which is equivalent to
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>LargeRJESJMSConfig CombMass</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+To switch to calorimeter mass, do: (cannot be used when doing systematic trees for now)
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>LargeRJESJMSConfig CaloMass</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+To switch to track-assisted mass, do: (cannot be used when doing systematic trees for now)
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>LargeRJESJMSConfig TAMass</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+<h5><a name="TCC_large_R_jet"></a> TCC large-R jet </h5>
+<p />
+The JES/JMS uncertainties for TCC large-R jets have only 1 option in the <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/JetUncertaintiesRel21Summer2019TCC" target="_top">recommendation</a>, which must be set manually by the user in the following way:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>LargeRJetUncertainties_JESJERJMS_NPModel Scale_TCC_all</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+The recommendation mentions some kinematic limits for the uncertainties which might be broken in extreme cases: "Mass cuts depending on stats
+High pT and high m/pT jets lack sufficient statistics for the method to derive an uncertainty. The tool will tell you if your jet is outside of validity or not as mentioned above. Roughly speaking, this will only happen for jets with m/pT &gt; 0.5 and reasonably high pT (varying with m/pT)"
+<p />
+The JES/JMS calibration for TCC large-R jets have only 1 option in the  <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/ApplyJetCalibrationR21#R_1_0_TCC_jets" target="_top">recommendation</a>, which must be set manually by the user in the following way:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>LargeRJESJMSConfig TCCMass</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+<h5><a name="Large_R_Jet_Tagging_SF_Uncertain"></a> Large-R Jet Tagging SF Uncertainties </h5>
+<p />
+Systematics associated with large-R jet tagging can be organized into two categories: JES-correlated and non JES-correlated.
+<p />
+If using the standard <code>EventSaverFlatNtuple.cxx</code> event saver, those large-R SF systematics correlated with the JES are varied coherently with their corresponding JES systematics. In this case, for each requested large-R tagger or tagger WP, the corresponding large-R SF branch variable, <code>ljet_tagSF_&lt;taggerName&gt;</code>, will be modified within the TTree associated with the particular JES systematic.
+<p />
+If using the standard <code>EventSaverFlatNtuple.cxx</code> event saver, those large-R SF systematics not correlated with the JES are added as a new branch variable to the nominal TTree whenever large-R jet tagging is requested. In particular, for each large-R tagger or tagger WP requested, the non JES-correlated SF variations will be stored as a 2D vector <code>ljet_tagSF_&lt;taggerName&gt;_variations</code>. The relation between the indices of <code>ljet_tagSF_&lt;taggerName&gt;_variations</code> and the name of their corresponding systematic variations are stored in <code>sysName_&lt;taggerName&gt;</code> within the  <code>sumWeights</code> TTree.
+<p />
+<h4><a name="Jet_Ghost_Tracks"></a> Jet Ghost Tracks </h4>
+<p />
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisTop">AnalysisTop</a> supports ghost tracks associated to jets. However, their usage is still EXPERIMENTAL since the implementation was not yet tested in physics analyses.
+<p />
+<span style="color: #ff0000">Warning</span></verbatim>: Currently, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/GhostTracks?topicparent=AtlasProtected.TopxAODStartGuideR21;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">GhostTracks</a></span> are not compatible with configs also using UFO large-R jets (even if ghost-tracks are only desired for small-R jets), since the respective variables are not available in derivations! Please contact the <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TopReco?topicparent=AtlasProtected.TopxAODStartGuideR21;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TopReco</a></span> conveners if you'd like to use both together.
+<p />
+Ghost tracks are activated by adding line
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>JetGhostTrackDecoName GhostTrack</pre>
+<!-- end SyntaxHighlightingPlugin -->
+to the cuts-file. One needs to know what is the thinning procedure applied on the specific jet collection in the derivation used in analysis.
+<p />
+One can control jet pt and eta thresholds to load ghost tracks in order to avoid loading vectors of tracks affected by jet thinning. This jet pt and eta criteria are always applied on nominal jets.  Therefore, the Pt criterion should be set below the 'JetPt' cut which is applied on shifted jet after systematic variations are applied. Default values for Pt and Eta are
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>JetPtGhostTracks 30000 [MeV]
+JetEtaGhostTracks 2.5</pre>
+<!-- end SyntaxHighlightingPlugin -->
+If nominal jet pt is above 'JetPtGhostTracks' and |jet eta| &lt;= 'JetEtaGhostTracks' cut, all tracks are kept in the ghost track vector. However, null pointers are removed from ghost track vectors. Warning message is printed if vector of ghost tracks contains null pointers only.
+<p />
+Systematic variations related with usage of ghost tracks can be added to the output using
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>Systematics AllGhostTrack</pre>
+<!-- end SyntaxHighlightingPlugin -->
+They are also activated using 'Systematics All' option which activates all systematics variations.
+<p />
+In recent releases (&gt;21.143), a set of ghost track selections is applied. It is controled by the following flags (with default values shown):
+<p />
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>GhostTrackspT: 500 [MeV]
+GhostTracksVertexAssociation: nominal
+GhostTracksQuality: TightPrimary</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+<span style="color: #ff0000">Reminder:</span></verbatim> The selctions are applied to the nominal collection as well but the tracks are not skimmed (since it is the original track container). The solution is to add a decoration to the track collection: passPreORSelection. In the user's analysis code, when dealing with tracks, please filter the tracks using this decoration so that only the tracks passing the above selections are considered:
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#0000FF">if</FONT></B>(ghostTracks.at(iGhost)-&gt;auxdataConst&lt; <B><FONT COLOR="#228B22">char</FONT></B> &gt;(<B><FONT COLOR="#BC8F8F">&quot;passPreORSelection&quot;</FONT></B>) != 1)
+		{ <B><FONT COLOR="#A020F0">continue</FONT></B>;}</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+<h4><a name="Quark_Gluon_fraction_in_Jets_Unc"></a> Quark/Gluon fraction in Jets Uncertainties </h4>
+<p />
+It is possible to reduce the JES if the true composition of quark and gluons is known. In order to use this feature, a 3-step procedure was implemented in AnalysisTop. More information can be found in <a href="https://indico.cern.ch/event/652751/contributions/2661800/attachments/1492898/2321307/JESFlavour_TopAnalyses.pdf" target="_blank">this presentation<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>, and in the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TopJetFlavourComposition13TeV">TopJetFlavourComposition13TeV</a> twiki.
+<p />
+1) Run with AnalysisTop with the JETFLAVORPLOTS flag in your selection, for example:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>JETFLAVORPLOTS pt:15:20:30:45:50 abseta:0.:0.3:0.8:1.2:2.1</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+This will create a root file that is used as input for the next step
+<p />
+2) Run the stand-alone MakeQuarkGluonFractionPlots code that you can find <a href="https://gitlab.cern.ch/atlas/athena/tree/21.2/PhysicsAnalysis/TopPhys/xAOD/TopAnalysis/scripts" target="_blank">here<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>root[0].x MakeQuarkGluonFractionPlots.cxx++ (<B><FONT COLOR="#BC8F8F">&quot;MakeQuarkGluonFractionPlots.config&quot;</FONT></B>)</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+This will create several files with control plots and an input file to be used in the next step
+<p />
+3) Rerun AT specifying the new file in AT config file (do not forget to add this file to prun with "--extFile <file>" if you run on the grid):
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>JetUncertainties_QGFracFile path/FlavourCompostion.root</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+The procedure should be able to produce also the q/g fraction in Njet regions but AT currently does not support this.
+<p />
+<h5><a name="AT_repository_for_q_g_fractions"></a> AT repository for q/g fractions </h5>
+<p />
+We are storing in <a href="https://gitlab.cern.ch/atlasphys-top/reco/quarkgluonfractions" target="_blank">this repository<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> q/g plots from some analyses, that analyses with similar selections can use as examples (for instance, to test the impact of the reduction of this uncertainty in their case).
+<p />
+<h4><a name="Jet_response_plots"></a> Jet response plots </h4>
+<p />
+You can generate 2D histograms where on Y axis the reco pT - truth pT / truth pT for matched jets is stored as a function of truth jet pT (X axis). The same <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TruthJetCollection?topicparent=AtlasProtected.TopxAODStartGuideR21;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TruthJetCollection</a></span> is used for the truth jets. The matching is done with a simple delta R criterion.
+Inclusive plot (all jets) as well as per flavour plots are stored. The following syntax should be used:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>JETRESPONSEPLOTS deltaR:0.2 bins:10 min:-1 max:1 ptBinning:0,30,50,100,200,500,999999</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+Where <code>deltaR</code> controls the critical delta R value for matching, <code>bins</code>, <code>min</code> and <code>max</code> control the bins and range of the Y axis (the jet reposponse) and <code>ptBinning</code> controls the bin edges for the X axis.
+<p />
+<h4><a name="Egamma"></a> Egamma </h4>
+<p />
+Egamma Systematic Model. By default AnalysisTop uses the 1NP_v1 model, the other options are FULL_ETACORRELATED_v1 and FULL_v1. You could do:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>EgammaSystematicModel FULL_ETACORRELATED_v1</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+<h4><a name="B_tagging_eigenvector_uncertaint"></a> B-tagging eigenvector uncertainties. </h4>
+<p />
+The eigenvector variation method is developed to reduce the number of variations in the b-tagging calibration. More details can be found <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/BTaggingCalibrationDataInterface#Eigenvector_variation_method" target="_top">here</a>.
+<p />
+Sometimes, the sources of systematics are shared between the construction of b-tagging eigenvector and the physics analysis. In that case, these sources should be removed from the eigenvector construction and varied simultaneously in the b-tagging calibration and in the physics analysis. The following configuration is used to specify those sources that are to be excluded from b-tagging eigenvector construction:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>BTaggingSystExcludedFromEV</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+where the possible names of the systematics can be listed by:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>top-tool-ftag cutfile inputfile</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+In this way, in the systematic tree corresponding to the correlated systematics, the nominal b-tagging weight will be replaced by the varied one, thus the systematics is correlated.
+<p />
+Sometimes, the naming of sources in b-tagging calibration (from the CDI file) could be different from the naming of the systematics tree (from ASG). In that case, the nominal b-tagging weight will not be replaced automatically in the systematic tree, but has to be done by hand. To do that, first you need to store the varied b-tagging weight in the systematic tree by:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>DumpBtagSystsInSystTrees True</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+which will save, in addition to the nominal b-tagging weight, all the varied b-tagging weights corresponding to the requested b-tagging uncertainties listed in "BTaggingSystExcludedFromEV". Then you can do a manual correlation by using the varied b-tagging weight rather than the nominal b-tagging weight with the systematic tree.
+<p />
+<h4><a name="Store_per_jet_btag_SFs"></a> Store per-jet btag SFs </h4>
+<p />
+By default AnalysisTop stores per-event b-tag weights to reduce the output file size. If you want to store per-jet b-tag weights, use
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>StorePerJetBtagSFs True</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+<h3><a name="Example_of_systematic_variation"></a> Example of systematic variation on scale factors </h3>
+<p />
+<h4><a name="Tau"></a> Tau </h4>
+<p />
+AnalysisTop uses the default setups for the <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TauRecommendationsR21" target="_top">Tau systematics</a> provided by the TauCP group.
+<p />
+Current tau systematic variations in AnalysisTop include scale factor corrections to:
+<p /> <ul>
+<li> Tau reconstruction in high pt (TAU_SF_RECO_HIGHPT_UP/DOWN) and all pt range (TAU_SF_RECO_TOTAL_UP/DOWN).
+</li> <li> Tau identification in high pt (TAU_SF_JETID_HIGHPT_UP/DOWN) and all pt range (TAU_SF_JETID_TOTAL_UP/DOWN).
+</li> <li> Electron veto scale factors aimed at tau candidates (TAU_SF_ELEOLR_TOTAL_UP/DOWN) and electrons (TAU_SF_TRUEELECTRON_ELEOLR_TOTAL_UP/DOWN).
+</li></ul> 
+The systematics are retrieved by the function <a href="https://gitlab.cern.ch/atlas/athena/blob/master/PhysicsAnalysis/TopPhys/xAOD/TopCorrections/Root/ScaleFactorRetriever.cxx#L700" target="_blank">ScaleFactorRetriever::tauSF<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> where you provide the tau candidate and the systematics such as top::topSFSyst::TAU_SF_RECO_HIGHPT_UP.
+<p />
+and tau energy scale variations at: <ul>
+<li> Detector level (TAUS_TRUEHADTAU_SME_TES_DETECTOR__1up/1down)
+</li> <li> In-situ level (TAUS_TRUEHADTAU_SME_TES_INSITU__1up/1down)
+</li> <li> Model level (TAUS_TRUEHADTAU_SME_TES_MODEL__1up/down)
+</li></ul> 
+<p />
+<h4><a name="Electrons"></a> Electrons </h4>
+<p />
+The Electron Charge ID Selection tool (<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/ElectronChargeFlipTaggerTool">ElectronChargeFlipTaggerTool</a>) aims at reducing the numbers of electrons that are reconstructed with a wrong charge. The variable el_ECIDS is set to 1 if the electron it passes the tool selection (N.B. the only available working points are <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MediumLH?topicparent=AtlasProtected.TopxAODStartGuideR21;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MediumLH</a></span> /TightLH ID and FCTight/Gradient isolation), while el_ECIDSResult stores the corresponding BDT output value. The following scale factors should be used associated to the tool: those computed by the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/EgammaChargeMisIdentificationTool">EgammaChargeMisIdentificationTool</a> (adjust the fractions of right/wrong charge electrons), stored in the weight_indiv_SF_EL_ChargeMisID variable; and those by the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/XAODElectronEfficiencyCorrectionTool">XAODElectronEfficiencyCorrectionTool</a> (difference in selection efficiency of the Charge ID selector tool between data and MC), stored in the weight_indiv_SF_EL_ChargeID variable. The first scale factor is associated to four additional variables with _STAT_UP/DOWN and _SYST_UP/DOWN variations. To the second scale factor two additional variables are stored for the systematic _UP/DOWN variations.
+<p />
+<h4><a name="Photons"></a> Photons </h4>
+<p />
+The scale factors are provided by the tool <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/PhotonEfficiencyCorrection">PhotonEfficiencyCorrection</a>, to be applied on MC to match the efficiency measured in data, and saved in the variables (systematic variation name): <br /> weight_photonSF (nominal) <br /> weight_photonSF_ID_UP (PH_EFF_ID_Uncertainty__1up) <br /> weight_photonSF_ID_DOWN (PH_EFF_ID_Uncertainty__1down)
+<p />
+The uncertainties corresponding for <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/IsolationSF2016Moriond#Photons" target="_top">photon track isolation efficiency</a> are also calculated. Tools with name "AsgPhotonEfficiencyCorrectionTool_IsoSF" + "isolation working point" (Loose, Tight, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TightCaloOnly?topicparent=AtlasProtected.TopxAODStartGuideR21;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TightCaloOnly</a></span>) are initialized and can be retrieved, but only Tight isolation working point scale factors are currently saved in the output. The following variables (systematic variation name) are available : <br /> weight_photonSF_effIso (nominal) <br /> weight_photonSF_effLowPtIso_UP (PH_EFF_LOWPTISO_Uncertainty__1up) <br /> weight_photonSF_effLowPtIso_DOWN (PH_EFF_LOWPTISO_Uncertainty__1down) <br /> weight_photonSF_effTrkIso_UP (PH_EFF_TRKISO_Uncertainty__1up) <br /> weight_photonSF_effTrkIso_DOWN (PH_EFF_TRKISO_Uncertainty__1down)
+<p />
+<h3><a name="Truth_options"></a> Truth options </h3>
+<p />
+The following are True/False options that are all set to False as default. So if you want any, you can turn them on
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table1" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top"> <a href="/twiki/bin/view/AtlasProtected/TopxAODStartGuideR21?sortcol=0;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Name</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol1" valign="top"> <a href="/twiki/bin/view/AtlasProtected/TopxAODStartGuideR21?sortcol=1;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Parameter values</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol2 twikiLastCol" valign="top"> <a href="/twiki/bin/view/AtlasProtected/TopxAODStartGuideR21?sortcol=2;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Description</font></a> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> TruthBlockInfo </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> True/False (default: False) </td>
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol" valign="top"> full Truth block info - this is very large </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TopParticleLevel">TopParticleLevel</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> True/False (default: False) </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2 twikiLastCol" valign="top"> For performing particle level analysis, stored in the particleLevel tree in the output file </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <strong>for release &gt;=21.2.115</strong> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TopPartonLevel?topicparent=AtlasProtected.TopxAODStartGuideR21;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TopPartonLevel</a></span> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top"> True/False (default: True) </td>
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol twikiLast" valign="top"> For performing parton level analysis, stored in the truth tree in the output file </td>
+</tr></table>
+<p />
+Three options are available for defining which PDF output is written
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table2" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top"> <a href="/twiki/bin/view/AtlasProtected/TopxAODStartGuideR21?sortcol=0;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Name</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol1 twikiLastCol" valign="top"> <a href="/twiki/bin/view/AtlasProtected/TopxAODStartGuideR21?sortcol=1;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Description</font></a> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> PDFInfo </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol twikiLast" valign="top"> False: nothing is written (Default), True: PDF written in truth and particle trees, Nominal: Stored in truth, particle and nominal trees </td>
+</tr></table>
+If you do set
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>TopParticleLevel True</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+You can also set the truth electron, muon and jet pT and eta cuts; refer to <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TopParticleLevel">TopParticleLevel</a> for a more complete description of the functionality provided by <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TopParticleLevel">TopParticleLevel</a> and how to use the data produced by this tool.
+<p />
+The TopPartonHistory option can also be used to dump parton-level information on the event kinematics.
+<p />
+The topologies currently supported are: <ul>
+<li> ttbar <ul>
+<li> where only the t-&gt;bW decay is taken into account
+</li> <li> where the t-&gt;qW (q=u, d, c, s, b) decay is considered (<span style="color: #ff0000">NB:</span></verbatim> you need to run over special DSIDs for this option to be meaningful)
+</li></ul> 
+</li> <li> W'-&gt;tb (or SM single-top s-channel)
+</li> <li> Wt(b)
+</li></ul> 
+<p />
+They are enabled by doing, respectively:
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>TopPartonHistory ttbar</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+or
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>TopPartonHistory ttbarlight</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+or
+<p />
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>TopPartonHistory tb</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+or
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>TopPartonHistory Wtb</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+or
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>TopPartonHistory ttz</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+or
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>TopPartonHistory ttgamma</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+or
+<sticky>
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>TopPartonHistory tHqtautau</pre>
+<!-- end SyntaxHighlightingPlugin --></sticky>
+<p />
+The default parameter is False which deactivates this feature. Note that depending on the thinning of the truth contents at the stage of derivations, it may not work on all derivations. Up to now, things have been checked to work fine for TOPQ1 and EXOT4.
+<p />
+<span style="color: #ff0000">NB:</span></verbatim> Wtb option stores information about the top quark and W boson and their decay products. If there is additional b-quark present in the event, the information about the additional b-quark is also stored. Due to the nature of histograms contributing to Wtb events and the way the parton information is stored in MC samples, it is very difficult to identify the "other b-quarks". The code looks for b-quarks that do not come from top quarks, W bosons or directly from protons. The output of this algorithm for identifying the other b-quarks needs to be carefully cross-checked by the analyzers.
+<p />
+<span style="color: #ff0000">NB:</span></verbatim> The parton history calculation relies on the existance of the <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TruthParticles?topicparent=AtlasProtected.TopxAODStartGuideR21;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TruthParticles</a></span> Collection in the derivation. This means, e.g. TRUTH3 and the ongoing DAOD_PHYS won't work with top parton history routines. Adaption of these routines is needed for R22/Run-3.
+<p />
+<h3><a name="Exploting_loose_physics_objects"></a> Exploting loose physics objects definitions </h3>
+<p />
+In several parts of the twiki, we discuss the possibility of defining "loose" physics objects. In this section we'll try to give a more complete overview of how these work. "Tight" objects are the ones used by default, on which AT typically runs storing the results in the standard output trees ("nominal" + all syst variations trees). "Loose" objects can be used to run the same analysis on objects defined in a different way: for example, the user may run without using isolation on "loose" electrons, while using isolation requirements on the standard (tight) definition. The idea, usually, is to use the loose definition e.g. to define a control region in data that can be used for estimating the background relative to fake leptons from QCD events, but other uses are possible. The output of the "loose" analysis will be stored in trees with the "_Loose" prefix (e.g. "nominal_Loose").
+<p />
+The main options to control the AT behaviour for these are the following options:
+<p />
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>DoTight Data/MC/Both(default)/False
+DoLoose Data(default)/MC/Both/False
+DoSysts Both(default)/Tight/Loose</pre>
+<!-- end SyntaxHighlightingPlugin -->&lt;/sticky&gt;
+<p />
+which control the running of the "normal" (i.e. tight) analysis, the "loose" one, and define what to do for systematics.
+<p />
+Technically, AT will run separately using tight definitions and using loose definitions: for example, when an <a href="https://gitlab.cern.ch/atlas/athena/-/blob/21.2/PhysicsAnalysis/TopPhys/xAOD/TopEvent/TopEvent/Event.h" target="_blank">Event<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> is built in <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisTop">AnalysisTop</a>, the <code>event.m_isLoose</code> flag will tell the user if the  event was built using the standard (tight) definitions of physics objects or the loose ones: in the first case (m_isLoose is false) vectors of objects like <code>event.m_electrons</code> will be filled with objects passing the standard (tight) definition, in the second case (m_isLoose is true) objects stored in vectors in the event will be the ones passing the loose cuts.
+<p />
+To define the loose objects, options like:
+<p />
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>ElectronIDLoose
+ElectronIsolationLoose
+
+FwdElectronIDLoose
+
+PhotonIDLoose
+PhotonIsolationLoose
+
+MuonQualityLoose
+MuonIsolationLoose
+
+TauJetIDWPLoose
+TauEleBDTWPLoose</pre>
+<!-- end SyntaxHighlightingPlugin -->&lt;/sticky&gt;
+<p />
+can be used, please have a look at <a href="https://gitlab.cern.ch/atlas/athena/-/blob/21.2/PhysicsAnalysis/TopPhys/xAOD/TopConfiguration/Root/ConfigurationSettings.cxx" target="_blank">ConfigurationSettings.cxx<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> for more details (just search for "loose").
+<p />
+For events built using loose definitions, loose objects will be used in the Overlap Removal procedure. On the other hand, the MET will by default be built using tight objects even for loose events: the idea here is that in order to use these events for a background estimation, one wants to keep the events as similar as possible to the tight ones, with the exception of the differences in the loose objects definitions; in this way, an event passing the selection both when built using tight and loose definitions will have the same MET in those two cases. For releases &gt;=21.2.138 three new options have been added:
+<p />
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>UseLooseObjectsInMETInLooseTree -&amp;gt; Experimental: use loose objects when rebuilding the MET <B><FONT COLOR="#A020F0">for</FONT></B> the loose tree : True or False (default = False)
+UseLooseObjectsInMETInNominalTree -&amp;gt; Experimental: use loose objects when rebuilding the MET <B><FONT COLOR="#A020F0">for</FONT></B> the nominal tree : True or False (default = False)
+WriteMETBuiltWithLooseObjects -&amp;gt; Write a separate branch with the met built with loose objects <B><FONT COLOR="#A020F0">in</FONT></B> the output <B><FONT COLOR="#A020F0">for</FONT></B> tests: True or False (default = False)</pre>
+<!-- end SyntaxHighlightingPlugin -->&lt;/sticky&gt;
+<p />
+More informations on how to use loose options to estimate the fakes background can be found <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TopFakes">here</a> and <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TopFakesIFFForUsers13TeV">here</a>.
+<p />
+<h3><a name="Fakes_control_region_determinati"></a> Fakes control region determination </h3>
+<p />
+Would you also like to be able to select loose MC events in order to determine a fakes control region? </div><!-- /patternTopic-->
+<div class="twikiContentFooter"></div></div><!-- /patternContent-->
+<div class="clear"></div>
+<a name="topic-actions"></a><div class="patternTopicActions"><div class="patternTopicAction"><span class="patternActionButtons"><span style=''><span><a href='https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/TopxAODStartGuideR21?t=1763376476;nowysiwyg=1' rel='nofollow' title='Edit this topic text' accesskey='e'><img src='/twiki/pub/TWiki/TWikiDocGraphics/uweb-o14.gif' width='14' height='14' border='0' alt='' /> <span class='twikiAccessKey'>E</span>dit</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span></span><span style=''><span><a href='/twiki/bin/attach/AtlasProtected/TopxAODStartGuideR21' rel='nofollow' title='Attach an image or document to this topic' accesskey='a'><span class='twikiAccessKey'>A</span>ttach</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span></span><span><a href='/twiki/bin/view/AtlasProtected/TopxAODStartGuideR21?cover=print' rel='nofollow' title='Printable version of this topic' accesskey='p'><span class='twikiAccessKey'>P</span>rint version</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span><span><a href='/twiki/bin/oops/AtlasProtected/TopxAODStartGuideR21?template=oopshistory' rel='nofollow' title='View total topic history' accesskey='h'><span class='twikiAccessKey'>H</span>istory</a></span>: r281&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/TopxAODStartGuideR21?rev1=281;rev2=280" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/TopxAODStartGuideR21?rev=280" rel="nofollow">r280</a>&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/TopxAODStartGuideR21?rev1=280;rev2=279" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/TopxAODStartGuideR21?rev=279" rel="nofollow">r279</a>&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/TopxAODStartGuideR21?rev1=279;rev2=278" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/TopxAODStartGuideR21?rev=278" rel="nofollow">r278</a>&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/TopxAODStartGuideR21?rev1=278;rev2=277" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/TopxAODStartGuideR21?rev=277" rel="nofollow">r277</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span><a href='/twiki/bin/oops/AtlasProtected/TopxAODStartGuideR21?template=backlinksweb' rel='nofollow' title='Search the AtlasProtected Web for topics that link to here' accesskey='b'><span class='twikiAccessKey'>B</span>acklinks</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span><a href='/twiki/bin/view/AtlasProtected/TopxAODStartGuideR21?raw=on' rel='nofollow' title='View raw text without formatting' accesskey='r'><span class='twikiAccessKey'>R</span>aw View</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span style=''><span><a href='https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/TopxAODStartGuideR21?t=1763376476;nowysiwyg=0' rel='nofollow' title='WYSIWYG editor' accesskey='w'>WYSIWYG</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span></span><span><a href='/twiki/bin/oops/AtlasProtected/TopxAODStartGuideR21?template=oopsmore&amp;param1=281&amp;param2=281' rel='nofollow' title='Delete or rename this topic; set parent topic; view and compare revisions' accesskey='m'><span class='twikiAccessKey'>M</span>ore topic actions</a></span></span></div><!--/patternTopicAction--></div><!--/patternTopicActions-->
+<div class="patternInfo twikiGrayText"><div class="patternRevInfo">Topic revision: r281 - 2024-07-08 <a href="https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/TopxAODStartGuideR21?t=1763376476;nowysiwyg=1" target="_top">-</a> <span class="twikiNewLink"><a href="/twiki/bin/edit/Main/SteffenKorn?topicparent=AtlasProtected.TopxAODStartGuideR21;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">SteffenKorn</a></span></div><!-- /patternRevInfo--></div><!-- /patternInfo-->
+</div><!-- /patternMainContents-->
+</div><!-- /patternMain--><div id="patternLeftBar"><div id="patternClearHeaderLeft"></div>
+<div id="patternLeftBarContents"><div class="patternLoginActions"><span style="padding: 0 0 0 20px; word-wrap:break-word; display:block;"><img src="https://twiki.cern.ch/twiki/pub/TWiki/TWikiDocGraphics/person.gif" style="position:absolute; margin: 0 0 0 -20px;" /> <span class="twikiNewLink"><a href="/twiki/bin/edit/Main/RoySchimmelBrener?topicparent=AtlasProtected.TopxAODStartGuideR21;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">RoySchimmelBrener</a></span></span>  <img src="/twiki/pub/TWiki/TWikiDocGraphics/lock.gif" width="16" height="16" alt="Lock" title="Lock" border="0" /> <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/TopxAODStartGuideR21?logout=1">Log Out</a></div><div class="patternWebIndicator"> <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="/twiki/bin/view/AtlasProtected/WebHome"><img src="/twiki/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" width="13" height="13" alt="Web background" title="Web background" border="0" /> AtlasProtected</a>
+</li></ul> 
+</div> <ul>
+<li> <strong><a href="https://atlas-collaboration.web.cern.ch" target="_blank"><span style="color: blue">ATLAS Collaboration</span><img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a></strong>
+</li></ul> 
+<hr /> <ul>
+<li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/WebHome"><span style="color: #0000ff"> ATLAS TWiki</span></verbatim></a></strong>
+</li> <li> <strong><a class="twikiCurrentWebHomeLink twikiLink" href="/twiki/bin/view/AtlasProtected/WebHome"><span style="color: #0000ff"> ATLAS Protected</span></verbatim></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasComputing/WebHome"><span style="color: #0000ff"> ATLAS Computing </span></verbatim></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasPublic/WebHome"><span style="color: #0000ff"> Public Results </span></verbatim></a></strong>
+</li></ul> 
+<hr /> <ul>
+<li> <strong><a href="https://its.cern.ch/jira/secure/CreateIssueDetails!init.jspa?pid=22679&amp;issuetype=3&amp;summary=Problem+with+TopxAODStartGuideR21+TWiki+topic&amp;description=The+topic+https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TopxAODStartGuideR21+has+an+issue.+Describe+it+below:&amp;reporter=rbrener" target="_blank"><span style="color: #ff0000"> Report outdated page </span></verbatim><img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a></strong>
+</li> <li> <strong><a href="mailto&#58;atlas&#45;twiki&#45;support&#64;cern&#46;ch"><span style="color: #ff0000"> Twiki-Support </span></verbatim></a></strong>
+</li></ul> 
+<hr />
+<p /> <ul>
+ <li>
+ <ul>
+<li> <strong><a href="https://twiki.cern.ch/twiki/bin/view/AtlasPublic" target="_top"><span style="color: navy;"> Public Results </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AtlasPhysics"><span style="color: navy;"> Physics </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/AtlasDetectors"><span style="color: navy;"> Detectors </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/AtlasTrigger"><span style="color: navy;"> Trigger </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasComputing/WebHome"><span style="color: navy;"> Computing </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/DataPreparation"><span style="color: navy;"> Data Preparation </span></a></strong>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/Atlas/DocumentationManagement">Documentation Help</a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/Atlas/AtlasGlossary">Glossary</a>
+</li></ul> 
+</li></ul> 
+<p />
+<div class="twikiLeftBarBase">
+  <a href="/twiki/bin/edit/AtlasProtected/TopxAODStartGuideR21LeftBar?templatetopic=AtlasProtected.WebLeftBarTemplate">Create</a> a LeftBar for this page
+</div>
+<p />
+<hr />
+<span style="color: #008000"> <img src='https://twiki.cern.ch/twiki/pub/TWiki/TWikiDocGraphics/searchtopic.gif'> <strong><a href="https://search.cern.ch/Pages/TwikiResults.aspx?k=generic2%3AATLAS" target="_blank">TWiki Search<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a></strong> </span></verbatim>
+<hr />
+<p />
+<!-- <ul>
+ <li>
+ <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="/twiki/bin/view/AtlasProtected/WebHome">AtlasProtected Wiki</a>
+</li></ul> 
+</li></ul> 
+-->
+</div><!-- /patternLeftBarContents--></div><!-- /patternLeftBar-->
+</div><!-- /patternFloatWrap-->
+<div class="clear">&nbsp;</div>
+</div><!-- /patternOuter--></div><!-- /patternWrapper--><div id="patternTopBar"><div id="patternTopBarContents"><table border="0" cellpadding="0" cellspacing="0" style="width:100%; margin-top:12px;">
+<tr><td valign="middle"><span id="twikiLogo" class="twikiImage"><a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/WebHome"><img src="/twiki/pub/AtlasPublic/AtlasTWikiLogos/AtlasTwikiProtectedLogo.png" border="0" alt="CERN" style="border:none;" /></a></span></td>
+<td align="right" valign="top" class="patternMetaMenu">
+ <ul>
+<li> <form name="jumpForm" action="/twiki/bin/view/AtlasProtected/TopxAODStartGuideR21"><input id="jumpFormField" type="text" class="twikiInputField" name="topic" value="" size="18" /><noscript>&nbsp;<input type="submit" class="twikiButton" size="5" name="submit" value="Jump" />&nbsp;</noscript>   </form>
+</li> <li> <form name="quickSearchForm" action="https://search.cern.ch/Pages/TwikiResults.aspx" target="search" class="cernTWikiSearch">    <ul class="engineList" style="background-image: url('https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/arrow.png');">        <li class="active" id="twikisearch">            <img src="https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/twikisearchicon.gif" alt="TWiki Search Icon" />            <span class="engineDescription">TWiki Search</span>        </li>        <!-- Due to a security incident <a href="https://cern.service-now.com/service-portal?id=outage&amp;n=OTG0156848" target="_blank">OTG0156848<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>, the legacy CERN Search Service has been shut down        <li id="cernsearch">            <img src="https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/cernsearchicon.png" alt="Cern Search Icon" />            <span class="engineDescription">Cern Search</span>        </li>         -->        <li id="googlesearch">            <img class="engine" src="https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/googlesearchicon.png" alt="Google Search Icon" />            <span class="engineDescription">Google Search</span>        </li>    </ul>    <input type="text" class="twikiInputField" id="quickSearchBox" name="k" value="" size="18" /> <br />    <input type="radio" name="scope" value=Atlas checked />     <span class="webScopeDescription">Atlas</span>    <input type="radio" name="scope" value="AllWebs" />    <span class="allWebsScopeDescription">All webs</span>    <input type='hidden' name='autologin' value='1'/>     <noscript>        &nbsp; <input type="submit" size="5" class="twikiButton" name="submit" value="Search"/>&nbsp;    </noscript>
+</li></ul> 
+</form>
+<p />
+<p />
+<!-- <pre> -->
+<script language="javascript">
+<!--
+$(function() {
+    // We use the current web name to form the redirect in the TWiki search
+    var currentWeb = undefined;
+    // If the web starts with alice* atlas* cms* or lhcb* (case-insensitive),
+    // the "Web search" should be altered so that AtlasFoo => Atlas
+    var specialWeb = undefined;
+    // Remembering what the user have entered into the searchbox to after
+    // he has selected a new search engine from the dropdown
+    var searchPhrase = '';
+
+    // --- BEGIN: CONFIGURABLE LIST FOR SUBWEB SEARCH ---
+    // List of webs for which sub-web searching should be enabled
+    var subWebSearchWebs = ['AtlasProtected', 'AtlasComputing', 'Atlas'];
+    // --- END: CONFIGURABLE LIST FOR SUBWEB SEARCH ---
+
+    // --- ORIGINAL WEB DETECTION LOGIC ---
+    // We want to store the current web for later use.
+    var currentWebSearch = window.location.pathname.match(/\/([A-Z][^\/]+)/);
+    if (currentWebSearch != null) {
+        currentWeb = currentWebSearch[1];
+
+        // Do we have a special kind of web? If so, the web search should be altered a little to fetch more broader results.
+        var specialWebSearch = currentWeb.match(/^(alice|atlas|cms|lhcb)/i);
+        if (specialWebSearch != null) {
+            var lowercaseToCorrect = {
+                'alice' : 'Alice',
+                'atlas' : 'Atlas',
+                'cms'   : 'CMS',
+                'lhcb'  : 'LHCb'
+            };
+            specialWeb = lowercaseToCorrect[specialWebSearch[1].toLowerCase()];
+            $('span.webScopeDescription').text(specialWeb);
+        }
+    } else {
+        currentWeb = 'DefaultWeb';
+    }
+
+    // --- BEGIN: SUBWEB LOGIC TO EXTRACT SUBWEB PATH (EXCLUDING TOPIC) ---
+    var subWebSearchWebs = ['AtlasProtected', 'AtlasComputing', 'Atlas'];
+    // Build regex to match web/subweb path and topic
+    var subWebsPattern = new RegExp(
+        '/((' + subWebSearchWebs.join('|') + ')(?=(?:/|$))(?:/[A-Za-z0-9_]+)*)/([A-Za-z0-9_]+)$'
+    );
+    var subWebMatch = window.location.pathname.match(subWebsPattern);
+    if (subWebMatch) {
+        // subWebMatch[1] is the full web/subweb path (e.g. "AtlasComputing/AtlasComputingArchive")
+        // subWebMatch[3] is the topic (e.g. "WebHome")
+        currentWeb = subWebMatch[1];
+        specialWeb = currentWeb;
+        $('span.webScopeDescription').text(specialWeb);
+    }
+    // --- END: SUBWEB LOGIC TO EXTRACT SUBWEB PATH (EXCLUDING TOPIC) ---
+
+    // Do we have a favourite search engine in localStorage? We set Twiki search as default anyways
+    if (window.localStorage) {
+        // var storedEngine = localStorage.getItem('defaultSearchEngine');
+        // console.log('stored engine preference: ' + storedEngine);
+        var storedEngine = 'twikisearch';
+        var storedEngineLi = $('.cernTWikiSearch li#' + storedEngine);
+        if (!storedEngineLi.hasClass('active')) {
+            changeActiveSearchEngine(storedEngineLi);
+        }
+        if (storedEngine == 'twikisearch') {
+            $('input[name=scope][value=AllWebs]').attr('disabled','disabled');
+            $('.allWebsScopeDescription').addClass('disabled');
+        }
+    }
+    
+    // Toggle the searchEngines list on and off on click
+    $('.cernTWikiSearch ul.engineList').click(function(e) {
+        e.stopPropagation();
+        if ($(this).hasClass('open')) {
+            $(this).removeClass('open');
+        } else {
+            $(this).addClass('open');
+        }
+    });
+
+    // Stupid IE8 hack because the click handler on ul.engineList does not work properly there.
+    if ($.browser.msie && document.documentMode && document.documentMode < 9) {
+        $('.cernTWikiSearch #quickSearchBox').focus(function(e) {
+            $('.cernTWikiSearch ul.engineList').removeClass('open');
+        });
+    }
+    
+    // Handle clicks on one of the search engines
+    $('.cernTWikiSearch ul.engineList li').click(function(e) {
+        // If we clicked on a <li> that does not has class 'active', it means this should become active and swap places with this.
+        if (!$(this).hasClass('active')) {
+            changeActiveSearchEngine($(this));
+        }  
+        if ($(this).parent().hasClass('open')) {
+            $('.cernTWikiSearch #quickSearchBox').val(searchPhrase);
+            $('.cernTWikiSearch #quickSearchBox').focus();                          
+        }
+        if ($(this).attr('id') == 'twikisearch') {
+            var allWebsRadio = $('input[name=scope][value=AllWebs]');
+            allWebsRadio.attr('disabled','disabled');
+            allWebsRadio.siblings('input[type=radio]').attr('checked',true)
+            $('.allWebsScopeDescription').addClass('disabled');
+        } else {
+            $('input[name=scope][value=AllWebs]').attr('disabled','');
+            $('.allWebsScopeDescription').removeClass('disabled');
+        }
+    });
+    
+    // Show the engine description text on hover
+    $('.engineList.open li').live('hover',function() {
+        var displayText = $(this).find('span.engineDescription').text();
+        $('.cernTWikiSearch #quickSearchBox').val(displayText);
+    });
+
+
+    // The form is submitted, now let's do the search.
+    $('.cernTWikiSearch').submit(function(e) {
+        e.preventDefault();
+
+        var scope = $('input[name=scope]:checked', $(this)).val();
+        if (scope != 'AllWebs' && specialWeb !== undefined) {
+            scope = specialWeb;
+        }
+        var val = $('.cernTWikiSearch #quickSearchBox').val();
+        var engine = $('.engineList li.active').attr('id')
+        
+        switch (engine) {
+            case 'googlesearch':
+                window.open('https://google.com/search?q=site:' + encodeURIComponent('https://twiki.cern.ch') + (scope != 'AllWebs' ? ' ' + scope : '') + ' ' + val);
+                break;
+            case 'cernsearch':
+                window.open('https://search.cern.ch/Pages/TwikiResults.aspx?k=' + val + (scope != 'AllWebs' ? ' cernscope:' + scope : '') + '&autologin=1');
+                break;
+            case 'twikisearch':
+                window.open(window.location.pathname.replace(/\/[A-Z].+$/,'') + '/' + currentWeb + '/WebSearch?search=' + val + '&scope=all');
+                break;
+        default:
+            break;
+        }
+        
+        // Save the search engine. If the user reloads the page he should get the last one used.
+        if (window.localStorage) { 
+            console.log('store engine preference: ' + engine);
+            localStorage.setItem('defaultSearchEngine',engine);
+        }
+    });
+    
+    // Save the search phrase on every key up
+    $('.cernTWikiSearch #quickSearchBox').keyup(function() {
+        searchPhrase = $(this).val();
+    });
+    
+    // If a user clicks outside the search engine list, the search engine list should be closed.
+    $('html').click(function() {
+        if ($('.engineList').hasClass('open')) {
+            $('.engineList').removeClass('open');
+            $('.cernTWikiSearch #quickSearchBox').val(searchPhrase);
+        }
+    });
+});
+
+// We want to change the active search engine
+function changeActiveSearchEngine(engineLi) {
+    var activeEngine = engineLi.siblings(':first');
+    engineLi.detach().insertBefore(activeEngine);
+    activeEngine.removeClass('active');
+    engineLi.addClass('active');
+    if (engineLi.attr('id') == 'twikiSearch') {
+        deactivateAllWebsOption();
+    }
+}
+
+// The user has chosen twiki search (or the preference was stored in localStorage). 
+// We will then disable the 'All Webs' option since this will time out.
+function deactivateAllWebsOption() {
+}
+
+// Helper method to check input attribute browser compability
+function checkInputAttributeSupport(attribute) {
+    var i = document.createElement("input");
+    return typeof i.placeholder !== 'undefined';
+}
+//-->
+</script>
+<!-- </pre> --> <ul>
+<li> 
+</li></ul> 
+</td></tr></table></div></div><!-- /patternTopBar--><div id="patternBottomBar"><div id="patternBottomBarContents"><div id="patternWebBottomBar"><div class="twikiCopyright"><span class="twikiRight"> <a href="http://twiki.org/"><img src="/twiki/pub/TWiki/TWikiLogos/T-badge-88x31.gif" alt="This site is powered by the TWiki collaboration platform" width="88" height="31" title="This site is powered by the TWiki collaboration platform" border="0" /></a></span><span class="twikiRight" style="padding:0 10px 0 10px"> <a href="http://www.perl.org/"><img src="/twiki/pub/TWiki/TWikiLogos/perl-logo-88x31.gif" alt="Powered by Perl" width="88" height="31" title="Powered by Perl" border="0" /></a></span>Copyright &amp;© 2008-2025 by the contributing authors. All material on this collaboration platform is the property of the contributing authors. <br />  or Ideas, requests, problems regarding TWiki? use <a href="https://discourse.web.cern.ch/c/collaborative-editing/wikis/12">Discourse</a> or <a href='https://twiki.cern.ch/twiki/bin/view/Main/ServiceNow'>Send feedback</a> </div><!--/twikiCopyright--></div><!--/patternWebBottomBar--></div><!-- /patternBottomBarContents--></div><!-- /patternBottomBar-->
+</div><!-- /patternPage-->
+</div><!-- /patternPageShadow-->
+</div><!-- /patternScreen-->
+<p />
+<p />
+<p />
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+	 var u="https://webanalytics.web.cern.ch/";
+	 _paq.push(['setTrackerUrl', u+'matomo.php']);
+	 _paq.push(['setSiteId', '5']);
+	 var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	 g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+<p />
+</body></html>

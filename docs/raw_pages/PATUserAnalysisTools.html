@@ -1,0 +1,1989 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+<script type="text/javascript" src="/twiki/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="/twiki/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="/twiki/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<link rel="stylesheet" href="https://twiki.cern.ch/twiki/pub/TWiki/ImagePlugin/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="https://twiki.cern.ch/twiki/pub/TWiki/ImageGalleryPlugin/style.css" type="text/css" media="all" />
+<title> PATUserAnalysisTools &lt; AtlasProtected &lt; TWiki</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="icon" href="/twiki/pub/AtlasProtected/WebPreferences/favicon_new.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/twiki/pub/AtlasProtected/WebPreferences/favicon_new.ico" type="image/x-icon" />
+<link rel="alternate" href="https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/PATUserAnalysisTools?t=1763376386" type="application/x-wiki" title="Edit PATUserAnalysisTools" />
+<link rel="edit" href="https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/PATUserAnalysisTools?t=1763376386" title="Edit PATUserAnalysisTools" />
+<meta name="SCRIPTURLPATH" content="/twiki/bin" />
+<meta name="SCRIPTSUFFIX" content="" />
+<meta name="TEXT_JUMP" content="Jump" />
+<meta name="TEXT_SEARCH" content="Search" />
+<meta name="TEXT_NUM_TOPICS" content="Number of topics:" />
+<meta name="TEXT_MODIFY_SEARCH" content="Modify search" />
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/twiki/bin/view/AtlasProtected/WebRss" />
+<base href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/PATUserAnalysisTools"></base>
+<!--BEHAVIOURCONTRIB--><script type="text/javascript" src="/twiki/pub/TWiki/BehaviourContrib/behaviour.compressed.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiWindow.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiEvent.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiHTML.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiForm.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/PatternSkin/pattern.js"></script>
+<style type="text/css" media="all">
+@import url('/twiki/pub/TWiki/TWikiTemplates/base.css');
+</style>
+<style type="text/css" media="all">
+#patternTopBar,
+#patternClearHeaderCenter,
+#patternClearHeaderLeft,
+#patternClearHeaderRight,
+#patternTopBarContentsOuter,
+#patternTopBarContents {
+	height:64px; /* top bar height; make room for header columns */
+	overflow:hidden;
+}
+#patternOuter {
+	margin-left:14em;
+}
+#patternLeftBar {
+	width:14em;
+	margin-left:-14em;
+}
+</style>
+<style type="text/css" media="all">
+@import url('/twiki/pub/TWiki/PatternSkin/layout.css');
+@import url('/twiki/pub/TWiki/PatternSkin/style.css');
+@import url('/twiki/pub/TWiki/PatternSkin/colors.css');
+</style>
+<style type="text/css" media="all">
+	/* Styles that are set using variables */
+	.patternBookView .twikiTopRow,
+	.patternWebIndicator a img,
+	.patternWebIndicator a:hover img {
+		background-color:#0b048c ;
+	}
+	#patternTopBarContents { background-image:url(/twiki/pub/TWiki/PatternSkin/TWiki_header.gif); background-repeat:no-repeat;}
+	
+	.patternBookView {
+		border-color:#0b048c ;
+	}
+	.patternPreviewPage #patternMain {
+		/* uncomment to set the preview image */
+		/*background-image:url("/twiki/pub/TWiki/PreviewBackground/preview2bg.gif");*/
+	}
+	
+</style><style type="text/css" media="all">
+
+
+
+</style>
+<style type="text/css" media="all">
+	@import url("/twiki/pub/TWiki/PatternSkin/print.css");
+</style>
+<!--[if IE]><style type="text/css" media="screen">
+pre {
+	overflow-x:auto;
+	padding-bottom:expression(this.scrollWidth > this.offsetWidth ? 16 : 0);
+}
+</style>
+<![endif]-->
+<!--[if lte IE 6]> 
+<style type="text/css">
+#patternLeftBar {
+	position:relative; /* IE 5.5 needs this or the contents won't show outside the parent container on print. IE 6.0 needs it only during printable copy! */
+}
+</style><![endif]-->
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiStyles.js"></script>
+
+<script src="https://twiki.cern.ch/twiki/pub/TWiki/ChecklistPlugin/itemstatechange.js" language="javascript" type="text/javascript"></script><!--GENERATED_HEADERS--><!-- CERNSEARCHBAR_CSS --> <link rel='stylesheet' href='/twiki/pub/TWiki/CernSearchBar/CernSearchBar.css' type='text/css' media='all' />
+<!-- TWISTYPLUGIN_TWISTY --> <style type="text/css" media="all">
+@import url("https://twiki.cern.ch/twiki/pub/TWiki/TwistyContrib/twist.css");
+</style>
+<script type='text/javascript' src='https://twiki.cern.ch/twiki/pub/TWiki/BehaviourContrib/behaviour.compressed.js'></script>
+<script type="text/javascript" src="https://twiki.cern.ch/twiki/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="https://twiki.cern.ch/twiki/pub/TWiki/TWikiJavascripts/twikiPref.js"></script>
+<script type="text/javascript" src="https://twiki.cern.ch/twiki/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="https://twiki.cern.ch/twiki/pub/TWiki/TwistyContrib/twist.compressed.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+var styleText = '<style type="text/css" media="all">.twikiMakeVisible{display:inline;}.twikiMakeVisibleInline{display:inline;}.twikiMakeVisibleBlock{display:block;}.twikiMakeHidden{display:none;}</style>';
+document.write(styleText);
+// ]]>
+</script>
+
+<!-- TABLEPLUGIN_twikiAttachmentsTable --> <style type="text/css" media="all">
+.tableSortIcon img {padding-left:.3em; vertical-align:text-bottom;}
+.twikiTable#twikiAttachmentsTable td {border-style:solid none;}
+.twikiTable#twikiAttachmentsTable th {border-style:solid none;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable th {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:top;}
+.twikiTable#twikiAttachmentsTable th {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable th.twikiSortedCol {background-color:#eeeeee;}
+.twikiTable#twikiAttachmentsTable th {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover font {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td.twikiSortedCol {background-color:#f5f5f5;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol0 {text-align:center;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol1 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol2 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol3 {text-align:right;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol4 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol5 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol6 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol7 {text-align:left;}
+</style></head>
+<body class="patternViewPage">
+<a name="PageTop"></a>
+<div id="patternScreen">
+<div id="patternPageShadow">
+<div id="patternPage">
+<div id="patternWrapper"><div id="patternOuter">
+<div id="patternFloatWrap">
+<div id="patternMain"><div id="patternClearHeaderCenter"></div>
+<div id="patternMainContents"><div class="patternTop"><span class="patternHomePath twikiLeft"><a class="twikiLink" href="/twiki/bin/view/Main/WebHome">TWiki</a><span class='twikiSeparator'>&gt;</span><img src="/twiki/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" border="0" alt="" width="13" height="13" style="background-color:#0b048c " />&nbsp;<a href="/twiki/bin/view/AtlasProtected/WebHome">AtlasProtected Web</a><span class='twikiSeparator'>&gt;</span><a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AtlasPhysics">AtlasPhysics</a><span class='twikiSeparator'>&gt;</span><a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisSoftwareGroup">AnalysisSoftwareGroup</a><span class='twikiSeparator'>&gt;</span><a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/PATUserAnalysisTools" title='Topic revision: 56 (2017-02-09 - 01:10:03)'>PATUserAnalysisTools</a> <span class='patternRevInfo'>(2017-02-09, <a class="twikiLink" href="/twiki/bin/view/Main/StevenFarrell">StevenFarrell</a>)</span></span><!-- /patternHomePath--><span class="patternToolBar twikiRight"><span><a href='https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/PATUserAnalysisTools?t=1763376386;nowysiwyg=1' rel='nofollow' title='Edit this topic text' accesskey='e'><img src='/twiki/pub/TWiki/TWikiDocGraphics/uweb-o14.gif' width='14' height='14' border='0' alt='' /> <span class='twikiAccessKey'>E</span>dit</a></span><span><a href='/twiki/bin/attach/AtlasProtected/PATUserAnalysisTools' rel='nofollow' title='Attach an image or document to this topic' accesskey='a'><span class='twikiAccessKey'>A</span>ttach</a></span><span><a href='/twiki/bin/genpdf/AtlasProtected/PATUserAnalysisTools' rel='nofollow' title='Create a PDF file for the topic' accesskey='f'><span class='twikiAccessKey'>P</span>DF</a></span></span><!-- /patternToolBar--><br class="twikiClear" /></div><!--/patternTop--><div class="twikiContentHeader"></div><div class="patternContent"><div class="patternTopic"> <!-- This is the default ATLAS template. 
+Please modify it in the sections indicated to create your topic! In particular, notice that at the bottom there are some sections that must be filled for publicly accessible pages.
+If you have any comments/complaints about this template, then please email : Patrick Jussel (patrick dot jussel at cern dot ch) and/or Maria Smizanska (maria dot smizanska at cern dot ch)--> 
+<p />
+<!-- By default the title is the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/WikiWord">WikiWord</a> used to create this topic !-->
+<!-- if you want to modify it to something more meaningful, just replace <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/PATUserAnalysisTools">PATUserAnalysisTools</a> below with i.e "My Topic"!-->
+<!---------------------------------------------------------  snip snip ----------------------------------------------------------------->
+<p />
+<h1><a name="PATUserAnalysisTools"></a> PATUserAnalysisTools </h1>
+<div class="twikiToc"> <ul>
+<li> <a href="#Introduction">Introduction</a> <ul>
+<li> <a href="#Adding_More_Tools">Adding More Tools</a>
+</li></ul> 
+</li> <li> <a href="#Object_Level_Tools">Object Level Tools</a> <ul>
+<li> <a href="#Electron">Electron</a> <ul>
+<li> <a href="#egamma_AnalysisUtils_egammaSFcla">egammaAnalysisUtils: egammaSFclass</a>
+</li> <li> <a href="#egamma_AnalysisUtils_ElectronEff">egammaAnalysisUtils: ElectronEfficiencySFTool</a>
+</li> <li> <a href="#egamma_AnalysisUtils_ElectronMCC">egammaAnalysisUtils: ElectronMCChargeCorrector</a>
+</li> <li> <a href="#egamma_AnalysisUtils_IsEMForward">egammaAnalysisUtils: IsEMForwardDefs</a>
+</li> <li> <a href="#egamma_AnalysisUtils_EisoTool_Ei">egammaAnalysisUtils: EisoTool &amp; EisoTool2012</a>
+</li> <li> <a href="#egamma_AnalysisUtils_ElectronLik">egammaAnalysisUtils: ElectronLikelihoodTool</a>
+</li> <li> <a href="#ElectronEfficiencyCorrection">ElectronEfficiencyCorrection</a>
+</li> <li> <a href="#ElectronPhotonSelectorTools">ElectronPhotonSelectorTools</a>
+</li> <li> <a href="#ElectronPhotonFourMomentumCorrec">ElectronPhotonFourMomentumCorrection</a>
+</li> <li> <a href="#TopElectronSFUtils">TopElectronSFUtils</a>
+</li></ul> 
+</li> <li> <a href="#Muon">Muon</a> <ul>
+<li> <a href="#MuonSelectorTools">MuonSelectorTools</a>
+</li> <li> <a href="#MuonMomentumCorrections">MuonMomentumCorrections</a>
+</li> <li> <a href="#MuonEfficiencyCorrections">MuonEfficiencyCorrections</a>
+</li> <li> <a href="#TopMuonSFUtils">TopMuonSFUtils</a>
+</li></ul> 
+</li> <li> <a href="#Tau">Tau</a> <ul>
+<li> <a href="#TauDiscriminant">TauDiscriminant</a>
+</li> <li> <a href="#TauCorrUncert">TauCorrUncert</a>
+</li> <li> <a href="#TauSelectorTools">TauSelectorTools</a>
+</li></ul> 
+</li> <li> <a href="#Photons">Photons</a> <ul>
+<li> <a href="#egamma_AnalysisUtils_PhotonIDToo">egammaAnalysisUtils: PhotonIDTool</a>
+</li> <li> <a href="#egamma_AnalysisUtils_FudgeMCTool">egammaAnalysisUtils: FudgeMCTool</a>
+</li> <li> <a href="#egamma_AnalysisUtils_Photon">egammaAnalysisUtils: Photon</a>
+</li> <li> <a href="#egamma_AnalysisUtils_FsrPhotons">egammaAnalysisUtils: FsrPhotons</a>
+</li> <li> <a href="#ElectronPhotonSelectorTools_phot">ElectronPhotonSelectorTools (photon)</a>
+</li> <li> <a href="#ElectronPhotonFourMomentumCo_AN1">ElectronPhotonFourMomentumCorrection (photon)</a>
+</li></ul> 
+</li> <li> <a href="#Jets">Jets</a> <ul>
+<li> <a href="#JetSelectorTools">JetSelectorTools</a>
+</li> <li> <a href="#JetUncertainties">JetUncertainties</a>
+</li> <li> <a href="#JetEffiProvider">JetEffiProvider</a>
+</li> <li> <a href="#JetResolution">JetResolution</a>
+</li> <li> <a href="#ApplyJetResolutionSmearing">ApplyJetResolutionSmearing</a>
+</li> <li> <a href="#ApplyJetCalibration">ApplyJetCalibration</a>
+</li> <li> <a href="#JVFUncertaintyTool">JVFUncertaintyTool</a>
+</li> <li> <a href="#TopJetUtils">TopJetUtils</a>
+</li></ul> 
+</li> <li> <a href="#Heavy_Flavor_Jets">Heavy Flavor Jets</a> <ul>
+<li> <a href="#CalibrationDataInterface">CalibrationDataInterface</a>
+</li></ul> 
+</li> <li> <a href="#Missing_ET">Missing ET</a> <ul>
+<li> <a href="#MissingETUtility">MissingETUtility</a>
+</li></ul> 
+</li> <li> <a href="#Trigger">Trigger</a> <ul>
+<li> <a href="#TrigAnalysisInterfaces_TrigBunch">TrigAnalysisInterfaces + TrigBunchCrossingTool</a>
+</li> <li> <a href="#ReweightUtils">ReweightUtils</a>
+</li> <li> <a href="#TrigMuonEfficiency">TrigMuonEfficiency</a>
+</li></ul> 
+</li> <li> <a href="#W_Z">W / Z</a> <ul>
+<li> <a href="#egamma_AnalysisUtils_BosonPtRewe">egammaAnalysisUtils: BosonPtReweightingTool</a>
+</li></ul> 
+</li> <li> <a href="#Low_Level_Tools">Low Level Tools</a> <ul>
+<li> <a href="#TileTripReader">TileTripReader</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Event_Level_Tools">Event Level Tools</a> <ul>
+ <li>
+ <ul>
+<li> <a href="#GoodRunsLists">GoodRunsLists</a>
+</li> <li> <a href="#FakesMacros">FakesMacros</a>
+</li> <li> <a href="#egamma_AnalysisUtils_VertexPosit">egammaAnalysisUtils: VertexPositionReweightingTool</a>
+</li> <li> <a href="#PileupReweighting">PileupReweighting</a>
+</li> <li> <a href="#KLFitter">KLFitter</a>
+</li> <li> <a href="#ISUFitter">ISUFitter</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Sample_Level_Tools">Sample Level Tools</a> <ul>
+ <li>
+ <ul>
+<li> <a href="#TopDataPreparation">TopDataPreparation</a>
+</li></ul> 
+</li> <li> <a href="#Statistics_Tools">Statistics Tools</a> <ul>
+<li> <a href="#mclimitCode">mclimitCode</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Workflow_Tools">Workflow Tools</a> <ul>
+ <li>
+ <ul>
+<li> <a href="#RootCore">RootCore</a>
+</li> <li> <a href="#PATCore">PATCore</a>
+</li> <li> <a href="#D3PDReader_D3PDMakerReader">D3PDReader / D3PDMakerReader</a>
+</li> <li> <a href="#D3PDReader_Example">D3PDReader Example</a>
+</li> <li> <a href="#SampleHandler">SampleHandler</a>
+</li> <li> <a href="#EventLoop">EventLoop</a>
+</li> <li> <a href="#MultiDraw">MultiDraw</a>
+</li> <li> <a href="#PlotMaker">PlotMaker</a>
+</li> <li> <a href="#NTUPtoNTUP">NTUPtoNTUP</a>
+</li> <li> <a href="#SFrame">SFrame</a>
+</li> <li> <a href="#SPyRoot">SPyRoot</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Frameworks">Frameworks</a> <ul>
+ <li>
+ <ul>
+<li> <a href="#TopRootCore">TopRootCore</a>
+</li> <li> <a href="#SUSYTools">SUSYTools</a>
+</li> <li> <a href="#CamEvent">CamEvent</a>
+</li> <li> <a href="#Overkill_Framework">Overkill Framework</a>
+</li> <li> <a href="#HWWAnalysisCode">HWWAnalysisCode</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Other_Tools">Other Tools</a> <ul>
+ <li>
+ <ul>
+<li> <a href="#ATLASLocalRootBase">ATLASLocalRootBase</a>
+</li> <li> <a href="#cvmfs">cvmfs</a>
+</li> <li> <a href="#Federated_XRootd_FAX">Federated XRootd (FAX)</a>
+</li> <li> <a href="#AMI">AMI</a>
+</li> <li> <a href="#Atlantis">Atlantis</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Non_Public_Tools">Non-Public Tools</a> <ul>
+ <li>
+ <ul>
+<li> <a href="#RootCoreUtils">RootCoreUtils</a>
+</li> <li> <a href="#EventLoopTRC">EventLoopTRC</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Undocumented_Tools">Undocumented Tools</a> <ul>
+ <li>
+ <ul>
+<li> <a href="#TrigEfficiency">TrigEfficiency</a>
+</li> <li> <a href="#egammaEvent">egammaEvent</a>
+</li> <li> <a href="#SemileptonicCorr">SemileptonicCorr</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Obsolete_Tools">Obsolete Tools</a> <ul>
+ <li>
+ <ul>
+<li> <a href="#EGammaOQ_2011">EGammaOQ_2011</a>
+</li> <li> <a href="#PhotonIDTool">PhotonIDTool</a>
+</li> <li> <a href="#ObjectSelectorCore">ObjectSelectorCore</a>
+</li> <li> <a href="#FudgeMCTool">FudgeMCTool</a>
+</li> <li> <a href="#TopMetTool">TopMetTool</a>
+</li> <li> <a href="#PhotonEfficiencySFTool">PhotonEfficiencySFTool</a>
+</li> <li> <a href="#FakesTriggerUtils">FakesTriggerUtils</a>
+</li> <li> <a href="#MV1Tagger">MV1Tagger</a>
+</li> <li> <a href="#TauCorrections">TauCorrections</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Old_Page">Old Page</a>
+</li> <li> <a href="#Introduction_AN1">Introduction</a>
+</li> <li> <a href="#Useful_tools_and_scripts"> Useful tools and scripts </a> <ul>
+<li> <a href="#All_kind_of_useful_scripts_and_c">All kind of useful scripts and commands</a>
+</li></ul> 
+</li> <li> <a href="#Tools_for_analysis_in_Athena_Ath"> Tools for analysis in Athena, AthenaRootAccess and ROOT</a> <ul>
+<li> <a href="#Standard_Object_Selection_Tools">Standard Object Selection Tools</a>
+</li></ul> 
+</li> <li> <a href="#Tools_for_Athena_Analysis"> Tools for Athena Analysis</a> <ul>
+ <li>
+ <ul>
+<li> <a href="#Creating_Implementing_new_tools"> Creating/Implementing new tools</a>
+</li> <li> <a href="#Data_handling_tools"> Data handling tools</a>
+</li> <li> <a href="#MC_correction_tools_at_AOD_level"> MC correction tools at AOD level ("fixup" tools): </a>
+</li> <li> <a href="#MC_reweighting_tools"> MC reweighting tools</a>
+</li> <li> <a href="#Tool_for_finding_out_where_in_a"> Tool for finding out where in a bunch train your event is</a>
+</li> <li> <a href="#Isolation_tools_for_different_ty"> Isolation tools for different type of objects</a>
+</li> <li> <a href="#Performance_bookkeeping_tools"> Performance bookkeeping tools</a>
+</li> <li> <a href="#Overlap_tools"> Overlap tools</a>
+</li> <li> <a href="#Trigger_tools"> Trigger tools</a>
+</li> <li> <a href="#Metadata_tools"> Metadata tools</a>
+</li> <li> <a href="#Truth_tools"> Truth tools</a>
+</li> <li> <a href="#Embedding_Tools"> Embedding Tools</a>
+</li> <li> <a href="#Dumping_AOD_containers"> Dumping AOD containers</a>
+</li></ul> 
+</li> <li> <a href="#Requests_for_new_tools"> Requests for new tools</a>
+</li></ul> 
+</li> <li> <a href="#Tools_for_ROOT_or_D3PD_Analysis"> Tools for ROOT (or D3PD) Analysis</a> <ul>
+ <li>
+ <ul>
+<li> <a href="#Data_handling_tools_AN1"> Data handling tools</a>
+</li> <li> <a href="#MC_reweighting_tools_AN1"> MC reweighting tools</a>
+</li> <li> <a href="#Tool_for_finding_out_where_i_AN1"> Tool for finding out where in a bunch train your event is</a>
+</li> <li> <a href="#Performance_bookkeeping_tool_AN1"> Performance bookkeeping tools</a>
+</li> <li> <a href="#Fitting_tools"> Fitting tools</a>
+</li> <li> <a href="#Statistical_tools"> Statistical tools</a>
+</li> <li> <a href="#Trim_D3PDs_on_the_grid"> Trim D3PDs on the grid</a>
+</li> <li> <a href="#B_tagging_calibration_tool"> B-tagging calibration tool</a>
+</li> <li> <a href="#Build_package_for_dual_use_and_r"> Build package for dual use and root-only packages</a>
+</li> <li> <a href="#Sample_management"> Sample management</a>
+</li> <li> <a href="#Event_loop_management"> Event loop management</a>
+</li> <li> <a href="#Plot_Creation"> Plot Creation</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Tools_for_AthenaROOTAccess_Analy"> Tools for AthenaROOTAccess Analysis</a> <ul>
+ <li>
+ <ul>
+<li> <a href="#Trigger_tools_AN1"> Trigger tools</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Other_Tools_AN1"> Other Tools</a>
+</li></ul> 
+</div>     <!--optional-->
+<p />
+<p />
+<h1><a name="Introduction"></a> Introduction </h1>
+<p />
+This page contains a list of all tools available for physics analysis.  If a tool is listed on this page it does not mean that the tool is official, but it does mean that the package author thinks the tool is useful beyond his own analysis and that he is willing to provide at least some level of support.
+<p />
+The plan is that for the most relevant tools, we will put together a short usage example and possibly feature them in future PAT tutorials.  Relevant is a very subjective term, but if you want to vote a particular tool in you can send me an email and I'll think about it.
+<p />
+If you have questions about a particular tool please contact the authors, or follow the instructions they posted for the case of problems.  In general it is good form to include the name of the tool in the subject line.  If you find the information on this page incorrect or out-of-date or misleading, or if you have any other feedback on this page, please contact <a href="mailto&#58;Nils&#46;Erik&#46;Krumnack&#64;cern&#46;ch">Nils.Erik.Krumnack&#64;cern.ch</a>.
+<p />
+<h2><a name="Adding_More_Tools"></a> Adding More Tools </h2>
+<p />
+If you have a tool that you would like to add to this list, please contact <a href="mailto&#58;Nils&#46;Erik&#46;Krumnack&#64;cern&#46;ch">Nils.Erik.Krumnack&#64;cern.ch</a>.  It doesn't matter if this is your own tool, or just a tool that you feel might belong here.  If this is your own tool, please try to answer the questions below to the best of your ability, but don't worry if you can't answer all of them.
+<p /> <ul>
+<li> Is this package still current and supported?  Or has it been made obsolete by another package?  If so, which one?
+</li> <li> Is this package suitable for a list of general analysis tools?  That doesn't mean it has to be useful for everyone, but it should be useful beyond your own analysis and you should be willing to provide at least some level of support.
+</li> <li> Should this package be featured by itself, or is it part of a larger group of packages that are meant to be used together?
+</li> <li> Is this package maintained as part of the official software of a physics or performance group and if so which one?
+</li> <li> What is the SVN URL for this package?
+</li> <li> What are the official contact email addresses for this package?   A mailing list or web form is acceptable here.
+</li> <li> Are there any specific instructions the user should follow before/when contacting you about problems?
+</li> <li> Where can the user find documentation for this package?
+</li> <li> Apart from the documentation, are there any examples of how to use this package?
+</li> <li> Can you give a short summary of what this package does?
+</li></ul> 
+<p />
+<h1><a name="Object_Level_Tools"></a> Object Level Tools </h1>
+<p />
+<h2><a name="Electron"></a> Electron </h2>
+<p />
+<h3><a name="egamma_AnalysisUtils_egammaSFcla"></a> egammaAnalysisUtils: egammaSFclass </h3>
+<p />
+<strong>description:</strong> provides: electron reco, ID and trigger data/MC efficiency corrections (scale factors)
+<p />
+<strong>status:</strong> supported, soon to be superseded<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> e-gamma
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EfficiencyMeasurements" target="_top">https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EfficiencyMeasurements</a><br />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EfficiencyMeasurements2012" target="_top">https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EfficiencyMeasurements2012</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;Jan&#46;Kretzschmar&#64;cern&#46;ch">Jan.Kretzschmar&#64;cern.ch</a>, <a href="mailto&#58;kristin&#46;lohwasser&#64;cern&#46;ch">kristin.lohwasser&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/Reconstruction/egamma/egammaAnalysis/egammaAnalysisUtils
+<p />
+<h3><a name="egamma_AnalysisUtils_ElectronEff"></a> egammaAnalysisUtils: <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/ElectronEfficiencySFTool?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">ElectronEfficiencySFTool</a></span> </h3>
+<p />
+<strong>description:</strong> provides: electron reco, ID and trigger data/MC efficiency corrections
+(scale factors).  will be replacing egammaSFclass (in this or similar form)
+<p />
+<strong>status:</strong> pre-preliminary<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> e-gamma
+<p />
+<strong>documentation:</strong> header file
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;karnevsky&#64;gmail&#46;com">karnevsky&#64;gmail.com</a>, <a href="mailto&#58;Jan&#46;Kretzschmar&#64;cern&#46;ch">Jan.Kretzschmar&#64;cern.ch</a>, <a href="mailto&#58;kristin&#46;lohwasser&#64;cern&#46;ch">kristin.lohwasser&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/Reconstruction/egamma/egammaAnalysis/egammaAnalysisUtils
+<p />
+<h3><a name="egamma_AnalysisUtils_ElectronMCC"></a> egammaAnalysisUtils: <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/ElectronMCChargeCorrector?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">ElectronMCChargeCorrector</a></span> </h3>
+<p />
+<strong>description:</strong> provides: electron charge misID corrections.  in principle for every ATLAS analysis with electrons, however in
+practicel only needed for high precision analyses
+<p />
+<strong>status:</strong> pre-preliminary, 2011 data only<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> e-gamma
+<p />
+<strong>documentation:</strong> header file
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;karnevsky&#64;gmail&#46;com">karnevsky&#64;gmail.com</a>, <a href="mailto&#58;Jan&#46;Kretzschmar&#64;cern&#46;ch">Jan.Kretzschmar&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/Reconstruction/egamma/egammaAnalysis/egammaAnalysisUtils
+<p />
+<h3><a name="egamma_AnalysisUtils_IsEMForward"></a> egammaAnalysisUtils: <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/IsEMForwardDefs?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">IsEMForwardDefs</a></span> </h3>
+<p />
+<strong>description:</strong> provides: updated forward electron Id cuts (for 2011 data).  for the few ATLAS analyses with <strong>forward</strong> electrons 2.5&lt;|eta|&lt;4.9
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> e-gamma
+<p />
+<strong>documentation:</strong> header file
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;ellingha&#64;uni&#45;mainz&#46;de">ellingha&#64;uni-mainz.de</a>, <a href="mailto&#58;Jan&#46;Kretzschmar&#64;cern&#46;ch">Jan.Kretzschmar&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/Reconstruction/egamma/egammaAnalysis/egammaAnalysisUtils
+<p />
+<h3><a name="egamma_AnalysisUtils_EisoTool_Ei"></a> egammaAnalysisUtils: <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/EisoTool?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">EisoTool</a></span> &amp; <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/EisoTool2012?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">EisoTool2012</a></span> </h3>
+<p />
+<strong>description:</strong> provides Uniform isolation efficiency (at various working points) cuts across Et and eta for tight electrons.  for every ATLAS analysis with electrons
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> e-gamma
+<p />
+<strong>documentation:</strong> header file
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;john&#46;morris&#64;cern&#46;ch">john.morris&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/Reconstruction/egamma/egammaAnalysis/egammaAnalysisUtils
+<p />
+<h3><a name="egamma_AnalysisUtils_ElectronLik"></a> egammaAnalysisUtils: <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/ElectronLikelihoodTool?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">ElectronLikelihoodTool</a></span> </h3>
+<p />
+<strong>description:</strong> PID tool for identification of electrons, intended to outperform cut-based menus.  Suitable and supported for any 2012 analysis involving electrons.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> e-gamma
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/ElectronLikelihoodPID" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/ElectronLikelihoodPID</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;kurt&#46;brendlinger&#64;cern&#46;ch">kurt.brendlinger&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/Reconstruction/egamma/egammaAnalysis/egammaAnalysisUtils
+<p />
+<h3><a name="ElectronEfficiencyCorrection"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/ElectronEfficiencyCorrection?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">ElectronEfficiencyCorrection</a></span> </h3>
+<p />
+<strong>description:</strong> The package implements a class to obtain scale factors (trigger, reco and id) for electrons. The scale factors are provided as ROOT 2d-histograms that are shipped with the tool.  
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> e-gamma
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TElectronEfficiencyCorrectionTool" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TElectronEfficiencyCorrectionTool</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;felix&#46;buehrer&#64;cern&#46;ch">felix.buehrer&#64;cern.ch</a>, <a href="mailto&#58;hn&#45;atlas&#45;PATHelp&#64;cern&#46;ch">hn-atlas-PATHelp&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/ElectronPhotonID/ElectronEfficiencyCorrection
+<p />
+<h3><a name="ElectronPhotonSelectorTools"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/ElectronPhotonSelectorTools">ElectronPhotonSelectorTools</a> </h3>
+<p />
+<strong>description:</strong> It's a standard selector for electrons and photons.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> e-gamma
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/IsEMIdentification" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/IsEMIdentification</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;hn&#45;atlas&#45;EGammaWG&#64;cern&#46;ch">hn-atlas-EGammaWG&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/ElectronPhotonID/ElectronPhotonSelectorTools
+<p />
+<h3><a name="ElectronPhotonFourMomentumCorrec"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection">ElectronPhotonFourMomentumCorrection</a> </h3>
+<p />
+<strong>description:</strong> the tool is used to apply all energy calibration corrections for electrons and photons. Data-MC
+scales are applied to data together with smearing corrections for MC. At the end it will also call
+MVA based MC calibration ( for data and MC ) and layer recalibration.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> e-gamma
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/EGammaCalibrationGEO21" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/EGammaCalibrationGEO21</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;ruggero&#46;turra&#64;cern&#46;ch">ruggero.turra&#64;cern.ch</a>, <a href="mailto&#58;fabien&#46;tarrade&#64;cern&#46;ch">fabien.tarrade&#64;cern.ch</a>, <a href="mailto&#58;maarten&#46;boonekamp&#64;cern&#46;ch">maarten.boonekamp&#64;cern.ch</a>, <a href="mailto&#58;leonardo&#46;carminati&#64;mi&#46;infn&#46;it">leonardo.carminati&#64;mi.infn.it</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/ElectronPhotonID/ElectronPhotonFourMomentumCorrection
+<p />
+<p />
+<h3><a name="TopElectronSFUtils"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TopElectronSFUtils?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TopElectronSFUtils</a></span> </h3>
+<p />
+<strong>description:</strong> It provides electron selection scale factors for top analysis.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> root-only<br />
+<strong>group:</strong> top
+<p />
+<strong>documentation:</strong> look into code
+<p />
+<strong>contacts:</strong> top reconstruction conveners and top electron liaison contact<br />
+<strong>contacts:</strong> <a href="mailto&#58;Hongbo&#46;Zhu&#64;cern&#46;ch">Hongbo.Zhu&#64;cern.ch</a>, <a href="mailto&#58;Alison&#46;Lister&#64;cern&#46;ch">Alison.Lister&#64;cern.ch</a>, <a href="mailto&#58;clemens&#46;lange&#64;desy&#46;de">clemens.lange&#64;desy.de</a>, <a href="mailto&#58;Andreas&#46;Wildauer&#64;cern&#46;ch">Andreas.Wildauer&#64;cern.ch</a>, <a href="mailto&#58;w&#46;bell&#64;cern&#46;ch">w.bell&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/TopPhys/TopPhysUtils/TopElectronSFUtils
+<p />
+<h2><a name="Muon"></a> Muon </h2>
+<p />
+<h3><a name="MuonSelectorTools"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/MuonSelectorTools">MuonSelectorTools</a> </h3>
+<p />
+<strong>description:</strong> This package provides the latest 2012 data and MC12 selection criteria on the associated ID track for all muon collections (as recommended by the MCP group).
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> muon
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/MCPAnalysisGuidelinesData2012#AnchorSelections" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/MCPAnalysisGuidelinesData2012#AnchorSelections</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;karstenkoeneke&#64;gmail&#46;com">karstenkoeneke&#64;gmail.com</a>, <a href="mailto&#58;rikard&#46;sandstrom&#64;gmail&#46;com">rikard.sandstrom&#64;gmail.com</a>, <a href="mailto&#58;magda&#46;anna&#46;chelstowska&#64;cern&#46;ch">magda.anna.chelstowska&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/MuonID/MuonSelectorTools
+<p />
+<h3><a name="MuonMomentumCorrections"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MuonMomentumCorrections?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MuonMomentumCorrections</a></span> </h3>
+<p />
+<strong>description:</strong> This packages allows the user to: <ul>
+<li> smear separately the ID and MS extrapolated measurements of the muon pT on MC, 
+</li> <li> smear the combined measurement of the muon pT on MC and shift the combined scale. 
+</li> <li> the smearing is reproducible by different analysts (for event yield comparisons, etc): this is ensured by using random numbers generated based on the event number considered 
+</li> <li> It also provides a 1 sigma variation of all parameters so to perform systematic uncertainty studies for each analysis. 
+</li> <li> smear pT or q/pT
+</li></ul> 
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> muon
+<p />
+<strong>documentation:</strong> README file<br />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/MCPAnalysisGuidelinesData2012#Muon_pT_smearing_on_MC" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/MCPAnalysisGuidelinesData2012#Muon_pT_smearing_on_MC</a><br />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/MCPAnalysisGuidelinesRel17MC11a" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/MCPAnalysisGuidelinesRel17MC11a</a><br />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/MCPAnalysisGuidelinesRel16" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/MCPAnalysisGuidelinesRel16</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;hn&#45;atlas&#45;muoncombinedperfwg&#64;cern&#46;ch">hn-atlas-muoncombinedperfwg&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/MuonID/MuonIDAnalysis/MuonMomentumCorrections
+<p />
+<h3><a name="MuonEfficiencyCorrections"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MuonEfficiencyCorrections?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MuonEfficiencyCorrections</a></span> </h3>
+<p />
+<strong>description:</strong> The package provides muon efficiency scale factors and uncertainties on a per-object basis.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> muon
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/MCPAnalysisGuidelinesData2012#Muon_Monte_Carlo_efficiency_scal" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/MCPAnalysisGuidelinesData2012#Muon_Monte_Carlo_efficiency_scal</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;hn&#45;atlas&#45;MuonCombinedPerfWG&#64;cern&#46;ch">hn-atlas-MuonCombinedPerfWG&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/MuonID/MuonIDAnalysis/MuonEfficiencyCorrections
+<p />
+<h3><a name="TopMuonSFUtils"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TopMuonSFUtils?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TopMuonSFUtils</a></span> </h3>
+<p />
+<strong>description:</strong> This package is used to obtain the efficiency scale factors (trigger, isolation, reconstruction) for muons used in top analyses.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> root-only<br />
+<strong>group:</strong> top
+<p />
+<strong>documentation(7 <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TeV">TeV</a>):</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TopCommonScales2011#Muon_efficiency_scale_factors" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TopCommonScales2011#Muon_efficiency_scale_factors</a><br />
+<strong>documentation(8 <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TeV">TeV</a>):</strong> The recipe for 8 <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TeV">TeV</a> data was changed to obtain these scale factors from the trigger and MCP tools directly, and basically <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TopMuonSFUtils?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TopMuonSFUtils</a></span> only serves as a container for the root file with the trigger scale factors.
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;Thijs&#46;Cornelissen&#64;cern&#46;ch">Thijs.Cornelissen&#64;cern.ch</a>, <a href="mailto&#58;mark&#46;andrew&#46;owen&#64;cern&#46;ch">mark.andrew.owen&#64;cern.ch</a>, <a href="mailto&#58;w&#46;bell&#64;cern&#46;ch">w.bell&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/TopPhys/TopPhysUtils/TopMuonSFUtils
+<p />
+<h2><a name="Tau"></a> Tau </h2>
+<p />
+<h3><a name="TauDiscriminant"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TauDiscriminant?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TauDiscriminant</a></span> </h3>
+<p />
+<strong>description:</strong> This package provides a set of tools mainly for identification of hadronic decays of tau leptons. It can use simple cuts, but currently focuses mainly on multivariate methods, such as Likelihood and Boosted Decision Trees. Due to recent developments this package also provides an information on the possible pi0's in tau decays. It counts their number (with BDT-based analysis) and reconstructs their kinematics.
+This package is run by default in the production chain and its output is present in the recent <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TauD3PD?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TauD3PD</a></span>'s. Besides, the package can be also run in standalone mode allowing to re-process <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PD">D3PD</a>'s.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> tau
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/TauDiscriminantPackage" target="_top">https://twiki.cern.ch/twiki/bin/view/AtlasProtected/TauDiscriminantPackage</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;Pawel&#46;Malecki&#64;cern&#46;ch">Pawel.Malecki&#64;cern.ch</a>, <a href="mailto&#58;Noel&#46;Dawe&#64;cern&#46;ch">Noel.Dawe&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/TauID/TauDiscriminant
+<p />
+<h3><a name="TauCorrUncert"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TauCorrUncert?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TauCorrUncert</a></span> </h3>
+<p />
+<strong>description:</strong> The package implements all recommendations for corrections prepared by the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TauWG">TauWG</a> (e.g. TES, ID scale factors etc.).
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> root-only<br />
+<strong>group:</strong> tau
+<p />
+<strong>documentation:</strong> README file<br />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TauRecommendationsWinterConf2013#TauCorrUncert_package" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TauRecommendationsWinterConf2013#TauCorrUncert_package</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;Noel&#46;Dawe&#64;cern&#46;ch">Noel.Dawe&#64;cern.ch</a>, <a href="mailto&#58;marcus&#46;matthias&#46;morgenstern&#64;cern&#46;ch">marcus.matthias.morgenstern&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/TauID/TauCorrUncert
+<p />
+<h3><a name="TauSelectorTools"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TauSelectorTools?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TauSelectorTools</a></span> </h3>
+<p />
+<strong>description:</strong> The package is not used so it has not been checked recently.  It's a set of booleans for each tau algorithm; currently users just take these directly from the d3pds.  In its current state it's not particularly useful.  There was some plan to have the BDT and LLH output calculated within the tool but there was not much interest in this from the tau group.
+<p />
+<strong>status:</strong> currently unmaintained, but support will be extended to those who want to use it<br />
+<strong>type:</strong> root-only<br />
+<strong>group:</strong> none
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;hays&#64;physics&#46;ox&#46;ac&#46;uk">hays&#64;physics.ox.ac.uk</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/TauID/TauSelectorTools
+<p />
+<h2><a name="Photons"></a> Photons </h2>
+<p />
+<h3><a name="egamma_AnalysisUtils_PhotonIDToo"></a> egammaAnalysisUtils: <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/PhotonIDTool">PhotonIDTool</a> </h3>
+<p />
+<strong>description:</strong> provides Photon quality selection.  for any analysis using photons. including SMDP, Higgs-&gt;GammaGamma and exotics
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> e-gamma
+<p />
+<strong>documentation:</strong> README file + example .C macro + wiki page
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;Marco&#46;Delmastro&#64;cern&#46;ch">Marco.Delmastro&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/Reconstruction/egamma/egammaAnalysis/egammaAnalysisUtils
+<p />
+<h3><a name="egamma_AnalysisUtils_FudgeMCTool"></a> egammaAnalysisUtils: <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/FudgeMCTool">FudgeMCTool</a> </h3>
+<p />
+<strong>description:</strong> provides Correction factors to tune G4 MC shower shape on data. for any analysis using photons. including SMDP, Higgs-&gt;GammaGamma and exotics
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> e-gamma
+<p />
+<strong>documentation:</strong> README file + example .C macro + wiki page
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;Marco&#46;Delmastro&#64;cern&#46;ch">Marco.Delmastro&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/Reconstruction/egamma/egammaAnalysis/egammaAnalysisUtils
+<p />
+<h3><a name="egamma_AnalysisUtils_Photon"></a> egammaAnalysisUtils: Photon </h3>
+<p />
+<strong>description:</strong> provides Photon efficiency scale factors, systematic uncertainties and correlation factors.  for any analysis using photons. including SMDP, Higgs-&gt;GammaGamma and exotics.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> e-gamma
+<p />
+<strong>documentation:</strong> Wiki page
+<p />
+<strong>contacts:</strong>  <a href="mailto&#58;Marco&#46;Delmastro&#64;cern&#46;ch">Marco.Delmastro&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/Reconstruction/egamma/egammaAnalysis/egammaAnalysisUtils
+<p />
+<h3><a name="egamma_AnalysisUtils_FsrPhotons"></a> egammaAnalysisUtils: <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/FsrPhotons?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">FsrPhotons</a></span> </h3>
+<p />
+<strong>description:</strong> Not for all analysis, only analysis looking for the FSR effect in muons.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> e-gamma
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/Atlas/FSRStudy" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/Atlas/FSRStudy</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;tcuhadar&#64;cern&#46;ch">tcuhadar&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/Reconstruction/egamma/egammaAnalysis/egammaAnalysisUtils
+<p />
+<h3><a name="ElectronPhotonSelectorTools_phot"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/ElectronPhotonSelectorTools">ElectronPhotonSelectorTools</a> (photon) </h3>
+<p />
+See: <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/PATUserAnalysisTools#ElectronPhotonSelectorTools" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/PATUserAnalysisTools#ElectronPhotonSelectorTools</a>
+<p />
+<h3><a name="ElectronPhotonFourMomentumCo_AN1"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection">ElectronPhotonFourMomentumCorrection</a> (photon) </h3>
+<p />
+See: <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/PATUserAnalysisTools#ElectronPhotonFourMomentumCorrec" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/PATUserAnalysisTools#ElectronPhotonFourMomentumCorrec</a>
+<p />
+<p />
+<h2><a name="Jets"></a> Jets </h2>
+<p />
+<h3><a name="JetSelectorTools"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/JetSelectorTools?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">JetSelectorTools</a></span> </h3>
+<p />
+<strong>description:</strong> JetSelector Tool is a package which Selects the good quality jets as per the recommendation of Jet/Etmiss group. It contains various definitions/ID of Jets like Loose, Medium,Tight,Tighter etc.
+<p />
+<strong>status:</strong> PAT featured<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> jet / etmiss
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/CPObjectSelection#Jets" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/CPObjectSelection#Jets</a>
+<p />
+<strong>examples:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/Atlas/SoftwareTutorialAnalyzingD3PDsInROOT#Basic_Selection_Tools" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/Atlas/SoftwareTutorialAnalyzingD3PDsInROOT#Basic_Selection_Tools</a><br />
+<strong>examples:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/PatTutorial2011ROOT#Using_ObjectSelectors" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/PatTutorial2011ROOT#Using_ObjectSelectors</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;Harinder&#46;Singh&#46;Bawa&#64;cern&#46;ch">Harinder.Singh.Bawa&#64;cern.ch</a>, <a href="mailto&#58;karsten&#46;koeneke&#64;cern&#46;ch">karsten.koeneke&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/JetMissingEtID/JetSelectorTools
+<p />
+<h3><a name="JetUncertainties"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/JetUncertainties">JetUncertainties</a> </h3>
+<p />
+<strong>description:</strong> The package contains the current estimates of the Jet Energy Scale (JES) uncertainty, and is updated whenever new in-situ calibrations are completed.  It provides a way for users to obtain the JES uncertainty for a given jet by specifying the relevant parameters, and allows them to vary the contributions of different uncertainty components to properly account for correlations in their analysis.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> jet / etmiss
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/JetUncertainties" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/JetUncertainties</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;Steven&#46;Schramm&#64;cern&#46;ch">Steven.Schramm&#64;cern.ch</a>, <a href="mailto&#58;joseph&#46;taenzer&#64;cern&#46;ch">joseph.taenzer&#64;cern.ch</a>, <a href="mailto&#58;dag&#46;gillberg&#64;cern&#46;ch">dag.gillberg&#64;cern.ch</a>, <a href="mailto&#58;Caterina&#46;Doglioni&#64;cern&#46;ch">Caterina.Doglioni&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/Reconstruction/Jet/JetUncertainties
+<p />
+<h3><a name="JetEffiProvider"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/JetEffiProvider?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">JetEffiProvider</a></span> </h3>
+<p />
+<strong>description:</strong> The tool is used for the jet reconstruction efficiency systematics.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> root-only<br />
+<strong>group:</strong> top group
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TopJetReconstructionEfficiency#USAGE_OF_THE_TOOL" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TopJetReconstructionEfficiency#USAGE_OF_THE_TOOL</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;Nabil&#46;Ghodbane&#64;cern&#46;ch">Nabil.Ghodbane&#64;cern.ch</a>, <a href="mailto&#58;w&#46;bell&#64;cern&#46;ch">w.bell&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/TopPhys/TopPhysUtils/JetEffiProvider
+<p />
+<h3><a name="JetResolution"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/JetResolution?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">JetResolution</a></span> </h3>
+<p />
+<strong>description:</strong> This package provides the value of the jet momentum resolution and its uncertainties.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> jet-etmiss
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/JetEnergyResolutionProvider" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/JetEnergyResolutionProvider</a><br />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/JetEnergyResolutionProviderForPhysicsAnalysis" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/JetEnergyResolutionProviderForPhysicsAnalysis</a><br />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/JetCalibrationToolsWinter2011#The_jet_smearing_tool_For_MC_onl" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/JetCalibrationToolsWinter2011#The_jet_smearing_tool_For_MC_onl</a> 
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;Sabrina&#46;Sacerdoti&#64;cern&#46;ch">Sabrina.Sacerdoti&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/Reconstruction/Jet/JetResolution
+<p />
+<h3><a name="ApplyJetResolutionSmearing"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/ApplyJetResolutionSmearing">ApplyJetResolutionSmearing</a> </h3>
+<p />
+<strong>description:</strong> Wrapper around the JERProvier to provide a user friendly interface, with minimal screw-up possibilities as the JER provider used to be quite confusing for user
+(one really had to know what one was doing to use it). This package contains no additional information: it just extracts the information needed from the JER provided and calculates the smearing factor according to the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/JetEtMiss">JetEtMiss</a> recommendations.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> root-only<br />
+<strong>group:</strong> jet-etmiss
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/JetEtmissRecommendations2012" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/JetEtmissRecommendations2012</a><br />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/JetEnergyResolutionProvider" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/JetEnergyResolutionProvider</a><br />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/ApplyJetResolutionSmearing" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/ApplyJetResolutionSmearing</a>
+<p />
+<strong>contacts:</strong> Jet calibration and resolution &lt;atlas-cp-jet-calibration@cern.ch&gt;
+<p />
+<strong>SVN URL:</strong> atlasoff/Reconstruction/Jet/JetAnalysisTools/ApplyJetResolutionSmearing
+<p />
+<h3><a name="ApplyJetCalibration"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/ApplyJetCalibration">ApplyJetCalibration</a> </h3>
+<p />
+<strong>description:</strong> Recalibrates the 4-vector of a jet applying the latest pile-up subtraction, JES and in-situ (data-only) calibration constants, for data and MC.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual use<br />
+<strong>group:</strong> jet-etmiss
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/JetEtmissRecommendations2012" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/JetEtmissRecommendations2012</a><br />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/ApplyJetCalibration2011" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/ApplyJetCalibration2011</a><br />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/ApplyJetCalibration2012" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/ApplyJetCalibration2012</a> 
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;atlas&#45;cp&#45;jet&#45;calibration&#64;cern&#46;ch">atlas-cp-jet-calibration&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/Reconstruction/Jet/ApplyJetCalibration<br />
+<strong>outdated:</strong> atlasperf/CombPerf/JetETMiss/JetCalibrationTools/ApplyJetCalibration
+<p />
+<h3><a name="JVFUncertaintyTool"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/JVFUncertaintyTool">JVFUncertaintyTool</a> </h3>
+<p />
+<strong>description:</strong> The tool provides the JVF cut up/down variation needed to estimate the systematic uncertainty associated to the use of a JVF cut in the analysis.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> jet-etmiss
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/JVFUncertaintyTool" target="_top">https://twiki.cern.ch/twiki/bin/view/AtlasProtected/JVFUncertaintyTool</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;reina&#46;camacho&#64;cern&#46;ch">reina.camacho&#64;cern.ch</a>, <a href="mailto&#58;john&#46;backus&#46;mayes&#64;cern&#46;ch">john.backus.mayes&#64;cern.ch</a>, <a href="mailto&#58;delsart&#64;in2p3&#46;fr">delsart&#64;in2p3.fr</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/Reconstruction/Jet/JetAnalysisTools/JVFUncertaintyTool
+<p />
+<h3><a name="TopJetUtils"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TopJetUtils?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TopJetUtils</a></span> </h3>
+<p />
+<strong>description:</strong> Provide the SF for a JVF cut.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> root-only<br />
+<strong>group:</strong> top group
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TopJetLiaisonR172Recommendations#Example_of_use_in_C" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TopJetLiaisonR172Recommendations#Example_of_use_in_C</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;reina&#46;coromoto&#46;camacho&#46;toro&#64;cern&#46;ch">reina.coromoto.camacho.toro&#64;cern.ch</a>, <a href="mailto&#58;samuel&#46;pierre&#46;jean&#46;calvet&#64;cern&#46;ch">samuel.pierre.jean.calvet&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/TopPhys/TopPhysUtils/TopJetUtils
+<p />
+<h2><a name="Heavy_Flavor_Jets"></a> Heavy Flavor Jets </h2>
+<p />
+<h3><a name="CalibrationDataInterface"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/CalibrationDataInterface">CalibrationDataInterface</a> </h3>
+<p />
+<strong>description:</strong> provide b-tagging (in)efficiency scale factors for different flavours, as a function of kinematic (or in principle other) variables. Assuming that the Flavour Tagging group will manage to extend the calibrations to allow users to use calibrated output tagging weights directly (instead of only calibrated efficiencies), the intention is that the package will be extended accordingly.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> flavor tagging
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/BTaggingCalibrationDataInterface" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/BTaggingCalibrationDataInterface</a><br />
+<strong>documentation:</strong> <a href="http://cdsweb.cern.ch/record/1269912" target="_blank">http://cdsweb.cern.ch/record/1269912<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;f&#46;filthaut&#64;science&#46;ru&#46;nl">f.filthaut&#64;science.ru.nl</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/JetTagging/JetTagPerformanceCalibration/CalibrationDataInterface
+<p />
+<h2><a name="Missing_ET"></a> Missing ET </h2>
+<p />
+<h3><a name="MissingETUtility"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/MissingETUtility">MissingETUtility</a> </h3>
+<p />
+<strong>description:</strong> METUtility provides assistance for recomputation of the MET from analysis objects that reproduces the treatment from the MET algorithms. This has two applications. Firstly, post-reconstruction corrections and calibrations applied to the analysis objects can be accounted for in the MET. Secondly, uncertainties on these objects can be propagated in a consistent manner.  The uncertainties on MET in many cases stem directly from the uncertainties on the input analysis objects. However, due to various corrections, cell overlap-removal etc, the contribution of the object momentum to the MET sum may not be 100%. METUtility accounts for this when propagating uncertainties from objects to MET so as not to inflate or deflate the impact. Uncertainties will be propagated with a size consistent with the influence of the object on the global MET, to a close approximation.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> jet-etmiss
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/MissingETUtility" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/MissingETUtility</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;teng&#46;jian&#46;khoo&#64;cern&#46;ch">teng.jian.khoo&#64;cern.ch</a>, <a href="mailto&#58;caterina&#46;pizio&#64;mi&#46;infn&#46;it">caterina.pizio&#64;mi.infn.it</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/Reconstruction/MissingETUtility
+<p />
+<p />
+<h2><a name="Trigger"></a> Trigger </h2>
+<p />
+<h3><a name="TrigAnalysisInterfaces_TrigBunch"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TrigAnalysisInterfaces?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TrigAnalysisInterfaces</a></span> + <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TrigBunchCrossingTool?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TrigBunchCrossingTool</a></span> </h3>
+<p />
+<strong>description:</strong> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TrigAnalysisInterfaces?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TrigAnalysisInterfaces</a></span> and <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TrigBunchCrossingTool?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TrigBunchCrossingTool</a></span> should always be treated together. Neither of them can live without the other one.  They provide detailed access to the fill pattern of the LHC.  This includes the positions and intensities of all the bunches in the machine at a given time.  The user can figure out how bunches were surrounding the colliding bunch of a given event using this code.  This is mostly used by the non-beam backgrounds and the jet groups. Pileup behaviour is the most important for them. But there's nothing that would prevent any other analysis from using this code. It's just that physics-wise the mentioned two areas are the most affected by this.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> trigger
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/Atlas/TrigBunchCrossingTool" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/Atlas/TrigBunchCrossingTool</a>
+<p />
+<strong>example:</strong> /afs/cern.ch/user/k/krasznaa/public/bunch
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;hn&#45;atlas&#45;TriggerHelp&#64;cern&#46;ch">hn-atlas-TriggerHelp&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/Trigger/TrigAnalysis/TrigAnalysisInterfaces<br />
+<strong>SVN URL:</strong> atlasoff/Trigger/TrigAnalysis/TrigBunchCrossingTool
+<p />
+<h3><a name="ReweightUtils"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/ReweightUtils">ReweightUtils</a> </h3>
+<p />
+<strong>description:</strong> The package calculates event weights based on single object trigger efficiencies. It currently provides single object triggers as well as symmetric and asymmetric di-object triggers. Certain combinations of triggers can as well be used. Apart from event weights, it provides a class for the calculation of the sum of these weights, including a method to calculate an uncertainty on that sum taking into account the full correlation between each pair of event weights.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> trigger
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/ReweightUtils" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/ReweightUtils</a><br />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/ReweightUtilsTutorial" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/ReweightUtilsTutorial</a>
+<p />
+<strong>examples:</strong> $SVNPHYS/Physics/SUSY/Analyses/WeakProduction/DGTriggerReweight/
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;ReweightUtils&#45;Users&#64;cern&#46;ch">ReweightUtils-Users&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/AnalysisCommon/ReweightUtils
+<p />
+<h3><a name="TrigMuonEfficiency"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TrigMuonEfficiency">TrigMuonEfficiency</a> </h3>
+<p />
+<strong>description:</strong> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TrigMuonEfficiency">TrigMuonEfficiency</a> (perhaps somewhat misleadingly named) allows to do trigger matching for both electrons and muons in <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PD">D3PDs</a>, it further can provide per event scale factors for single and multi-lepton events (again for muons and electrons), including the possibility of systematic variations, for the main single lepton triggers that the respective performance group support (recently also dimuon chains have been added). 
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> e-gamma / muon trigger signature
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;marilyn&#46;danielle&#46;f&#46;marx&#64;cern&#46;ch">marilyn.danielle.f.marx&#64;cern.ch</a>, <a href="mailto&#58;Takashi&#46;Matsushita&#64;cern&#46;ch">Takashi.Matsushita&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/Trigger/TrigAnalysis/TrigMuonEfficiency
+<p />
+<h2><a name="W_Z"></a> W / Z </h2>
+<p />
+<h3><a name="egamma_AnalysisUtils_BosonPtRewe"></a> egammaAnalysisUtils: <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/BosonPtReweightingTool?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">BosonPtReweightingTool</a></span> </h3>
+<p />
+<strong>description:</strong> reweighting kinematics for inclusive W or Z production, mainly boson pt, but also W polarisation
+<p />
+<strong>status:</strong> unofficial, but supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> e-gamma / SM
+<p />
+<strong>documentation:</strong> header file
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;Jan&#46;Kretzschmar&#64;cern&#46;ch">Jan.Kretzschmar&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/Reconstruction/egamma/egammaAnalysis/egammaAnalysisUtils
+<p />
+<h2><a name="Low_Level_Tools"></a> Low Level Tools </h2>
+<p />
+<h3><a name="TileTripReader"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TileTripReader?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TileTripReader</a></span> </h3>
+<p />
+<strong>description:</strong> The primary purpose is to give analyzers an easy way to retrieve eta/phi coordinates of unpowered tile modules.  The intent was to help in the assessment in how objects like Jets and MET are affected.  The package also contains a list of 433 events from 2012 that were affected by data corruption in Tile so analyzers can easily veto them.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> data preparation
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/Atlas/TileTripReader" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/Atlas/TileTripReader</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;stephen&#46;cole&#64;cern&#46;ch">stephen.cole&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/TileID/TileTripReader
+<p />
+<h1><a name="Event_Level_Tools"></a> Event Level Tools </h1>
+<p />
+<h3><a name="GoodRunsLists"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/GoodRunsLists?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">GoodRunsLists</a></span> </h3>
+<p />
+<strong>description:</strong> The GoodRunsLists package allows you to test whether events come from lumi-blocks that have been marked as good for physics.
+<p />
+<strong>status:</strong> PAT featured<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> PAT<br />
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/Atlas/GoodRunsListsTutorial" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/Atlas/GoodRunsListsTutorial</a><br />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/Atlas/GoodRunsLists#Recommended_release_and_tags" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/Atlas/GoodRunsLists#Recommended_release_and_tags</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;hn&#45;atlas&#45;PATHelp&#64;cern&#46;ch">hn-atlas-PATHelp&#64;cern.ch</a>, <a href="mailto&#58;Nils&#46;Erik&#46;Krumnack&#64;cern&#46;ch">Nils.Erik.Krumnack&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/DataQuality/GoodRunsLists
+<p />
+<h3><a name="FakesMacros"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/FakesMacros?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">FakesMacros</a></span> </h3>
+<p />
+<strong>description:</strong> It provides loose and tight efficiencies for QCD multijet matrix methods, as well as tools for accessing other QCD multijet background predictions. 
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> root-only<br />
+<strong>group:</strong> physics<br />
+<strong>subgroup:</strong> fakes
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;Anna&#46;Henrichs&#64;cern&#46;ch">Anna.Henrichs&#64;cern.ch</a>, <a href="mailto&#58;xiedebao&#64;googlemail&#46;com">xiedebao&#64;googlemail.com</a>, <a href="mailto&#58;atlas&#45;phys&#45;top&#45;fakes&#64;cern&#46;ch">atlas-phys-top-fakes&#64;cern.ch</a>, <a href="mailto&#58;hn&#45;atlas&#45;top&#45;reconstruction&#64;cern&#46;ch">hn-atlas-top-reconstruction&#64;cern.ch</a>
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TopFakes" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TopFakes</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/TopPhys/FakesMacros
+<p />
+<h3><a name="egamma_AnalysisUtils_VertexPosit"></a> egammaAnalysisUtils: <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/VertexPositionReweightingTool?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">VertexPositionReweightingTool</a></span> </h3>
+<p />
+<strong>description:</strong> provides reweighting of beam spot position size in z to match MC to data. in principle for every ATLAS analysis (however impact often small)
+<p />
+<strong>status:</strong> unofficial, but supported<br />
+<strong>type:</strong> dual-use<br />
+<p />
+<strong>documentation:</strong> header file
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;Jan&#46;Kretzschmar&#64;cern&#46;ch">Jan.Kretzschmar&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/Reconstruction/egamma/egammaAnalysis/egammaAnalysisUtils
+<p />
+<h3><a name="PileupReweighting"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/PileupReweighting">PileupReweighting</a> </h3>
+<p />
+<strong>description:</strong> Primary Features: Reweight MC samples so that their <mu> distributions match that provided by the iLumiCalc service using the users GRL. Correctly accounts for run-dependent MC and generator level event weights. Includes options to rescale MC or Data distributions to estimate pileup uncertainties. Also provides mechanisms to generate random run numbers according to luminosity distributions, used by numerous other combined performance packages.<br />
+Secondary Features: Generic reweighting tool, can reweight any variables you want, up to 3 dimensions. Can also be used to obtain luminosity associated to sub-periods of the provided GRL.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> PAT<br />
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/ExtendedPileupReweighting" target="_top">https://twiki.cern.ch/twiki/bin/view/AtlasProtected/ExtendedPileupReweighting</a><br />
+<strong>documentation:</strong> INT note in preparation
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;will&#64;cern&#46;ch">will&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/AnalysisCommon/PileupReweighting
+<p />
+<h3><a name="KLFitter"></a> KLFitter </h3>
+<p />
+<strong>description:</strong> The Kinematic Likelihood Fitter (KLFitter) is a general tool for kinematic fits using a likelihood approach. The tool is independent of the physics process (and in principle also independent of the experiment). Since the current applications are in the top quark single lepton channels, concrete implementations are available for this use case and, hence, are discussed here. However, the implementation of other physics processes is straightforward.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> custom makefile<br />
+<strong>group:</strong> top
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/KLFitter" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/KLFitter</a>
+<p />
+<strong>for problems:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/KLFitterFAQ" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/KLFitterFAQ</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;KLFitter&#45;Users&#64;cern&#46;ch">KLFitter-Users&#64;cern.ch</a>
+<p />
+<h3><a name="ISUFitter"></a> ISUFitter </h3>
+<p />
+<strong>description:</strong> The package is a kinematic fitter for semi-leptonic ttbar events. The package takes <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TLorentzVector">TLorentzVector</a> of the final state objects in a ttbar semi-leptonic decay channel. Of the many permutations that the jets can have to match a given quark at truth level, the package computes a likelihood and picks the best likelihood as the best permutation. The package also comes with its own set of transfer functions for missing energy, lepton's PT and jets PT. Using these transfer functions, the fitter also improves the resolutions of the objects.
+<p />
+<strong>status:</strong> private, but supported<br />
+<strong>type:</strong> root-only<br />
+<strong>group:</strong> none<br />
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;suyog&#46;shrestha&#64;cern&#46;ch">suyog.shrestha&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/AnalysisCommon/ISUFitter
+<p />
+<h1><a name="Sample_Level_Tools"></a> Sample Level Tools </h1>
+<p />
+<h3><a name="TopDataPreparation"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TopDataPreparation?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TopDataPreparation</a></span> </h3>
+<p />
+<strong>description:</strong> Removes the need to lookup kfactors and xsections in analysis code by collecting them in a single place.
+<p />
+<strong>status:</strong> supported, primarily for top group<br />
+<strong>type:</strong> root-only<br />
+<strong>group:</strong> top
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TopReconstructionGroup#Standalone_tool_to_retrieve_gene" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TopReconstructionGroup#Standalone_tool_to_retrieve_gene</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;samuel&#46;pierre&#46;jean&#46;calvet&#64;cern&#46;ch">samuel.pierre.jean.calvet&#64;cern.ch</a>, <a href="mailto&#58;jahreda&#64;gmail&#46;com">jahreda&#64;gmail.com</a>, <a href="mailto&#58;mark&#46;andrew&#46;owen&#64;cern&#46;ch">mark.andrew.owen&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/TopPhys/TopPhysUtils/TopDataPreparation
+<p />
+<h2><a name="Statistics_Tools"></a> Statistics Tools </h2>
+<p />
+Most statistics tools are not part of ATLAS software, even if they are maintained by ATLAS authors.  We have some tools available to make the use of such software easier, but for the most part you are in your own.  In general statistics tools are the domain of the statistics forum:
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/StatisticsTools" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/StatisticsTools</a><br />
+<strong>contacts:</strong> <a href="mailto&#58;hn&#45;atlas&#45;physics&#45;Statistics&#64;cern&#46;ch">hn-atlas-physics-Statistics&#64;cern.ch</a>
+<p />
+<h3><a name="mclimitCode"></a> mclimitCode </h3>
+<p />
+<strong>description:</strong> package is an interface to mclimit code that is configured using xml files.  Each channel is defined in an individual xml, a master xml is used to combine individual channels and define basics variables like the running mode, number of PSE etc...  The configuration of xmls is straightforward and brings a lot of flexibility, especially when using profiling of the systematics, they can be turned on/off just by changing an individual flag per systematic.  The code provides a lot of outputs used to control the limit setting procedure, as well as document the analysis (systematics tables, pre/post fit plots LLR distributions, pulls etc)
+<p />
+<strong>status:</strong> unofficial, but supported<br />
+<strong>type:</strong> root only
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/MclimitHeavyQuarks" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/MclimitHeavyQuarks</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;mclimit&#45;heavyquarks&#64;cern&#46;ch">mclimit-heavyquarks&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasphys/Physics/Exotic/Analysis/HeavyQuarks/LimitsCode/mclimitCode
+<p />
+<p />
+<h1><a name="Workflow_Tools"></a> Workflow Tools </h1>
+<p />
+<h3><a name="RootCore"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/RootCore">RootCore</a> </h3>
+<p />
+<strong>description:</strong> RootCore is providing a generic build tool for root-only and dual use tools.  It is based on the root build system and highly portable.  It also provides tools for package management.  It also simplifies packaging your code when submitting to a batch system or to the grid.
+<p />
+<strong>status:</strong> PAT featured / semi-standard<br />
+<strong>type:</strong> root-only<br />
+<strong>group:</strong> PAT
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/Atlas/RootCore" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/Atlas/RootCore</a>
+<p />
+<strong>in case of problems:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/Atlas/RootCore#If_Something_Goes_Wrong" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/Atlas/RootCore#If_Something_Goes_Wrong</a><br />
+<strong>contacts:</strong> <a href="mailto&#58;hn&#45;atlas&#45;PATHelp&#64;cern&#46;ch">hn-atlas-PATHelp&#64;cern.ch</a>, <a href="mailto&#58;Nils&#46;Erik&#46;Krumnack&#64;cern&#46;ch">Nils.Erik.Krumnack&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/D3PDTools/RootCore
+<strong>SVN URL (optional):</strong> atlasoff/PhysicsAnalysis/D3PDTools/RootCoreCintex<br />
+<strong>SVN URL (optional):</strong> atlasoff/PhysicsAnalysis/D3PDTools/RootCoreBoost<br />
+<strong>SVN URL (optional):</strong> atlasoff/PhysicsAnalysis/D3PDTools/RootCoreBoostDist<br />
+<strong>SVN URL (optional):</strong> atlasoff/PhysicsAnalysis/D3PDTools/RootCoreLhapdf<br />
+<strong>SVN URL (optional):</strong> atlasoff/PhysicsAnalysis/D3PDTools/RootCoreCLHEP<br />
+<strong>SVN URL (optional):</strong> atlasusr/krumnack/rcpkg/RootCoreRooUnfold
+<p />
+<h3><a name="PATCore"></a> PATCore </h3>
+<p />
+<strong>description:</strong> It contains the base classes for the dual-use selector and calculator packages as well as other (future) helper code and base classes for stand-alone <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/RootCore">RootCore</a> compiled analysis tools.
+<p />
+<strong>status:</strong> PAT featured<br />
+<strong>type:</strong> dual use<br />
+<strong>group:</strong> PAT
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/StandardSelectorTools" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/StandardSelectorTools</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;hn&#45;atlas&#45;PATHelp&#64;cern&#46;ch">hn-atlas-PATHelp&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/AnalysisCommon/PATCore
+<p />
+<h3><a name="D3PDReader_D3PDMakerReader"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PDReader">D3PDReader</a> / <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PDMakerReader">D3PDMakerReader</a> </h3>
+<p />
+<strong>description:</strong> The <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PDReader">D3PDReader</a> is a tool that implements our best knowledge on how to read <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PD">D3PD</a> files efficiently.  At the same time it also provides a simple EDM that many people find more convenient than working with the raw vectors of the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PD">D3PDs</a>.  The <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/D3PDReaderMaker?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">D3PDReaderMaker</a></span> works by generating a <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PDReader">D3PDReader</a> package from one or more <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PD">D3PD</a> files that you are using.
+<p />
+<strong>status:</strong> PAT featured<br />
+<strong>group:</strong> PAT
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;Attila&#46;Krasznahorkay&#64;cern&#46;ch">Attila.Krasznahorkay&#64;cern.ch</a>, <a href="mailto&#58;hn&#45;atlas&#45;PATHelp&#64;cern&#46;ch">hn-atlas-PATHelp&#64;cern.ch</a>
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/D3PDMakerReader" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/D3PDMakerReader</a>
+<p />
+<h3><a name="D3PDReader_Example"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PDReader">D3PDReader</a> Example </h3>
+<p />
+<strong>description:</strong> This is a <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PDReader">D3PDReader</a> package that I use in user support to test user code that uses the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PDReader">D3PDReader</a>, but it can also be used for analysises that want to use <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PDReader">D3PDReader</a>, but don't want to generate their own <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PDReader">D3PDReader</a> package.  It is build with a recent version of <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PDMakerReader">D3PDMakerReader</a> using all the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PD">D3PD</a> formats I am aware of.  Upon request I can regenerate it with a newer version of <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PDMakerReader">D3PDMakerReader</a> or with an additional <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PD">D3PD</a> format.
+<p />
+<strong>status:</strong> unofficial, but supported
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;Nils&#46;Erik&#46;Krumnack&#64;cern&#46;ch">Nils.Erik.Krumnack&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasusr/krumnack/rcpkg/D3PDReader
+<p />
+<h3><a name="SampleHandler"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/SampleHandler">SampleHandler</a> </h3>
+<p />
+*description: The SampleHandler package provides services for managing your data samples and associated meta-information.  It is essentially just a giant bookkeeping tool, meant to help you avoid trivial mistakes, but also avoid handling one sample at a time or having to maintain lists of samples and files yourself.
+<p />
+<strong>status:</strong> PAT featured<br />
+<strong>type:</strong> root-only<br />
+<strong>group:</strong> PAT
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/SampleHandler" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/SampleHandler</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/D3PDTools/SampleHandler
+<p />
+<h3><a name="EventLoop"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> </h3>
+<p />
+<strong>description:</strong> The EventLoop package simplifies writing analysis code that can not only run on your personal computer, but also on your local cluster or the grid.
+<p />
+<strong>status:</strong> PAT featured<br />
+<strong>type:</strong> root-only<br />
+<strong>group:</strong> PAT
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/EventLoop" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/EventLoop</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;hn&#45;atlas&#45;PATHelp&#64;cern&#46;ch">hn-atlas-PATHelp&#64;cern.ch</a>, <a href="mailto&#58;Nils&#46;Erik&#46;Krumnack&#64;cern&#46;ch">Nils.Erik.Krumnack&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/D3PDTools/EventLoop<br />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/D3PDTools/EventLoopAlgs<br />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/D3PDTools/EventLoopGrid
+<p />
+<h3><a name="MultiDraw"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/MultiDraw">MultiDraw</a> </h3>
+<p />
+<strong>description:</strong> This package builds a service on top of <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> that allows to fill multiple histograms in parallel in a TTree::Draw() like fashion.  It also allows <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a> algorithms to use formulas, which can be useful for configuration purposes.
+<p />
+<strong>status:</strong> PAT featured<br />
+<strong>type:</strong> root-only<br />
+<strong>group:</strong> PAT
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/MultiDraw" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/MultiDraw</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;hn&#45;atlas&#45;PATHelp&#64;cern&#46;ch">hn-atlas-PATHelp&#64;cern.ch</a>, <a href="mailto&#58;Nils&#46;Erik&#46;Krumnack&#64;cern&#46;ch">Nils.Erik.Krumnack&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/D3PDTools/MultiDraw
+<p />
+<h3><a name="PlotMaker"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/PlotMaker">PlotMaker</a> </h3>
+<p />
+<strong>description:</strong> This package serves several functions: Aggregating histograms obtained from running on many different samples into a single plot or output file.  Produce output plots that are of reasonably high quality and can be fairly easily improved to the level needed for publication.  Use the same data that goes into the plots as inputs for various statistics tools.
+<p />
+<strong>status:</strong> still in early development, but supported<br />
+<strong>type:</strong> root-only<br />
+<strong>group:</strong> none yet, but to be submitted for PAT approval
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/PlotMaker" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/PlotMaker</a>
+<p />
+<strong>SVN URL:</strong> atlasusr/krumnack/rcpkg/PlotMaker
+<p />
+<p />
+<h3><a name="NTUPtoNTUP"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/NTUPtoNTUP?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">NTUPtoNTUP</a></span> </h3>
+<p />
+<strong>description:</strong> This package has been developed to replace user grid jobs for skimming/slimming large <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PD">D3PDs</a> to the central production jobs.  This is just an "interface", not a new tool.  If people have own scripts/codes which is being used to run on the grid or local cpu, they can easily migrate scripts/codes to run on the central production system.  Even if people don't have own scripts/codes, they can easily start with example for simple skimming/slimming.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> Athena only<br />
+<strong>group:</strong> PAT
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/view/Main/NTUPtoNTUP" target="_top">https://twiki.cern.ch/twiki/bin/view/Main/NTUPtoNTUP</a>
+<p />
+<strong>example:</strong> <a href="https://svnweb.cern.ch/trac/atlasoff/browser/PhysicsAnalysis/NTUPtoNTUP/NTUPtoNTUPExample" target="_blank">https://svnweb.cern.ch/trac/atlasoff/browser/PhysicsAnalysis/NTUPtoNTUP/NTUPtoNTUPExample<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/NTUPtoNTUP/*
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;Michiru&#46;Kaneda&#64;cern&#46;ch">Michiru.Kaneda&#64;cern.ch</a>
+<p />
+<h3><a name="SFrame"></a> SFrame </h3>
+<p />
+<strong>description:</strong> Provides a convenient environment for implementing usual analysis tasks quickly, taking care of communicating with ROOT/PROOF, providing a configuration interface, simple histogram/ntuple handling, etc.
+<p />
+<strong>status:</strong> unofficial, but supported<br />
+<strong>type:</strong> private build system<br />
+<strong>group:</strong> none
+<p />
+<strong>documentation:</strong> <a href="http://sframe.sourceforge.net" target="_blank">http://sframe.sourceforge.net<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;atlas&#45;sframe&#45;users&#64;cern&#46;ch">atlas-sframe-users&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> <a href="https://sframe.svn.sourceforge.net/svnroot/sframe/SFrame" target="_blank">https://sframe.svn.sourceforge.net/svnroot/sframe/SFrame<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<p />
+<h3><a name="SPyRoot"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/SPyRoot">SPyRoot</a> </h3>
+<p />
+<strong>description:</strong> It works best as an add-on to SUSYTools.  It is meant to ease sample handling, moving samples through analysis (from skimming to object definition and other parts of the cut flow to histogram making), providing a large number of helpers along the way and features like file staging.
+<p />
+<strong>status:</strong> unofficial, but supported<br />
+<strong>type:</strong> mostly python<br />
+<strong>group:</strong> none
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/view/Main/SpyRootTutorial" target="_top">https://twiki.cern.ch/twiki/bin/view/Main/SpyRootTutorial</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;till&#46;eifert&#64;cern&#46;ch">till.eifert&#64;cern.ch</a>, <a href="mailto&#58;zmarshal&#64;cern&#46;ch">zmarshal&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasgroups/Misc/SPyRoot/<br />
+<strong>SVN URL:</strong> atlasinst/Institutes/SLAC/SUSY/SPyRoot/trunk/common_susy_r17_p1181
+<p />
+<h1><a name="Frameworks"></a> Frameworks </h1>
+<p />
+<h3><a name="TopRootCore"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TopRootCore">TopRootCore</a> </h3>
+<p />
+<strong>description:</strong> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TopRootCore">TopRootCore</a> is a collection of software packages maintained by the top group to simplify and standardize analysis.  Most importantly it makes it very simple to apply all object corrections in exactly the manner prescribed by the top group.  It should be useful for (almost) all members of the top group, as well as for people from other physics groups who operate in the same region of phase space.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> root-only<br />
+<strong>group:</strong> top
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;atlas&#45;phys&#45;top&#45;d3pd&#45;dev&#64;cern&#46;ch">atlas-phys-top-d3pd-dev&#64;cern.ch</a>
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TopRootCore" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TopRootCore</a><br />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TopD3PDStartGuide" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TopD3PDStartGuide</a><br />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TopReconstructionGroup" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/TopReconstructionGroup</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/TopPhys/TopRootCoreRelease<br />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/TopPhys/TopPhysUtils/TopAnalysisBase<br />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/TopPhys/TopD3PDCorrections<br />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/TopPhys/TopD3PDSelection<br />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/TopPhys/TopPhysUtils/TopMiniNtuple<br />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/TopPhys/MultiJesInputFiles<br />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/TopPhys/TopPhysUtils/TopGoodRunsList<br />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/TopPhys/TopPhysUtils/TopDileptonSFUtils<br />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/TopPhys/TopD3PDAnalysis<br />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/TopPhys/TopPhysUtils/WjetsCorrections
+<p />
+<h3><a name="SUSYTools"></a> SUSYTools </h3>
+<p />
+<strong>description:</strong> Using <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/RootCore">RootCore</a> it installs a group of up to date packages for physics analysis.  It provides object definitions for leptons, jets, MET through the <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/SUSYObjDef?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">SUSYObjDef</a></span> class.  It contains txt files with MC samples cross sections.  It contains reweighting tools for systematics addressing.  Etc.
+<p />
+<strong>status:</strong> supported<br />
+<strong>type:</strong> dual-use<br />
+<strong>group:</strong> SUSY
+<p />
+<strong>documentation:</strong> There is a quite complete example macro in the scripts directory, as well as a README file.
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;Kerim&#46;Suruliz&#64;cern&#46;ch">Kerim.Suruliz&#64;cern.ch</a>, <a href="mailto&#58;Joaquin&#46;Poveda&#64;cern&#46;ch">Joaquin.Poveda&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/SUSYPhys/SUSYTools
+<p />
+<h3><a name="CamEvent"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/CamEvent?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">CamEvent</a></span> </h3>
+<p />
+<strong>description:</strong> Core Package Classes: "D3PDReader"-like objects for analysis of <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PD">D3PD</a> using the Athena Event loop, without generating large class structures. Effectively provides a <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TLorentzVector">TLorentzVector</a> with the ability to have <strong>any</strong> type of  "properties" associated to it through a "get" and a "set" method. Provides fast mechanisms for reading and writing TTrees using these objects. Useful beyond just <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PD">D3PD</a>-based analysis.<br />
+<span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/CamTool?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">CamTool</a></span> Packages: Generally act as wrappers for the various analysis tools a user might have to deal with, but with the configuration of these tools done in a highly automated (but fully user configurable) manner. Provides the interface to use the tools via the core classes by attaching the output of the tools as additional "properties" of the objects.
+<p />
+<strong>status:</strong> private, but supported<br />
+<strong>type:</strong> athena only<br />
+<strong>group:</strong> none
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/Atlas/CommonAnalysisModel" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/Atlas/CommonAnalysisModel</a><br />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/Atlas/CamTools" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/Atlas/CamTools</a><br />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/Atlas/CamTutorial" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/Atlas/CamTutorial</a>
+<p />
+<strong>example:</strong> <a href="https://svnweb.cern.ch/trac/atlasusr/browser/will/DemoPackage/trunk" target="_blank">https://svnweb.cern.ch/trac/atlasusr/browser/will/DemoPackage/trunk<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;will&#64;cern&#46;ch">will&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/AnalysisCam/AnalysisCamEvent<br />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/AnalysisCam/AnalysisCamTools/*
+<p />
+<h3><a name="Overkill_Framework"></a> Overkill Framework </h3>
+<p />
+<strong>description:</strong> Overkill provides a framework for <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PD">D3PD</a>/ntuple based physics analysis which is intended to simplify the setup of new analysis projects, the unification of different <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PD">D3PD</a> architectures/contents and the reuse of commonly needed analysis modules. Overkill can be run locally, on the BAF and on the grid.  The framework is in particular tailored for the structure of <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PD">D3PDs</a> but not limited to <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PD">D3PDs</a>.  The framework takes care of activating branches as needed, manages the storage for the values of the branches and allows to represent groups of branches as objects or vectors of objects. The mechanism to access branches also provides some means to support multiple versions of a n-tuple simultaneously i.e. renamed branches or changed types. An analysis is configured by text files, but the configurables are also accessible (and modifiable) from within root macros. A GUI is available to put together an analysis sequence or configure individual pieces, browse histograms and generate code skeletons for analyses and selection tools.
+<p />
+<strong>status:</strong> unofficial, but supported<br />
+<strong>type:</strong> custom build system<br />
+<strong>group:</strong> none
+<p />
+<strong>documentation:</strong> <a href="http://goetz.web.cern.ch/goetz/overkill/doc/OverkillIntro.html" target="_blank">http://goetz.web.cern.ch/goetz/overkill/doc/OverkillIntro.html<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;Goetz&#46;Gaycken&#64;cern&#46;ch">Goetz.Gaycken&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> <a href="https://svnweb.cern.ch/trac/atlasinst/browser/Institutes/Bonn/Zmumu/Overkill" target="_blank">https://svnweb.cern.ch/trac/atlasinst/browser/Institutes/Bonn/Zmumu/Overkill<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<p />
+<h3><a name="HWWAnalysisCode"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/HWWAnalysisCode?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">HWWAnalysisCode</a></span> </h3>
+<p />
+<strong>description:</strong> The <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/HWWAnalysisCode?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">HWWAnalysisCode</a></span> is a program library that facilitates and extends
+the ROOT functionality by additional classes, functions and data
+structures.
+Most prominently, it provides a set of classes for handling and storing
+large collections of TTrees or Histograms in a file-system-like
+structure (with associated meta-data), provides advanced functionality
+for plotting histograms and producing cutflows. New features like a
+fully automated cut optimization toolset, an easily configurable and
+highly modular interface to <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/RooStats">RooStats</a>/HistFactory functionality and an
+automatic way of handling MC/data normalization factors are under
+developement.
+<p />
+<strong>status:</strong> semi-official<br />
+<strong>type:</strong> standalone<br />
+<strong>group:</strong> Higgs / HSG3
+<p />
+<strong>documentation:</strong> <a href="http://wwwhep.physik.uni-freiburg.de/~cburgard/CAF-doc/" target="_blank">http://wwwhep.physik.uni-freiburg.de/~cburgard/CAF-doc/<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;cburgard&#64;cern&#46;ch">cburgard&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/HiggsPhys/HSG3/WWDileptonAnalysisCode/HWWAnalysisCode
+<p />
+<h1><a name="Other_Tools"></a> Other Tools </h1>
+<p />
+<h3><a name="ATLASLocalRootBase"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/ATLASLocalRootBase?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">ATLASLocalRootBase</a></span> </h3>
+<p />
+<strong>description:</strong> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/ATLASLocalRootBase?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">ATLASLocalRootBase</a></span> is a tool which provides a consistent "look and feel" to ATLAS users on any platform or site where it is installed.  It is available via cvmfs and provides access to root and other useful software packages.
+<p />
+<strong>status:</strong> PAT featured<br />
+<strong>group:</strong> ATLAS ADC operations
+<p />
+<strong>documentation:</strong> <a href="https://twiki.atlas-canada.ca/bin/view/AtlasCanada/ATLASLocalRootBase" target="_blank">https://twiki.atlas-canada.ca/bin/view/AtlasCanada/ATLASLocalRootBase<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;hn&#45;atlas&#45;dist&#45;analysis&#45;help&#64;cern&#46;ch">hn-atlas-dist-analysis-help&#64;cern.ch</a> <br />
+<strong>contacts for experts:</strong> <a href="mailto&#58;atlas&#45;adc&#45;tier3&#45;managers&#64;cern&#46;ch">atlas-adc-tier3-managers&#64;cern.ch</a>, <a href="mailto&#58;desilva&#64;cern&#46;ch">desilva&#64;cern.ch</a>, <a href="mailto&#58;itrigger&#64;triumf&#46;ca">itrigger&#64;triumf.ca</a>
+<p />
+<h3><a name="cvmfs"></a> cvmfs </h3>
+<p />
+<strong>description:</strong> cvmfs is a read-only network file system which allows for efficient distribution of commonly used files for which users do not need write access.  It is used to distribute ATLAS software to a large number of sites, including all grid sites, as well as tier 3 sites and desktop computers.  Among other things cmvfs is used to distribute ATLAS releases, selected nightlies and calibration files.
+<p />
+<strong>status:</strong> PAT featured<br />
+<strong>group:</strong> WLCG / ATLAS ADC operations
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/view/Atlas/CernVMFS" target="_top">https://twiki.cern.ch/twiki/bin/view/Atlas/CernVMFS</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;hn&#45;atlas&#45;dist&#45;analysis&#45;help&#64;cern&#46;ch">hn-atlas-dist-analysis-help&#64;cern.ch</a> <br />
+<strong>contacts for experts:</strong> <a href="mailto&#58;atlas&#45;adc&#45;cvmfs&#64;cern&#46;ch">atlas-adc-cvmfs&#64;cern.ch</a> (general), <a href="mailto&#58;cvmfs&#45;talk&#64;cern&#46;ch">cvmfs-talk&#64;cern.ch</a> (general), <a href="mailto&#58;undrus&#64;bnl&#46;gov">undrus&#64;bnl.gov</a> (nightlies), <a href="mailto&#58;Mikhail&#46;Borodin&#64;cern&#46;ch">Mikhail.Borodin&#64;cern.ch</a> (conditions db), <a href="mailto&#58;douglas&#46;benjamin&#64;cern&#46;ch">douglas.benjamin&#64;cern.ch</a> (conditions db), <a href="mailto&#58;Alessandro&#46;De&#46;Salvo&#64;cern&#46;ch">Alessandro.De.Salvo&#64;cern.ch</a> (repo/sw area, ie Athena plus T1/T2 tools, infrastructure), <a href="mailto&#58;desilva&#64;cern&#46;ch">desilva&#64;cern.ch</a> (repo/ATLASLocalRootBase area), <a href="mailto&#58;itrigger&#64;triumf&#46;ca">itrigger&#64;triumf.ca</a> (repo/ATLASLocalRootBase area)
+<p />
+<h3><a name="Federated_XRootd_FAX"></a> Federated XRootd (FAX) </h3>
+<p />
+<strong>description:</strong> FAX (Federated ATLAS Xrootd) is a way to access most of the ATLAS data from any place, without needing to know where the files are. Specially convenient for direct data access over WAN.
+<p />
+<strong>status:</strong> supported, but not completely stable yet<br />
+<strong>group:</strong> WLCG (eventually)
+<p />
+<strong>documentation:</strong> <a href="https://twiki.cern.ch/twiki/bin/viewauth/Atlas/UsingFAXforEndUsers" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/Atlas/UsingFAXforEndUsers</a>
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;atlas&#45;adc&#45;federated&#45;xrootd&#64;cern&#46;ch">atlas-adc-federated-xrootd&#64;cern.ch</a>, <a href="mailto&#58;usatlas&#45;federated&#45;xrootd&#64;cern&#46;ch">usatlas-federated-xrootd&#64;cern.ch</a>
+<p />
+<h3><a name="AMI"></a> AMI </h3>
+<p />
+<strong>description:</strong> AMI catalogues all official ATLAS datasets. Information is aggregated from Tier 0, the Production system, DDM. Information is completely shared between COMA and AMI. Therefore AMI can link runs and periods to datasets and files, and to a certain extent LB numbers.  Dataset provenance and status is tracked.  AMI also provides interfaces for: <ul>
+<li> management of data periods (the information is actually stored in COMA)
+</li> <li> making physicsContainers
+</li> <li> comparing numbers of reprocessed events with RAW events,
+</li> <li> reserving MC dataset numbers
+</li> <li> repositories for the official lists of projectTags (mc12_8TeV, data12_8TeV etc.) and dataTypes.
+</li> <li> management of AMITags
+</li></ul> 
+All AMI information is available either through the web pages or through our python client pyAMI.
+pyAMI is available in the ATLAS software release and also installed centrally on lxplus (afs and cvmfs). pyAMI can be installed standalone on a laptop. Instructions are available for linux and windows on our web site.
+<p />
+<strong>status:</strong> PAT featured<br />
+<strong>group:</strong> Data Preparation
+<p />
+<strong>portal page:</strong> <a href="http://ami.in2p3.fr" target="_blank">http://ami.in2p3.fr<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<p />
+<strong>documentation:</strong> The AMI tutorial slides linked from the ATLAS SW tutorial twiki page is kept up to date, as it is revised each time the tutorial is given (though it is sometimes a bit out of date).<br />
+<strong>documentation:</strong> <a href="https://atlas-ami.cern.ch/AMI/pyAMI/index.html" target="_blank">https://atlas-ami.cern.ch/AMI/pyAMI/index.html<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (for pyAMI)
+<p />
+<strong>examples:</strong> There are some working examples in the above web page.  In principle they can be cut and pasted, and they work. If they dont it is a bug.
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;atlas&#45;bookkeeping&#64;cern&#46;ch">atlas-bookkeeping&#64;cern.ch</a> (bugs)<br />
+<strong>contacts:</strong> <a href="mailto&#58;hn&#45;atlas&#45;physicsMetadata&#64;cern&#46;ch">hn-atlas-physicsMetadata&#64;cern.ch</a> (general metadata questions)
+<p />
+<strong>for problems:</strong> By far the biggest problem users have is getting recognized as a member of ATLAS by our site. There is a special page for this on our portal page.( Account Validation first and then <a href="http://ami.in2p3.fr/opencms/opencms/AMI/www/detailedInstructions.html" target="_blank">http://ami.in2p3.fr/opencms/opencms/AMI/www/detailedInstructions.html<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> if still having problems)
+Otherwise we reply to any AMI question we see on the above mailing lists, or on atlas-sw-help or on the distributed analysis help list.
+There is a Savannah topic too- but it is little used.
+<p />
+<h3><a name="Atlantis"></a> Atlantis </h3>
+<p />
+<strong>description:</strong> Atlantis is an event visualisation package. It shows complete events (all subdetectors) in a series of 2D projections. The user can interact with these projections in many different ways, ranging from simple cuts to reconstructing vertices and performing invariant mass calculations. Atlantis aims to provide a tool to understand the physics of an event in a graphical way.
+<p />
+<strong>status:</strong> supported<br />
+<strong>group:</strong> none, yet official
+<p />
+<strong>documentation:</strong> Atlantis is an event visualisation package. It shows complete events (all subdetectors) in a series of 2D projections. The user can interact with these projections in many different ways, ranging from simple cuts to reconstructing vertices and performing invariant mass calculations. Atlantis aims to provide a tool to understand the physics of an event in a graphical way.
+<p />
+<strong>problem procedure:</strong> Remove any user configuration files (~/.Atlantis-*) and try the most up to date version (<a href="http://cern.ch/atlantis/download" target="_blank">http://cern.ch/atlantis/download<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>) before contacting <a href="mailto&#58;hn&#45;atlas&#45;AtlantisDisplay&#64;cern&#46;ch">hn-atlas-AtlantisDisplay&#64;cern.ch</a>.
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;hn&#45;atlas&#45;AtlantisDisplay&#64;cern&#46;ch">hn-atlas-AtlantisDisplay&#64;cern.ch</a>, <a href="mailto&#58;atlas&#45;atlantis&#45;developers&#64;cern&#46;ch">atlas-atlantis-developers&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/graphics/AtlantisJava
+<p />
+<h1><a name="Non_Public_Tools"></a> Non-Public Tools </h1>
+<p />
+<h3><a name="RootCoreUtils"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/RootCoreUtils?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">RootCoreUtils</a></span> </h3>
+<p />
+<strong>description:</strong> This package is essentially a collection of private tools that are used by a number of PAT packages.  You may find it useful, but it is not really aimed for public consumption.
+<p />
+<strong>status:</strong> semi-private<br />
+<strong>type:</strong> root-only<br />
+<strong>group:</strong> private
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;hn&#45;atlas&#45;PATHelp&#64;cern&#46;ch">hn-atlas-PATHelp&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/PhysicsAnalysis/D3PDTools/RootCoreUtils
+<p />
+<h3><a name="EventLoopTRC"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoopTRC">EventLoopTRC</a> </h3>
+<p />
+<strong>description:</strong> This package is an attempt to use <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TopRootCore">TopRootCore</a> with the latest set of PAT tools for a quick startup time for new students.
+<p />
+<strong>status:</strong> under development<br />
+<strong>type:</strong> root-only<br />
+<strong>group:</strong> none yet
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;Nils&#46;Erik&#46;Krumnack&#64;cern&#46;ch">Nils.Erik.Krumnack&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasusr/krumnack/rcpkg/EventLoopTRC
+<p />
+<p />
+<p />
+<h1><a name="Undocumented_Tools"></a> Undocumented Tools </h1>
+<p />
+For these tools I still need to identify the authors or am waiting for information from the authors.  The main motivation they are here is to make sure that the overall list is complete and to allow authors to come forward themselves.
+<p />
+<h3><a name="TrigEfficiency"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TrigEfficiency?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TrigEfficiency</a></span> </h3>
+<p />
+<strong>status:</strong> authors contacted
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;joerg&#46;stelzer&#64;cern&#46;ch">joerg.stelzer&#64;cern.ch</a>, <a href="mailto&#58;Patrick&#46;True&#64;cern&#46;ch">Patrick.True&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasoff/Trigger/TrigAnalysis/TrigEfficiency
+<p />
+<h3><a name="egammaEvent"></a> egammaEvent </h3>
+<p />
+<strong>status:</strong> authors contacted
+<p />
+<strong>SVN URL:</strong> atlasoff/Reconstruction/egamma/egammaEvent
+<p />
+<h3><a name="SemileptonicCorr"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/SemileptonicCorr?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">SemileptonicCorr</a></span> </h3>
+<p />
+<strong>status:</strong> authors contacted
+<p />
+<strong>contacts:</strong> <a href="mailto&#58;David&#46;Lopez&#64;cern&#46;ch">David.Lopez&#64;cern.ch</a>
+<p />
+<strong>SVN URL:</strong> atlasusr/dlopez/SemileptonicCorr
+<p />
+<h1><a name="Obsolete_Tools"></a> Obsolete Tools </h1>
+<p />
+<h3><a name="EGammaOQ_2011"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/EGammaOQ?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">EGammaOQ</a></span>_2011 </h3>
+<p />
+<strong>status:</strong> obsolete
+<p />
+<strong>reason:</strong> superseded by egammaAnalysisUtils
+<p />
+<h3><a name="PhotonIDTool"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/PhotonIDTool">PhotonIDTool</a> </h3>
+<p />
+<strong>status:</strong> obsolete
+<p />
+<strong>reason:</strong> superseded by egammaAnalysisUtils
+<p />
+<h3><a name="ObjectSelectorCore"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/ObjectSelectorCore?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">ObjectSelectorCore</a></span> </h3>
+<p />
+<strong>status:</strong> obsolete
+<p />
+<strong>reason:</strong> superseded by PATCore
+<p />
+<h3><a name="FudgeMCTool"></a> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/FudgeMCTool">FudgeMCTool</a> </h3>
+<p />
+<strong>status:</strong> obsolete
+<p />
+<strong>reason:</strong> superseded by egammaAnalysisUtils
+<p />
+<h3><a name="TopMetTool"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TopMetTool?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TopMetTool</a></span> </h3>
+<p />
+<strong>status:</strong> obsolete
+<p />
+<strong>reason:</strong> superseded by METUtility
+<p />
+<h3><a name="PhotonEfficiencySFTool"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/PhotonEfficiencySFTool?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">PhotonEfficiencySFTool</a></span> </h3>
+<p />
+<strong>status:</strong> obsolete
+<p />
+<strong>reason:</strong> superseded by egammaAnalysisUtils
+<p />
+<h3><a name="FakesTriggerUtils"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/FakesTriggerUtils?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">FakesTriggerUtils</a></span> </h3>
+<p />
+<strong>status:</strong> outdated
+<p />
+<strong>reason:</strong> The package contains some code to study the trigger efficiency of triggers used for the anti-electron QCD multijet method.  The top group has not really put any further effort into this and the package is currently not being used.  At some point in the future they might start this again, of course that will be too late to fix the trigger menu.
+<p />
+<h3><a name="MV1Tagger"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MV1Tagger?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MV1Tagger</a></span> </h3>
+<p />
+<strong>status:</strong> outdated
+<p />
+<strong>explanation:</strong> This package was a temporary fix to compute on-the-fly from <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PD">D3PD</a> the (then) new MV1 tagger for physics analyses. Now MV1 has been integrated in the athena regular b-tagging software and it is pre-computed in AOD and <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PD">D3PD</a>.
+So currently the package is not only not useful, but should not be used by users as the underlying calibration is not up-to-date. However, we are continuously developing new algorithms, and therefore at some point it is likely that we update this tool to allow analyses to use quickly a better algorithm, before it is actually available inside athena.
+<p />
+<h3><a name="TauCorrections"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TauCorrections?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TauCorrections</a></span> </h3>
+<p />
+<strong>status:</strong> outdated
+<p />
+<strong>explanation:</strong> this package became deprecated and has moved to <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TauCorrUncert?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TauCorrUncert</a></span>.  However, one needs to be a bit careful with upgrading to <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TauCorrUncert?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TauCorrUncert</a></span>. Some groups like SUSY, which do not have the recent tau ID in their <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PD">D3PDs</a>, yet, still need to use the old package as we have not migrated the old scale factors into <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/TauCorrUncert?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">TauCorrUncert</a></span>. The authors should be aware of this, but in case of doubt they should contact me.
+<p />
+<p />
+<p />
+<h1><a name="Old_Page"></a> Old Page </h1>
+<p />
+Below follows the old version of the page, which soon will go away.  For now I'm keeping it, to make sure it doesn't contain any packages that I otherwise missed.
+<p />
+<h1><a name="Introduction_AN1"></a> Introduction </h1>
+This page collects a list of common tools that can be used in ATLAS analyzes. Many of the tools listed are provided by the Combined Performance groups. 
+The tools are divided by the analysis framework (for example Athena or ROOT). At the end of each section is the opportunity for users to request or suggest new tools from the PAT group.   
+<p />
+<p />
+<p />
+<!-- <code><b>=====================</b></code> -->
+<h1><a name="Useful_tools_and_scripts"></a> Useful tools and scripts </h1>
+<!-- <code><b>=====================</b></code> -->
+<p />
+<h2><a name="All_kind_of_useful_scripts_and_c"></a> All kind of useful scripts and commands </h2>
+<a href="https://twiki.cern.ch/twiki/bin/viewauth/Atlas/AthenaScripts" target="_top">Useful scripts</a>
+<p />
+<p />
+<p />
+<p />
+<!-- <code><b>=====================</b></code> -->
+<h1><a name="Tools_for_analysis_in_Athena_Ath"></a> Tools for analysis in Athena, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/AthenaRootAccess?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">AthenaRootAccess</a></span> and ROOT </h1>
+<!-- <code><b>=====================</b></code> -->
+<p />
+<h2><a name="Standard_Object_Selection_Tools"></a> Standard Object Selection Tools </h2>
+<img src="/twiki/pub/TWiki/TWikiDocGraphics/new.gif" alt="NEW" title="NEW" width="30" height="16" border="0" /> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/StandardSelectorTools">StandardSelectorTools</a>
+<p />
+<p />
+<p />
+<p />
+<!-- <code><b>=====================</b></code> -->
+<h1><a name="Tools_for_Athena_Analysis"></a> Tools for Athena Analysis </h1>
+<!-- <code><b>=====================</b></code> -->
+<p />
+<h3><a name="Creating_Implementing_new_tools"></a> Creating/Implementing new tools </h3>
+<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/PhysicsAnalysisWorkBookAlgToolRel15" target="_top">AlgTool in Athena</a>: From the Physics Workbook, learn how to write your own or implement an existing AlgTool (release 15). <strong>Note</strong> If you create a new tool that you think might be useful for a larger audience please feel free to contact the PAT group, give a short presentation during a PAT group meeting, and/or post it here on this wiki.
+<p />
+<h3><a name="Data_handling_tools"></a> Data handling tools </h3>
+ <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/FileStager" target="_top">FileStager</a>: Tool for running over several files of a given collection (ex. (d)AODs, (d)ESDs, DPDs) on nearby Tier2 and Tier3 sites, or castor.
+<p />
+<h3><a name="MC_correction_tools_at_AOD_level"></a> MC correction tools at AOD level ("fixup" tools): </h3>
+<a href="https://twiki.cern.ch/twiki/bin/view/Atlas/MonteCarloReact" target="_top">MonteCarloReact</a>: AOD to AOD corrections to be run in analysis jobs (on MC)
+<p />
+<h3><a name="MC_reweighting_tools"></a> MC reweighting tools </h3>
+<img src="/twiki/pub/TWiki/TWikiDocGraphics/new.gif" alt="NEW" title="NEW" width="30" height="16" border="0" /> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/PileupReweighting">PileupReweighting</a>
+<p />
+<h3><a name="Tool_for_finding_out_where_in_a"></a> Tool for finding out where in a bunch train your event is </h3>
+<img src="/twiki/pub/TWiki/TWikiDocGraphics/new.gif" alt="NEW" title="NEW" width="30" height="16" border="0" /> <a href="https://twiki.cern.ch/twiki/bin/view/Atlas/TrigBunchCrossingTool" target="_top">TrigBunchCrossingTool</a>
+<p />
+<h3><a name="Isolation_tools_for_different_ty"></a> Isolation tools for different type of objects </h3>
+<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/IsolationTools" target="_top">IsolationTools</a>: Tools to calculate calorimeter or track isolation given any INavigable4Momentum object.
+<p />
+<h3><a name="Performance_bookkeeping_tools"></a> Performance bookkeeping tools </h3>
+<a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/InsituPerformance" target="_top">InsituPerformance</a>: A tool for derivation, application, monitoring, and storage of performance measurements (for example object efficiencies and resolutions). There are InsituPerformance packages for egamma, muons, taus, trigger reweighting, inner detector track, and MET. Performance results can be generated in Athena (typically by the respective combined performance group), and saved into root files or COOL (ongoing development) files, which can be later read by users in Athena or ROOT.
+<p />
+<h3><a name="Overlap_tools"></a> Overlap tools </h3>
+<a href="https://svnweb.cern.ch/trac/atlasoff/browser/PhysicsAnalysis/AnalysisCommon/AssociationUtils/trunk/doc/README.rst" target="_blank">AssociationUtils<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>: ASG recommendations for overlap removal in dual-use xAOD tools.
+<p />
+<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/TopCommonInputs#Overlap_Tagging" target="_top">TopCommonInputs (OverlapTagging)</a>: Specific to the TopCommonInputs analysis framework, the tool flags overlapping reconstructed objects after object selection.
+<p />
+<h3><a name="Trigger_tools"></a> Trigger tools </h3>
+<a href="https://twiki.cern.ch/twiki/bin/viewauth/Atlas/TriggerAnalysisTools" target="_top">TriggerAnalysisTools</a>: Information about access to TriggerDecisionTool, trigger-reconstructed object matching, and bunching crossing tools (in Athena and AthenaROOTAccess).
+<p />
+<h3><a name="Metadata_tools"></a> Metadata tools </h3>
+<a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasComputing/CutFlowSvc" target="_top">CutFlowSvc</a>: ongoing project to organize writing and reading of DPD bookkeeping information (for example, what event filters have been applied to this file and how many events pass each cut). 
+<p />
+<h3><a name="Truth_tools"></a> Truth tools </h3>
+<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/MCTruthClassifier" target="_top">MCTruthClassifier</a>: Match reconstructed object to truth objects, and classify the truth object based on its origin (for example a true electron from a parent W boson). <br/>
+<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/BTaggingTutorialPrague#g_knowing_from_the_MC_Truth_if_a" target="_top">FlavorTagTruthJets</a>: Determine the flavor of a true jet (ex. b-jet, c-jet, tau-jet). <br/>
+<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/PDFreweightingTool" target="_top">PDFReweightingTool</a>
+<p />
+<h3><a name="Embedding_Tools"></a> Embedding Tools </h3>
+<a href="https://twiki.cern.ch/twiki/bin/viewauth/Atlas/EmbeddingTools" target="_top">EmbeddingTools</a>: The general (long term) idea of the EmbeddingTools package is to select muons or electrons in data events and replace them by simulated tau decays. Currently runs on ESDs.
+<p />
+<h3><a name="Dumping_AOD_containers"></a> Dumping AOD containers </h3>
+<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/PhysicsAnalysisWorkBookAODAnalysisRel15#Dump_list_of_AOD_containers" target="_top">Dump AOD containers</a>: Prescriptions from the Physics Workbook about how to dump the container names in an AOD file (release 15).
+<p />
+<p />
+<h2><a name="Requests_for_new_tools"></a> Requests for new tools </h2> <ul>
+<li> Generic overlap removal tools: make a selection, check/tag for overlap, re-reconstruct jets, MET, etc. <em>framework independent</em> .
+</li> <li> Metadata bookkeeping tools: read and write simulation metadata (for example does the sample contain pileup).
+</li> <li> Metadata bookkeeping tools: read and write (sub-detector) data quality flags and selections of these flags.
+</li> <li> More uniform way of adding new object identification (for example like Robust electrons).
+</li></ul> 
+<p />
+<p />
+<!-- <code><b>=====================</b></code> -->
+<h1><a name="Tools_for_ROOT_or_D3PD_Analysis"></a> Tools for ROOT (or D3PD) Analysis </h1>
+<!-- <code><b>=====================</b></code> -->
+<p />
+<h3><a name="Data_handling_tools_AN1"></a> Data handling tools </h3>
+ <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/FileStager" target="_top">FileStager</a>: Tool for running over several files of a given collection (ex. (d)AODs, (d)ESDs, DPDs) on nearby Tier2 and Tier3 sites, or castor.
+<p />
+<h3><a name="MC_reweighting_tools_AN1"></a> MC reweighting tools </h3>
+<img src="/twiki/pub/TWiki/TWikiDocGraphics/new.gif" alt="NEW" title="NEW" width="30" height="16" border="0" /> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/PileupReweighting">PileupReweighting</a>
+<p />
+<h3><a name="Tool_for_finding_out_where_i_AN1"></a> Tool for finding out where in a bunch train your event is </h3>
+<img src="/twiki/pub/TWiki/TWikiDocGraphics/new.gif" alt="NEW" title="NEW" width="30" height="16" border="0" /> <a href="https://twiki.cern.ch/twiki/bin/view/Atlas/TrigBunchCrossingTool" target="_top">TrigBunchCrossingTool</a>
+<p />
+<h3><a name="Performance_bookkeeping_tool_AN1"></a> Performance bookkeeping tools </h3>
+<a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/InsituPerformance" target="_top">InsituPerformance</a>: A tool for derivation, application, monitoring, and storage of performance measurements (for example object efficiencies and resolutions). There are InsituPerformance packages for egamma, muons, taus, trigger reweighting, inner detector track, and MET. Performance results can be generated in Athena (typically by the respective combined performance group), and saved into root files or COOL (ongoing development) files, which can be later read by users in Athena or ROOT.
+<p />
+<h3><a name="Fitting_tools"></a> Fitting tools </h3>
+<a href="https://twiki.cern.ch/twiki/bin/view/Atlas/KinFitter" target="_top">KinFitter package</a>: General kinematic fitting package with non-linear constraints.
+<p />
+<h3><a name="Statistical_tools"></a> Statistical tools </h3>
+<a href="https://twiki.cern.ch/twiki/bin/view/RooStats/RooFit" target="_top">RooFit</a>: Package within ROOT to allow users to built models based on real or simulated data. <br/>
+<a href="https://twiki.cern.ch/twiki/bin/view/RooStats/WebHome" target="_top">RooStats</a>: Statistical package in ROOT, built on top of RooFit to apply statistical tests to models (built in RooFit).
+<p />
+<p />
+<h3><a name="Trim_D3PDs_on_the_grid"></a> Trim <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PD">D3PDs</a> on the grid </h3>
+<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EGammaTipsAndTricks" target="_top">EGammaTipsAndTricks</a>: Example from EGamma group of how to trim (reduce variable content) <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PD">D3PDs</a> over the grid.
+<p />
+<h3><a name="B_tagging_calibration_tool"></a> B-tagging calibration tool </h3>
+<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/BtaggingCalibrationTool" target="_top">BtaggingCalibrationTool</a>: Gives a b-tagging scale factor and associated uncertainties, on jet-by-jet and/or event-by-event basis.
+<p />
+<h3><a name="Build_package_for_dual_use_and_r"></a> Build package for dual use and root-only packages </h3>
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/RootCore">RootCore</a>: package under development to simplify the build of packages.
+<p />
+<h3><a name="Sample_management"></a> Sample management </h3>
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/SampleHandler">SampleHandler</a>: package under development for managing/accessing data samples
+<p />
+<h3><a name="Event_loop_management"></a> Event loop management </h3>
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a>: package under development for managing the event loop
+<p />
+<h3><a name="Plot_Creation"></a> Plot Creation </h3>
+<p />
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/MultiDraw">MultiDraw</a>: package under development for filling histograms using text formulas.
+<p />
+<!-- <code><b>=====================</b></code> -->
+<h1><a name="Tools_for_AthenaROOTAccess_Analy"></a> Tools for AthenaROOTAccess Analysis </h1>
+<!-- <code><b>=====================</b></code> -->
+<p />
+<h3><a name="Trigger_tools_AN1"></a> Trigger tools </h3>
+<a href="https://twiki.cern.ch/twiki/bin/viewauth/Atlas/TriggerAnalysisTools" target="_top">TriggerAnalysisTools</a>: Information about access to TriggerDecisionTool, trigger-reconstructed object matching, and bunching crossing tools (in Athena and AthenaROOTAccess).
+<p />
+<p />
+<!-- <code><b>=====================</b></code> -->
+<h1><a name="Other_Tools_AN1"></a> Other Tools </h1>
+<!-- <code><b>=====================</b></code> -->
+  * <span class="twikiNewLink"><a href="/twiki/bin/edit/Atlas/CernVMTutorialHead?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">CernVM-ATLAS tutorial</a></span>: Run Athena on MAC or Windows
+<p />
+<p />
+<!--***********************************************************-->
+<!--Do NOT remove the remaining lines, but add requested info as appropriate-->
+<!--***********************************************************-->
+<p />
+<hr />
+<!--For significant updates to the topic, consider adding your 'signature' (beneath this editing box)-->
+<strong>Major updates</strong>:<br />
+-- <a class="twikiLink" href="/twiki/bin/view/Main/LouiseHeelan">LouiseHeelan</a> - 07-Feb-2011
+-- <a class="twikiLink" href="/twiki/bin/view/Main/NilsKrumnack">NilsKrumnack</a> - 22-Oct-2012
+<p />
+<!--Please add the name of someone who is responsible for this page so that he/she can be contacted if changes are needed.
+The creator's name will be added by default, but this can be replaced if appropriate.
+Put the name first, without dashes.-->
+Responsible: <a class="twikiLink" href="/twiki/bin/view/Main/LouiseHeelan">LouiseHeelan</a> <br />
+<!--Once this page has been reviewed, please add the name and the date e.g. <a class="twikiLink" href="/twiki/bin/view/Main/StephenHaywood">StephenHaywood</a> - 31 Oct 2006 -->
+Last reviewed by: <strong>Never reviewed</strong>
+<p /> </div><!-- /patternTopic-->
+<div class="twikiContentFooter"></div><div class="twikiAttachments">
+<div class="twistyPlugin twikiMakeVisibleInline">  <span id="topicattachmentslistshow" class="twistyRememberSetting twistyFirstStartShow twistyTrigger twikiUnvisited twistyHidden twistyInited1"><a href="#"><img src="/twiki/pub/TWiki/TWikiDocGraphics/toggleopen.gif" border="0" alt="" /><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span> <span id="topicattachmentslisthide" class="twistyRememberSetting twistyFirstStartShow twistyTrigger twikiUnvisited twistyInited1"><a href="#"><img src="/twiki/pub/TWiki/TWikiDocGraphics/toggleclose.gif" border="0" alt="" /><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span>  </div><!--/twistyPlugin twikiMakeVisibleInline--> <div class="twistyPlugin"><div id="topicattachmentslisttoggle" class="twistyRememberSetting twistyFirstStartShow twistyContent twistyInited1">
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="twikiAttachmentsTable" rules="rows" summary="Topic attachments"><caption>Topic attachments</caption>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="middle"> <a href="/twiki/bin/view/AtlasProtected/PATUserAnalysisTools?sortcol=0;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">I</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol1" valign="middle"> <a href="/twiki/bin/view/AtlasProtected/PATUserAnalysisTools?sortcol=1;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Attachment</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol2" valign="middle"> <a href="/twiki/bin/view/AtlasProtected/PATUserAnalysisTools?sortcol=2;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">History</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol3" valign="middle"> <a href="/twiki/bin/view/AtlasProtected/PATUserAnalysisTools?sortcol=3;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Action</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol4" valign="middle"> <a href="/twiki/bin/view/AtlasProtected/PATUserAnalysisTools?sortcol=4;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Size</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol5" valign="middle"> <a href="/twiki/bin/view/AtlasProtected/PATUserAnalysisTools?sortcol=5;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Date</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol6" valign="middle"> <a href="/twiki/bin/view/AtlasProtected/PATUserAnalysisTools?sortcol=6;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Who</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol7 twikiLastCol" valign="middle"> <a href="/twiki/bin/view/AtlasProtected/PATUserAnalysisTools?sortcol=7;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Comment</font></a> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <img src="/twiki/pub/TWiki/TWikiDocGraphics/else.gif" width="16" height="16" alt="Unknown file format" title="Unknown file format" border="0" /><span class="twikiHidden">root</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top"> <a href="https://twiki.cern.ch/twiki/pub/AtlasProtected/PATUserAnalysisTools/Only10evts_mc09_7TeV.106484.SU4_herwigpp_susy.merge.AOD.e542_s765_s767_r1302_r1306.pool.root">Only10evts_mc09_7TeV.106484.SU4_herwigpp_susy.merge.AOD.e542_s765_s767_r1302_r1306.pool.root</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top"> r1 </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top"> <a href="/twiki/bin/attach/AtlasProtected/PATUserAnalysisTools?filename=Only10evts_mc09_7TeV.106484.SU4_herwigpp_susy.merge.AOD.e542_s765_s767_r1302_r1306.pool.root;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4 twikiLast" valign="top"> 7713.3&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5 twikiLast" valign="top"> <span class="twikiNoBreak">2011-02-07 - 17:05</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLast" valign="top"> <a class="twikiLink" href="/twiki/bin/view/Main/LouiseHeelan">LouiseHeelan</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol7 twikiLastCol twikiLast" valign="top"> Small AOD file from r1302 that can be used for testing athena code (from aodtoaod.py) </td>
+</tr></table>
+</div></div> <!--/twistyPlugin--></div><!--//twikiAttachments--></div><!-- /patternContent-->
+<div class="clear"></div>
+<a name="topic-actions"></a><div class="patternTopicActions"><div class="patternTopicAction"><span class="patternActionButtons"><span style=''><span><a href='https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/PATUserAnalysisTools?t=1763376387;nowysiwyg=1' rel='nofollow' title='Edit this topic text' accesskey='e'><img src='/twiki/pub/TWiki/TWikiDocGraphics/uweb-o14.gif' width='14' height='14' border='0' alt='' /> <span class='twikiAccessKey'>E</span>dit</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span></span><span style=''><span><a href='/twiki/bin/attach/AtlasProtected/PATUserAnalysisTools' rel='nofollow' title='Attach an image or document to this topic' accesskey='a'><span class='twikiAccessKey'>A</span>ttach</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span></span><span><a href='/twiki/bin/view/AtlasProtected/PATUserAnalysisTools?cover=print' rel='nofollow' title='Printable version of this topic' accesskey='p'><span class='twikiAccessKey'>P</span>rint version</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span><span><a href='/twiki/bin/oops/AtlasProtected/PATUserAnalysisTools?template=oopshistory' rel='nofollow' title='View total topic history' accesskey='h'><span class='twikiAccessKey'>H</span>istory</a></span>: r56&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/PATUserAnalysisTools?rev1=56;rev2=55" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/PATUserAnalysisTools?rev=55" rel="nofollow">r55</a>&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/PATUserAnalysisTools?rev1=55;rev2=54" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/PATUserAnalysisTools?rev=54" rel="nofollow">r54</a>&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/PATUserAnalysisTools?rev1=54;rev2=53" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/PATUserAnalysisTools?rev=53" rel="nofollow">r53</a>&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/PATUserAnalysisTools?rev1=53;rev2=52" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/PATUserAnalysisTools?rev=52" rel="nofollow">r52</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span><a href='/twiki/bin/oops/AtlasProtected/PATUserAnalysisTools?template=backlinksweb' rel='nofollow' title='Search the AtlasProtected Web for topics that link to here' accesskey='b'><span class='twikiAccessKey'>B</span>acklinks</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span><a href='/twiki/bin/view/AtlasProtected/PATUserAnalysisTools?raw=on' rel='nofollow' title='View raw text without formatting' accesskey='r'><span class='twikiAccessKey'>R</span>aw View</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span style=''><span><a href='https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/PATUserAnalysisTools?t=1763376387;nowysiwyg=0' rel='nofollow' title='WYSIWYG editor' accesskey='w'>WYSIWYG</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span></span><span><a href='/twiki/bin/oops/AtlasProtected/PATUserAnalysisTools?template=oopsmore&amp;param1=56&amp;param2=56' rel='nofollow' title='Delete or rename this topic; set parent topic; view and compare revisions' accesskey='m'><span class='twikiAccessKey'>M</span>ore topic actions</a></span></span></div><!--/patternTopicAction--></div><!--/patternTopicActions-->
+<div class="patternInfo twikiGrayText"><div class="patternRevInfo">Topic revision: r56 - 2017-02-09 <a href="https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/PATUserAnalysisTools?t=1763376387;nowysiwyg=1" target="_top">-</a> <a class="twikiLink" href="/twiki/bin/view/Main/StevenFarrell">StevenFarrell</a></div><!-- /patternRevInfo--></div><!-- /patternInfo-->
+</div><!-- /patternMainContents-->
+</div><!-- /patternMain--><div id="patternLeftBar"><div id="patternClearHeaderLeft"></div>
+<div id="patternLeftBarContents"><div class="patternLoginActions"><span style="padding: 0 0 0 20px; word-wrap:break-word; display:block;"><img src="https://twiki.cern.ch/twiki/pub/TWiki/TWikiDocGraphics/person.gif" style="position:absolute; margin: 0 0 0 -20px;" /> <span class="twikiNewLink"><a href="/twiki/bin/edit/Main/RoySchimmelBrener?topicparent=AtlasProtected.PATUserAnalysisTools;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">RoySchimmelBrener</a></span></span>  <img src="/twiki/pub/TWiki/TWikiDocGraphics/lock.gif" width="16" height="16" alt="Lock" title="Lock" border="0" /> <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/PATUserAnalysisTools?logout=1">Log Out</a></div><div class="patternWebIndicator"> <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="/twiki/bin/view/AtlasProtected/WebHome"><img src="/twiki/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" width="13" height="13" alt="Web background" title="Web background" border="0" /> AtlasProtected</a>
+</li></ul> 
+</div> <ul>
+<li> <strong><a href="https://atlas-collaboration.web.cern.ch" target="_blank"><span style="color: blue">ATLAS Collaboration</span><img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a></strong>
+</li></ul> 
+<hr /> <ul>
+<li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/WebHome"><span style="color: #0000ff"> ATLAS TWiki</span></verbatim></a></strong>
+</li> <li> <strong><a class="twikiCurrentWebHomeLink twikiLink" href="/twiki/bin/view/AtlasProtected/WebHome"><span style="color: #0000ff"> ATLAS Protected</span></verbatim></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasComputing/WebHome"><span style="color: #0000ff"> ATLAS Computing </span></verbatim></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasPublic/WebHome"><span style="color: #0000ff"> Public Results </span></verbatim></a></strong>
+</li></ul> 
+<hr /> <ul>
+<li> <strong><a href="https://its.cern.ch/jira/secure/CreateIssueDetails!init.jspa?pid=22679&amp;issuetype=3&amp;summary=Problem+with+PATUserAnalysisTools+TWiki+topic&amp;description=The+topic+https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/PATUserAnalysisTools+has+an+issue.+Describe+it+below:&amp;reporter=rbrener" target="_blank"><span style="color: #ff0000"> Report outdated page </span></verbatim><img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a></strong>
+</li> <li> <strong><a href="mailto&#58;atlas&#45;twiki&#45;support&#64;cern&#46;ch"><span style="color: #ff0000"> Twiki-Support </span></verbatim></a></strong>
+</li></ul> 
+<hr />
+<p /> <ul>
+ <li>
+ <ul>
+<li> <strong><a href="https://twiki.cern.ch/twiki/bin/view/AtlasPublic" target="_top"><span style="color: navy;"> Public Results </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AtlasPhysics"><span style="color: navy;"> Physics </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/AtlasDetectors"><span style="color: navy;"> Detectors </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/AtlasTrigger"><span style="color: navy;"> Trigger </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasComputing/WebHome"><span style="color: navy;"> Computing </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/DataPreparation"><span style="color: navy;"> Data Preparation </span></a></strong>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/Atlas/DocumentationManagement">Documentation Help</a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/Atlas/AtlasGlossary">Glossary</a>
+</li></ul> 
+</li></ul> 
+<p />
+<div class="twikiLeftBarBase">
+  <a href="/twiki/bin/edit/AtlasProtected/PATUserAnalysisToolsLeftBar?templatetopic=AtlasProtected.WebLeftBarTemplate">Create</a> a LeftBar for this page
+</div>
+<p />
+<hr />
+<span style="color: #008000"> <img src='https://twiki.cern.ch/twiki/pub/TWiki/TWikiDocGraphics/searchtopic.gif'> <strong><a href="https://search.cern.ch/Pages/TwikiResults.aspx?k=generic2%3AATLAS" target="_blank">TWiki Search<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a></strong> </span></verbatim>
+<hr />
+<p />
+<!-- <ul>
+ <li>
+ <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="/twiki/bin/view/AtlasProtected/WebHome">AtlasProtected Wiki</a>
+</li></ul> 
+</li></ul> 
+-->
+</div><!-- /patternLeftBarContents--></div><!-- /patternLeftBar-->
+</div><!-- /patternFloatWrap-->
+<div class="clear">&nbsp;</div>
+</div><!-- /patternOuter--></div><!-- /patternWrapper--><div id="patternTopBar"><div id="patternTopBarContents"><table border="0" cellpadding="0" cellspacing="0" style="width:100%; margin-top:12px;">
+<tr><td valign="middle"><span id="twikiLogo" class="twikiImage"><a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/WebHome"><img src="/twiki/pub/AtlasPublic/AtlasTWikiLogos/AtlasTwikiProtectedLogo.png" border="0" alt="CERN" style="border:none;" /></a></span></td>
+<td align="right" valign="top" class="patternMetaMenu">
+ <ul>
+<li> <form name="jumpForm" action="/twiki/bin/view/AtlasProtected/PATUserAnalysisTools"><input id="jumpFormField" type="text" class="twikiInputField" name="topic" value="" size="18" /><noscript>&nbsp;<input type="submit" class="twikiButton" size="5" name="submit" value="Jump" />&nbsp;</noscript>   </form>
+</li> <li> <form name="quickSearchForm" action="https://search.cern.ch/Pages/TwikiResults.aspx" target="search" class="cernTWikiSearch">    <ul class="engineList" style="background-image: url('https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/arrow.png');">        <li class="active" id="twikisearch">            <img src="https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/twikisearchicon.gif" alt="TWiki Search Icon" />            <span class="engineDescription">TWiki Search</span>        </li>        <!-- Due to a security incident <a href="https://cern.service-now.com/service-portal?id=outage&amp;n=OTG0156848" target="_blank">OTG0156848<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>, the legacy CERN Search Service has been shut down        <li id="cernsearch">            <img src="https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/cernsearchicon.png" alt="Cern Search Icon" />            <span class="engineDescription">Cern Search</span>        </li>         -->        <li id="googlesearch">            <img class="engine" src="https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/googlesearchicon.png" alt="Google Search Icon" />            <span class="engineDescription">Google Search</span>        </li>    </ul>    <input type="text" class="twikiInputField" id="quickSearchBox" name="k" value="" size="18" /> <br />    <input type="radio" name="scope" value=Atlas checked />     <span class="webScopeDescription">Atlas</span>    <input type="radio" name="scope" value="AllWebs" />    <span class="allWebsScopeDescription">All webs</span>    <input type='hidden' name='autologin' value='1'/>     <noscript>        &nbsp; <input type="submit" size="5" class="twikiButton" name="submit" value="Search"/>&nbsp;    </noscript>
+</li></ul> 
+</form>
+<p />
+<p />
+<!-- <pre> -->
+<script language="javascript">
+<!--
+$(function() {
+    // We use the current web name to form the redirect in the TWiki search
+    var currentWeb = undefined;
+    // If the web starts with alice* atlas* cms* or lhcb* (case-insensitive),
+    // the "Web search" should be altered so that AtlasFoo => Atlas
+    var specialWeb = undefined;
+    // Remembering what the user have entered into the searchbox to after
+    // he has selected a new search engine from the dropdown
+    var searchPhrase = '';
+
+    // --- BEGIN: CONFIGURABLE LIST FOR SUBWEB SEARCH ---
+    // List of webs for which sub-web searching should be enabled
+    var subWebSearchWebs = ['AtlasProtected', 'AtlasComputing', 'Atlas'];
+    // --- END: CONFIGURABLE LIST FOR SUBWEB SEARCH ---
+
+    // --- ORIGINAL WEB DETECTION LOGIC ---
+    // We want to store the current web for later use.
+    var currentWebSearch = window.location.pathname.match(/\/([A-Z][^\/]+)/);
+    if (currentWebSearch != null) {
+        currentWeb = currentWebSearch[1];
+
+        // Do we have a special kind of web? If so, the web search should be altered a little to fetch more broader results.
+        var specialWebSearch = currentWeb.match(/^(alice|atlas|cms|lhcb)/i);
+        if (specialWebSearch != null) {
+            var lowercaseToCorrect = {
+                'alice' : 'Alice',
+                'atlas' : 'Atlas',
+                'cms'   : 'CMS',
+                'lhcb'  : 'LHCb'
+            };
+            specialWeb = lowercaseToCorrect[specialWebSearch[1].toLowerCase()];
+            $('span.webScopeDescription').text(specialWeb);
+        }
+    } else {
+        currentWeb = 'DefaultWeb';
+    }
+
+    // --- BEGIN: SUBWEB LOGIC TO EXTRACT SUBWEB PATH (EXCLUDING TOPIC) ---
+    var subWebSearchWebs = ['AtlasProtected', 'AtlasComputing', 'Atlas'];
+    // Build regex to match web/subweb path and topic
+    var subWebsPattern = new RegExp(
+        '/((' + subWebSearchWebs.join('|') + ')(?=(?:/|$))(?:/[A-Za-z0-9_]+)*)/([A-Za-z0-9_]+)$'
+    );
+    var subWebMatch = window.location.pathname.match(subWebsPattern);
+    if (subWebMatch) {
+        // subWebMatch[1] is the full web/subweb path (e.g. "AtlasComputing/AtlasComputingArchive")
+        // subWebMatch[3] is the topic (e.g. "WebHome")
+        currentWeb = subWebMatch[1];
+        specialWeb = currentWeb;
+        $('span.webScopeDescription').text(specialWeb);
+    }
+    // --- END: SUBWEB LOGIC TO EXTRACT SUBWEB PATH (EXCLUDING TOPIC) ---
+
+    // Do we have a favourite search engine in localStorage? We set Twiki search as default anyways
+    if (window.localStorage) {
+        // var storedEngine = localStorage.getItem('defaultSearchEngine');
+        // console.log('stored engine preference: ' + storedEngine);
+        var storedEngine = 'twikisearch';
+        var storedEngineLi = $('.cernTWikiSearch li#' + storedEngine);
+        if (!storedEngineLi.hasClass('active')) {
+            changeActiveSearchEngine(storedEngineLi);
+        }
+        if (storedEngine == 'twikisearch') {
+            $('input[name=scope][value=AllWebs]').attr('disabled','disabled');
+            $('.allWebsScopeDescription').addClass('disabled');
+        }
+    }
+    
+    // Toggle the searchEngines list on and off on click
+    $('.cernTWikiSearch ul.engineList').click(function(e) {
+        e.stopPropagation();
+        if ($(this).hasClass('open')) {
+            $(this).removeClass('open');
+        } else {
+            $(this).addClass('open');
+        }
+    });
+
+    // Stupid IE8 hack because the click handler on ul.engineList does not work properly there.
+    if ($.browser.msie && document.documentMode && document.documentMode < 9) {
+        $('.cernTWikiSearch #quickSearchBox').focus(function(e) {
+            $('.cernTWikiSearch ul.engineList').removeClass('open');
+        });
+    }
+    
+    // Handle clicks on one of the search engines
+    $('.cernTWikiSearch ul.engineList li').click(function(e) {
+        // If we clicked on a <li> that does not has class 'active', it means this should become active and swap places with this.
+        if (!$(this).hasClass('active')) {
+            changeActiveSearchEngine($(this));
+        }  
+        if ($(this).parent().hasClass('open')) {
+            $('.cernTWikiSearch #quickSearchBox').val(searchPhrase);
+            $('.cernTWikiSearch #quickSearchBox').focus();                          
+        }
+        if ($(this).attr('id') == 'twikisearch') {
+            var allWebsRadio = $('input[name=scope][value=AllWebs]');
+            allWebsRadio.attr('disabled','disabled');
+            allWebsRadio.siblings('input[type=radio]').attr('checked',true)
+            $('.allWebsScopeDescription').addClass('disabled');
+        } else {
+            $('input[name=scope][value=AllWebs]').attr('disabled','');
+            $('.allWebsScopeDescription').removeClass('disabled');
+        }
+    });
+    
+    // Show the engine description text on hover
+    $('.engineList.open li').live('hover',function() {
+        var displayText = $(this).find('span.engineDescription').text();
+        $('.cernTWikiSearch #quickSearchBox').val(displayText);
+    });
+
+
+    // The form is submitted, now let's do the search.
+    $('.cernTWikiSearch').submit(function(e) {
+        e.preventDefault();
+
+        var scope = $('input[name=scope]:checked', $(this)).val();
+        if (scope != 'AllWebs' && specialWeb !== undefined) {
+            scope = specialWeb;
+        }
+        var val = $('.cernTWikiSearch #quickSearchBox').val();
+        var engine = $('.engineList li.active').attr('id')
+        
+        switch (engine) {
+            case 'googlesearch':
+                window.open('https://google.com/search?q=site:' + encodeURIComponent('https://twiki.cern.ch') + (scope != 'AllWebs' ? ' ' + scope : '') + ' ' + val);
+                break;
+            case 'cernsearch':
+                window.open('https://search.cern.ch/Pages/TwikiResults.aspx?k=' + val + (scope != 'AllWebs' ? ' cernscope:' + scope : '') + '&autologin=1');
+                break;
+            case 'twikisearch':
+                window.open(window.location.pathname.replace(/\/[A-Z].+$/,'') + '/' + currentWeb + '/WebSearch?search=' + val + '&scope=all');
+                break;
+        default:
+            break;
+        }
+        
+        // Save the search engine. If the user reloads the page he should get the last one used.
+        if (window.localStorage) { 
+            console.log('store engine preference: ' + engine);
+            localStorage.setItem('defaultSearchEngine',engine);
+        }
+    });
+    
+    // Save the search phrase on every key up
+    $('.cernTWikiSearch #quickSearchBox').keyup(function() {
+        searchPhrase = $(this).val();
+    });
+    
+    // If a user clicks outside the search engine list, the search engine list should be closed.
+    $('html').click(function() {
+        if ($('.engineList').hasClass('open')) {
+            $('.engineList').removeClass('open');
+            $('.cernTWikiSearch #quickSearchBox').val(searchPhrase);
+        }
+    });
+});
+
+// We want to change the active search engine
+function changeActiveSearchEngine(engineLi) {
+    var activeEngine = engineLi.siblings(':first');
+    engineLi.detach().insertBefore(activeEngine);
+    activeEngine.removeClass('active');
+    engineLi.addClass('active');
+    if (engineLi.attr('id') == 'twikiSearch') {
+        deactivateAllWebsOption();
+    }
+}
+
+// The user has chosen twiki search (or the preference was stored in localStorage). 
+// We will then disable the 'All Webs' option since this will time out.
+function deactivateAllWebsOption() {
+}
+
+// Helper method to check input attribute browser compability
+function checkInputAttributeSupport(attribute) {
+    var i = document.createElement("input");
+    return typeof i.placeholder !== 'undefined';
+}
+//-->
+</script>
+<!-- </pre> --> <ul>
+<li> 
+</li></ul> 
+</td></tr></table></div></div><!-- /patternTopBar--><div id="patternBottomBar"><div id="patternBottomBarContents"><div id="patternWebBottomBar"><div class="twikiCopyright"><span class="twikiRight"> <a href="http://twiki.org/"><img src="/twiki/pub/TWiki/TWikiLogos/T-badge-88x31.gif" alt="This site is powered by the TWiki collaboration platform" width="88" height="31" title="This site is powered by the TWiki collaboration platform" border="0" /></a></span><span class="twikiRight" style="padding:0 10px 0 10px"> <a href="http://www.perl.org/"><img src="/twiki/pub/TWiki/TWikiLogos/perl-logo-88x31.gif" alt="Powered by Perl" width="88" height="31" title="Powered by Perl" border="0" /></a></span>Copyright &amp;© 2008-2025 by the contributing authors. All material on this collaboration platform is the property of the contributing authors. <br />  or Ideas, requests, problems regarding TWiki? use <a href="https://discourse.web.cern.ch/c/collaborative-editing/wikis/12">Discourse</a> or <a href='https://twiki.cern.ch/twiki/bin/view/Main/ServiceNow'>Send feedback</a> </div><!--/twikiCopyright--></div><!--/patternWebBottomBar--></div><!-- /patternBottomBarContents--></div><!-- /patternBottomBar-->
+</div><!-- /patternPage-->
+</div><!-- /patternPageShadow-->
+</div><!-- /patternScreen-->
+<p />
+<p />
+<p />
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+	 var u="https://webanalytics.web.cern.ch/";
+	 _paq.push(['setTrackerUrl', u+'matomo.php']);
+	 _paq.push(['setSiteId', '5']);
+	 var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	 g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+<p />
+</body></html>

@@ -1,0 +1,975 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+<script type="text/javascript" src="/twiki/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="/twiki/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="/twiki/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<link rel="stylesheet" href="https://twiki.cern.ch/twiki/pub/TWiki/ImagePlugin/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="https://twiki.cern.ch/twiki/pub/TWiki/ImageGalleryPlugin/style.css" type="text/css" media="all" />
+<title> AnalysisRelease &lt; AtlasProtected &lt; TWiki</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="icon" href="/twiki/pub/AtlasProtected/WebPreferences/favicon_new.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/twiki/pub/AtlasProtected/WebPreferences/favicon_new.ico" type="image/x-icon" />
+<link rel="alternate" href="https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/AnalysisRelease?t=1763376420" type="application/x-wiki" title="Edit AnalysisRelease" />
+<link rel="edit" href="https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/AnalysisRelease?t=1763376420" title="Edit AnalysisRelease" />
+<meta name="SCRIPTURLPATH" content="/twiki/bin" />
+<meta name="SCRIPTSUFFIX" content="" />
+<meta name="TEXT_JUMP" content="Jump" />
+<meta name="TEXT_SEARCH" content="Search" />
+<meta name="TEXT_NUM_TOPICS" content="Number of topics:" />
+<meta name="TEXT_MODIFY_SEARCH" content="Modify search" />
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/twiki/bin/view/AtlasProtected/WebRss" />
+<base href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/AnalysisRelease"></base>
+<!--BEHAVIOURCONTRIB--><script type="text/javascript" src="/twiki/pub/TWiki/BehaviourContrib/behaviour.compressed.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiWindow.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiEvent.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiHTML.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiForm.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/PatternSkin/pattern.js"></script>
+<style type="text/css" media="all">
+@import url('/twiki/pub/TWiki/TWikiTemplates/base.css');
+</style>
+<style type="text/css" media="all">
+#patternTopBar,
+#patternClearHeaderCenter,
+#patternClearHeaderLeft,
+#patternClearHeaderRight,
+#patternTopBarContentsOuter,
+#patternTopBarContents {
+	height:64px; /* top bar height; make room for header columns */
+	overflow:hidden;
+}
+#patternOuter {
+	margin-left:14em;
+}
+#patternLeftBar {
+	width:14em;
+	margin-left:-14em;
+}
+</style>
+<style type="text/css" media="all">
+@import url('/twiki/pub/TWiki/PatternSkin/layout.css');
+@import url('/twiki/pub/TWiki/PatternSkin/style.css');
+@import url('/twiki/pub/TWiki/PatternSkin/colors.css');
+</style>
+<style type="text/css" media="all">
+	/* Styles that are set using variables */
+	.patternBookView .twikiTopRow,
+	.patternWebIndicator a img,
+	.patternWebIndicator a:hover img {
+		background-color:#0b048c ;
+	}
+	#patternTopBarContents { background-image:url(/twiki/pub/TWiki/PatternSkin/TWiki_header.gif); background-repeat:no-repeat;}
+	
+	.patternBookView {
+		border-color:#0b048c ;
+	}
+	.patternPreviewPage #patternMain {
+		/* uncomment to set the preview image */
+		/*background-image:url("/twiki/pub/TWiki/PreviewBackground/preview2bg.gif");*/
+	}
+	
+</style><style type="text/css" media="all">
+
+
+
+</style>
+<style type="text/css" media="all">
+	@import url("/twiki/pub/TWiki/PatternSkin/print.css");
+</style>
+<!--[if IE]><style type="text/css" media="screen">
+pre {
+	overflow-x:auto;
+	padding-bottom:expression(this.scrollWidth > this.offsetWidth ? 16 : 0);
+}
+</style>
+<![endif]-->
+<!--[if lte IE 6]> 
+<style type="text/css">
+#patternLeftBar {
+	position:relative; /* IE 5.5 needs this or the contents won't show outside the parent container on print. IE 6.0 needs it only during printable copy! */
+}
+</style><![endif]-->
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiStyles.js"></script>
+
+<script src="https://twiki.cern.ch/twiki/pub/TWiki/ChecklistPlugin/itemstatechange.js" language="javascript" type="text/javascript"></script><!--GENERATED_HEADERS--><!-- CERNSEARCHBAR_CSS --> <link rel='stylesheet' href='/twiki/pub/TWiki/CernSearchBar/CernSearchBar.css' type='text/css' media='all' /></head>
+<body class="patternViewPage">
+<a name="PageTop"></a>
+<div id="patternScreen">
+<div id="patternPageShadow">
+<div id="patternPage">
+<div id="patternWrapper"><div id="patternOuter">
+<div id="patternFloatWrap">
+<div id="patternMain"><div id="patternClearHeaderCenter"></div>
+<div id="patternMainContents"><div class="patternTop"><span class="patternHomePath twikiLeft"><a class="twikiLink" href="/twiki/bin/view/Main/WebHome">TWiki</a><span class='twikiSeparator'>&gt;</span><img src="/twiki/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" border="0" alt="" width="13" height="13" style="background-color:#0b048c " />&nbsp;<a href="/twiki/bin/view/AtlasProtected/WebHome">AtlasProtected Web</a><span class='twikiSeparator'>&gt;</span><a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AtlasPhysics">AtlasPhysics</a><span class='twikiSeparator'>&gt;</span><a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisSoftwareGroup">AnalysisSoftwareGroup</a><span class='twikiSeparator'>&gt;</span><a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/AnalysisRelease" title='Topic revision: 183 (2024-02-28 - 15:09:47)'>AnalysisRelease</a> <span class='patternRevInfo'>(2024-02-28, <a class="twikiLink" href="/twiki/bin/view/Main/AndrewMehta">AndrewMehta</a>)</span></span><!-- /patternHomePath--><span class="patternToolBar twikiRight"><span><a href='https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/AnalysisRelease?t=1763376420;nowysiwyg=1' rel='nofollow' title='Edit this topic text' accesskey='e'><img src='/twiki/pub/TWiki/TWikiDocGraphics/uweb-o14.gif' width='14' height='14' border='0' alt='' /> <span class='twikiAccessKey'>E</span>dit</a></span><span><a href='/twiki/bin/attach/AtlasProtected/AnalysisRelease' rel='nofollow' title='Attach an image or document to this topic' accesskey='a'><span class='twikiAccessKey'>A</span>ttach</a></span><span><a href='/twiki/bin/genpdf/AtlasProtected/AnalysisRelease' rel='nofollow' title='Create a PDF file for the topic' accesskey='f'><span class='twikiAccessKey'>P</span>DF</a></span></span><!-- /patternToolBar--><br class="twikiClear" /></div><!--/patternTop--><div class="twikiContentHeader"></div><div class="patternContent"><div class="patternTopic"> <!-- This is the default ATLAS template. 
+Please modify it in the sections indicated to create your topic! In particular, notice that at the bottom there are some sections that must be filled for publicly accessible pages.
+If you have any comments/complaints about this template, then please email : Patrick Jussel (patrick dot jussel at cern dot ch) and/or Maria Smizanska (maria dot smizanska at cern dot ch)
+<p />
+By default the title is the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/WikiWord">WikiWord</a> used to create this topic
+if you want to modify it to something more meaningful, just replace <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisRelease">AnalysisRelease</a> below with i.e "My Topic"
+<code><b>=======</b></code>  you can remove the lines above <code><b>=========================================</b></code> -->
+<p />
+<table> <tbody> <tr> <td valign="top" width="100"><img alt="" src="https://twiki.cern.ch/twiki/pub/AtlasProtected/AnalysisSoftwareGroup/ar_logo.png" /></td> <td valign="top">
+<h1><a name="Analysis_Releases"></a> Analysis Releases </h1>
+<p />
+Analysis releases are software releases specifically aimed at analysis use. Below is the key information about available analysis releases, as well as a glossary of useful commands.</td> </tr> </tbody> </table> <center> <a class="twikiCurrentTopicLink twikiAnchorLink" href="/twiki/bin/view/AtlasProtected/AnalysisRelease#AnalysisBase">AnalysisBase</a> | <a class="twikiCurrentTopicLink twikiAnchorLink" href="/twiki/bin/view/AtlasProtected/AnalysisRelease#AnalysisTop">AnalysisTop</a></center>
+<p />
+<center> <a class="twikiCurrentTopicLink twikiAnchorLink" href="/twiki/bin/view/AtlasProtected/AnalysisRelease#RosettaStone">CMT and RootCore useful commands</a></center>
+<p />
+<div class="twikiToc"> <ul>
+ <li>
+ <ul>
+<li> <a href="#ASG_Analysis_Release_AnalysisBas"> ASG Analysis Release (AnalysisBase)</a>
+</li> <li> <a href="#Nightly_info"> Nightly info</a>
+</li> <li> <a href="#Top_Analysis_Release_AnalysisTop"> Top Analysis Release (AnalysisTop)</a>
+</li> <li> <a href="#Useful_commands_The_rootcore_cmt"> Useful commands (The rootcore-cmt Rosetta stone)</a>
+</li></ul> 
+</li> <li> <a href="#Other_links_and_info"> Other links and info</a> <ul>
+<li> <a href="#Notes_on_Analysis_Releases"> Notes on Analysis Releases</a>
+</li> <li> <a href="#rcSetup_notes"> rcSetup notes</a> <ul>
+<li> <a href="#Additional_commands"> Additional commands:</a>
+</li> <li> <a href="#Usage_of_rcSetup"> Usage of rcSetup</a>
+</li> <li> <a href="#Setup_of_previous_Analysis_relea"> Setup of previous Analysis release</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#Downloading_Building_a_release_l"> Downloading/Building a release locally</a> <ul>
+<li> <a href="#Downloading_rcSetup"> Downloading rcSetup</a>
+</li> <li> <a href="#Native_installers_for_Linux_MacO"> Native installers for Linux/MacOS</a> <ul>
+<li> <a href="#First_installation"> First installation</a>
+</li> <li> <a href="#Updating_the_installation"> Updating the installation</a>
+</li> <li> <a href="#Specific_instructions_for_Mac"> Specific instructions for Mac</a>
+</li></ul> 
+</li> <li> <a href="#Downloading_source_code_of_a_rel"> Downloading source code of a release</a>
+</li> <li> <a href="#Building_a_release_locally"> Building a release locally</a>
+</li></ul> 
+</li> <li> <a href="#CVMFS_access_from_MacOS"> CVMFS access from MacOS</a>
+</li> <li> <a href="#How_to_submit_to_the_grid"> How to submit to the grid</a>
+</li></ul> 
+</div>
+<p />
+<p />
+<a name="AnalysisBase"></a>
+<h2><a name="ASG_Analysis_Release_AnalysisBas"></a> ASG Analysis Release (AnalysisBase) </h2>
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table1" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top"> <font color="#ffffff">Project description:</font> </th>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol" valign="top"> Releases prepared by ASG for general analysis needs </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top"> <font color="#ffffff">eventloop project name:</font> </th>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLastCol" valign="top"> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisBase">Base</a> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top"> <font color="#ffffff">athena project name:</font> </th>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol" valign="top"> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AthAnalysisBase">AthAnalysisBase</a> (click for user manual) </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top"> <font color="#ffffff">Release co-ordinators:</font> </th>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLastCol" valign="top"> Andrew Mehta </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top"> <font color="#ffffff">Requesting Tags:</font> </th>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol" valign="top"> For requesting an updated tag to be included in AnalysisBase or AthAnalysisBase open an ATLASG JIRA ticket with component 'Release Requests'. Please give details, including whether there are interface changes or changes to the physics objects </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <font color="#ffffff">Mailing lists:</font> </th>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLastCol twikiLast" valign="top"> <a href="mailto&#58;atlas&#45;sw&#45;pat&#45;releaseannounce&#64;cern&#46;ch">atlas-sw-pat-releaseannounce&#64;cern.ch</a> (announcements)<br /> <a href="mailto&#58;atlas&#45;sw&#45;pat&#45;releasehelp&#64;cern&#46;ch">atlas-sw-pat-releasehelp&#64;cern.ch</a> (release help)<br /> <a href="mailto&#58;hn&#45;atlas&#45;PATHelp&#64;cern&#46;ch">hn-atlas-PATHelp&#64;cern.ch</a> / <a href="mailto&#58;atlas&#45;sw&#45;analysis&#45;forum&#64;cern&#46;ch">atlas-sw-analysis-forum&#64;cern.ch</a> (general help) </td>
+</tr></table>
+<p />
+<strong>Release series table:</strong>
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table2" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=0;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Release series</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol1" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=1;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">rc Nightly</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol2" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=2;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">cmt Nightly</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol3" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=3;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">cmake Nightly</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol4" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=4;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Latest release</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol5" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=5;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Series Purpose</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol6 twikiLastCol" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=6;table=2;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Additional notes</font></a> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiFirstCol" colspan="7" valign="top"> <center> <div style="background-color: #8080ff; padding: 0 0 0 0;"> <strong>Active series for end users</strong> </div> </center> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisBaseReleaseNotes25pt2"><b>25.2</b></a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> &nbsp; </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> &nbsp; </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> <a href="https://bigpanda.cern.ch/nview/?nightly=main_AnalysisBase_x86_64-el9-gcc13-opt" target="_blank">25.2.X<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4" valign="top"> <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/AnalysisBaseReleaseNotes25pt2" target="_top">Check here</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol5" valign="top"> Analysis Release for rel22/rel23/24 </td>
+<th bgcolor="#687684" class="twikiTableCol6 twikiLastCol" valign="top"> <font color="#ffffff">git+CMake</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisBaseReleaseNotes24pt2">24.2</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> &nbsp; </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> &nbsp; </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> <a href="https://bigpanda.cern.ch/nview/?nightly=main_AnalysisBase_x86_64-centos7-gcc11-opt" target="_blank">24.2.X<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/AnalysisBaseReleaseNotes24pt2" target="_top">Check here</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol5" valign="top"> Analysis Release for rel22/rel23/24 </td>
+<th bgcolor="#687684" class="twikiTableCol6 twikiLastCol" valign="top"> <font color="#ffffff">git+CMake</font> </th>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisBaseReleaseNotes22pt2">22.2</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> &nbsp; </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> &nbsp; </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> 22.2.X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4" valign="top"> <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/AnalysisBaseReleaseNotes22pt2" target="_top">Check here</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol5" valign="top"> Analysis Release for rel22 </td>
+<th bgcolor="#687684" class="twikiTableCol6 twikiLastCol" valign="top"> <font color="#ffffff">git+CMake</font> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisBaseReleaseNotes21_2">21.2</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> &nbsp; </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> &nbsp; </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> <a href="https://bigpanda.cern.ch/nview/?nightly=21.2_AnalysisBase_x86_64-centos7-gcc8-opt" target="_blank">21.2.X<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/AnalysisBaseReleaseNotes21_2" target="_top">Check here</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol5" valign="top"> Analysis Release for rel21 xAOD </td>
+<th bgcolor="#687684" class="twikiTableCol6 twikiLastCol" valign="top"> <font color="#ffffff">git+CMake</font> </th>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisBaseReleaseNotes21_2">21.2</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLast" valign="top"> &nbsp; </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2 twikiLast" valign="top"> &nbsp; </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3 twikiLast" valign="top"> 21.2.X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4 twikiLast" valign="top"> <a class="twikiAnchorLink" href="/twiki/bin/view/AtlasProtected/AnalysisBaseReleaseNotes21_2#21_2_83_built_on_2019_07_17">21.2.83</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol5 twikiLast" valign="top"> Last AnalysisBase Release for SLC6 </td>
+<th bgcolor="#687684" class="twikiTableCol6 twikiLastCol twikiLast" valign="top"> <font color="#ffffff">git+CMake</font> </th>
+</tr></table>
+<center>
+<div style="background-color: #8080ff; padding: 0 0 0 0;"> <strong>Other series: development and retired</strong> </div>
+<p />
+</center>
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table3" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=0;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Release series</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol1" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=1;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">rc Nightly</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol2" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=2;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">cmt Nightly</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol3" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=3;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">cmake Nightly</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol4" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=4;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Latest release</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol5" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=5;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Series Purpose</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol6 twikiLastCol" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=6;table=3;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Additional notes</font></a> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisBaseReleaseNotes26">2.6</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> &nbsp; </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> &nbsp; </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> <a href="http://atlas-nightlies-browser.cern.ch/~platinum/nightlies/info?tp=g&amp;nightly=AthAnalysisBase-2.6.X" target="_blank">2.6.X<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <a class="twikiAnchorLink" href="/twiki/bin/view/AtlasProtected/AnalysisBaseReleaseNotes26#ReleaseNotes5">2.6.5</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol5" valign="top"> Analysis Release for rel21 xAOD </td>
+<td bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> <img src="/twiki/pub/TWiki/TWikiDocGraphics/twiki-alert.gif" width="16" height="16" alt="TWiki Alert" title="TWiki Alert" border="0" /><span style="color: #ff0000"> OBSOLETE - DO NOT USE 2.6.X RELEASES <img src="/twiki/pub/TWiki/TWikiDocGraphics/twiki-alert.gif" width="16" height="16" alt="TWiki Alert" title="TWiki Alert" border="0" /></span></verbatim> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/AnalysisBaseReleaseNotes25?topicparent=AtlasProtected.AnalysisRelease;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">2.5</a></span> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> <a href="http://atlas-nightlies-browser.cern.ch/~platinum/nightlies/info?tp=g&amp;nightly=AnalysisBase-2.5.X" target="_blank">2.5.X<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> <a href="http://atlas-nightlies-browser.cern.ch/~platinum/nightlies/info?tp=g&amp;nightly=AthAnalysisBase-2.5.X" target="_blank">2.5.X<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> &nbsp; </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4" valign="top"> <a class="twikiAnchorLink" href="/twiki/bin/view/AtlasProtected/AnalysisBaseReleaseNotes24#ReleaseNotes22">2.5.0</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol5" valign="top"> Analysis Release for rel21 xAOD </td>
+<td bgcolor="#edf4f9" class="twikiTableCol6 twikiLastCol" valign="top"> <img src="/twiki/pub/TWiki/TWikiDocGraphics/twiki-alert.gif" width="16" height="16" alt="TWiki Alert" title="TWiki Alert" border="0" /><span style="color: #ff0000"> OBSOLETE - DO NOT USE 2.5.X RELEASES <img src="/twiki/pub/TWiki/TWikiDocGraphics/twiki-alert.gif" width="16" height="16" alt="TWiki Alert" title="TWiki Alert" border="0" /></span></verbatim> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisBaseReleaseNotes24">2.4</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="http://atlas-nightlies-browser.cern.ch/~platinum/nightlies/info?tp=g&amp;nightly=AnalysisBase-2.4.X" target="_blank">2.4.X<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="http://atlas-nightlies-browser.cern.ch/~platinum/nightlies/info?tp=g&amp;nightly=AthAnalysisBase-2.4.X" target="_blank">2.4.X<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> &nbsp; </td>
+<td bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <a class="twikiAnchorLink" href="/twiki/bin/view/AtlasProtected/AnalysisBaseReleaseNotes24#2_4_42_Built_on_18_01_2018">2.4.42</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol5" valign="top"> Run2 Analysis with 20.7 (D)xAOD. <br />CMT release can be used for 20.1 (D)xAOD. </td>
+<td bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> Using ROOT 6.04/16 </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisBaseReleaseNotes24">2.4HI</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLast" valign="top"> <a href="http://atlas-nightlies-browser.cern.ch/~platinum/nightlies/info?tp=g&amp;nightly=AnalysisBase-2.4.X-HI" target="_blank">2.4.X-HI<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2 twikiLast" valign="top"> n/a </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3 twikiLast" valign="top"> &nbsp; </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4 twikiLast" valign="top"> <a class="twikiAnchorLink" href="/twiki/bin/view/AtlasProtected/AnalysisBaseReleaseNotes24#ReleaseNotes32">2.4.32hi</a> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol5 twikiLast" valign="top"> Run2 Analysis with <strong>20.7.9</strong> Heavy Ion (D)xAOD. </td>
+<td bgcolor="#edf4f9" class="twikiTableCol6 twikiLastCol twikiLast" valign="top"> Matches 2.4 series except has EDM updates for HI data taking. CMT version available upon request. </td>
+</tr></table>
+<p />
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table4" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=0;table=4;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Release series</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol1" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=1;table=4;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">rc Nightly</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol2" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=2;table=4;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">cmt Nightly</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol3" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=3;table=4;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">cmake Nightly</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol4" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=4;table=4;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Latest release</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol5" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=5;table=4;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Series Purpose</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol6 twikiLastCol" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=6;table=4;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Additional notes</font></a> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisBaseReleaseNotes23">2.3</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="http://atlas-nightlies-browser.cern.ch/~platinum/nightlies/info?tp=g&amp;nightly=AnalysisBase-2.3.X" target="_blank">2.3.X<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <a href="http://atlas-nightlies-browser.cern.ch/~platinum/nightlies/info?tp=g&amp;nightly=2.3.X" target="_blank">2.3.X<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> &nbsp; </td>
+<td bgcolor="#ffffff" class="twikiTableCol4" valign="top"> <a class="twikiAnchorLink" href="/twiki/bin/view/AtlasProtected/AnalysisBaseReleaseNotes23#ReleaseNotes53">2.3.53</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol5" valign="top"> ROOT6 MC15 : current run-2 analyses (using 20.1 (D)xAOD) </td>
+<td bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> Using ROOT 6.04/12 from 2.3.40 (6.02/12 before). No longer building new releases. </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> 2.0 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> - </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> - </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> - </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4" valign="top"> 2.0.27 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol5" valign="top"> ROOT5 DC14 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol6 twikiLastCol" valign="top"> No longer supported </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> 2.1 </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3" valign="top"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol4" valign="top"> 2.1.36 </td>
+<td bgcolor="#ffffff" class="twikiTableCol5" valign="top"> ROOT6 DC14 (mc14_8TeV, mc14_13TeV or data12 in xAOD format) </td>
+<td bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol" valign="top"> Supported but no longer building new releases </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> 2.2 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> - </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> - </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3" valign="top"> - </td>
+<td bgcolor="#edf4f9" class="twikiTableCol4" valign="top"> 2.2.5 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol5" valign="top"> ROOT5 MC15 </td>
+<td bgcolor="#edf4f9" class="twikiTableCol6 twikiLastCol" valign="top"> No longer supported </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> 1.5 </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top"> - </td>
+<td bgcolor="#ffffff" class="twikiTableCol4 twikiLast" valign="top"> 1.5.14 </td>
+<td bgcolor="#ffffff" class="twikiTableCol5 twikiLast" valign="top"> Run-1 Analyses with <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/D3PD">D3PD</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol6 twikiLastCol twikiLast" valign="top"> No longer building new releases. Not available in cmt builds. </td>
+</tr></table>
+The latest release in a series is always the recommended release
+<p />
+Status of CP tools in master: <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/CPToolStatusR22">CPToolStatusR22</a>
+<p />
+<h2><a name="Nightly_info"></a> Nightly info </h2>
+<p />
+You can find the list of merge requests for the recent nightlies of all analysis releases <a class="twikiLink" href="/twiki/bin/view/AtlasComputing/GitNightlyInfo">here</a>.
+<p />
+<a name="AnalysisTop"></a>
+<h2><a name="Top_Analysis_Release_AnalysisTop"></a> Top Analysis Release (AnalysisTop) </h2>
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table5" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top"> <font color="#ffffff">Project description:</font> </th>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol" valign="top"> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisBase">AnalysisBase</a> + <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TopRootCore">TopRootCore</a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top"> <font color="#ffffff">eventloop project name:</font> </th>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLastCol" valign="top"> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TopxAODStartGuide">Top</a> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top"> <font color="#ffffff">athena project name:</font> </th>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol" valign="top"> N/A </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top"> <font color="#ffffff">Release co-ordinators:</font> </th>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLastCol" valign="top"> Sebastian Mergelmeyer, Marco Vanadia </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top"> <font color="#ffffff">Mailing lists:</font> </th>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol" valign="top"> <a href="mailto&#58;hn&#45;atlas&#45;top&#45;reconstruction&#64;cern&#46;ch">hn-atlas-top-reconstruction&#64;cern.ch</a> : also here, very busy mailing list, if you have a technical problem with <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisTop">AnalysisTop</a> or a request for a new feature, please submit a ticket for the JIRA below. </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <font color="#ffffff">JIRA</font> </th>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLastCol twikiLast" valign="top"> <a href="https://its.cern.ch/jira/browse/ANALYSISTO/" target="_blank">https://its.cern.ch/jira/browse/ANALYSISTO/<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+</tr></table>
+<p />
+<strong>Release series table:</strong>
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table6" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=0;table=6;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Release series</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol1 twikiLast" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=1;table=6;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">rc Nightly</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol2 twikiLast" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=2;table=6;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">cmt Nightly</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol3 twikiLast" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=3;table=6;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Latest release</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol4 twikiLast" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=4;table=6;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Series Purpose</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol5 twikiLastCol twikiLast" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=5;table=6;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Additional notes</font></a> </th>
+</tr></table>
+<a name="RosettaStone"></a>
+<h2><a name="Useful_commands_The_rootcore_cmt"></a> Useful commands (The rootcore-cmt Rosetta stone) </h2>
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table7" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=0;table=7;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Command purpose</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol1" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=1;table=7;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">rootcore</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol2" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=2;table=7;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">cmt</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol3 twikiLastCol" valign="top"> <a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?sortcol=3;table=7;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">example</font></a> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> List available releases </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <pre>rcSetup -r</pre> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol" valign="top"> <pre>showVersions athena &#124; grep AthAnalysis</pre> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> Setup a release (see above below for available projects) </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> <pre>rcSetup &#60;project&#62;,&#60;release&#62;</pre> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2" valign="top"> <pre>asetup &#60;project&#62;,&#60;release&#62;</pre> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol3 twikiLastCol" valign="top"> <code>asetup <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AthAnalysisBase">AthAnalysisBase</a>,2.3.30</code> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> Setup a nightly (see sections above for available nightlies)<br /> <pre>&#60;relnum&#62;</pre> runs from <code>rel_0</code> to <code>rel_6</code> and is day of the week that nightly was compiled </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <pre>rcSetup &#60;project&#62;,&#60;nightly&#62;,&#60;relnum&#62;</pre> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2" valign="top"> <pre>asetup &#60;project&#62;,&#60;nightly&#62;,&#60;relnum&#62;</pre> </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLastCol" valign="top"> <pre>rcSetup Base,2.3.X,rel&#95;1</pre> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> Create new package </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> <pre>mkdir &#60;packageName&#62; ; rc make&#95;skeleton &#60;packageName&#62;</pre> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2 twikiLastCol" valign="top"> <pre>cmt new&#95;skeleton &#60;packageName&#62;</pre> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> Checkout a package </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <center> <pre>rc checkout&#95;pkg &#60;pathToPackage&#62;</pre> <br />where path is full SVN location<br />or<br /> <pre> rc checkout&#95;pkg &#60;packageName&#62;</pre> <br />where packageName is a package in the release</center> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol" valign="top"> <center> <pre>cmt checkout&#95;pkg NameOfPackage</pre> <br />or if package isnt in the release<br /> <pre>cmt co -r &#60;PackageTag&#62; &#60;pathToPackage&#62;</pre> </center> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> Show package version </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> <center> <pre>rc version &#124; grep &#60;Package&#62;</pre> <br />or<br /> <pre>rc version</pre> <br />lists all packages <br />or<br /> <pre>rc version --local</pre> <br />lists all packages in the local work area</center> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2 twikiLastCol" valign="top"> <center> <pre>cmt show versions &#60;Package&#62;</pre> <br />or<br /> <pre>cmt show packages</pre> <br />lists all packages</center> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> Compile a package </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <pre>rc compile&#95;pkg Package</pre> or <pre>rc compile Package</pre> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol" valign="top"> <center> <pre>cmt compile&#95;pkg &#60;packageName&#62;</pre> <br />or<br /> <pre>make -C $TestArea/&#60;packageName&#62;/cmt</pre> <br />or<br /> <pre>cd $TestArea/&#60;packageName&#62;/cmt; make</pre> </center> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> Prepare to compile all packages </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> <code>rc find_packages</code> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2 twikiLastCol" valign="top"> <pre>cmt find&#95;packages</pre> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> Compile all packages </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <code>rc compile</code> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol" valign="top"> <pre>cmt compile</pre> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> Search all header files for an expression </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" valign="top"> <pre>find $ROOTCOREBIN/include/&#42;/ -type f &#124; grep -v /.svn/ &#124; xargs grep -E &#60;expression&#62;</pre> </td>
+<td bgcolor="#edf4f9" class="twikiTableCol2 twikiLastCol" valign="top"> Use <a href="http://acode-browser2.usatlas.bnl.gov/lxr-AthAna/search" target="_blank">LXR Code Browser<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> Where to learn more </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top"> <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasComputing/RootCore" target="_top">RootCore</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLastCol twikiLast" valign="top"> <a class="twikiLink" href="/twiki/bin/view/Main/LearningAthena">CMT Primer</a> </td>
+</tr></table>
+Note you can also setup eventloop releases using asetup: <code>asetup <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisBase">AnalysisBase</a>,2.3.30</code> is equivalent to <code>rcSetup Base,2.3.30</code>.
+<p />
+If you are very used to eventloop, or like the syntax for the commands, when you call setupATLAS:
+<pre>
+setupATLAS</pre>
+<p />
+You will find you have a set of useful cmt 'actions' available to you after you have setup an athena release (analysis or otherwise):
+<pre>
+asetup AthAnalysisBase,2.3.29
+cmt show actions </pre>
+<p />
+The second line lists all the 'commands' you will have. You will then be able to do: <code>cmt find_packages</code>, <code>cmt compile</code>. There is also <code>cmt new_skeleton</code> to quickly create a package with an analysis alg and a joboption in it (in the share directory), ready for xAOD analysis
+<p />
+<h1><a name="Other_links_and_info"></a> Other links and info </h1>
+<p />
+Release Shift instructions for 21 <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisReleaseShifter21">AnalysisReleaseShifter21</a>
+<p />
+<h2><a name="Notes_on_Analysis_Releases"></a> Notes on Analysis Releases </h2>
+<p />
+This section collects useful information to know about specific releases / release ranges.
+<p /> <ul>
+<li> The issue with grid job submissions affecting releases [24.2.2 - 24.2.3] and [21.2.249 - 21.2.251] is described on: <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisReleaseCPackBug2023April">AnalysisReleaseCPackBug2023April</a>
+</li></ul> 
+<p />
+<h2><a name="rcSetup_notes"></a> rcSetup notes </h2>
+<h3><a name="Additional_commands"></a> Additional commands: </h3>
+<p /> <ul>
+ <li>
+ <ul>
+<li> <code>rcSetup -u</code> -&gt; unsetup previous version
+</li> <li> <code>rcSetup -d</code> -&gt; download packages from SVN instead of creating links
+</li> <li> <code>rcSetup -d</code> -&gt; download packages from SVN instead of creating links <ul>
+<li> Next steps: <code>source setup.sh &amp;&amp; find_packages &amp;&amp; source setup_external.sh</code>
+</li></ul> 
+</li> <li> <code>rc version</code> -&gt; version numbers of all packages in the release
+</li> <li> <code>rc checkout_pkg <package></code> -&gt; checkout package from SVN, full path (see rc version) can contain tag
+</li></ul> 
+</li></ul> 
+<p />
+<h3><a name="Usage_of_rcSetup"></a> Usage of rcSetup </h3>
+<p />
+The script rcSetup is available on both CERN AFS and CVMFS, and is accessible by doing one of the following: <ol>
+<li> <strong>rcSetup</strong> after running <strong>setupATLAS</strong> (recommended, using CVMFS)
+</li> <li> <strong>alias rcSetup="source /afs/cern.ch/atlas/software/ASG/scripts/rcSetup.sh"</strong> (using AFS)
+</li> <li> <strong>alias rcSetup="source /afs/cern.ch/atlas/software/ASG/scripts/cvmfs/rcSetup.sh"</strong> (using CVMFS)
+</li></ol> 
+For doing analysis via grid submission it is recommended to set up using cvmfs.
+<p />
+<strong>Note</strong> <code>rcSetup</code> supports bash/zsh and tcsh. This does not work for <code>sh</code> or you will get complaints about:
+<code>setup_external.RootCore.sh: file not found</code>
+<p />
+Its usage is as follows:
+<blockquote>
+<pre>
+lxplus&#37; rcSetup -h
+
+Usage: rcSetup &#91;options] project,&#91;nightlyType,]release,&#91;,configs]
+
+       where project/release/configs are delimited by &#34;,&#34; or space:
+          Base &#124; Top &#124; SUSY   # project choice, such as &#34;Base&#34;
+          nightlyType        # type of nightly, such as &#34;dev&#34;
+          64 &#124; 32            # 64-bit (x86&#95;64, the default) or 32-bit (i686)
+          slc5 &#124; slc6        # using slc5 or slc6
+          opt &#124; dbg          # using opt (default) or dbg version of ASG releas
+          gcc43 &#124; gcc46 &#124; gcc47  # in format gcc&#42; set gcc version
+
+The default configuration can be overridden by defining env var &#34;rcSetupSite&#34;.
+
+
+Options:
+  -h, --help          show this help message and exit
+  -d                  Download source code of a release, try &#39;-d -h&#39; for usage
+  -b, --buildRelease  download and build release under current directory
+  -V, --version       Print rcSetup version
+  -r, --releases      Print available releases
+  -c, --printConfigs  Print available config(s) for given project/release
+  -f, --findPackages  Automatic running &#39;rc find&#95;packages&#39; in this setup
+  -u, --unSetup       unSet currently existing ASG environment</pre> </blockquote>
+<p />
+<h3><a name="Setup_of_previous_Analysis_relea"></a> Setup of previous Analysis release </h3>
+<p />
+One useful feature in rcSetup is, that you can <strong>set up your previous ASG release env under the same working directory</strong> simply
+by running rcSetup without any argument if you use ROOT from cvmfs, i.e.
+<p />
+<pre>
+rcSetup</pre>
+<p />
+after running "AtlasSetup", or simply
+<p />
+<pre>
+source rcSetup.sh</pre>
+<p />
+even <strong>without the need of running "AtlasSetup"</strong>.
+<p />
+<h1><a name="Downloading_Building_a_release_l"></a> Downloading/Building a release locally </h1>
+<p />
+In case you have Internet, but do not have access either CVMFS or CERN AFS, or you like to work on a platform (says Mac OS X) not currently supported,
+you can <strong>still using rcSetup</strong> to download the full source code for a given release and build the release yourself.
+<p />
+<h2><a name="Downloading_rcSetup"></a> Downloading rcSetup </h2>
+<p />
+You can download rcSetup and define alias for rcSetup:
+<p />
+<pre>
+svn co svn+ssh://svn.cern.ch/reps/atlasoff/rcSetup/trunk rcSetup
+alias rcSetup&#61;&#34;source $PWD/rcSetup/rcSetup.sh&#34;</pre>
+<p />
+Its usage is as follows:
+<blockquote>
+<pre>
+rcSetup -d -h
+
+Usage: rcSetup &#91;options] project,release
+
+       where project/release are delimited by &#34;,&#34; or space:
+
+
+Options:
+  -h, --help          show this help message and exit
+  -d                  Download source code of a release
+  -q, --quiet         Do not ask question, use default answer
+  -V, --version       Print rcSetup version
+  -l, --listPackages  Print list of packages in a given release
+  -r, --releases      Print available releases for download
+  -b, --buildRelease  download and build release under current directory</pre> </blockquote>
+<p />
+<h2><a name="Native_installers_for_Linux_MacO"></a> Native installers for Linux/MacOS </h2>
+<p />
+If you are running Linux or MacOS, you can use native installers to install one or more versions of <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisBase">AnalysisBase</a>: <ul>
+<li> <a href="http://cern.ch/akraszna/AtlasAnalysisReleaseInstaller" target="_blank">http://cern.ch/akraszna/AtlasAnalysisReleaseInstaller<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (Linux)
+</li> <li> <a href="http://cern.ch/akraszna/AtlasAnalysisReleaseInstaller.dmg" target="_blank">http://cern.ch/akraszna/AtlasAnalysisReleaseInstaller.dmg<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (macOS)
+</li></ul> 
+<p />
+These make it very simple, as they have a relatively up-to-date list of releases from which you can choose. The code responsible for generating the releases is at: <a href="https://gitlab.cern.ch/akraszna/AtlasInstaller" target="_blank">https://gitlab.cern.ch/akraszna/AtlasInstaller<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<p />
+<strong>Note:</strong> In order to bypass macOS's system protections (since the installer application is not a "signed" binary), your best bet is to download the DMG file from the terminal with:
+<p />
+<pre>
+curl https://akraszna.web.cern.ch/AtlasAnalysisReleaseInstaller.dmg --output AtlasAnalysisReleaseInstaller.dmg</pre>
+<p />
+Since the resulting binary will be handled by the system as something that the user created, and not downloaded from the internet. And hence macOS will allow you to execute it with no questions asked. :-P
+<p />
+<h3><a name="First_installation"></a> First installation </h3>
+<p /> <ol>
+<li> Simply navigate to the urls above, then run the downloaded executable and follow the installer instructions. <code><b>Note: Mac-users see the Mac-specific instructions below if you have trouble with security settings.</b></code>
+</li> <li> Choose an installation folder
+</li> <li> Tick the list of release(s) and/or components you'd like to install (externals, release and CMake)
+</li> <li> Accept the bundled software licenses.
+</li></ol> 
+The installation takes about 1GB of space (for <code>AnalysisBase,21.2.43</code>).
+<p />
+Supposing you chose the location <code>~/ATLAS/Software</code> as the installation location, then you can set up a release as follows:
+<p />
+<pre>
+source ~/ATLAS/Software/AnalysisBase/&#91;release&#95;number]/InstallArea/&#42;/setup.sh</pre>
+<p />
+It may be convenient to define a function in your <code>.bashrc</code> or <code>.profile</code> file as follows:
+<p />
+<pre>
+absetup() {
+    # Remember the release number
+    RELEASE&#61;$1
+    # Set up the release
+    source ~/ATLAS/Software/AnalysisBase/${RELEASE}/InstallArea/&#42;/setup.sh
+    echo &#34;Configured AnalysisBase from: ${AnalysisBase&#95;DIR}&#34;
+    # Clean up
+    unset RELEASE
+}</pre>
+<p />
+If installing a different release (e.g. <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisTop">AnalysisTop</a>), then substitute the release name for "AnalysisBase" above.
+<p />
+You can inspect the code in <code>~/ATLAS/Software/AnalysisBase/[release_number]/InstallArea/*/src</code>.
+<p />
+<h3><a name="Updating_the_installation"></a> Updating the installation </h3>
+<p />
+Once you have installed the ATLAS releases once, should you wish to modify your installation (add another release, remove an existing release), you will find a "maintenancetool" executable in <code>~/ATLAS/Software</code>. Run this, which will open a wizard allowing you to make modifications of this nature.
+<p />
+<h3><a name="Specific_instructions_for_Mac"></a> Specific instructions for Mac </h3>
+<p />
+Opening the dmg will give you a disk image with the <code>AtlasAnalysisReleaseInstaller</code> executable. MacOS security will prevent you from running this by double-clicking, so right-click and select "Open", then follow the dialogue box.
+<p />
+<h2><a name="Downloading_source_code_of_a_rel"></a> Downloading source code of a release </h2>
+<p />
+To download Base-2.0.12, just run
+<p />
+<pre>
+  rcSetup -d Base,2.0.12</pre>
+<p />
+which would download all the required packages for Base-1.0.0, at the end print out a list of package tags downloaded, and a list of packages not downloaded because they already exist under the working directory.
+<p />
+Then you can compile all the packages via command <code>"rc compile"</code>.
+<p />
+<h2><a name="Building_a_release_locally"></a> Building a release locally </h2>
+<p />
+If you like to use your local release in the future, you can build the release via command <code>"rcSetup -b"</code>. For example, to build ASG release of Base-1.0.0, just run
+<p />
+<pre>
+  rcSetup -b Base,2.0.12</pre>
+<p />
+which will <ol>
+<li> create directory $PWD/AnalysisBase/2.0.12/,
+</li> <li> download the packages (if not downloaded yet) in ASG release Base-2.0.12,
+</li> <li> compile the release,
+</li> <li> write a private configuration file <strong>$HOME/.rcSetup.conf</strong> if the above compilation is successful.
+</li></ol> 
+<p />
+Later you can just run <strong>"rcSetup Base,2.0.12"</strong> to use this local ASG release.
+<p />
+<strong>Note: this feature is still under development stage.</strong>
+<p />
+<h1><a name="CVMFS_access_from_MacOS"></a> CVMFS access from <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MacOS?topicparent=AtlasProtected.AnalysisRelease;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MacOS</a></span> </h1>
+<p />
+More information here: <a class="twikiAnchorLink" href="/twiki/bin/view/AtlasComputing/Cvmfs21#Mac_OSX_client_installation_and">CVMFS: Mac OSX client installation</a>
+<p />
+<h1><a name="How_to_submit_to_the_grid"></a> How to submit to the grid </h1>
+<p />
+You can submit you ROOT job to the grid, using your usual <code>prun</code> command, and adding <code>--useRootCore</code>. For example:
+<blockquote>
+<pre>
+prun --useRootCore
+        --inDS&#61;mc12&#95;8TeV.157814.Sherpa&#95;CT10&#95;VVtoeeqq.merge.NTUP&#95;SUSY.e1515&#95;s1499&#95;s1504&#95;r3658&#95;r3549&#95;p1328/ --outDS&#61;user.username.ASGtest&#95;v11
+        --nGBPerJob&#61;14
+        --writeInputToTxt IN:input.txt
+        --exec &#34;macrotest&#34; 
+        --site&#61;ANALY&#95;AUSTRALIA</pre> </blockquote>
+<p />
+The job will only compile the users package, and the rest is taken from the release. Note your analysis release must be using RootCore-00-02-56 or newer.
+<p />
+<!-- Add the main topic here. i.e. create some new headings as follows: -->
+<p />
+<!-- <strong>*********************************************************</strong> --> <!-- Do NOT remove the remaining lines, but add requested info as appropriate --> <!-- <strong>*********************************************************</strong> -->
+<p />
+<hr />
+<p />
+<!-- For significant updates to the topic, consider adding your 'signature' (beneath this editing box) --> <strong>Major updates</strong>:<br /> -- <a class="twikiLink" href="/twiki/bin/view/Main/LouiseHeelan">LouiseHeelan</a> - 07 Nov 2013
+<p />
+<!-- Person responsible for the page: 
+Either leave as is - the creator's name will be inserted; 
+Or replace the complete REVINFO tag (including percentages symbols) with a name in the form <a class="twikiLink" href="/twiki/bin/view/Main/TwikiUsersName">TwikiUsersName</a> -->
+Responsible: <a class="twikiLink" href="/twiki/bin/view/Main/LouiseHeelan">LouiseHeelan</a> <br /> <!-- Once this page has been reviewed, please add the name and the date e.g. <a class="twikiLink" href="/twiki/bin/view/Main/StephenHaywood">StephenHaywood</a> - 31 Oct 2006 -->
+Last reviewed by: <strong>Never reviewed</strong> </div><!-- /patternTopic-->
+<div class="twikiContentFooter"></div></div><!-- /patternContent-->
+<div class="clear"></div>
+<a name="topic-actions"></a><div class="patternTopicActions"><div class="patternTopicAction"><span class="patternActionButtons"><span style=''><span><a href='https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/AnalysisRelease?t=1763376420;nowysiwyg=1' rel='nofollow' title='Edit this topic text' accesskey='e'><img src='/twiki/pub/TWiki/TWikiDocGraphics/uweb-o14.gif' width='14' height='14' border='0' alt='' /> <span class='twikiAccessKey'>E</span>dit</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span></span><span style=''><span><a href='/twiki/bin/attach/AtlasProtected/AnalysisRelease' rel='nofollow' title='Attach an image or document to this topic' accesskey='a'><span class='twikiAccessKey'>A</span>ttach</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span></span><span><a href='/twiki/bin/view/AtlasProtected/AnalysisRelease?cover=print' rel='nofollow' title='Printable version of this topic' accesskey='p'><span class='twikiAccessKey'>P</span>rint version</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span><span><a href='/twiki/bin/oops/AtlasProtected/AnalysisRelease?template=oopshistory' rel='nofollow' title='View total topic history' accesskey='h'><span class='twikiAccessKey'>H</span>istory</a></span>: r183&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/AnalysisRelease?rev1=183;rev2=182" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?rev=182" rel="nofollow">r182</a>&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/AnalysisRelease?rev1=182;rev2=181" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?rev=181" rel="nofollow">r181</a>&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/AnalysisRelease?rev1=181;rev2=180" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?rev=180" rel="nofollow">r180</a>&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/AnalysisRelease?rev1=180;rev2=179" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/AnalysisRelease?rev=179" rel="nofollow">r179</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span><a href='/twiki/bin/oops/AtlasProtected/AnalysisRelease?template=backlinksweb' rel='nofollow' title='Search the AtlasProtected Web for topics that link to here' accesskey='b'><span class='twikiAccessKey'>B</span>acklinks</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span><a href='/twiki/bin/view/AtlasProtected/AnalysisRelease?raw=on' rel='nofollow' title='View raw text without formatting' accesskey='r'><span class='twikiAccessKey'>R</span>aw View</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span style=''><span><a href='https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/AnalysisRelease?t=1763376420;nowysiwyg=0' rel='nofollow' title='WYSIWYG editor' accesskey='w'>WYSIWYG</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span></span><span><a href='/twiki/bin/oops/AtlasProtected/AnalysisRelease?template=oopsmore&amp;param1=183&amp;param2=183' rel='nofollow' title='Delete or rename this topic; set parent topic; view and compare revisions' accesskey='m'><span class='twikiAccessKey'>M</span>ore topic actions</a></span></span></div><!--/patternTopicAction--></div><!--/patternTopicActions-->
+<div class="patternInfo twikiGrayText"><div class="patternRevInfo">Topic revision: r183 - 2024-02-28 <a href="https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/AnalysisRelease?t=1763376420;nowysiwyg=1" target="_top">-</a> <a class="twikiLink" href="/twiki/bin/view/Main/AndrewMehta">AndrewMehta</a></div><!-- /patternRevInfo--></div><!-- /patternInfo-->
+</div><!-- /patternMainContents-->
+</div><!-- /patternMain--><div id="patternLeftBar"><div id="patternClearHeaderLeft"></div>
+<div id="patternLeftBarContents"><div class="patternLoginActions"><span style="padding: 0 0 0 20px; word-wrap:break-word; display:block;"><img src="https://twiki.cern.ch/twiki/pub/TWiki/TWikiDocGraphics/person.gif" style="position:absolute; margin: 0 0 0 -20px;" /> <span class="twikiNewLink"><a href="/twiki/bin/edit/Main/RoySchimmelBrener?topicparent=AtlasProtected.AnalysisRelease;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">RoySchimmelBrener</a></span></span>  <img src="/twiki/pub/TWiki/TWikiDocGraphics/lock.gif" width="16" height="16" alt="Lock" title="Lock" border="0" /> <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/AnalysisRelease?logout=1">Log Out</a></div><div class="patternWebIndicator"> <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="/twiki/bin/view/AtlasProtected/WebHome"><img src="/twiki/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" width="13" height="13" alt="Web background" title="Web background" border="0" /> AtlasProtected</a>
+</li></ul> 
+</div> <ul>
+<li> <strong><a href="https://atlas-collaboration.web.cern.ch" target="_blank"><span style="color: blue">ATLAS Collaboration</span><img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a></strong>
+</li></ul> 
+<hr /> <ul>
+<li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/WebHome"><span style="color: #0000ff"> ATLAS TWiki</span></verbatim></a></strong>
+</li> <li> <strong><a class="twikiCurrentWebHomeLink twikiLink" href="/twiki/bin/view/AtlasProtected/WebHome"><span style="color: #0000ff"> ATLAS Protected</span></verbatim></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasComputing/WebHome"><span style="color: #0000ff"> ATLAS Computing </span></verbatim></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasPublic/WebHome"><span style="color: #0000ff"> Public Results </span></verbatim></a></strong>
+</li></ul> 
+<hr /> <ul>
+<li> <strong><a href="https://its.cern.ch/jira/secure/CreateIssueDetails!init.jspa?pid=22679&amp;issuetype=3&amp;summary=Problem+with+AnalysisRelease+TWiki+topic&amp;description=The+topic+https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/AnalysisRelease+has+an+issue.+Describe+it+below:&amp;reporter=rbrener" target="_blank"><span style="color: #ff0000"> Report outdated page </span></verbatim><img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a></strong>
+</li> <li> <strong><a href="mailto&#58;atlas&#45;twiki&#45;support&#64;cern&#46;ch"><span style="color: #ff0000"> Twiki-Support </span></verbatim></a></strong>
+</li></ul> 
+<hr />
+<p /> <ul>
+ <li>
+ <ul>
+<li> <strong><a href="https://twiki.cern.ch/twiki/bin/view/AtlasPublic" target="_top"><span style="color: navy;"> Public Results </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AtlasPhysics"><span style="color: navy;"> Physics </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/AtlasDetectors"><span style="color: navy;"> Detectors </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/AtlasTrigger"><span style="color: navy;"> Trigger </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasComputing/WebHome"><span style="color: navy;"> Computing </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/DataPreparation"><span style="color: navy;"> Data Preparation </span></a></strong>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/Atlas/DocumentationManagement">Documentation Help</a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/Atlas/AtlasGlossary">Glossary</a>
+</li></ul> 
+</li></ul> 
+<p />
+<div class="twikiLeftBarBase">
+  <a href="/twiki/bin/edit/AtlasProtected/AnalysisReleaseLeftBar?templatetopic=AtlasProtected.WebLeftBarTemplate">Create</a> a LeftBar for this page
+</div>
+<p />
+<hr />
+<span style="color: #008000"> <img src='https://twiki.cern.ch/twiki/pub/TWiki/TWikiDocGraphics/searchtopic.gif'> <strong><a href="https://search.cern.ch/Pages/TwikiResults.aspx?k=generic2%3AATLAS" target="_blank">TWiki Search<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a></strong> </span></verbatim>
+<hr />
+<p />
+<!-- <ul>
+ <li>
+ <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="/twiki/bin/view/AtlasProtected/WebHome">AtlasProtected Wiki</a>
+</li></ul> 
+</li></ul> 
+-->
+</div><!-- /patternLeftBarContents--></div><!-- /patternLeftBar-->
+</div><!-- /patternFloatWrap-->
+<div class="clear">&nbsp;</div>
+</div><!-- /patternOuter--></div><!-- /patternWrapper--><div id="patternTopBar"><div id="patternTopBarContents"><table border="0" cellpadding="0" cellspacing="0" style="width:100%; margin-top:12px;">
+<tr><td valign="middle"><span id="twikiLogo" class="twikiImage"><a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/WebHome"><img src="/twiki/pub/AtlasPublic/AtlasTWikiLogos/AtlasTwikiProtectedLogo.png" border="0" alt="CERN" style="border:none;" /></a></span></td>
+<td align="right" valign="top" class="patternMetaMenu">
+ <ul>
+<li> <form name="jumpForm" action="/twiki/bin/view/AtlasProtected/AnalysisRelease"><input id="jumpFormField" type="text" class="twikiInputField" name="topic" value="" size="18" /><noscript>&nbsp;<input type="submit" class="twikiButton" size="5" name="submit" value="Jump" />&nbsp;</noscript>   </form>
+</li> <li> <form name="quickSearchForm" action="https://search.cern.ch/Pages/TwikiResults.aspx" target="search" class="cernTWikiSearch">    <ul class="engineList" style="background-image: url('https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/arrow.png');">        <li class="active" id="twikisearch">            <img src="https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/twikisearchicon.gif" alt="TWiki Search Icon" />            <span class="engineDescription">TWiki Search</span>        </li>        <!-- Due to a security incident <a href="https://cern.service-now.com/service-portal?id=outage&amp;n=OTG0156848" target="_blank">OTG0156848<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>, the legacy CERN Search Service has been shut down        <li id="cernsearch">            <img src="https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/cernsearchicon.png" alt="Cern Search Icon" />            <span class="engineDescription">Cern Search</span>        </li>         -->        <li id="googlesearch">            <img class="engine" src="https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/googlesearchicon.png" alt="Google Search Icon" />            <span class="engineDescription">Google Search</span>        </li>    </ul>    <input type="text" class="twikiInputField" id="quickSearchBox" name="k" value="" size="18" /> <br />    <input type="radio" name="scope" value=Atlas checked />     <span class="webScopeDescription">Atlas</span>    <input type="radio" name="scope" value="AllWebs" />    <span class="allWebsScopeDescription">All webs</span>    <input type='hidden' name='autologin' value='1'/>     <noscript>        &nbsp; <input type="submit" size="5" class="twikiButton" name="submit" value="Search"/>&nbsp;    </noscript>
+</li></ul> 
+</form>
+<p />
+<p />
+<!-- <pre> -->
+<script language="javascript">
+<!--
+$(function() {
+    // We use the current web name to form the redirect in the TWiki search
+    var currentWeb = undefined;
+    // If the web starts with alice* atlas* cms* or lhcb* (case-insensitive),
+    // the "Web search" should be altered so that AtlasFoo => Atlas
+    var specialWeb = undefined;
+    // Remembering what the user have entered into the searchbox to after
+    // he has selected a new search engine from the dropdown
+    var searchPhrase = '';
+
+    // --- BEGIN: CONFIGURABLE LIST FOR SUBWEB SEARCH ---
+    // List of webs for which sub-web searching should be enabled
+    var subWebSearchWebs = ['AtlasProtected', 'AtlasComputing', 'Atlas'];
+    // --- END: CONFIGURABLE LIST FOR SUBWEB SEARCH ---
+
+    // --- ORIGINAL WEB DETECTION LOGIC ---
+    // We want to store the current web for later use.
+    var currentWebSearch = window.location.pathname.match(/\/([A-Z][^\/]+)/);
+    if (currentWebSearch != null) {
+        currentWeb = currentWebSearch[1];
+
+        // Do we have a special kind of web? If so, the web search should be altered a little to fetch more broader results.
+        var specialWebSearch = currentWeb.match(/^(alice|atlas|cms|lhcb)/i);
+        if (specialWebSearch != null) {
+            var lowercaseToCorrect = {
+                'alice' : 'Alice',
+                'atlas' : 'Atlas',
+                'cms'   : 'CMS',
+                'lhcb'  : 'LHCb'
+            };
+            specialWeb = lowercaseToCorrect[specialWebSearch[1].toLowerCase()];
+            $('span.webScopeDescription').text(specialWeb);
+        }
+    } else {
+        currentWeb = 'DefaultWeb';
+    }
+
+    // --- BEGIN: SUBWEB LOGIC TO EXTRACT SUBWEB PATH (EXCLUDING TOPIC) ---
+    var subWebSearchWebs = ['AtlasProtected', 'AtlasComputing', 'Atlas'];
+    // Build regex to match web/subweb path and topic
+    var subWebsPattern = new RegExp(
+        '/((' + subWebSearchWebs.join('|') + ')(?=(?:/|$))(?:/[A-Za-z0-9_]+)*)/([A-Za-z0-9_]+)$'
+    );
+    var subWebMatch = window.location.pathname.match(subWebsPattern);
+    if (subWebMatch) {
+        // subWebMatch[1] is the full web/subweb path (e.g. "AtlasComputing/AtlasComputingArchive")
+        // subWebMatch[3] is the topic (e.g. "WebHome")
+        currentWeb = subWebMatch[1];
+        specialWeb = currentWeb;
+        $('span.webScopeDescription').text(specialWeb);
+    }
+    // --- END: SUBWEB LOGIC TO EXTRACT SUBWEB PATH (EXCLUDING TOPIC) ---
+
+    // Do we have a favourite search engine in localStorage? We set Twiki search as default anyways
+    if (window.localStorage) {
+        // var storedEngine = localStorage.getItem('defaultSearchEngine');
+        // console.log('stored engine preference: ' + storedEngine);
+        var storedEngine = 'twikisearch';
+        var storedEngineLi = $('.cernTWikiSearch li#' + storedEngine);
+        if (!storedEngineLi.hasClass('active')) {
+            changeActiveSearchEngine(storedEngineLi);
+        }
+        if (storedEngine == 'twikisearch') {
+            $('input[name=scope][value=AllWebs]').attr('disabled','disabled');
+            $('.allWebsScopeDescription').addClass('disabled');
+        }
+    }
+    
+    // Toggle the searchEngines list on and off on click
+    $('.cernTWikiSearch ul.engineList').click(function(e) {
+        e.stopPropagation();
+        if ($(this).hasClass('open')) {
+            $(this).removeClass('open');
+        } else {
+            $(this).addClass('open');
+        }
+    });
+
+    // Stupid IE8 hack because the click handler on ul.engineList does not work properly there.
+    if ($.browser.msie && document.documentMode && document.documentMode < 9) {
+        $('.cernTWikiSearch #quickSearchBox').focus(function(e) {
+            $('.cernTWikiSearch ul.engineList').removeClass('open');
+        });
+    }
+    
+    // Handle clicks on one of the search engines
+    $('.cernTWikiSearch ul.engineList li').click(function(e) {
+        // If we clicked on a <li> that does not has class 'active', it means this should become active and swap places with this.
+        if (!$(this).hasClass('active')) {
+            changeActiveSearchEngine($(this));
+        }  
+        if ($(this).parent().hasClass('open')) {
+            $('.cernTWikiSearch #quickSearchBox').val(searchPhrase);
+            $('.cernTWikiSearch #quickSearchBox').focus();                          
+        }
+        if ($(this).attr('id') == 'twikisearch') {
+            var allWebsRadio = $('input[name=scope][value=AllWebs]');
+            allWebsRadio.attr('disabled','disabled');
+            allWebsRadio.siblings('input[type=radio]').attr('checked',true)
+            $('.allWebsScopeDescription').addClass('disabled');
+        } else {
+            $('input[name=scope][value=AllWebs]').attr('disabled','');
+            $('.allWebsScopeDescription').removeClass('disabled');
+        }
+    });
+    
+    // Show the engine description text on hover
+    $('.engineList.open li').live('hover',function() {
+        var displayText = $(this).find('span.engineDescription').text();
+        $('.cernTWikiSearch #quickSearchBox').val(displayText);
+    });
+
+
+    // The form is submitted, now let's do the search.
+    $('.cernTWikiSearch').submit(function(e) {
+        e.preventDefault();
+
+        var scope = $('input[name=scope]:checked', $(this)).val();
+        if (scope != 'AllWebs' && specialWeb !== undefined) {
+            scope = specialWeb;
+        }
+        var val = $('.cernTWikiSearch #quickSearchBox').val();
+        var engine = $('.engineList li.active').attr('id')
+        
+        switch (engine) {
+            case 'googlesearch':
+                window.open('https://google.com/search?q=site:' + encodeURIComponent('https://twiki.cern.ch') + (scope != 'AllWebs' ? ' ' + scope : '') + ' ' + val);
+                break;
+            case 'cernsearch':
+                window.open('https://search.cern.ch/Pages/TwikiResults.aspx?k=' + val + (scope != 'AllWebs' ? ' cernscope:' + scope : '') + '&autologin=1');
+                break;
+            case 'twikisearch':
+                window.open(window.location.pathname.replace(/\/[A-Z].+$/,'') + '/' + currentWeb + '/WebSearch?search=' + val + '&scope=all');
+                break;
+        default:
+            break;
+        }
+        
+        // Save the search engine. If the user reloads the page he should get the last one used.
+        if (window.localStorage) { 
+            console.log('store engine preference: ' + engine);
+            localStorage.setItem('defaultSearchEngine',engine);
+        }
+    });
+    
+    // Save the search phrase on every key up
+    $('.cernTWikiSearch #quickSearchBox').keyup(function() {
+        searchPhrase = $(this).val();
+    });
+    
+    // If a user clicks outside the search engine list, the search engine list should be closed.
+    $('html').click(function() {
+        if ($('.engineList').hasClass('open')) {
+            $('.engineList').removeClass('open');
+            $('.cernTWikiSearch #quickSearchBox').val(searchPhrase);
+        }
+    });
+});
+
+// We want to change the active search engine
+function changeActiveSearchEngine(engineLi) {
+    var activeEngine = engineLi.siblings(':first');
+    engineLi.detach().insertBefore(activeEngine);
+    activeEngine.removeClass('active');
+    engineLi.addClass('active');
+    if (engineLi.attr('id') == 'twikiSearch') {
+        deactivateAllWebsOption();
+    }
+}
+
+// The user has chosen twiki search (or the preference was stored in localStorage). 
+// We will then disable the 'All Webs' option since this will time out.
+function deactivateAllWebsOption() {
+}
+
+// Helper method to check input attribute browser compability
+function checkInputAttributeSupport(attribute) {
+    var i = document.createElement("input");
+    return typeof i.placeholder !== 'undefined';
+}
+//-->
+</script>
+<!-- </pre> --> <ul>
+<li> 
+</li></ul> 
+</td></tr></table></div></div><!-- /patternTopBar--><div id="patternBottomBar"><div id="patternBottomBarContents"><div id="patternWebBottomBar"><div class="twikiCopyright"><span class="twikiRight"> <a href="http://twiki.org/"><img src="/twiki/pub/TWiki/TWikiLogos/T-badge-88x31.gif" alt="This site is powered by the TWiki collaboration platform" width="88" height="31" title="This site is powered by the TWiki collaboration platform" border="0" /></a></span><span class="twikiRight" style="padding:0 10px 0 10px"> <a href="http://www.perl.org/"><img src="/twiki/pub/TWiki/TWikiLogos/perl-logo-88x31.gif" alt="Powered by Perl" width="88" height="31" title="Powered by Perl" border="0" /></a></span>Copyright &amp;© 2008-2025 by the contributing authors. All material on this collaboration platform is the property of the contributing authors. <br />  or Ideas, requests, problems regarding TWiki? use <a href="https://discourse.web.cern.ch/c/collaborative-editing/wikis/12">Discourse</a> or <a href='https://twiki.cern.ch/twiki/bin/view/Main/ServiceNow'>Send feedback</a> </div><!--/twikiCopyright--></div><!--/patternWebBottomBar--></div><!-- /patternBottomBarContents--></div><!-- /patternBottomBar-->
+</div><!-- /patternPage-->
+</div><!-- /patternPageShadow-->
+</div><!-- /patternScreen-->
+<p />
+<p />
+<p />
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+	 var u="https://webanalytics.web.cern.ch/";
+	 _paq.push(['setTrackerUrl', u+'matomo.php']);
+	 _paq.push(['setSiteId', '5']);
+	 var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	 g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+<p />
+</body></html>

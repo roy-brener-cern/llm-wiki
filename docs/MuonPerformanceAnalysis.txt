@@ -1,0 +1,497 @@
+   (BUTTON)
+   (BUTTON)
+    1. [1]ATLAS Muon Combined Performance Working Group
+
+    >
+
+     [2]Common Software Tools
+
+    >
+
+     MuonPerformanceAnalysis ntuple's production
+
+   (BUTTON)
+
+MuonPerformanceAnalysis ntuple's production
+
+   This page lists the official production of ntuples used:
+     * for efficiency measurements and isolation studies as well as to
+       provide the scale factors for these measurements and
+     * for momentum calibration purposes
+
+   The MuonPerformanceAnalysis ([3]MPA) framework is used to produce these
+   ntuples.
+     * The ntuples used for efficiency and isolation measurements have the
+       suffixes NTUP_MCP and EXT0 (when the production is done on the
+       Grid)
+     * The ntuples used for momentum calibration have the suffixes
+       NTUP_MCPSCALE and EXT1 (when the production is done on the Grid)
+
+   The efficiency and isolation measurements are using data from
+   "physics_Main", "physics_BphysDelayed" and "calibration_BPhysPEB"
+   streams.
+   The momentum calibration measurements are using data from
+   "physics_Main" and "physics_BphysDelayed" streams.
+
+   During datataking, the above mentioned ntuples are produced
+   automatically at Tier-0 (so only for real data) and copied on the
+   dedicated eos area of mcp group. For the mc production, Grid facilities
+   are used but the ntuples are copied at the same place.
+
+   The rucio storage element (RSE) where the mcp ntuples are replicated is
+   the following: /eos/atlas/atlasgroupdisk/perf-muons/
+                  *Run3 data and MC production to be used for providing recommen
+dations *
+
+   Date & Place of Production Input Datasets Output NTUPLES
+   (precise rucio patterns) MPA version Athena release Notes
+   (inc. relevant jira tickets) Purpose of production
+   June 2025 (Grid) data23 Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data23 | grep
+   67.100_25.34_v2 | grep EXT0"
+   67.100 25.0.34 Build with TriggerMatchingTool match variable set to
+   true Run3 Year 2023 Include continuous SF variables
+   June 2025 (Grid) mc23d Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep mc23 | grep
+   67.100_25.34_v2 | grep 15224 | grep EXT0"
+   67.100 25.0.34 Build with TriggerMatchingTool match variable set to
+   true Run3 Year 2023 Include continuous SF variables
+   June 2025 (Grid) mc23d Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep mc23 | grep
+   67.100_25.34_v2 | grep 15530 | grep EXT0"
+   67.100 25.0.34 Build with TriggerMatchingTool match variable set to
+   true Run3 Year 2023 Include continuous SF variables
+   February 2025 (Grid) mc23e (high pT fix - only efficiency) Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep mc23 | grep 16083
+   | grep 67.91 | grep 25.23 | grep EXT0"
+   67.91.0 25.0.23 BIS78, BEE included in high-pT selection Run3 Year 2024
+   Preliminary recommendations
+   December 2024 (Grid) mc23e Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep mc23 | grep 16083
+   | grep 67.88 | grep 25.23 | grep EXT1" 67.88.0 25.0.23 T&P efficiency
+   ntuples are obsolete - use the high-pT fix instead (Feb. 2025) Run3
+   Year 2024 Preliminary recommendations
+   November 2024 (Grid) mc23d Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep mc23 | grep 15224
+   | grep 67.75 | grep 25.0.10 | grep EXT0 | grep -v calmuons",
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep mc23 | grep 15530
+   | grep 67.75 | grep 25.0.10 | grep EXT0 | grep -v calmuons"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep mc23 | grep 15224
+   | grep 67.75 | grep 25.0.10 | grep EXT1 | grep -v calmuons",
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep mc23 | grep 15530
+   | grep 67.75 | grep 25.0.10 | grep EXT1 | grep -v calmuons" 67.75.0
+   25.0.10 - Run3 Year 2023 Consolidated recommendations
+   November 2024 (Grid) Data 2023, stream:
+   physics_Main Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data23 | grep
+   67.75_25.0.10_v2 | grep physics_Main | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data23 | grep
+   67.75_25.0.10_v2 | grep physics_Main | grep EXT1" 67.75.0 25.0.10 -
+   Run3 Year 2023 Preliminary recommendations
+   November 2024 (Grid) Data 2023, stream:
+   BphysDelayed Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data23 | grep
+   67.75_25.0.10_v2 | grep BphysDelayed | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data23 | grep
+   67.75_25.0.10_v2 | grep BphysDelayed | grep EXT1" 67.75.0 25.0.10 -
+   Run3 Year 2023 Preliminary recommendations
+   November 2024 (Grid) Data 2022, stream:
+   physics_Main Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data22 | grep
+   67.75 | grep 25.0.10 | grep physics_Main | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data22 | grep
+   67.75 | grep 25.0.10 | grep physics_Main | grep EXT1" 67.75.0 25.0.10 -
+   Run3 Year 2022 Consolidated recommendations
+   November 2024 (Grid) Data 2022, stream:
+   BphysDelayed Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data22 | grep
+   67.75.0_athena25.0.10 | grep BphysDelayed | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data22 | grep
+   67.75.0_athena25.0.10 | grep BphysDelayed | grep EXT1" 67.75.0 25.0.10
+   - Run3 Year 2022 Consolidated recommendations
+   October 2024 (Grid) Data 2015, stream:
+   physics_Main Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data15 | grep
+   physics_Main | grep 67.81.0_25.0.18 | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data15 | grep
+   physics_Main | grep 67.81.0_25.0.18 | grep EXT1" 67.81.0 25.0.18
+   DAOD_MUON1 Run2 Final recommendations
+   October 2024 (Grid) Data 2016, stream:
+   physics_Main Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data16 | grep
+   physics_Main | grep 67.81.0_25.0.18 | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data16 | grep
+   physics_Main | grep 67.81.0_25.0.18 | grep EXT1" 67.81.0 25.0.18
+   DAOD_MUON1 Run2 Final recommendations
+   October 2024 (Grid) Data 2017, stream:
+   physics_Main Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data17 | grep
+   physics_Main | grep 67.81.0_25.0.18 | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data17 | grep
+   physics_Main | grep 67.81.0_25.0.18 | grep EXT1" 67.81.0 25.0.18
+   DAOD_MUON1 Run2 Final recommendations
+   October 2024 (Grid) Data 2018, stream:
+   physics_Main Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data18 | grep
+   physics_Main | grep 67.81.0_25.0.18 | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data18 | grep
+   physics_Main | grep 67.81.0_25.0.18 | grep EXT1" 67.81.0 25.0.18
+   DAOD_MUON1 Run2 Final recommendations
+   October 2024 (Grid) Data 2016, stream:
+   BphysDelayed Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data16 | grep
+   BphysDelayed | grep 67.81.0_25.0.18 | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data16 | grep
+   BphysDelayed | grep 67.81.0_25.0.18 | grep EXT1" 67.81.0 25.0.18
+   DAOD_MUON1 Run2 Final recommendations
+   October 2024 (Grid) Data 2017, stream:
+   BphysPEB Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data17 | grep
+   BphysPEB | grep 67.81.0_25.0.18 | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data17 | grep
+   BphysPEB | grep 67.81.0_25.0.18 | grep EXT1" 67.81.0 25.0.18 DAOD_MUON1
+   Run2 Final recommendations
+   October 2024 (Grid) Data 2018, stream:
+   BphysPEB Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data18 | grep
+   BphysPEB | grep 67.81.0_25.0.18 | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data18 | grep
+   BphysPEB | grep 67.81.0_25.0.18 | grep EXT1" 67.81.0 25.0.18 DAOD_MUON1
+   Run2 Final recommendations
+   October 2024 (Grid) Data 2017, stream:
+   BhysLS Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data17 | grep
+   BphysLS | grep 67.81.0_25.0.18 | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data17 | grep
+   BphysLS | grep 67.81.0_25.0.18 | grep EXT1" 67.81.0 25.0.18 DAOD_MUON1
+   Run2 Final recommendations
+   October 2024 (Grid) Data 2018, stream:
+   BphysLS Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data18 | grep
+   BphysLS | grep 67.81.0_25.0.18 | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data18 | grep
+   BphysLS | grep 67.81.0_25.0.18 | grep EXT1" 67.81.0 25.0.18 DAOD_MUON1
+   Run2 Final recommendations
+   October 2024 (Grid) mc20a Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep mc20 | grep 13167
+   | grep 67.81.0_25.0.18 | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep mc20 | grep 13167
+   | grep 67.81.0_25.0.18 | grep EXT1" 67.81.0 25.0.18 DAOD_MUON1 Run2
+   Final recommendations
+   October 2024 (Grid) mc20d Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep mc20 | grep 13144
+   | grep 67.81.0_25.0.18 | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep mc20 | grep 13144
+   | grep 67.81.0_25.0.18 | grep EXT1" 67.81.0 25.0.18 DAOD_MUON1 Run2
+   Final recommendations
+   October 2024 (Grid) mc20e Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep mc20 | grep 13145
+   | grep 67.81.0_25.0.18 | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep mc20 | grep 13145
+   | grep 67.81.0_25.0.18 | grep EXT1" 67.81.0 25.0.18 DAOD_MUON1 Run2
+   Final recommendations
+   October 2024 (Grid) mc23a Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep mc23 | grep 14622
+   | grep 67.75 | grep 25.0.10 | grep EXT0",
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep mc23 | grep 15540
+   | grep 67.75 | grep 25.0.10 | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep mc23 | grep 14622
+   | grep 67.75 | grep 25.0.10 | grep EXT1",
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep mc23 | grep 15540
+   | grep 67.75 | grep 25.0.10 | grep EXT1" 67.75.0 25.0.10 - Run3 Year
+   2022 Consolidated recommendations
+   September 2024 (Grid) Data 2024, stream:
+   physics_Main Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep
+   67.75.0_athena25.0.10_fixed | grep physics_Main | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep
+   67.75.0_athena25.0.10_fixed | grep physics_Main | grep EXT1" 67.75.0
+   25.0.10 includes everything up to run 480277, for later runs use the
+   Tier-0 ntuples Reprocessed datasets with updated alignment conditions
+   (CONDBR2-BLKPA-2024-03)
+   September 2024 (Grid) Data 2024, stream:
+   BphysDelayed Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep
+   67.75.0_athena25.0.10_fixed | grep Delayed | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep
+   67.75.0_athena25.0.10_fixed | grep Delayed | grep EXT1" 67.75.0 25.0.10
+   includes everything up to run 480277, for later runs use the Tier-0
+   ntuples Reprocessed datasets with updated alignment conditions
+   (CONDBR2-BLKPA-2024-03)
+   September 2024 (Grid) Data 2024, stream:
+   Bphys_PEB Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep
+   67.75.0_athena25.0.10_fixed | grep PEB | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep
+   67.75.0_athena25.0.10_fixed | grep PEB | grep EXT1" 67.75.0 25.0.10 -
+   Reprocessed datasets with updated alignment conditions
+   (CONDBR2-BLKPA-2024-03)
+   July 2024 (Grid) Data 2023, stream:
+   physicsMain Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep
+   67.70.0_athena24.0.23 | grep data23 | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep
+   67.70.0_athena23.0.23 | grep data23 | grep EXT1" 67.70.0 23.0.23 -
+   Trigger NSW bugfix checks
+   July 2024 (Grid) Data 2022, stream:
+   physicsMain Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep
+   67.70.0_athena24.0.23 | grep data22 | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep
+   67.70.0_athena23.0.23 | grep data22 | grep EXT1" 67.70.0 23.0.23 -
+   Trigger NSW bugfix checks
+   May 2024 (Grid) mc23_13p6TeV.601190.PhPy8EG_AZNLO_
+   Zmumu.merge.AOD.e8514_e8528_
+   s4162_s4114_r15515_r15516
+   mc23_13p6TeV.601190.PhPy8EG_AZNLO_
+   Zmumu.merge.AOD.e8514_e8528_
+   s4159_s4114_r15513_r15514 Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep
+   67.64.0_athena25.0.5 | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep
+   67.64.0_athena25.0.5 | grep EXT1" 67.64.0 25.0.5 - Trigger NSW bugfix
+   checks
+   April 2024 (Grid) MC23d Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep
+   67.53.0_athena24.0.27 | grep mc23_13p6TeV | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep
+   67.53.0_athena24.0.27 | grep mc23_13p6TeV | grep EXT1" 67.53.0 24.0.27
+   [4]mc23d filelist To be used for checks
+   December 2023 (Grid) Data 2022, stream:
+   physics_Main Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep
+   67.37.0_athena24.0.16 | grep data22 | grep Main | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep
+   67.37.0_athena24.0.16 | grep data22 | grep Main | grep EXT1" 67.37.0
+   24.0.16 full reprocessing of data22 with release 23.0.20 (see details
+   in [5]JIRA) Run3 Year 2022 Consolidated recommendations
+   November 2023 (Grid) Data 2022, stream:
+   physics_BphysDelayed Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep
+   67.37.0_athena24.0.16 | grep data22 | grep Delayed | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep
+   67.37.0_athena24.0.16 | grep data22 | grep Delayed | grep EXT1" 67.37.0
+   24.0.16 full reprocessing of data22 with release 23.0.20 (see details
+   in [6]JIRA) Run3 Year 2022 Consolidated recommendations
+   April 2024 (Grid) Data 2022, stream:
+   Bphys_PEB Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data22 | grep
+   67.37.0_athena24.0.16 | grep PEB | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data22 | grep
+   67.37.0_athena24.0.16 | grep PEB | grep EXT1" 67.37.0 24.0.16 full
+   reprocessing of data22 with release 23.0.20 (see details in [7]JIRA)
+   Run3 Year 2022 Consolidated recommendations
+   December 2023 (Grid) mc23a to be used with data2022 Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep
+   67.31.0_athena24.0.16 | grep mc23_13p6TeV | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep
+   67.31.0_athena24.0.16 | grep mc23_13p6TeV | grep EXT1" 67.31.0 24.0.16
+   [8]mc23a filelist Run3 Year 2022 Consolidated recommendations
+   November 2023 (Grid) Data 2023, stream:
+   physics_Main
+   period F run range:
+   451094 - 455924
+   period G run range:
+   455975 - 456749 Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep
+   67.37.0_athena24.0.16 | grep data23 | grep Main | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep
+   67.37.0_athena24.0.16 | grep data23 | grep Main | grep EXT1" 67.37.0
+   24.0.16 dedicated reprocessing of data23 period F only with release
+   23.0.39 (see details in [9]JIRA) to be combined with period G runs
+   Tier-0 original processing Run3 Year 2023 Preliminary recommendations
+   November 2023 (Grid) Data 2023, stream:
+   Bphys_Delayed
+   period F run range:
+   451094 - 455924
+   period G run range:
+   455975 - 456749 Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep
+   67.37.0_athena24.0.16 | grep data23 | grep Delayed | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep
+   67.37.0_athena24.0.16 | grep data23 | grep Delayed | grep EXT1" 67.37.0
+   24.0.16 dedicated reprocessing of data23 period F only with release
+   23.0.39 (see details in [10]JIRA) to be combined with period G runs
+   Tier-0 original processing Run3 Year 2023 Preliminary recommendations
+   April 2024 (Grid) Data 2023, stream:
+   Bphys_PEB
+   period F run range:
+   451094 - 455924
+   period G run range:
+   455975 - 456749 Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data23 | grep
+   67.37.0_athena24.0.16 | grep PEB | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep data23 | grep
+   67.37.0_athena24.0.16 | grep PEB | grep EXT1" 67.37.0 24.0.16 dedicated
+   reprocessing of data23 period F only with release 23.0.39 (see details
+   in [11]JIRA) to be combined with period G runs Tier-0 original
+   processing Run3 Year 2023 Preliminary recommendations
+   November 2023 (Grid) mc23c to be used with data2023 Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep 67.37.0 | grep
+   24.0.16_bugfix | grep EXT0"
+   Mom Calibration:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep 67.27.0 | grep
+   EXT1" 67.37.0, 67.27.0 24.0.16, 24.0.15 [12]mc23c filelist Run3 Year
+   2023 Preliminary recommendations
+                  *Run2 release 22 data and MC production used for providing rec
+ommendations *
+
+   Date & Place of Production Input Datasets Output NTUPLES
+   (precise rucio patterns) MPA version Athena release Notes
+   (inc. relevant jira tickets) Purpose of production
+   2021 (Grid) BphysPEB (17+18)
+   BphysDelayed
+   (16)
+   BphysLS (17+18)
+   physicsMain (15+16+17+18)
+   mc20a
+   mc20d
+   mc20e Tag&Probe:
+   "rucio list-datasets-rse CERN-PROD_PERF-MUONS | grep v66.16.1" 66.16.1
+   23.0.4 [13]BPhysPEB
+   filelist
+   [14]BphysDelayed
+   filelist
+   [15]BphysLS
+   filelist
+   [16]physics_Main
+   filelist
+   [17]mc20a
+   filelist
+   [18]mc20d
+   filelist
+   [19]mc20e
+   filelist Final rel22 Run2 recommendations
+   2021 (Grid) BphysDelayed (16)
+   physicsMain (15+16+17+18)
+   mc20 Mom Calibration:
+   - 66.21.0 23.0.4 [20]BphysDelayed
+   filelist
+   [21]physics_Main
+   filelist
+   [22]mc20
+   filelist Final rel22 Run2 recommendations
+
+   [ATLAS.png]
+   (BUTTON) Search ____________________ (BUTTON)
+
+     * [23]Home
+     __________________________________________________________________
+
+     * [24]Guidelines for Physics Analyses
+     * [25]Open tasks
+     * [26]Publications and Presentations
+     * [27]Common Software Tools
+          + [28]User Documentation
+          + [29]MuonPerformanceAnalysis
+          + [30]MuonPerformanceAnalysis ntuple's production
+          + [31]Automated Monitoring Framework
+     * [32]Momentum Scale and Resolution group
+     * [33]Identification
+     * [34]Isolation Forum
+     * [35]Efficiency Working Group
+
+   More
+     * [36]GitLab MCP Group
+     * [37]JIRA Issues
+     * [38]MCP Efficiency Plots
+     * [39]MCP Meetings
+     * [40]MCP Pipelines
+     __________________________________________________________________
+
+     *
+       Language []
+     *
+       Theme [Blue]
+     *
+       (BUTTON) Clear History
+
+     Made with [41]Hugo framework
+
+     Documentation Contact: [42]Dimitris Iliadis
+
+   IFRAME: [43]./MuonPerformanceAnalysis ntuple's production __ ATLAS Muon
+   Combined Performance_files/saved_resource.html
+
+References
+
+   Visible links:
+   1. https://atlas-mcp.docs.cern.ch/index.html
+   2. https://atlas-mcp.docs.cern.ch/commonsoftware/index.html
+   3. https://gitlab.cern.ch/atlas-mcp/MuonPerformanceAnalysis/
+   4. https://gitlab.cern.ch/atlas-mcp/MuonPerformanceAnalysis/-/blob/master/MuonPerformanceAlgs/data/SampleLists/Production/Run3/R23/MC/MC23d_AOD.txt
+   5. https://its.cern.ch/jira/browse/DATREP-275
+   6. https://its.cern.ch/jira/browse/DATREP-275
+   7. https://its.cern.ch/jira/browse/DATREP-275
+   8. https://gitlab.cern.ch/atlas-mcp/MuonPerformanceAnalysis/-/blob/master/MuonPerformanceAlgs/data/SampleLists/R23/MC23a_AOD.txt
+   9. https://its.cern.ch/jira/browse/DATREP-280
+  10. https://its.cern.ch/jira/browse/DATREP-280
+  11. https://its.cern.ch/jira/browse/DATREP-280
+  12. https://gitlab.cern.ch/atlas-mcp/MuonPerformanceAnalysis/-/blob/master/MuonPerformanceAlgs/data/SampleLists/R23/MC23c_AOD.txt?ref_type=heads
+  13. https://gitlab.cern.ch/atlas-mcp/MuonPerformanceAnalysis/-/blob/v67.61.0/MuonPerformanceAlgs/data/SampleLists/Production/Run2/R22/data/calibration_BphysPEB_AOD.txt?ref_type=tags
+  14. https://gitlab.cern.ch/atlas-mcp/MuonPerformanceAnalysis/-/blob/v67.61.0/MuonPerformanceAlgs/data/SampleLists/Production/Run2/R22/data/physics_BphysDelayed_AOD.txt?ref_type=tags
+  15. https://gitlab.cern.ch/atlas-mcp/MuonPerformanceAnalysis/-/blob/v67.61.0/MuonPerformanceAlgs/data/SampleLists/Production/Run2/R22/data/physics_BphysLS_AOD.txt?ref_type=tags
+  16. https://gitlab.cern.ch/atlas-mcp/MuonPerformanceAnalysis/-/blob/v67.61.0/MuonPerformanceAlgs/data/SampleLists/Production/Run2/R22/data/physics_Main_AOD.txt?ref_type=tags
+  17. https://gitlab.cern.ch/atlas-mcp/MuonPerformanceAnalysis/-/blob/v67.61.0/MuonPerformanceAlgs/data/SampleLists/Production/Run2/R22/MC/MC20a_AOD.txt?ref_type=tags
+  18. https://gitlab.cern.ch/atlas-mcp/MuonPerformanceAnalysis/-/blob/v67.61.0/MuonPerformanceAlgs/data/SampleLists/Production/Run2/R22/MC/MC20d_AOD.txt?ref_type=tags
+  19. https://gitlab.cern.ch/atlas-mcp/MuonPerformanceAnalysis/-/blob/v67.61.0/MuonPerformanceAlgs/data/SampleLists/Production/Run2/R22/MC/MC20e_AOD.txt?ref_type=tags
+  20. https://gitlab.cern.ch/atlas-mcp/MuonPerformanceAnalysis/-/blob/c81899c4bd48fdb0c52445bfd4805433b9eaed16/MuonPerformanceAlgs/data/SampleLists/R22Run2/data/data_run2_periodContainers_rel22_physics_BphysDelayed_AOD.txt
+  21. https://gitlab.cern.ch/atlas-mcp/MuonPerformanceAnalysis/-/blob/c81899c4bd48fdb0c52445bfd4805433b9eaed16/MuonPerformanceAlgs/data/SampleLists/R22Run2/data/data_run2_periodContainers_rel22_physics_Main_AOD.txt
+  22. https://gitlab.cern.ch/atlas-mcp/MuonPerformanceAnalysis/-/blob/c81899c4bd48fdb0c52445bfd4805433b9eaed16/MuonPerformanceAlgs/data/SampleLists/R22Run2/MC/MC20AOD.txt
+  23. https://atlas-mcp.docs.cern.ch/index.html
+  24. https://atlas-mcp.docs.cern.ch/guidelines/index.html
+  25. https://atlas-mcp.docs.cern.ch/open-tasks/index.html
+  26. https://atlas-mcp.docs.cern.ch/publications/index.html
+  27. https://atlas-mcp.docs.cern.ch/commonsoftware/index.html
+  28. https://atlas-mcp.docs.cern.ch/commonsoftware/userdocs/index.html
+  29. https://atlas-mcp.docs.cern.ch/commonsoftware/mpa/index.html
+  30. https://atlas-mcp.docs.cern.ch/commonsoftware/productions/index.html
+  31. https://atlas-mcp.docs.cern.ch/commonsoftware/pipelineframework/index.html
+  32. https://atlas-mcp.docs.cern.ch/scale_resolution/index.html
+  33. https://atlas-mcp.docs.cern.ch/identification/index.html
+  34. https://atlas-mcp.docs.cern.ch/isolationforum/index.html
+  35. https://atlas-mcp.docs.cern.ch/efficiency/index.html
+  36. https://gitlab.cern.ch/atlas-mcp
+  37. https://its.cern.ch/jira/projects/ATLASMCP/issues/?filter=allopenissues
+  38. https://mcp-efficiency-plots.web.cern.ch/
+  39. http://indico.cern.ch/categoryDisplay.py?categId=491
+  40. https://mcp-pipelines.web.cern.ch/
+  41. https://gohugo.io/
+  42. mailto:dimitrios.iliadis@cern.ch
+  43. file:///Users/rbrener/projects/llm-wiki/docs/MuonPerformanceAnalysis%20ntuple's%20production%20__%20ATLAS%20Muon%20Combined%20Performance_files/saved_resource.html
+
+   Hidden links:
+  45. https://atlas-mcp.docs.cern.ch/commonsoftware/mpa/index.html
+  46. https://atlas-mcp.docs.cern.ch/commonsoftware/pipelineframework/index.html

@@ -1,0 +1,869 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+<script type="text/javascript" src="/twiki/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="/twiki/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="/twiki/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<link rel="stylesheet" href="https://twiki.cern.ch/twiki/pub/TWiki/ImagePlugin/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="https://twiki.cern.ch/twiki/pub/TWiki/ImageGalleryPlugin/style.css" type="text/css" media="all" />
+<title> ElectronPhotonFourMomentumCorrection &lt; AtlasProtected &lt; TWiki</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="icon" href="/twiki/pub/AtlasProtected/WebPreferences/favicon_new.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/twiki/pub/AtlasProtected/WebPreferences/favicon_new.ico" type="image/x-icon" />
+<link rel="alternate" href="https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/ElectronPhotonFourMomentumCorrection?t=1763377216" type="application/x-wiki" title="Edit ElectronPhotonFourMomentumCorrection" />
+<link rel="edit" href="https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/ElectronPhotonFourMomentumCorrection?t=1763377216" title="Edit ElectronPhotonFourMomentumCorrection" />
+<meta name="SCRIPTURLPATH" content="/twiki/bin" />
+<meta name="SCRIPTSUFFIX" content="" />
+<meta name="TEXT_JUMP" content="Jump" />
+<meta name="TEXT_SEARCH" content="Search" />
+<meta name="TEXT_NUM_TOPICS" content="Number of topics:" />
+<meta name="TEXT_MODIFY_SEARCH" content="Modify search" />
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/twiki/bin/view/AtlasProtected/WebRss" />
+<base href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection"></base>
+<!--BEHAVIOURCONTRIB--><script type="text/javascript" src="/twiki/pub/TWiki/BehaviourContrib/behaviour.compressed.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiWindow.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiEvent.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiHTML.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiForm.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/PatternSkin/pattern.js"></script>
+<style type="text/css" media="all">
+@import url('/twiki/pub/TWiki/TWikiTemplates/base.css');
+</style>
+<style type="text/css" media="all">
+#patternTopBar,
+#patternClearHeaderCenter,
+#patternClearHeaderLeft,
+#patternClearHeaderRight,
+#patternTopBarContentsOuter,
+#patternTopBarContents {
+	height:64px; /* top bar height; make room for header columns */
+	overflow:hidden;
+}
+#patternOuter {
+	margin-left:14em;
+}
+#patternLeftBar {
+	width:14em;
+	margin-left:-14em;
+}
+</style>
+<style type="text/css" media="all">
+@import url('/twiki/pub/TWiki/PatternSkin/layout.css');
+@import url('/twiki/pub/TWiki/PatternSkin/style.css');
+@import url('/twiki/pub/TWiki/PatternSkin/colors.css');
+</style>
+<style type="text/css" media="all">
+	/* Styles that are set using variables */
+	.patternBookView .twikiTopRow,
+	.patternWebIndicator a img,
+	.patternWebIndicator a:hover img {
+		background-color:#0b048c ;
+	}
+	#patternTopBarContents { background-image:url(/twiki/pub/TWiki/PatternSkin/TWiki_header.gif); background-repeat:no-repeat;}
+	
+	.patternBookView {
+		border-color:#0b048c ;
+	}
+	.patternPreviewPage #patternMain {
+		/* uncomment to set the preview image */
+		/*background-image:url("/twiki/pub/TWiki/PreviewBackground/preview2bg.gif");*/
+	}
+	
+</style><style type="text/css" media="all">
+
+
+
+</style>
+<style type="text/css" media="all">
+	@import url("/twiki/pub/TWiki/PatternSkin/print.css");
+</style>
+<!--[if IE]><style type="text/css" media="screen">
+pre {
+	overflow-x:auto;
+	padding-bottom:expression(this.scrollWidth > this.offsetWidth ? 16 : 0);
+}
+</style>
+<![endif]-->
+<!--[if lte IE 6]> 
+<style type="text/css">
+#patternLeftBar {
+	position:relative; /* IE 5.5 needs this or the contents won't show outside the parent container on print. IE 6.0 needs it only during printable copy! */
+}
+</style><![endif]-->
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiStyles.js"></script>
+
+<script src="https://twiki.cern.ch/twiki/pub/TWiki/ChecklistPlugin/itemstatechange.js" language="javascript" type="text/javascript"></script><!--GENERATED_HEADERS--><!-- CERNSEARCHBAR_CSS --> <link rel='stylesheet' href='/twiki/pub/TWiki/CernSearchBar/CernSearchBar.css' type='text/css' media='all' />
+<!-- TWISTYPLUGIN_TWISTY --> <style type="text/css" media="all">
+@import url("https://twiki.cern.ch/twiki/pub/TWiki/TwistyContrib/twist.css");
+</style>
+<script type='text/javascript' src='https://twiki.cern.ch/twiki/pub/TWiki/BehaviourContrib/behaviour.compressed.js'></script>
+<script type="text/javascript" src="https://twiki.cern.ch/twiki/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="https://twiki.cern.ch/twiki/pub/TWiki/TWikiJavascripts/twikiPref.js"></script>
+<script type="text/javascript" src="https://twiki.cern.ch/twiki/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="https://twiki.cern.ch/twiki/pub/TWiki/TwistyContrib/twist.compressed.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+var styleText = '<style type="text/css" media="all">.twikiMakeVisible{display:inline;}.twikiMakeVisibleInline{display:inline;}.twikiMakeVisibleBlock{display:block;}.twikiMakeHidden{display:none;}</style>';
+document.write(styleText);
+// ]]>
+</script>
+
+<!-- TABLEPLUGIN_twikiAttachmentsTable --> <style type="text/css" media="all">
+.tableSortIcon img {padding-left:.3em; vertical-align:text-bottom;}
+.twikiTable#twikiAttachmentsTable td {border-style:solid none;}
+.twikiTable#twikiAttachmentsTable th {border-style:solid none;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable th {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:top;}
+.twikiTable#twikiAttachmentsTable th {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable th.twikiSortedCol {background-color:#eeeeee;}
+.twikiTable#twikiAttachmentsTable th {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover font {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td.twikiSortedCol {background-color:#f5f5f5;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol0 {text-align:center;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol1 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol2 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol3 {text-align:right;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol4 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol5 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol6 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol7 {text-align:left;}
+</style></head>
+<body class="patternViewPage">
+<a name="PageTop"></a>
+<div id="patternScreen">
+<div id="patternPageShadow">
+<div id="patternPage">
+<div id="patternWrapper"><div id="patternOuter">
+<div id="patternFloatWrap">
+<div id="patternMain"><div id="patternClearHeaderCenter"></div>
+<div id="patternMainContents"><div class="patternTop"><span class="patternHomePath twikiLeft"><a class="twikiLink" href="/twiki/bin/view/Main/WebHome">TWiki</a><span class='twikiSeparator'>&gt;</span><img src="/twiki/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" border="0" alt="" width="13" height="13" style="background-color:#0b048c " />&nbsp;<a href="/twiki/bin/view/AtlasProtected/WebHome">AtlasProtected Web</a><span class='twikiSeparator'>&gt;</span><a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AtlasPhysics">AtlasPhysics</a><span class='twikiSeparator'>&gt;</span><a class="twikiLink" href="/twiki/bin/view/AtlasProtected/ElectronGamma">ElectronGamma</a><span class='twikiSeparator'>&gt;</span><a class="twikiLink" href="/twiki/bin/view/AtlasProtected/EgammaCalibration">EgammaCalibration</a><span class='twikiSeparator'>&gt;</span><a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection" title='Topic revision: 153 (2024-04-11 - 17:16:52)'>ElectronPhotonFourMomentumCorrection</a> <span class='patternRevInfo'>(2024-04-11, <a class="twikiLink" href="/twiki/bin/view/Main/AhmedTarek">AhmedTarek</a>)</span></span><!-- /patternHomePath--><span class="patternToolBar twikiRight"><span><a href='https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/ElectronPhotonFourMomentumCorrection?t=1763377217;nowysiwyg=1' rel='nofollow' title='Edit this topic text' accesskey='e'><img src='/twiki/pub/TWiki/TWikiDocGraphics/uweb-o14.gif' width='14' height='14' border='0' alt='' /> <span class='twikiAccessKey'>E</span>dit</a></span><span><a href='/twiki/bin/attach/AtlasProtected/ElectronPhotonFourMomentumCorrection' rel='nofollow' title='Attach an image or document to this topic' accesskey='a'><span class='twikiAccessKey'>A</span>ttach</a></span><span><a href='/twiki/bin/genpdf/AtlasProtected/ElectronPhotonFourMomentumCorrection' rel='nofollow' title='Create a PDF file for the topic' accesskey='f'><span class='twikiAccessKey'>P</span>DF</a></span></span><!-- /patternToolBar--><br class="twikiClear" /></div><!--/patternTop--><div class="twikiContentHeader"></div><div class="patternContent"><div class="patternTopic"> <h1><a name="ElectronPhotonFourMomentumCorrec"></a>  <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection">ElectronPhotonFourMomentumCorrection</a> </h1>
+<p />
+<br /><br /><div class="twikiToc"> <ul>
+<li> <a href="#Correction_applied"> Correction applied</a>
+</li> <li> <a href="#How_to_use_it"> How to use it</a> <ul>
+<li> <a href="#Examples"> Examples</a>
+</li> <li> <a href="#Tool_initialization"> Tool initialization</a> <ul>
+<li> <a href="#In_Athena_AnalysisBase_dual_use"> In Athena / AnalysisBase (dual use)</a>
+</li> <li> <a href="#Standalone"> Standalone</a>
+</li></ul> 
+</li> <li> <a href="#Configuration_properties"> Configuration properties</a>
+</li> <li> <a href="#Applying_the_correction"> Applying the correction</a>
+</li> <li> <a href="#Systematics"> Systematics</a> <ul>
+<li> <a href="#Full_list"> Full list</a>
+</li> <li> <a href="#How_to_run_over_systematics"> How to run over systematics</a>
+</li></ul> 
+</li> <li> <a href="#Other_methods"> Other methods</a> <ul>
+<li> <a href="#Resolution"> Resolution</a>
+</li></ul> 
+</li> <li> <a href="#For_advanced_users"> For advanced users</a> <ul>
+<li> <a href="#Random_seed"> Random seed</a>
+</li> <li> <a href="#Developing"> Developing</a>
+</li> <li> <a href="#Turn_off_the_smearing_and_correc"> Turn off the smearing and corrections</a>
+</li></ul> 
+</li></ul> 
+</li> <li> <a href="#FAQ"> FAQ</a> <ul>
+<li> <a href="#cannot_find_track_from_electron"> cannot find track from electron</a>
+</li> <li> <a href="#Why_do_I_get_warnings_errors_lik"> Why do I get warnings errors like: "phiCalo not available as auxilliary variable", "etaCalo not available as auxilliary variable"?</a>
+</li> <li> <a href="#How_should_I_set_the_random_seed"> How should I set the random seed? Should I reseed for every events?</a>
+</li> <li> <a href="#I_get_different_cutflow_result_w"> I get different cutflow result with respect to others and we think it is because of the smearing</a>
+</li> <li> <a href="#How_to_do_plots_of_systematic_va"> How to do plots of systematic values, ...</a>
+</li></ul> 
+</li> <li> <a href="#legacy_How_to_use_it_old_version"> <strong><em>legacy </em></strong>How to use it (old version for non-xAOD run1)</a> <ul>
+<li> <a href="#Get_the_code"> Get the code</a>
+</li> <li> <a href="#Initialize_the_tool"> Initialize the tool</a>
+</li> <li> <a href="#Get_the_energy_corrections_and_s"> Get the energy corrections and systematic variations</a>
+</li> <li> <a href="#Get_the_momentum_scale_systemati"> Get the momentum scale systematic variations</a>
+</li> <li> <a href="#Flags"> Flags</a> <ul>
+<li> <a href="#Energy_and_momentum_scale_variat"> Energy and momentum scale variations</a>
+</li> <li> <a href="#Resolution_variations"> Resolution variations</a>
+</li></ul> 
+</li> <li> <a href="#Disable_corrections"> Disable corrections</a>
+</li> <li> <a href="#Calibrate_E1_instead_of_E2"> Calibrate E1 instead of E2</a>
+</li></ul> 
+</li></ul> 
+</div>
+<p />
+<b><font color="#c000" size="3">Egamma calibration recommendation are described in <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/EGammaCalibrationRun2">EGammaCalibrationRun2</a> </font></b>
+<p />
+The <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection">ElectronPhotonFourMomentumCorrection</a> /EgammaCalibrationAndSmearingTool is the tool used to compute the energy of electrons and photons, including all necessary corrections and relative systematics. It is part of Athena and can be found in the <a href="https://gitlab.cern.ch/atlas/athena/tree/master/PhysicsAnalysis/ElectronPhotonID/ElectronPhotonFourMomentumCorrection" target="_blank">PhysicsAnalysis/ElectronPhotonID/ElectronPhotonFourMomentumCorrection<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> directory. Within this folder, several subtools are available, but users should only interact with the <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/EgammaCalibrationAndSmearingTool?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">EgammaCalibrationAndSmearingTool</a></span>.
+<p />
+This tool replaces the <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/EnergyRescalerUpgrade?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">EnergyRescalerUpgrade</a></span> tool and incorporates other tools such as: <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/LayerRecalibrationTool">egammaLayerRecalibTool</a>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/EgammaMVACalibration?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">EgammaMVACalibration</a></span>
+<p />
+<h2><a name="Correction_applied"></a> Correction applied </h2>
+<p />
+The tool applies the following correction in this order. In case of data: <ul>
+<li> layer calibration (E0, E1/E2,Eacc), including PS HV corrections
+</li> <li> MVA calibration
+</li> <li> intermodule widening effect
+</li> <li> HV phi uniformity
+</li> <li> gain and ADC correction
+</li> <li> scale factors (for Nominal case)
+</li></ul> 
+<p />
+In case of MC without systematics: <ul>
+<li> MVA Calibration
+</li> <li> smearing
+</li></ul> 
+<p />
+In case of MC with systematic: <ul>
+<li> MVACalibration
+</li> <li> systematic scale or systematic smearing
+</li></ul> 
+<p />
+where the systematic smearing is a variation of the nominal smearing. Smearing is applied on MC since the resolution is usually larger in data.
+<p />
+<strong><em>legacy</em></strong> For release 21, at the reco level, some of the EGamma corrections determined in Run I and data15/16 are applied at the cell level (EM, |eta| &lt; 2.5). More details are given <a class="twikiLink" href="/twiki/bin/view/AtlasComputing/CalorimeterCalibration">here</a> and especially in this <a href="https://its.cern.ch/jira/browse/ATLASRECTS-2949" target="_blank">JIRA<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> ticket.
+<p />
+<h2><a name="How_to_use_it"></a> How to use it </h2>
+<p />
+<span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/EgammaCalibrationAndSmearingTool?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">EgammaCalibrationAndSmearingTool</a></span> is a dual-use tool, compliant with the design CP-tool guidelines. This is the only tool needed to calibrate electrons and photons and to retrieve systematic variations. Depending on the type of sample (AOD / DAOD_XYZ / PHYS / ...), the calibration is usually already applied, but it may not be the latest version. Instead of instantiating the tool inside an algorithm, analysis algorithms applying the calibration are available in <a href="https://gitlab.cern.ch/atlas/athena/-/blob/master/PhysicsAnalysis/Algorithms/EgammaAnalysisAlgorithms" target="_blank">PhysicsAnalysis/Algorithms/EgammaAnalysisAlgorithms<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (using makeElectronCalibrationSequence and makePhotonCalibrationSequence).
+<p />
+<h3><a name="Examples"></a> Examples </h3>
+<p /> <ul>
+<li> <a href="https://gitlab.cern.ch/atlas/athena/-/blob/main/PhysicsAnalysis/ElectronPhotonID/ElectronPhotonFourMomentumCorrection/python/EgammaCalibCfg.py" target="_blank">Athena example (job option)<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a href="https://gitlab.cern.ch/atlas/athena/tree/master/PhysicsAnalysis/ElectronPhotonID/ElectronPhotonFourMomentumCorrection/src/testAthenaEgammaCalibTool.cxx" target="_blank">AnalysisBase example<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a href="https://gitlab.cern.ch/atlas/athena/tree/master/PhysicsAnalysis/ElectronPhotonID/ElectronPhotonFourMomentumCorrection/util/testEgammaCalibTool.cxx" target="_blank">standalone program<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li></ul> 
+<p />
+<h3><a name="Tool_initialization"></a> Tool initialization </h3>
+<p />
+The properties to be set in the initialization depends on the recommendations (see <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/EGammaCalibrationRun2">EGammaCalibrationRun2</a>)
+<p />
+<h4><a name="In_Athena_AnalysisBase_dual_use"></a> In Athena / <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisBase">AnalysisBase</a> (dual use) </h4>
+<p />
+In the header of you algorithm you need include the relevant interface and the <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/ToolHandle?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">ToolHandle</a></span>
+<p />
+<br /><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>&lt;br /&gt;#include <B><FONT COLOR="#BC8F8F">&quot;AsgTools/ToolHandle.h&quot;</FONT></B> &lt;br /&gt;#include <B><FONT COLOR="#BC8F8F">&quot;ElectronPhotonFourMomentumCorrection/IEgammaCalibrationAndSmearingTool.h&quot;</FONT></B>&lt;br /&gt;</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+Then declare a <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/ToolHandle?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">ToolHandle</a></span> to access to the calibration tool as member of your algorithm:
+<p />
+<br /><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>ToolHandle m_EgammaCalibrationAndSmearingTool;&lt;br /&gt;</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+In the constructor method of your algorithm:<br /><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>MyAlgo :: MyAlgo (<B><FONT COLOR="#228B22">const</FONT></B> std::string&amp; name, ISvcLocator* pSvcLocator) : AnaAlgorithm (name, pSvcLocator) , m_EgammaCalibrationAndSmearingTool (<B><FONT COLOR="#BC8F8F">&quot;CP::EgammaCalibrationAndSmearingTool&quot;</FONT></B>, <B><FONT COLOR="#A020F0">this</FONT></B>) { declareProperty (<B><FONT COLOR="#BC8F8F">&quot;calibrationAndSmearingTool&quot;</FONT></B>, m_EgammaCalibrationAndSmearingTool, <B><FONT COLOR="#BC8F8F">&quot;the egamma calibration tool&quot;</FONT></B>); }&lt;br /&gt;</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+In the initialize method of your algorithm (you can use ANA_CHECK instead):<br /><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#0000FF">ATH_CHECK</FONT></B>(m_EgammaCalibrationAndSmearingTool.retrieve());&lt;br /&gt;</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+Finally in the job option configure the tool (using component accumulator see example below)
+<p />
+<br /><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#A020F0">from</FONT></B> AthenaConfiguration.ComponentAccumulator <B><FONT COLOR="#A020F0">import</FONT></B> ComponentAccumulator
+
+<B><FONT COLOR="#A020F0">from</FONT></B> AthenaConfiguration.ComponentFactory <B><FONT COLOR="#A020F0">import</FONT></B> CompFactory
+
+<B><FONT COLOR="#A020F0">def</FONT></B> <B><FONT COLOR="#0000FF">EgammaCalibToolCfg </FONT></B>(flags, name =<B><FONT COLOR="#BC8F8F">&quot;EgammaCalibrationAndSmearingTool&quot;</FONT></B>, **kwargs ):
+
+acc = ComponentAccumulator () kwargs.setdefault(<B><FONT COLOR="#BC8F8F">&quot;decorrelationModel&quot;</FONT></B>, <B><FONT COLOR="#BC8F8F">&quot;1NP_v1&quot;</FONT></B> )
+
+kwargs.setdefault(<B><FONT COLOR="#BC8F8F">&quot;useFastSim&quot;</FONT></B>, flags.Input.isMC <B><FONT COLOR="#A020F0">and</FONT></B> <B><FONT COLOR="#A020F0">not</FONT></B> flags.Sim.ISF.Simulator.isFullSim() )
+
+kwargs.setdefault(<B><FONT COLOR="#BC8F8F">&quot;ESModel&quot;</FONT></B>, <B><FONT COLOR="#BC8F8F">&quot;es2018_R21_v1&quot;</FONT></B>)
+
+the_tool = [[CompFactory.CP.EgammaCalibrationAndSmearingTool]](name, **kwargs)
+
+acc.setPrivateTools(the_tool)
+
+<B><FONT COLOR="#A020F0">return</FONT></B> acc
+
+&lt;br /&gt;</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+<h4><a name="Standalone"></a> Standalone </h4>
+<p />
+You can use the tool without an algorithm.
+<p />
+Include directly the actual tool (and not only the interface):
+<p />
+<br /><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>&lt;br /&gt;#include&amp;lt;ElectronPhotonFourMomentumCorrection/IEgammaCalibrationAndSmearingTool.h&amp;gt;&lt;br /&gt;#include&amp;lt;ElectronPhotonFourMomentumCorrection/EgammaCalibrationAndSmearingTool.h&amp;gt;
+
+&lt;br /&gt;</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+Declare the tool and configure it
+<p />
+<br /><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>std::unique_ptr calibrationAndSmearingTool(<B><FONT COLOR="#A020F0">new</FONT></B> CP::EgammaCalibrationAndSmearingTool(<B><FONT COLOR="#BC8F8F">&quot;EgammaCalibrationAndSmearingTool&quot;</FONT></B>)); asg::setProperty(calibrationAndSmearingTool.get(), <B><FONT COLOR="#BC8F8F">&quot;ESModel&quot;</FONT></B>, es_model); asg::setProperty(calibrationAndSmearingTool.get(), <B><FONT COLOR="#BC8F8F">&quot;decorrelationModel&quot;</FONT></B>, decorrelation_model); asg::setProperty(calibrationAndSmearingTool.get(), <B><FONT COLOR="#BC8F8F">&quot;useFastSim&quot;</FONT></B>, is_afii); calibrationAndSmearingTool-&amp;gt;initialize();&lt;br /&gt;</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+<h3><a name="Configuration_properties"></a> Configuration properties </h3>
+<p />
+The main properties are:
+<p /> <ul>
+<li> ESModel: set the model of corrections. This property is mandatory, there is no default.
+</li> <li> decorrelationModel: specify how the systematics variations are correlated.
+</li> <li> useFastSim: specify if it is fast simulation. By default the tool should configure it correctly, so it is not mandatory.
+</li></ul> 
+<p />
+Many other properties exists, but they should not be used for physics analyses. They are documented in the section "For advanced users"
+<p />
+<strong>To know which ESModel to use please consult <a class="twikiAnchorLink" href="/twiki/bin/view/AtlasProtected/EgammaCalibration#Calibration_recommendations">this twiki page</a></strong>
+<p />
+List of decorrelationModel: <ul>
+<li> <strong>FULL_v1</strong>: full model. This is recommended for precision analyses. Every variation correspond to a different source of systematics in a specific decorrelated (eta) region. For example: FULL_v1_EG_SCALE_MATCALO__ETABIN4__1up is the up variation due to the systematic on the knowledge of the material in the calorimeter in the fourth eta bin. There is a special treatment for the statistical error on the energy scale (EG_SCALE_ZEESTAT*). It has been measured in many bins of eta, and it has been proved that the correlation between bins is very small. This means that every bins should be treated independently. This means to introduce a large number of NPs. To avoid this, the systematics is treated as fully correlated in eta (just 1 NP), but its value is scaled by the square root of the number of bins. This should be reasonable for analyses far from the Z peak (electron ~40 <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/GeV">GeV</a>), since this systematics is relatively large only close to this region. If you want to have all the variations decorrelated in eta bin, you have to set the property use_full_statistical_error to true.
+</li> <li> FULL_ETACORRELATED_v1: this is the behaviour of the tool in run1. Every variation corresponds to a physical effect, but the effect is applied to all the region of the detector. This is not supported (yet) for release 22 and beyond models.
+</li> <li> <strong>1NP_v1</strong>: very simplified model. This is suggested for analyses which are not sensitive to the energy scale or resolution and that do not use categories in eta. All the physical effects are summed in quadrature and considered fully correlated in eta. Usually this approach give pessimistic (larger) systematics. Using this scheme it should be checked that in the fit the <strong>NPs relative to the calibration systematics are neither pulled nor over-constrained</strong>. If this happens it could mean that the analysis is sensitive to the calibration and its decorrelation and so a more detailed model is needed.
+</li> <li> 1NPCOR_PLUS_UNCOR: similar to 1NP_v1, it provides one variation which is the sum of all the variations which are correlated between es2012c and es2015PRE* and three variations which are uncorrelated.
+</li> <li> an additional intermediate model based on the diagonalization on the covariance matrix is being prepared If you need to use different combinations of decorrelation models for scale and resolution, instead of decorrelationModel you can use decorrelationModelScale (1NP_v1, FULL_ETACORRELATED_v1, 1NPCOR_PLUS_UNCOR, FULL_v1) and decorrelationModelResolution (1NP_v1, FULL_v1). You can mix these flags with decorrelationModel, but you can't specify all together.
+</li></ul> 
+<p />
+<h3><a name="Applying_the_correction"></a> Applying the correction </h3>
+<p />
+The correction must be applied to electrons and photons, both in data and simulation. You should not apply the correction to topo seeded cluster (e.g. photon with author 128).
+<p />
+<br /><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#0000FF">if</FONT></B> (my_tool-&amp;gt;applyCorrection(*particle) != CP::CorrectionCode::Ok) { ATH_MSG_WARNING(<B><FONT COLOR="#BC8F8F">&quot;cannot calibrate particle!&quot;</FONT></B>); }&lt;br /&gt;</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+If systematics are not specified default corrections are applied.
+<p />
+This method also decorates the particle with the data-driven corrected layer energies: particle.auxdataConst&lt;double&gt;("correctedcl_Es0"), ...
+<p />
+<h3><a name="Systematics"></a> Systematics </h3>
+<p />
+The tools define systematic variation using the <a class="twikiLink" href="/twiki/bin/view/AtlasComputing/CPToolsSystematicsInterface">CP Systematic Interface</a>
+<p />
+<h4><a name="Full_list"></a> Full list </h4>
+<p />
+The full list of systematics depends on how you have initialized the tool, for example from the decorrelation model you use. To get the full list (1up and 1down). Here an example for es2022_R22_PRE model with FULL_v1 correlation model (the one without any decorrelation in eta):
+<p />
+<br /><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#A020F0">import</FONT></B> ROOT mytool = [[ROOT.CP.EgammaCalibrationAndSmearingTool]](<B><FONT COLOR="#BC8F8F">&quot;mytool&quot;</FONT></B>) mytool.setProperty(<B><FONT COLOR="#BC8F8F">&quot;ESModel&quot;</FONT></B>, <B><FONT COLOR="#BC8F8F">'es2022_R22_PRE'</FONT></B>) mytool.setProperty(<B><FONT COLOR="#BC8F8F">&quot;decorrelationModel&quot;</FONT></B>, <B><FONT COLOR="#BC8F8F">&quot;FULL_v1&quot;</FONT></B>) mytool.initialize() all_syst = mytool.recommendedSystematics() <I><FONT COLOR="#B22222"># do not delete this before next line print('\n'.join(sorted([x.name() for x in all_syst])))<br /></FONT></I></pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+Systematics starting with EL are only for electrons, the ones starting with PH only for photons, while the one starting with EG are affecting both electrons and photons. The tool applies them correctly, but probably you don't want to loop on photon systematics if you have only electrons.
+<p />
+<h4><a name="How_to_run_over_systematics"></a> How to run over systematics </h4>
+<p />
+This is documented (for example) in the <a class="twikiAnchorLink" href="/twiki/bin/view/AtlasComputing/SoftwareTutorialxAODAnalysisInROOT#Muon_calibration_and_smearing_to">software tutorial</a>: . The example is for muon, but since all the tools have the same interface the procedure is the same.
+<p />
+In case you want to remove by hand some systematics from the list (or want to select one particular variation), you can do it from the names.
+<p />
+For example, to remove all the photon systematics, you can do in your loop over the systematics list:
+<p />
+<br /><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>TString syst_name = TString(sysListItr-&amp;gt;name()); <B><FONT COLOR="#A020F0">if</FONT></B> (syst_name.BeginsWith(<B><FONT COLOR="#BC8F8F">&quot;PH&quot;</FONT></B>)) <B><FONT COLOR="#A020F0">continue</FONT></B>;&lt;br /&gt;</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+<h3><a name="Other_methods"></a> Other methods </h3>
+<p />
+Additional methods, in addition to the one inherited from CP::ISystematicsTool are added to fulfil needs from the analysis teams.
+<h4><a name="Resolution"></a> Resolution </h4>
+<p />
+<br /><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#0000FF">getResolution</FONT></B>(<B><FONT COLOR="#228B22">const</FONT></B> xAOD::Egamma&amp; particle, <B><FONT COLOR="#228B22">bool</FONT></B> withCT=true)</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+returns the expected resolution in data. When withCT is true the additional constant term is added to the resolution (to match resolution in data and MC). A similar interface is available:
+<p />
+<br /><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#0000FF">resolution</FONT></B>(<B><FONT COLOR="#228B22">double</FONT></B> energy, <B><FONT COLOR="#228B22">double</FONT></B> cl_eta, <B><FONT COLOR="#228B22">double</FONT></B> cl_etaCalo, PATCore::ParticleType::Type ptype = PATCore::ParticleType::Electron)</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+<h3><a name="For_advanced_users"></a> For advanced users </h3>
+<p />
+<h4><a name="Random_seed"></a> Random seed </h4>
+<p />
+A (pseudo)random number is used to apply the smearing on MC. This number comes from TRandom3 which is called for every event. By default the generator is reseeded for every event automatically (you don't need to call <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/SetSeed?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">SetSeed</a></span> for every event manually).
+<p />
+For every event the tool re-seed the random generator (autoreseed = true= by default) using a combination of phi, eta and <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/EventNumber?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">EventNumber</a></span>. If you prefer you can change the default behaviour (probably you don't want to do this). To use a different seeding (which is called automatically for every particle) you can change it with setRandomSeedFunction. Here a couple of examples:
+<p />
+1. Reseed with a random generator
+<p />
+<br /><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>&lt;br /&gt;#include &amp;lt;random&amp;gt;
+
+my_tool-&amp;gt;setRandomSeedFunction([](<B><FONT COLOR="#228B22">const</FONT></B> CP::EgammaCalibrationAndSmearingTool&amp;, <B><FONT COLOR="#228B22">const</FONT></B> xAOD::Egamma&amp;, <B><FONT COLOR="#228B22">const</FONT></B> xAOD::EventInfo&amp;) { <B><FONT COLOR="#228B22">static</FONT></B> std::random_device rd; <B><FONT COLOR="#228B22">static</FONT></B> std::default_random_engine re(rd()); <B><FONT COLOR="#228B22">static</FONT></B> std::uniform_int_distribution dist(42); <I><FONT COLOR="#B22222">// avoid 0 return dist(re); });<br /></FONT></I></pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+2. Old style using event number and index of the particle (this is not recommended since the index of the particle is not invariant under thinning as usually done in derivations).
+<p />
+<br /><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>my_tool-&amp;gt;setRandomSeedFunction([](<B><FONT COLOR="#228B22">const</FONT></B> CP::EgammaCalibrationAndSmearingTool&amp;, <B><FONT COLOR="#228B22">const</FONT></B> xAOD::Egamma&amp; p, <B><FONT COLOR="#228B22">const</FONT></B> xAOD::EventInfo&amp; ei) { <B><FONT COLOR="#A020F0">return</FONT></B> ei.eventNumber() + 100 * p.index(); });&lt;br /&gt;</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+3. If you don't want to reseed the random generator for every event use:
+<p />
+<br /><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#0000FF">asg::setProperty</FONT></B>(my_tool, <B><FONT COLOR="#BC8F8F">&quot;autoReseed&quot;</FONT></B>, false); <I><FONT COLOR="#B22222">// by default it is true<br /></FONT></I></pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+in this case it is recommeneded to seed the algorithm at the initialization: my_tool-&gt;SetRandomSeed(0) (see <a href="https://root.cern.ch/root/html/TRandom3.html#TRandom3:SetSeed" target="_blank">https://root.cern.ch/root/html/TRandom3.html#TRandom3:SetSeed<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> for the meaning of 0).
+<p />
+<h4><a name="Developing"></a> Developing </h4>
+<p />
+For R&amp;D purposes, one might need to add new corrections or update systematics ..etc. For this purpose, the following steps should be done: <ol>
+<li> Forking from <a href="https://gitlab.cern.ch/atlas/athena" target="_blank">Athena<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> or <a href="https://gitlab.cern.ch/ATLAS-EGamma/athena" target="_blank">E/g Athena<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> Development or additions to the <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection">ElectronPhotonFourMomentumCorrection</a> tool can be performed (located in athena/PhysicsAnalysis/ElectronPhotonID/ElectronPhotonFourMomentumCorrection)
+</li> <li> To compile the changes:
+</li></ol> 
+<!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>% setup analysis release 
+
+asetup master,latest,AnalysisBase
+
+% copy athena/Projects/WorkDir/package_filters_example.txt and edit to include only tool, see <B><FONT COLOR="#A020F0">for</FONT></B> example
+
++ PhysicsAnalysis/ElectronPhotonID/ElectronPhotonFourMomentumCorrection
+
+- .*
+
+% configure and compile
+
+cmake -DATLAS_PACKAGE_FILTER_FILE=PATHTO/package_filters.txt ../athena/Projects/WorkDir
+
+make 
+
+source x86*/setup.sh
+</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+<h4><a name="Turn_off_the_smearing_and_correc"></a> Turn off the smearing and corrections </h4>
+<h2><a name="FAQ"></a> FAQ </h2>
+<p />
+<h3><a name="cannot_find_track_from_electron"></a> cannot find track from electron </h3>
+<p />
+Check where it comes from, maybe from a derivation which is wrongly removing some needed tracks.
+<p />
+<h3><a name="Why_do_I_get_warnings_errors_lik"></a> Why do I get warnings errors like: "phiCalo not available as auxilliary variable", "etaCalo not available as auxilliary variable"? </h3>
+<p />
+You are trying to calibrate photon with author = 128= (topo seeded photons). The clusters associated with this photons are in a different container which has not been decorated with etaCalo, phiCalo, so the information is missing. <strong>Probably you want to remove these photons</strong>. From egammaMVACalib/tags/egammaMVACalib-01-00-45 the warning is removed and the uncalibrated energy is returned. In any case you should remove these photons.
+<p />
+<h3><a name="How_should_I_set_the_random_seed"></a> How should I set the random seed? Should I reseed for every events? </h3>
+<p />
+You should let the tool do it for you. Just do nothing and the tool will change the seed of the random generator using the properties of the egamma object.
+<p />
+<h3><a name="I_get_different_cutflow_result_w"></a> I get different cutflow result with respect to others and we think it is because of the smearing </h3>
+<p />
+This is strange. Are you using different architecture (32 bit / 64 bit)? Are using the same setup, ROOT version? Try to use the default behaviour (do not change autoReseed).
+<p />
+Check if the following code execute without assertion errors (even in a ROOT interactive console):
+<p />
+<br /><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>&lt;br /&gt;#include &amp;lt;cfloat&amp;gt; &lt;br /&gt;#include &amp;lt;sstream&amp;gt;
+
+std::ostringstream ss; ss &amp;lt;&amp;lt; FLT_RADIX &amp;lt;&amp;lt; DECIMAL_DIG &amp;lt;&amp;lt; FLT_DIG &amp;lt;&amp;lt; DBL_DIG &amp;lt;&amp;lt; FLT_MIN_EXP &amp;lt;&amp;lt; DBL_MIN_EXP &amp;lt;&amp;lt; FLT_MIN_10_EXP &amp;lt;&amp;lt; DBL_MIN_10_EXP &amp;lt;&amp;lt; FLT_MAX_EXP &amp;lt;&amp;lt; DBL_MAX_EXP &amp;lt;&amp;lt; FLT_ROUNDS &amp;lt;&amp;lt; FLT_EVAL_METHOD; assert(ss.str() = <B><FONT COLOR="#BC8F8F">&quot;221615-125-1021-37-307128102410&quot;</FONT></B>); assert(uint32_t(-1) = 4294967295);&lt;br /&gt;</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+Try to save and compare the values of:
+<p />
+<br /><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#228B22">unsigned</FONT></B> <B><FONT COLOR="#228B22">int</FONT></B> seed = tool.getRandomSeedFuction()(tool, *egamma_particle, *event_info);</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+<h3><a name="How_to_do_plots_of_systematic_va"></a> How to do plots of systematic values, ... </h3>
+<p />
+Have a look to <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrectionPlot">ElectronPhotonFourMomentumCorrectionPlot</a>
+<p />
+<h2><a name="legacy_How_to_use_it_old_version"></a> <strong><em>legacy </em></strong>How to use it (old version for non-xAOD run1) </h2>
+<p />
+This is the tool used during run1, without support of xAOD. It supports recommendation only for run1.
+<h3><a name="Get_the_code"></a> Get the code </h3>
+<p />
+<strong>the recommended version of the tool is shipped with <a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection">ElectronPhotonFourMomentumCorrection</a> -00-00-38</strong>. Check it out as: 
+<pre>svn.cern.ch/reps/atlasoff/PhysicsAnalysis/ElectronPhotonID/ElectronPhotonFourMomentumCorrection/tags/ElectronPhotonFourMomentumCorrection-00-00-38
+</pre>
+<p />
+This version depends on the following tags ( <strong>new repository: atlasoff</strong>):
+<p /> <ul>
+<li> egammaMVACalib-00-00-29 ( svn.cern.ch/reps/atlasoff/Reconstruction/egamma/egammaMVACalib)
+</li> <li> egammaLayerRecalibTool-00-01-13 ( svn.cern.ch/reps/atlasoff/Reconstruction/egamma/egammaLayerRecalibTool)
+</li> <li> &gt;= PATCore-00-00-12 ( svn+ssh://svn.cern.ch/reps/atlasoff/PhysicsAnalysis/AnalysisCommon/PATCore)
+</li> <li> &gt;= egammaAnalysisUtils-00-04-26 ( svn+ssh://svn.cern.ch/reps/atlasoff/Reconstruction/egamma/egammaAnalysis/egammaAnalysisUtils)
+</li></ul> 
+to download the packages if you are using <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/RootCore">RootCore</a> you can simply:
+<p />
+<h3><a name="Initialize_the_tool"></a> Initialize the tool </h3>
+<p />
+<br /><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'>#<B><FONT COLOR="#5F9EA0">include</FONT></B> <B><FONT COLOR="#BC8F8F">&quot;ElectronPhotonFourMomentumCorrection/egammaEnergyCorrectionTool.h&quot;</FONT></B>
+
+AtlasRoot::egammaEnergyCorrectionTool energy_correction_tool; energy_correction_tool.setESModel(egEnergyCorr::es2012c); energy_correction_tool.initialize();</pre>
+<!-- end SyntaxHighlightingPlugin --> The available tunings for setESModel are: * egEnergyCorr::es2010= * =egEnergyCorr::es2011c: faulty electron multiple scattering in G4; old geometry* egEnergyCorr::es2012a: crude MSc fix in G4, old geometry, All systematics as in 2010 <ul>
+<li> egEnergyCorr::es2012c: correct MSc in G4, new geometry, <strong>Final Run1 calibration scheme</strong>
+</li> <li> egEnergyCorr::es2011d: correct MSc in G4, new geometry, <strong>Final Run1 calibration scheme</strong>
+</li></ul> 
+<h3><a name="Get_the_energy_corrections_and_s"></a> Get the energy corrections and systematic variations </h3>
+<p />
+Two different interfaces have been developed. For an explanation of the flags see next section. Read next section for an explaination of the flags. Please note that the following are the function signatures (as in the header file), so the values listed here are the default values. Depending if you want to calibrate data or MC you should change the value of scaleVar and resVar, as explained in the Flags section.
+<p />
+Photon:<br /><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#228B22">double</FONT></B> <B><FONT COLOR="#0000FF">getCorrectedEnergyPhoton</FONT></B>( <B><FONT COLOR="#228B22">unsigned</FONT></B> <B><FONT COLOR="#228B22">int</FONT></B> runnumber, PATCore::ParticleDataType::DataType dataType, <B><FONT COLOR="#228B22">float</FONT></B> rawcl_Es0, <B><FONT COLOR="#228B22">float</FONT></B> rawcl_Es1, <B><FONT COLOR="#228B22">float</FONT></B> rawcl_Es2, <B><FONT COLOR="#228B22">float</FONT></B> rawcl_Es3, <B><FONT COLOR="#228B22">float</FONT></B> cl_eta, <B><FONT COLOR="#228B22">float</FONT></B> cl_phi, <B><FONT COLOR="#228B22">float</FONT></B> cl_E, <B><FONT COLOR="#228B22">float</FONT></B> cl_etaCalo, <B><FONT COLOR="#228B22">float</FONT></B> cl_phiCalo, <B><FONT COLOR="#228B22">float</FONT></B> ptconv, <B><FONT COLOR="#228B22">float</FONT></B> pt1conv, <B><FONT COLOR="#228B22">float</FONT></B> pt2conv, <B><FONT COLOR="#228B22">int</FONT></B> convtrk1nPixHits, <B><FONT COLOR="#228B22">int</FONT></B> convtrk1nSCTHits, <B><FONT COLOR="#228B22">int</FONT></B> convtrk2nPixHits, <B><FONT COLOR="#228B22">int</FONT></B> convtrk2nSCTHits, <B><FONT COLOR="#228B22">float</FONT></B> Rconv, egEnergyCorr::Scale::Variation scaleVar = egEnergyCorr::Scale::None, egEnergyCorr::Resolution::Variation resVar = egEnergyCorr::Resolution::None, egEnergyCorr::Resolution::resolutionType resType = egEnergyCorr::Resolution::SigmaEff90, <B><FONT COLOR="#228B22">double</FONT></B> varSF = 1.0 ) <B><FONT COLOR="#228B22">const</FONT></B>;&lt;br /&gt;</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+Electron:<br /><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#228B22">double</FONT></B> <B><FONT COLOR="#0000FF">getCorrectedEnergyElectron</FONT></B>( <B><FONT COLOR="#228B22">unsigned</FONT></B> <B><FONT COLOR="#228B22">int</FONT></B> runnumber, PATCore::ParticleDataType::DataType dataType, <B><FONT COLOR="#228B22">float</FONT></B> rawcl_Es0, <B><FONT COLOR="#228B22">float</FONT></B> rawcl_Es1, <B><FONT COLOR="#228B22">float</FONT></B> rawcl_Es2, <B><FONT COLOR="#228B22">float</FONT></B> rawcl_Es3, <B><FONT COLOR="#228B22">float</FONT></B> cl_eta, <B><FONT COLOR="#228B22">float</FONT></B> cl_phi, <B><FONT COLOR="#228B22">float</FONT></B> trk_eta, <B><FONT COLOR="#228B22">float</FONT></B> cl_E, <B><FONT COLOR="#228B22">float</FONT></B> cl_etaCalo, <B><FONT COLOR="#228B22">float</FONT></B> cl_phiCalo, egEnergyCorr::Scale::Variation scaleVar = egEnergyCorr::Scale::None, egEnergyCorr::Resolution::Variation resVar = egEnergyCorr::Resolution::None, egEnergyCorr::Resolution::resolutionType resType = egEnergyCorr::Resolution::SigmaEff90, <B><FONT COLOR="#228B22">double</FONT></B> varSF = 1.0 ) <B><FONT COLOR="#228B22">const</FONT></B>;&lt;br /&gt;</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+common (alternative) one:<br /><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#228B22">double</FONT></B> <B><FONT COLOR="#0000FF">getCorrectedEnergy</FONT></B>( <B><FONT COLOR="#228B22">unsigned</FONT></B> <B><FONT COLOR="#228B22">int</FONT></B> runnumber, PATCore::ParticleDataType::DataType dataType, <B><FONT COLOR="#228B22">const</FONT></B> ParticleInformation &amp; particle_info, Scale::Variation scaleVar <I><FONT COLOR="#B22222">// default Scale::None, Resolution::Variation resVar // default Resolution::None, Resolution::resolutionType resType, // default Resolution::SigmaEff90, double varSF // default 1.0 ) const;<br /></FONT></I></pre>
+<!-- end SyntaxHighlightingPlugin --> where <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/ParticleInformation?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">ParticleInformation</a></span> can be instanciated in two ways. For photons:<br /><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#0000FF">ParticleInformation</FONT></B> (<B><FONT COLOR="#228B22">float</FONT></B> rawcl_Es0, <B><FONT COLOR="#228B22">float</FONT></B> rawcl_Es1, <B><FONT COLOR="#228B22">float</FONT></B> rawcl_Es2, <B><FONT COLOR="#228B22">float</FONT></B> rawcl_Es3, <B><FONT COLOR="#228B22">float</FONT></B> cl_eta, <B><FONT COLOR="#228B22">float</FONT></B> cl_phi, <B><FONT COLOR="#228B22">float</FONT></B> cl_E, <B><FONT COLOR="#228B22">float</FONT></B> cl_etaCalo, <B><FONT COLOR="#228B22">float</FONT></B> cl_phiCalo, <B><FONT COLOR="#228B22">float</FONT></B> ptconv, <B><FONT COLOR="#228B22">float</FONT></B> pt1conv, <B><FONT COLOR="#228B22">float</FONT></B> pt2conv, <B><FONT COLOR="#228B22">float</FONT></B> convtrk1nPixHits, <B><FONT COLOR="#228B22">float</FONT></B> convtrk1nSCTHits, <B><FONT COLOR="#228B22">int</FONT></B> convtrk2nPixHits, <B><FONT COLOR="#228B22">int</FONT></B> convtrk2nSCTHits, <B><FONT COLOR="#228B22">float</FONT></B> Rconv)&lt;br /&gt;</pre>
+<!-- end SyntaxHighlightingPlugin --> or for electron:<br /><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#0000FF">ParticleInformation</FONT></B> (<B><FONT COLOR="#228B22">float</FONT></B> rawcl_Es0, <B><FONT COLOR="#228B22">float</FONT></B> rawcl_Es1, <B><FONT COLOR="#228B22">float</FONT></B> rawcl_Es2, <B><FONT COLOR="#228B22">float</FONT></B> rawcl_Es3, <B><FONT COLOR="#228B22">float</FONT></B> cl_eta, <B><FONT COLOR="#228B22">float</FONT></B> cl_phi, <B><FONT COLOR="#228B22">float</FONT></B> trk_eta, <B><FONT COLOR="#228B22">float</FONT></B> cl_E, <B><FONT COLOR="#228B22">float</FONT></B> cl_etaCalo, <B><FONT COLOR="#228B22">float</FONT></B> cl_phiCalo)&lt;br /&gt;</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<p />
+<h3><a name="Get_the_momentum_scale_systemati"></a> Get the momentum scale systematic variations </h3>
+<p />
+Use the following interface:
+<p />
+<br /><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#228B22">double</FONT></B> <B><FONT COLOR="#0000FF">getCorrectedMomentum</FONT></B>( PATCore::ParticleDataType::DataType dataType, PATCore::ParticleType::Type ptype, <B><FONT COLOR="#228B22">double</FONT></B> momentum, <B><FONT COLOR="#228B22">double</FONT></B> trk_eta, egEnergyCorr::Scale::Variation scaleVar = egEnergyCorr::Scale::None, <B><FONT COLOR="#228B22">double</FONT></B> varSF = 1.0 ) <B><FONT COLOR="#228B22">const</FONT></B>;&lt;br /&gt;</pre>
+<!-- end SyntaxHighlightingPlugin --> when scaleVar is Nominal, the input momentum is returned unchanged. Systematic variations are obtained for <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MomentumUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MomentumUp</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MomentumDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MomentumDown</a></span>.
+<p />
+<h3><a name="Flags"></a> Flags </h3>
+<p />
+<code>PATCore::ParticleDataType::DataType dataType</code> can be one of Data, Full (for MC G4 full simulation). &lt;!-- <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/FastShower?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">FastShower</a></span>, Fast, True. --&gt;
+<p />
+For the Scale::Variation and Resolution::Variation usually you should:
+<p /> <ul>
+<li> MC: Scale::Variation use None, Resolution::Variation use Nominal
+</li> <li> data: Scale::Variation use Nominal, Resolution::Variation use None
+</li></ul> 
+<p />
+<h4><a name="Energy_and_momentum_scale_variat"></a> Energy and momentum scale variations </h4>
+<p />
+<code>Scale::Variation scaleVar</code> set the systematics effect to be applied on the energy. Systematics variations are meant to be applied on MC only. Flag None turns off scale factor and smearings. Nominal applies central scale factors on data and smearing on MC. Some variations are only for electrons: <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MomentumUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MomentumUp</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MomentumDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MomentumDown</a></span>. Some only for photons: <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/LeakageUnconvUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">LeakageUnconvUp</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/LeakageUnconvDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">LeakageUnconvDown</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/LeakageConvUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">LeakageConvUp</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/LeakageConvDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">LeakageConvDown</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/ConvEfficiencyUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">ConvEfficiencyUp</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/ConvEfficiencyDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">ConvEfficiencyDown</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/ConvFakeRateUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">ConvFakeRateUp</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/ConvFakeRateDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">ConvFakeRateDown</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/ConvRadiusUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">ConvRadiusUp</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/ConvRadiusDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">ConvRadiusDown</a></span>. The following are for electrons and photons: <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/ZeeStatUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">ZeeStatUp</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/ZeeStatDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">ZeeStatDown</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/ZeeSystUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">ZeeSystUp</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/ZeeSystDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">ZeeSystDown</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/LArCalibUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">LArCalibUp</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/LArCalibDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">LArCalibDown</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/LArUnconvCalibUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">LArUnconvCalibUp</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/LArUnconvCalibDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">LArUnconvCalibDown</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/LArElecCalibUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">LArElecCalibUp</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/LArElecCalibDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">LArElecCalibDown</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/LArElecUnconvUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">LArElecUnconvUp</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/LArElecUnconvDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">LArElecUnconvDown</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/G4Up?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">G4Up</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/G4Down?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">G4Down</a></span>, PSUp, PSDown, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/S12Up?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">S12Up</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/S12Down?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">S12Down</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MatIDUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MatIDUp</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MatIDDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MatIDDown</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MatCryoUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MatCryoUp</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MatCryoDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MatCryoDown</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MatCaloUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MatCaloUp</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MatCaloDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MatCaloDown</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/GainUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">GainUp</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/GainDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">GainDown</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/PedestalUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">PedestalUp</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/PedestalDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">PedestalDown</a></span>.
+<p />
+<h4><a name="Resolution_variations"></a> Resolution variations </h4>
+<p />
+<code>Resolution::Variation resVar</code> can be one of: None, Nominal, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/AllDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">AllDown</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/AllUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">AllUp</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/ZSmearingDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">ZSmearingDown</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/ZSmearingUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">ZSmearingUp</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/SamplingTermDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">SamplingTermDown</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/SamplingTermUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">SamplingTermUp</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MaterialIDDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MaterialIDDown</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MaterialIDUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MaterialIDUp</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MaterialCaloDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MaterialCaloDown</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MaterialCaloUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MaterialCaloUp</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MaterialGapDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MaterialGapDown</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MaterialGapUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MaterialGapUp</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MaterialCryoDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MaterialCryoDown</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/MaterialCryoUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">MaterialCryoUp</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/PileUpDown?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">PileUpDown</a></span>, <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/PileUpUp?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">PileUpUp</a></span>,
+<p />
+<h3><a name="Disable_corrections"></a> Disable corrections </h3>
+<p />
+During the initialize method some internal flags are set. These flags handle the application of various correction. To modify the default behaviour the following methods can be called <strong>after</strong> the initialize method:
+<p />
+<br /><!-- SyntaxHighlightingPlugin -->
+<pre class='syntaxHighlightingPlugin' style='border: 1px solid #ccc; padding: 0 0.6em; background-color: #f2f5f8'><B><FONT COLOR="#0000FF">useLayerCorrection</FONT></B>( <B><FONT COLOR="#228B22">bool</FONT></B> ) useIntermoduleCorrection( <B><FONT COLOR="#228B22">bool</FONT></B> ) usePhiUniformCorrection( <B><FONT COLOR="#228B22">bool</FONT></B> ) useGainCorrection( <B><FONT COLOR="#228B22">bool</FONT></B> )</pre>
+<!-- end SyntaxHighlightingPlugin -->
+<h3><a name="Calibrate_E1_instead_of_E2"></a> Calibrate E1 instead of E2 </h3>
+<p />
+By default the tool change E2 to correct for E1/E2. If you want to change E1 instead of E2 you have to call useLayer2Recalibration(false) <strong>before</strong> the initialize method.
+<p />
+<br /> </div><!-- /patternTopic-->
+<div class="twikiContentFooter"></div><div class="twikiAttachments">
+<div class="twistyPlugin twikiMakeVisibleInline">  <span id="topicattachmentslistshow" class="twistyRememberSetting twistyFirstStartShow twistyTrigger twikiUnvisited twistyHidden twistyInited1"><a href="#"><img src="/twiki/pub/TWiki/TWikiDocGraphics/toggleopen.gif" border="0" alt="" /><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span> <span id="topicattachmentslisthide" class="twistyRememberSetting twistyFirstStartShow twistyTrigger twikiUnvisited twistyInited1"><a href="#"><img src="/twiki/pub/TWiki/TWikiDocGraphics/toggleclose.gif" border="0" alt="" /><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span>  </div><!--/twistyPlugin twikiMakeVisibleInline--> <div class="twistyPlugin"><div id="topicattachmentslisttoggle" class="twistyRememberSetting twistyFirstStartShow twistyContent twistyInited1">
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="twikiAttachmentsTable" rules="rows" summary="Topic attachments"><caption>Topic attachments</caption>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="middle"> <a href="/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection?sortcol=0;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">I</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol1" valign="middle"> <a href="/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection?sortcol=1;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Attachment</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol2" valign="middle"> <a href="/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection?sortcol=2;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">History</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol3" valign="middle"> <a href="/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection?sortcol=3;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Action</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol4" valign="middle"> <a href="/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection?sortcol=4;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Size</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol5" valign="middle"> <a href="/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection?sortcol=5;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Date</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol6" valign="middle"> <a href="/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection?sortcol=6;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Who</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol7 twikiLastCol" valign="middle"> <a href="/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection?sortcol=7;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Comment</font></a> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" width="16" height="16" alt="PDF" title="PDF" border="0" /><span class="twikiHidden">pdf</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="https://twiki.cern.ch/twiki/pub/AtlasProtected/ElectronPhotonFourMomentumCorrection/allnp_es2017_R21_v1.pdf">allnp_es2017_R21_v1.pdf</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> r1 </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> <a href="/twiki/bin/attach/AtlasProtected/ElectronPhotonFourMomentumCorrection?filename=allnp_es2017_R21_v1.pdf;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> 194.6&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <span class="twikiNoBreak">2019-05-08 - 17:57</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6" valign="top"> <a class="twikiLink" href="/twiki/bin/view/Main/NansiAndari">NansiAndari</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol7 twikiLastCol" valign="top"> Comparison of the NP between the esmodel 2017_R21_v1 and 2018_R21_v0. Binning used: particle type = 0(unconv), 1 (conv), 2 (electron) 12 bins in eta = 0.1,0.3,0.5,0.7,0.9,1.1,1.3,1.5,1.7,1.9,2.1,2.3 ; Et = 40,60,80,100,120 <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/GeV">GeV</a> ; bin = 60*(iparticle) + 12*iet + ieta </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <img src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" width="16" height="16" alt="PDF" title="PDF" border="0" /><span class="twikiHidden">pdf</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top"> <a href="https://twiki.cern.ch/twiki/pub/AtlasProtected/ElectronPhotonFourMomentumCorrection/allnp_es2018_R21_v0.pdf">allnp_es2018_R21_v0.pdf</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top"> r1 </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top"> <a href="/twiki/bin/attach/AtlasProtected/ElectronPhotonFourMomentumCorrection?filename=allnp_es2018_R21_v0.pdf;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4 twikiLast" valign="top"> 213.6&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5 twikiLast" valign="top"> <span class="twikiNoBreak">2019-05-08 - 17:57</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLast" valign="top"> <a class="twikiLink" href="/twiki/bin/view/Main/NansiAndari">NansiAndari</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol7 twikiLastCol twikiLast" valign="top"> Comparison of the NP between the esmodel 2017_R21_v1 and 2018_R21_v0. Binning used: particle type = 0(unconv), 1 (conv), 2 (electron) 12 bins in eta = 0.1,0.3,0.5,0.7,0.9,1.1,1.3,1.5,1.7,1.9,2.1,2.3 ; Et = 40,60,80,100,120 <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/GeV">GeV</a> ; bin = 60*(iparticle) + 12*iet + ieta </td>
+</tr></table>
+</div></div> <!--/twistyPlugin--></div><!--//twikiAttachments--></div><!-- /patternContent-->
+<div class="clear"></div>
+<a name="topic-actions"></a><div class="patternTopicActions"><div class="patternTopicAction"><span class="patternActionButtons"><span style=''><span><a href='https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/ElectronPhotonFourMomentumCorrection?t=1763377217;nowysiwyg=1' rel='nofollow' title='Edit this topic text' accesskey='e'><img src='/twiki/pub/TWiki/TWikiDocGraphics/uweb-o14.gif' width='14' height='14' border='0' alt='' /> <span class='twikiAccessKey'>E</span>dit</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span></span><span style=''><span><a href='/twiki/bin/attach/AtlasProtected/ElectronPhotonFourMomentumCorrection' rel='nofollow' title='Attach an image or document to this topic' accesskey='a'><span class='twikiAccessKey'>A</span>ttach</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span></span><span><a href='/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection?cover=print' rel='nofollow' title='Printable version of this topic' accesskey='p'><span class='twikiAccessKey'>P</span>rint version</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span><span><a href='/twiki/bin/oops/AtlasProtected/ElectronPhotonFourMomentumCorrection?template=oopshistory' rel='nofollow' title='View total topic history' accesskey='h'><span class='twikiAccessKey'>H</span>istory</a></span>: r153&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/ElectronPhotonFourMomentumCorrection?rev1=153;rev2=152" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection?rev=152" rel="nofollow">r152</a>&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/ElectronPhotonFourMomentumCorrection?rev1=152;rev2=151" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection?rev=151" rel="nofollow">r151</a>&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/ElectronPhotonFourMomentumCorrection?rev1=151;rev2=150" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection?rev=150" rel="nofollow">r150</a>&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/ElectronPhotonFourMomentumCorrection?rev1=150;rev2=149" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection?rev=149" rel="nofollow">r149</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span><a href='/twiki/bin/oops/AtlasProtected/ElectronPhotonFourMomentumCorrection?template=backlinksweb' rel='nofollow' title='Search the AtlasProtected Web for topics that link to here' accesskey='b'><span class='twikiAccessKey'>B</span>acklinks</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span><a href='/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection?raw=on' rel='nofollow' title='View raw text without formatting' accesskey='r'><span class='twikiAccessKey'>R</span>aw View</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span style=''><span><a href='https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/ElectronPhotonFourMomentumCorrection?t=1763377217;nowysiwyg=0' rel='nofollow' title='WYSIWYG editor' accesskey='w'>WYSIWYG</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span></span><span><a href='/twiki/bin/oops/AtlasProtected/ElectronPhotonFourMomentumCorrection?template=oopsmore&amp;param1=153&amp;param2=153' rel='nofollow' title='Delete or rename this topic; set parent topic; view and compare revisions' accesskey='m'><span class='twikiAccessKey'>M</span>ore topic actions</a></span></span></div><!--/patternTopicAction--></div><!--/patternTopicActions-->
+<div class="patternInfo twikiGrayText"><div class="patternRevInfo">Topic revision: r153 - 2024-04-11 <a href="https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/ElectronPhotonFourMomentumCorrection?t=1763377217;nowysiwyg=1" target="_top">-</a> <a class="twikiLink" href="/twiki/bin/view/Main/AhmedTarek">AhmedTarek</a></div><!-- /patternRevInfo--></div><!-- /patternInfo-->
+</div><!-- /patternMainContents-->
+</div><!-- /patternMain--><div id="patternLeftBar"><div id="patternClearHeaderLeft"></div>
+<div id="patternLeftBarContents"><div class="patternLoginActions"><span style="padding: 0 0 0 20px; word-wrap:break-word; display:block;"><img src="https://twiki.cern.ch/twiki/pub/TWiki/TWikiDocGraphics/person.gif" style="position:absolute; margin: 0 0 0 -20px;" /> <span class="twikiNewLink"><a href="/twiki/bin/edit/Main/RoySchimmelBrener?topicparent=AtlasProtected.ElectronPhotonFourMomentumCorrection;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">RoySchimmelBrener</a></span></span>  <img src="/twiki/pub/TWiki/TWikiDocGraphics/lock.gif" width="16" height="16" alt="Lock" title="Lock" border="0" /> <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection?logout=1">Log Out</a></div><div class="patternWebIndicator"> <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="/twiki/bin/view/AtlasProtected/WebHome"><img src="/twiki/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" width="13" height="13" alt="Web background" title="Web background" border="0" /> AtlasProtected</a>
+</li></ul> 
+</div> <ul>
+<li> <strong><a href="https://atlas-collaboration.web.cern.ch" target="_blank"><span style="color: blue">ATLAS Collaboration</span><img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a></strong>
+</li></ul> 
+<hr /> <ul>
+<li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/WebHome"><span style="color: #0000ff"> ATLAS TWiki</span></verbatim></a></strong>
+</li> <li> <strong><a class="twikiCurrentWebHomeLink twikiLink" href="/twiki/bin/view/AtlasProtected/WebHome"><span style="color: #0000ff"> ATLAS Protected</span></verbatim></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasComputing/WebHome"><span style="color: #0000ff"> ATLAS Computing </span></verbatim></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasPublic/WebHome"><span style="color: #0000ff"> Public Results </span></verbatim></a></strong>
+</li></ul> 
+<hr /> <ul>
+<li> <strong><a href="https://its.cern.ch/jira/secure/CreateIssueDetails!init.jspa?pid=22679&amp;issuetype=3&amp;summary=Problem+with+ElectronPhotonFourMomentumCorrection+TWiki+topic&amp;description=The+topic+https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/ElectronPhotonFourMomentumCorrection+has+an+issue.+Describe+it+below:&amp;reporter=rbrener" target="_blank"><span style="color: #ff0000"> Report outdated page </span></verbatim><img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a></strong>
+</li> <li> <strong><a href="mailto&#58;atlas&#45;twiki&#45;support&#64;cern&#46;ch"><span style="color: #ff0000"> Twiki-Support </span></verbatim></a></strong>
+</li></ul> 
+<hr />
+<p /> <ul>
+ <li>
+ <ul>
+<li> <strong><a href="https://twiki.cern.ch/twiki/bin/view/AtlasPublic" target="_top"><span style="color: navy;"> Public Results </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AtlasPhysics"><span style="color: navy;"> Physics </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/AtlasDetectors"><span style="color: navy;"> Detectors </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/AtlasTrigger"><span style="color: navy;"> Trigger </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasComputing/WebHome"><span style="color: navy;"> Computing </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/DataPreparation"><span style="color: navy;"> Data Preparation </span></a></strong>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/Atlas/DocumentationManagement">Documentation Help</a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/Atlas/AtlasGlossary">Glossary</a>
+</li></ul> 
+</li></ul> 
+<p />
+<div class="twikiLeftBarBase">
+  <a href="/twiki/bin/edit/AtlasProtected/ElectronPhotonFourMomentumCorrectionLeftBar?templatetopic=AtlasProtected.WebLeftBarTemplate">Create</a> a LeftBar for this page
+</div>
+<p />
+<hr />
+<span style="color: #008000"> <img src='https://twiki.cern.ch/twiki/pub/TWiki/TWikiDocGraphics/searchtopic.gif'> <strong><a href="https://search.cern.ch/Pages/TwikiResults.aspx?k=generic2%3AATLAS" target="_blank">TWiki Search<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a></strong> </span></verbatim>
+<hr />
+<p />
+<!-- <ul>
+ <li>
+ <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="/twiki/bin/view/AtlasProtected/WebHome">AtlasProtected Wiki</a>
+</li></ul> 
+</li></ul> 
+-->
+</div><!-- /patternLeftBarContents--></div><!-- /patternLeftBar-->
+</div><!-- /patternFloatWrap-->
+<div class="clear">&nbsp;</div>
+</div><!-- /patternOuter--></div><!-- /patternWrapper--><div id="patternTopBar"><div id="patternTopBarContents"><table border="0" cellpadding="0" cellspacing="0" style="width:100%; margin-top:12px;">
+<tr><td valign="middle"><span id="twikiLogo" class="twikiImage"><a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/WebHome"><img src="/twiki/pub/AtlasPublic/AtlasTWikiLogos/AtlasTwikiProtectedLogo.png" border="0" alt="CERN" style="border:none;" /></a></span></td>
+<td align="right" valign="top" class="patternMetaMenu">
+ <ul>
+<li> <form name="jumpForm" action="/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection"><input id="jumpFormField" type="text" class="twikiInputField" name="topic" value="" size="18" /><noscript>&nbsp;<input type="submit" class="twikiButton" size="5" name="submit" value="Jump" />&nbsp;</noscript>   </form>
+</li> <li> <form name="quickSearchForm" action="https://search.cern.ch/Pages/TwikiResults.aspx" target="search" class="cernTWikiSearch">    <ul class="engineList" style="background-image: url('https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/arrow.png');">        <li class="active" id="twikisearch">            <img src="https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/twikisearchicon.gif" alt="TWiki Search Icon" />            <span class="engineDescription">TWiki Search</span>        </li>        <!-- Due to a security incident <a href="https://cern.service-now.com/service-portal?id=outage&amp;n=OTG0156848" target="_blank">OTG0156848<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>, the legacy CERN Search Service has been shut down        <li id="cernsearch">            <img src="https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/cernsearchicon.png" alt="Cern Search Icon" />            <span class="engineDescription">Cern Search</span>        </li>         -->        <li id="googlesearch">            <img class="engine" src="https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/googlesearchicon.png" alt="Google Search Icon" />            <span class="engineDescription">Google Search</span>        </li>    </ul>    <input type="text" class="twikiInputField" id="quickSearchBox" name="k" value="" size="18" /> <br />    <input type="radio" name="scope" value=Atlas checked />     <span class="webScopeDescription">Atlas</span>    <input type="radio" name="scope" value="AllWebs" />    <span class="allWebsScopeDescription">All webs</span>    <input type='hidden' name='autologin' value='1'/>     <noscript>        &nbsp; <input type="submit" size="5" class="twikiButton" name="submit" value="Search"/>&nbsp;    </noscript>
+</li></ul> 
+</form>
+<p />
+<p />
+<!-- <pre> -->
+<script language="javascript">
+<!--
+$(function() {
+    // We use the current web name to form the redirect in the TWiki search
+    var currentWeb = undefined;
+    // If the web starts with alice* atlas* cms* or lhcb* (case-insensitive),
+    // the "Web search" should be altered so that AtlasFoo => Atlas
+    var specialWeb = undefined;
+    // Remembering what the user have entered into the searchbox to after
+    // he has selected a new search engine from the dropdown
+    var searchPhrase = '';
+
+    // --- BEGIN: CONFIGURABLE LIST FOR SUBWEB SEARCH ---
+    // List of webs for which sub-web searching should be enabled
+    var subWebSearchWebs = ['AtlasProtected', 'AtlasComputing', 'Atlas'];
+    // --- END: CONFIGURABLE LIST FOR SUBWEB SEARCH ---
+
+    // --- ORIGINAL WEB DETECTION LOGIC ---
+    // We want to store the current web for later use.
+    var currentWebSearch = window.location.pathname.match(/\/([A-Z][^\/]+)/);
+    if (currentWebSearch != null) {
+        currentWeb = currentWebSearch[1];
+
+        // Do we have a special kind of web? If so, the web search should be altered a little to fetch more broader results.
+        var specialWebSearch = currentWeb.match(/^(alice|atlas|cms|lhcb)/i);
+        if (specialWebSearch != null) {
+            var lowercaseToCorrect = {
+                'alice' : 'Alice',
+                'atlas' : 'Atlas',
+                'cms'   : 'CMS',
+                'lhcb'  : 'LHCb'
+            };
+            specialWeb = lowercaseToCorrect[specialWebSearch[1].toLowerCase()];
+            $('span.webScopeDescription').text(specialWeb);
+        }
+    } else {
+        currentWeb = 'DefaultWeb';
+    }
+
+    // --- BEGIN: SUBWEB LOGIC TO EXTRACT SUBWEB PATH (EXCLUDING TOPIC) ---
+    var subWebSearchWebs = ['AtlasProtected', 'AtlasComputing', 'Atlas'];
+    // Build regex to match web/subweb path and topic
+    var subWebsPattern = new RegExp(
+        '/((' + subWebSearchWebs.join('|') + ')(?=(?:/|$))(?:/[A-Za-z0-9_]+)*)/([A-Za-z0-9_]+)$'
+    );
+    var subWebMatch = window.location.pathname.match(subWebsPattern);
+    if (subWebMatch) {
+        // subWebMatch[1] is the full web/subweb path (e.g. "AtlasComputing/AtlasComputingArchive")
+        // subWebMatch[3] is the topic (e.g. "WebHome")
+        currentWeb = subWebMatch[1];
+        specialWeb = currentWeb;
+        $('span.webScopeDescription').text(specialWeb);
+    }
+    // --- END: SUBWEB LOGIC TO EXTRACT SUBWEB PATH (EXCLUDING TOPIC) ---
+
+    // Do we have a favourite search engine in localStorage? We set Twiki search as default anyways
+    if (window.localStorage) {
+        // var storedEngine = localStorage.getItem('defaultSearchEngine');
+        // console.log('stored engine preference: ' + storedEngine);
+        var storedEngine = 'twikisearch';
+        var storedEngineLi = $('.cernTWikiSearch li#' + storedEngine);
+        if (!storedEngineLi.hasClass('active')) {
+            changeActiveSearchEngine(storedEngineLi);
+        }
+        if (storedEngine == 'twikisearch') {
+            $('input[name=scope][value=AllWebs]').attr('disabled','disabled');
+            $('.allWebsScopeDescription').addClass('disabled');
+        }
+    }
+    
+    // Toggle the searchEngines list on and off on click
+    $('.cernTWikiSearch ul.engineList').click(function(e) {
+        e.stopPropagation();
+        if ($(this).hasClass('open')) {
+            $(this).removeClass('open');
+        } else {
+            $(this).addClass('open');
+        }
+    });
+
+    // Stupid IE8 hack because the click handler on ul.engineList does not work properly there.
+    if ($.browser.msie && document.documentMode && document.documentMode < 9) {
+        $('.cernTWikiSearch #quickSearchBox').focus(function(e) {
+            $('.cernTWikiSearch ul.engineList').removeClass('open');
+        });
+    }
+    
+    // Handle clicks on one of the search engines
+    $('.cernTWikiSearch ul.engineList li').click(function(e) {
+        // If we clicked on a <li> that does not has class 'active', it means this should become active and swap places with this.
+        if (!$(this).hasClass('active')) {
+            changeActiveSearchEngine($(this));
+        }  
+        if ($(this).parent().hasClass('open')) {
+            $('.cernTWikiSearch #quickSearchBox').val(searchPhrase);
+            $('.cernTWikiSearch #quickSearchBox').focus();                          
+        }
+        if ($(this).attr('id') == 'twikisearch') {
+            var allWebsRadio = $('input[name=scope][value=AllWebs]');
+            allWebsRadio.attr('disabled','disabled');
+            allWebsRadio.siblings('input[type=radio]').attr('checked',true)
+            $('.allWebsScopeDescription').addClass('disabled');
+        } else {
+            $('input[name=scope][value=AllWebs]').attr('disabled','');
+            $('.allWebsScopeDescription').removeClass('disabled');
+        }
+    });
+    
+    // Show the engine description text on hover
+    $('.engineList.open li').live('hover',function() {
+        var displayText = $(this).find('span.engineDescription').text();
+        $('.cernTWikiSearch #quickSearchBox').val(displayText);
+    });
+
+
+    // The form is submitted, now let's do the search.
+    $('.cernTWikiSearch').submit(function(e) {
+        e.preventDefault();
+
+        var scope = $('input[name=scope]:checked', $(this)).val();
+        if (scope != 'AllWebs' && specialWeb !== undefined) {
+            scope = specialWeb;
+        }
+        var val = $('.cernTWikiSearch #quickSearchBox').val();
+        var engine = $('.engineList li.active').attr('id')
+        
+        switch (engine) {
+            case 'googlesearch':
+                window.open('https://google.com/search?q=site:' + encodeURIComponent('https://twiki.cern.ch') + (scope != 'AllWebs' ? ' ' + scope : '') + ' ' + val);
+                break;
+            case 'cernsearch':
+                window.open('https://search.cern.ch/Pages/TwikiResults.aspx?k=' + val + (scope != 'AllWebs' ? ' cernscope:' + scope : '') + '&autologin=1');
+                break;
+            case 'twikisearch':
+                window.open(window.location.pathname.replace(/\/[A-Z].+$/,'') + '/' + currentWeb + '/WebSearch?search=' + val + '&scope=all');
+                break;
+        default:
+            break;
+        }
+        
+        // Save the search engine. If the user reloads the page he should get the last one used.
+        if (window.localStorage) { 
+            console.log('store engine preference: ' + engine);
+            localStorage.setItem('defaultSearchEngine',engine);
+        }
+    });
+    
+    // Save the search phrase on every key up
+    $('.cernTWikiSearch #quickSearchBox').keyup(function() {
+        searchPhrase = $(this).val();
+    });
+    
+    // If a user clicks outside the search engine list, the search engine list should be closed.
+    $('html').click(function() {
+        if ($('.engineList').hasClass('open')) {
+            $('.engineList').removeClass('open');
+            $('.cernTWikiSearch #quickSearchBox').val(searchPhrase);
+        }
+    });
+});
+
+// We want to change the active search engine
+function changeActiveSearchEngine(engineLi) {
+    var activeEngine = engineLi.siblings(':first');
+    engineLi.detach().insertBefore(activeEngine);
+    activeEngine.removeClass('active');
+    engineLi.addClass('active');
+    if (engineLi.attr('id') == 'twikiSearch') {
+        deactivateAllWebsOption();
+    }
+}
+
+// The user has chosen twiki search (or the preference was stored in localStorage). 
+// We will then disable the 'All Webs' option since this will time out.
+function deactivateAllWebsOption() {
+}
+
+// Helper method to check input attribute browser compability
+function checkInputAttributeSupport(attribute) {
+    var i = document.createElement("input");
+    return typeof i.placeholder !== 'undefined';
+}
+//-->
+</script>
+<!-- </pre> --> <ul>
+<li> 
+</li></ul> 
+</td></tr></table></div></div><!-- /patternTopBar--><div id="patternBottomBar"><div id="patternBottomBarContents"><div id="patternWebBottomBar"><div class="twikiCopyright"><span class="twikiRight"> <a href="http://twiki.org/"><img src="/twiki/pub/TWiki/TWikiLogos/T-badge-88x31.gif" alt="This site is powered by the TWiki collaboration platform" width="88" height="31" title="This site is powered by the TWiki collaboration platform" border="0" /></a></span><span class="twikiRight" style="padding:0 10px 0 10px"> <a href="http://www.perl.org/"><img src="/twiki/pub/TWiki/TWikiLogos/perl-logo-88x31.gif" alt="Powered by Perl" width="88" height="31" title="Powered by Perl" border="0" /></a></span>Copyright &amp;© 2008-2025 by the contributing authors. All material on this collaboration platform is the property of the contributing authors. <br />  or Ideas, requests, problems regarding TWiki? use <a href="https://discourse.web.cern.ch/c/collaborative-editing/wikis/12">Discourse</a> or <a href='https://twiki.cern.ch/twiki/bin/view/Main/ServiceNow'>Send feedback</a> </div><!--/twikiCopyright--></div><!--/patternWebBottomBar--></div><!-- /patternBottomBarContents--></div><!-- /patternBottomBar-->
+</div><!-- /patternPage-->
+</div><!-- /patternPageShadow-->
+</div><!-- /patternScreen-->
+<p />
+<p />
+<p />
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+	 var u="https://webanalytics.web.cern.ch/";
+	 _paq.push(['setTrackerUrl', u+'matomo.php']);
+	 _paq.push(['setSiteId', '5']);
+	 var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	 g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+<p />
+</body></html>

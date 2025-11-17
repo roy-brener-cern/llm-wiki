@@ -1,0 +1,750 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+<script type="text/javascript" src="/twiki/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="/twiki/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="/twiki/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<link rel="stylesheet" href="https://twiki.cern.ch/twiki/pub/TWiki/ImagePlugin/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="https://twiki.cern.ch/twiki/pub/TWiki/ImageGalleryPlugin/style.css" type="text/css" media="all" />
+<title> AtlasPhysics &lt; AtlasProtected &lt; TWiki</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="icon" href="/twiki/pub/AtlasProtected/WebPreferences/favicon_new.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/twiki/pub/AtlasProtected/WebPreferences/favicon_new.ico" type="image/x-icon" />
+<link rel="alternate" href="https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/AtlasPhysics?t=1763376327" type="application/x-wiki" title="Edit AtlasPhysics" />
+<link rel="edit" href="https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/AtlasPhysics?t=1763376327" title="Edit AtlasPhysics" />
+<meta name="SCRIPTURLPATH" content="/twiki/bin" />
+<meta name="SCRIPTSUFFIX" content="" />
+<meta name="TEXT_JUMP" content="Jump" />
+<meta name="TEXT_SEARCH" content="Search" />
+<meta name="TEXT_NUM_TOPICS" content="Number of topics:" />
+<meta name="TEXT_MODIFY_SEARCH" content="Modify search" />
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/twiki/bin/view/AtlasProtected/WebRss" />
+<base href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/AtlasPhysics"></base>
+<!--BEHAVIOURCONTRIB--><script type="text/javascript" src="/twiki/pub/TWiki/BehaviourContrib/behaviour.compressed.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiWindow.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiEvent.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiHTML.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiForm.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/PatternSkin/pattern.js"></script>
+<style type="text/css" media="all">
+@import url('/twiki/pub/TWiki/TWikiTemplates/base.css');
+</style>
+<style type="text/css" media="all">
+#patternTopBar,
+#patternClearHeaderCenter,
+#patternClearHeaderLeft,
+#patternClearHeaderRight,
+#patternTopBarContentsOuter,
+#patternTopBarContents {
+	height:64px; /* top bar height; make room for header columns */
+	overflow:hidden;
+}
+#patternOuter {
+	margin-left:14em;
+}
+#patternLeftBar {
+	width:14em;
+	margin-left:-14em;
+}
+</style>
+<style type="text/css" media="all">
+@import url('/twiki/pub/TWiki/PatternSkin/layout.css');
+@import url('/twiki/pub/TWiki/PatternSkin/style.css');
+@import url('/twiki/pub/TWiki/PatternSkin/colors.css');
+</style>
+<style type="text/css" media="all">
+	/* Styles that are set using variables */
+	.patternBookView .twikiTopRow,
+	.patternWebIndicator a img,
+	.patternWebIndicator a:hover img {
+		background-color:#0b048c ;
+	}
+	#patternTopBarContents { background-image:url(/twiki/pub/TWiki/PatternSkin/TWiki_header.gif); background-repeat:no-repeat;}
+	
+	.patternBookView {
+		border-color:#0b048c ;
+	}
+	.patternPreviewPage #patternMain {
+		/* uncomment to set the preview image */
+		/*background-image:url("/twiki/pub/TWiki/PreviewBackground/preview2bg.gif");*/
+	}
+	
+</style><style type="text/css" media="all">
+
+
+
+</style>
+<style type="text/css" media="all">
+	@import url("/twiki/pub/TWiki/PatternSkin/print.css");
+</style>
+<!--[if IE]><style type="text/css" media="screen">
+pre {
+	overflow-x:auto;
+	padding-bottom:expression(this.scrollWidth > this.offsetWidth ? 16 : 0);
+}
+</style>
+<![endif]-->
+<!--[if lte IE 6]> 
+<style type="text/css">
+#patternLeftBar {
+	position:relative; /* IE 5.5 needs this or the contents won't show outside the parent container on print. IE 6.0 needs it only during printable copy! */
+}
+</style><![endif]-->
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiStyles.js"></script>
+
+<script src="https://twiki.cern.ch/twiki/pub/TWiki/ChecklistPlugin/itemstatechange.js" language="javascript" type="text/javascript"></script><!--GENERATED_HEADERS--><!-- TWISTYPLUGIN_TWISTY --> <style type="text/css" media="all">
+@import url("https://twiki.cern.ch/twiki/pub/TWiki/TwistyContrib/twist.css");
+</style>
+<script type='text/javascript' src='https://twiki.cern.ch/twiki/pub/TWiki/BehaviourContrib/behaviour.compressed.js'></script>
+<script type="text/javascript" src="https://twiki.cern.ch/twiki/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="https://twiki.cern.ch/twiki/pub/TWiki/TWikiJavascripts/twikiPref.js"></script>
+<script type="text/javascript" src="https://twiki.cern.ch/twiki/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="https://twiki.cern.ch/twiki/pub/TWiki/TwistyContrib/twist.compressed.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+var styleText = '<style type="text/css" media="all">.twikiMakeVisible{display:inline;}.twikiMakeVisibleInline{display:inline;}.twikiMakeVisibleBlock{display:block;}.twikiMakeHidden{display:none;}</style>';
+document.write(styleText);
+// ]]>
+</script>
+
+<!-- TABLEPLUGIN_twikiAttachmentsTable --> <style type="text/css" media="all">
+.tableSortIcon img {padding-left:.3em; vertical-align:text-bottom;}
+.twikiTable#twikiAttachmentsTable td {border-style:solid none;}
+.twikiTable#twikiAttachmentsTable th {border-style:solid none;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable th {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:top;}
+.twikiTable#twikiAttachmentsTable th {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable th.twikiSortedCol {background-color:#eeeeee;}
+.twikiTable#twikiAttachmentsTable th {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover font {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td.twikiSortedCol {background-color:#f5f5f5;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol0 {text-align:center;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol1 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol2 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol3 {text-align:right;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol4 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol5 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol6 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol7 {text-align:left;}
+</style>
+<!-- CERNSEARCHBAR_CSS --> <link rel='stylesheet' href='/twiki/pub/TWiki/CernSearchBar/CernSearchBar.css' type='text/css' media='all' /></head>
+<body class="patternViewPage">
+<a name="PageTop"></a>
+<div id="patternScreen">
+<div id="patternPageShadow">
+<div id="patternPage">
+<div id="patternWrapper"><div id="patternOuter">
+<div id="patternFloatWrap">
+<div id="patternMain"><div id="patternClearHeaderCenter"></div>
+<div id="patternMainContents"><div class="patternTop"><span class="patternHomePath twikiLeft"><a class="twikiLink" href="/twiki/bin/view/Main/WebHome">TWiki</a><span class='twikiSeparator'>&gt;</span><img src="/twiki/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" border="0" alt="" width="13" height="13" style="background-color:#0b048c " />&nbsp;<a href="/twiki/bin/view/AtlasProtected/WebHome">AtlasProtected Web</a><span class='twikiSeparator'>&gt;</span><a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/AtlasPhysics" title='Topic revision: 654 (2025-11-05 - 20:15:10)'>AtlasPhysics</a> <span class='patternRevInfo'>(2025-11-05, <a class="twikiLink" href="/twiki/bin/view/Main/AurelioJuste">AurelioJuste</a>)</span></span><!-- /patternHomePath--><span class="patternToolBar twikiRight"><span><a href='https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/AtlasPhysics?t=1763376327;nowysiwyg=1' rel='nofollow' title='Edit this topic text' accesskey='e'><img src='/twiki/pub/TWiki/TWikiDocGraphics/uweb-o14.gif' width='14' height='14' border='0' alt='' /> <span class='twikiAccessKey'>E</span>dit</a></span><span><a href='/twiki/bin/attach/AtlasProtected/AtlasPhysics' rel='nofollow' title='Attach an image or document to this topic' accesskey='a'><span class='twikiAccessKey'>A</span>ttach</a></span><span><a href='/twiki/bin/genpdf/AtlasProtected/AtlasPhysics' rel='nofollow' title='Create a PDF file for the topic' accesskey='f'><span class='twikiAccessKey'>P</span>DF</a></span></span><!-- /patternToolBar--><br class="twikiClear" /></div><!--/patternTop--><div class="twikiContentHeader"></div><div class="patternContent"><div class="patternTopic"> <!-- <ul>
+<li> Set ALLOWTOPICCHANGE=atlas-twiki-admins, atlas-physics-coordinators, <span class="twikiNewLink"><a href="/twiki/bin/edit/Main/GianlucaPicco?topicparent=AtlasProtected.AtlasPhysics;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">GianlucaPicco</a></span>
+</li> <li> Set TOPIC_ACCESS_CONTACT = If you need to edit this site, please contact  <a href="mailto&#58;atlas&#45;physics&#45;coordinators&#64;cern&#46;ch">atlas-physics-coordinators&#64;cern.ch</a>
+</li></ul> 
+-->
+<p />
+<img alt="atlaslogo.png" src="http://twiki.cern.ch/twiki/pub/Atlas/WebPreferences/atlaslogo.png" width="50" />
+<p />
+<h1><a name="ATLAS_Physics_Activity"></a>  ATLAS Physics Activity </h1>
+<h5><a name="Physics_coordinators_Kerstin_Tac"></a> Physics coordinators: <a href="mailto&#58;atlas&#45;physics&#45;coordinators&#64;cern&#46;ch">Kerstin Tackmann, Aurelio Juste</a> </h5>
+<p />
+<p />
+<table style="width: 99%;"> <tbody> <tr> <td valign="top" width="43%">  
+<p />
+<p />
+<h2><a name="Analysis_Getting_started_and_key"></a> Analysis - Getting started and key links </h2>
+<p />
+<strong>Getting set-up</strong> <br />
+<a href="https://twiki.cern.ch/twiki/bin/viewauth/Atlas/DataPreparationCheckListForPhysicsAnalysis" target="_top">Data checklist for physics analyses</a> -  Starting page for GRLs, data and MC <br />
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisModelgroup">AMG info</a> - Useful FAQ, info on PHYS/PHYSLITE, software tutorials, who to ask for help <br />
+<p />
+<p />
+<strong>Finding your samples</strong> <br />
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/DataMCForAnalysis">Data and Monte Carlo Datasets</a> - Starting point for all data/MC information <br />
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/DerivationProductionTeam">Derivations</a> <br />
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/McSampleRequestProcedure">MC Sample Request Procedure</a> <br />
+<p />
+<p />
+<strong>Trigger and Object calibration</strong> <br />
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/PerformanceKickOffWork">CP analysis Kick-off work</a> - Contributions to CP/PMG/Trigger SF from Physics Analyses analysis <br />
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AtlasPhysicsRun3Planning2022">Run 3 CP recommendations</a> - Status and links <br />
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AtlasPhysicsRun2Planning2019">Run 2 CP recommendations</a> - Status and links <br />
+<a href="https://twiki.cern.ch/twiki/bin/viewauth/Atlas/LowestUnprescaled" target="_top">Lowest unprescaled triggers</a><br />
+<a href="https://twiki.cern.ch/twiki/bin/viewauth/Atlas/LuminosityForPhysics" target="_top">Luminosity</a><br />
+<p />
+<strong>High priority CP work</strong> <br />
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/HighPriorityTasks"><b>Tracking</b></a> | <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/EGammaOpenTasks"> <strong>EGamma</strong> </a> | <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/MuonPerformanceTasksRun2"> <strong>Muon</strong> </a> | <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TauWGOpenTasks"> <strong>Tau</strong> </a> | 
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/JetEtmissHighPriorityTasks"> <strong>JetETmiss</strong> </a> | <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/BTaggingToDoList"> <strong>Flavour tagging</strong> </a> | <br />
+<a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasComputing/AtlasSimulationOpenTasks" target="_top"> <strong>Simulation</strong> </a> | <a class="twikiAnchorLink" href="/twiki/bin/view/AtlasProtected/PhysicsModellingGroup#Uncovered_and_Ongoing_Tasks"> <strong>PMG</strong> </a> | <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/PhysicsValidation"> <strong>Physics validation</strong> </a>
+<p />
+<p />
+<strong>Hepdata and public data</strong> <br />
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/HepDataATLAS">ATLAS Hepdata recommendations</a> - helpful tips and scrips to get started <br>
+<p />
+<strong>General links</strong> <br />
+<a href="https://twiki.cern.ch/twiki/bin/view/Atlas/HowATLASCollaborationWorks" target="_top">How the ATLAS collaboration works</a> - All helpful ATLAS links in one place! <br />
+<a href="https://twiki.cern.ch/twiki/bin/viewauth/Atlas/OfficialEventDisplayGuidelines" target="_top">Guidelines to produce event displays</a> - create event displays <br />
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/Run2Discrepancies">Run 2 Discrepancies and excesses</a> <br />
+<p />
+<h2><a name="Paper_writing_links_and_tips"></a> Paper writing links and tips <br /> </h2>
+<p />
+<a href="https://twiki.cern.ch/twiki/bin/view/Atlas/HowATLASCollaborationWorks#Physics_Analyses_and_Combined_Pe" target="_top">Approval of Results</a> - links approval procedure and policies <br />
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/PubComHome">PubComm main page</a> - Contains all instructions, latex templates, etc <br />
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/PubResultsDeadlines">Conference deadlines for papers and CONF notes</a> - timelines for major conferences <br />
+<a href="https://cds.cern.ch/record/1707807?ln=en" target="_blank">ATLAS figure style recommendations (Jun 2014)<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />
+<a href="https://cds.cern.ch/record/1668799?ln=en" target="_blank">ATLAS rounding rules (Mar 2014)<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a><br />
+<a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/PhysicsOffice" target="_top">Physics Office</a> - policy documents, glance-related instructions, egroups naming rules <br />
+<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/AnalysisPhase0Tutorial" target="_top">Glance Phase 0 instructions</a> - including who is on what egroup <br />
+<p />
+<strong>Policy Documents</strong> <br />
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AtlasPolicyDocuments"> ATLAS Policy Documents</a> - includes policy on theses, job talks, etc <br />
+<p />
+<h2><a name="Events"></a> Events </h2>
+<p />
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/PhysicsAndPerformanceWorkshops">ATLAS physics workshops</a> - Workshops and guidelines on away meetings <br />
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AtlasLHCCPosters2025">ATLAS posters at LHCC meeting, November 17, 2025</a> <br />
+<p />
+<h2><a name="Physics_Organisation"></a> Physics Organisation </h2>
+<p />
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/PhysicsGroupStructure">Physics Groups Structure</a> <br />
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AtlasPhysicsCoordinationBoard">Physics Coordination Membership</a> <br />
+<a href="https://otp-atlas.web.cern.ch/otp-atlas/reports/" target="_blank">Operation Task Planner (OTP)<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> <br />
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/SCABnominationsForCPPA">SCAB</a> - Instructions on SCAB <br>
+<a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/ListOfQualifying" target="_top">List of qualification tasks</a> <br/>
+<a href="https://atlas.web.cern.ch/Atlas/Collaboration/private/physics-indicomb/physco.html" target="_blank">Compact list of talks at main meetings (indicomb)<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<p />
+<strong>Task forces</strong> <br />
+<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/OfflineActivityCoordinationBoard#Review_panels_study_groups_and_t" target="_top">OAB Task force reports</a> - reports from all on-going and past task forces from the OAB <br />
+<p />
+<p />
+<h2><a name="Historical_links"></a> Historical links </h2>
+<p />
+<font color="#777777">
+Run-1 anomalies: <br />
+<a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/SusyDiscrepancies" target="_top">SUSY</a>, <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AtlasProtectedArchive/ExoticsExcessSummary">Exotics</a>, <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/HiggsExcessSummary">Higgs</a> <br />
+<p />
+</td> <td valign="top" width="4%"> </td> <td bgcolor="#ffffff" valign="top" width="50%">
+<p />
+<h2><a name="Combined_Performance_CP_Groups"></a> Combined Performance (CP) Groups </h2>
+<p />
+<link href="https://atlaspo.cern.ch/public//twiki/css/conveners.css" type="text/css" rel="stylesheet" />
+<table id="combined_performance_groups" class="conveners_table">
+	<tbody>
+		<tr class="evenRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/ElectronGamma" target="_blank"><b>E/gamma</b></a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-perf-egamma-conveners@cern.ch">A. Tarek, P. Sommer</a></td>
+		</tr>
+		<tr class="oddRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://ftag.docs.cern.ch/" target="_blank"><b>Flavour Tagging</b></a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-perf-flavtag-conveners@cern.ch">V. Vecchio, A.M. Burger</a></td>
+		</tr>
+		<tr class="evenRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/GlobalPerformance" target="_blank"><b>Global Performance (GPER)</b></a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-gper-conveners@cern.ch">M. Swiatlowski, M.C. Hodgkinson</a></td>
+		</tr>
+		<tr class="oddRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/InDetTrackingWG" target="_blank"><b>Inner Tracking</b></a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-perf-idtracking-conveners@cern.ch">T. Strebler, P. Gessinger-Befurt</a></td>
+		</tr>
+		<tr class="evenRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/JetEtMiss" target="_blank"><b>Jet/EtMiss</b></a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-perf-jets-conveners@cern.ch">J.R. Dandoy, P.A. Delsart</a></td>
+		</tr>
+		<tr class="oddRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://atlas-mcp.docs.cern.ch/" target="_blank"><b>Muon</b></a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-perf-muons-conveners@cern.ch">L. Martinelli, S. Francescato</a></td>
+		</tr>
+		<tr class="evenRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/TauWG" target="_blank"><b>Tau</b></a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-perf-tau-conveners@cern.ch">Y. Liu, S. Alderweireldt</a></td>
+		</tr>
+</tbody>
+</table>
+<p />
+<p />
+<h2><a name="Physics_Analysis_PA_Groups"></a> Physics Analysis (PA) Groups </h2>
+<p />
+<link href="https://atlaspo.cern.ch/public//twiki/css/conveners.css" type="text/css" rel="stylesheet" />
+<table id="combined_performance_groups" class="conveners_table">
+	<tbody>
+		<tr class="evenRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/BPhysicsWorkingGroup" target="_blank"><b>B Physics &amp; Light States</b></a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-phys-beauty-conveners@cern.ch">R. Novotny, N. Tal Hod</a></td>
+		</tr>
+		<tr class="oddRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/ExoticsWorkingGroup" target="_blank"><b>Exotics</b></a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-phys-exotics-conveners@cern.ch">L.D. Corpe, G. Gustavino</a></td>
+		</tr>
+		<tr class="evenRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/HeavyIonsWorkingGroup" target="_blank"><b>Heavy Ions</b></a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-phys-hi-conveners@cern.ch">T. Bold, R. Longo</a></td>
+		</tr>
+		<tr class="oddRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/HiggsAndDiHiggsPhysicsWorkingGroup" target="_blank"><b>Higgs and Di-Higgs Physics (HIGP)</b></a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-higp-conveners@cern.ch">A. Cortes-Gonzalez, P. Francavilla, H.T. Yang</a></td>
+		</tr>
+		<tr class="evenRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/HMBSWorkingGroup" target="_blank"><b>Higgs, Multi-Boson, and SUSY searches (HMBS)</b></a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-hmbs-conveners@cern.ch">R. Camacho Toro, C.J. Potter</a></td>
+		</tr>
+		<tr class="oddRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/PhysicsModellingGroup" target="_blank"><b>Physics Modelling</b></a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-phys-pmg-conveners@cern.ch">S. Argyropoulos, F. Giuli</a></td>
+		</tr>
+		<tr class="evenRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/StandardModelWorkingGroup" target="_blank"><b>Standard Model</b></a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-phys-sm-conveners@cern.ch">Y. Wu, E. Rizvi</a></td>
+		</tr>
+		<tr class="oddRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/TopWorkingGroup" target="_blank"><b>Top</b></a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-phys-top-conveners@cern.ch">J.A. Mcfayden, T. Dado</a></td>
+		</tr>
+</tbody>
+</table>
+<p />
+<hr />
+<a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/PhysicsGroupStructure#Current_Physics_Subgroups" target="_top">List of PA &amp; CP subgroups and subgroup convenors</a><br />
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/PhysicsGroupLiaisons">Physics and CP Group Liaisons</a> <br />
+<a href="https://atlas-glance.cern.ch/atlas/appointment" target="_blank">ATLAS Appointments Database<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a><br />
+<a href="https://cms.cern/org/cms-scientific-results" target="_blank">List of CMS conveners<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<h2><a name="Other_Groups_related_to_PC"></a> Other Groups related to PC </h2>
+<link href="https://atlaspo.cern.ch/public//twiki/css/conveners.css" type="text/css" rel="stylesheet" />
+<table id="combined_performance_groups" class="conveners_table">
+	<tbody>
+		<tr class="evenRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/AnalysisModelgroup" target="_blank"><b>Analysis Model Group</b></a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-phys-amg-conveners@cern.ch">E. Torro Pastor, A. Held</a></td>
+		</tr>
+		<tr class="oddRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/DerivationProductionTeam" target="_blank"><b>Derivation Coordination and Production Team</b></a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-computing-derivation-coordinator@cern.ch">R. Lysak</a></td>
+		</tr>
+		<tr class="evenRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://twiki.cern.ch/twiki/bin/viewauth/Atlas/ForwardProtonPerformance" target="_blank"><b>Forward proton performance</b></a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-fdet-afp-combined-performance-coordinators@cern.ch">M.P. Lewicki, J. D. Lomas</a></td>
+		</tr>
+		<tr class="oddRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/IsolationFakeForum" target="_blank"><b>Isolation and Fake Forum</b></a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-phys-gen-isolation-fake-forum-conveners@cern.ch">F. Alonso, A. Tishelman-Charny, M. Bauce</a></td>
+		</tr>
+		<tr class="evenRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://twiki.cern.ch/twiki/bin/view/Atlas/LuminosityGroup" target="_blank"><b>Luminosity WG (data preparation)</b></a> <a href="https://twiki.cern.ch/twiki/bin/view/Atlas/LuminosityForPhysics" target="_blank">(info)</a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-luminosity-conveners@cern.ch">K. Monig, G. Ripellino</a></td>
+		</tr>
+		<tr class="oddRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasComputing/MachineLearningForum" target="_blank"><b>Machine Learning Forum</b></a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-perf-machine-learning-conveners@cern.ch">D.T. Murnane, R. Les</a></td>
+		</tr>
+		<tr class="evenRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/AtlasProductionGroup" target="_blank"><b>MC Production</b></a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-computing-mc-production-coordinators@cern.ch">E.M. Lobodzinska, D. Kar</a></td>
+		</tr>
+		<tr class="oddRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/PhysicsOffice" target="_blank"><b>Physics Office</b></a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-phys-office-mgr@cern.ch">J. Howarth</a></td>
+		</tr>
+		<tr class="evenRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/PhysicsValidation" target="_blank"><b>Physics Validation</b></a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-phys-validation-software-coordination@cern.ch">R.M. Bianchi, L. Mijovic</a></td>
+		</tr>
+		<tr class="oddRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasComputing/AtlasSimulation" target="_blank"><b>Simulation</b></a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-phys-simu-conveners@cern.ch">M. Bandieramonte, M. Javurkova</a></td>
+		</tr>
+		<tr class="evenRow">
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/AtlasStatistics" target="_blank"><b>Statistics Committee</b></a></td>
+		    <td class="tdSpaced" width="30%">&nbsp;&nbsp;<a href="mailto:atlas-phys-stat-conveners@cern.ch">L. Brenner, R. Les</a></td>
+		</tr>
+</tbody>
+</table>
+<p />
+</td> </tr> </tbody> </table>
+<p />
+<p />
+<p />
+<p />
+<hr />
+<p />
+<!--Please add the name of someone who is responsible for this page so that they can be contacted if the contents need updating! The creator's name will be added by default using the REVINFO function, but this can be replaced if appropriate.-->
+Responsible:  <a class="twikiLink" href="/twiki/bin/view/Main/FabioCerutti">Fabio Cerutti</a>
+<p /> <ul>
+<li> <a href="https://twiki.cern.ch/twiki/pub/AtlasProtected/AtlasPhysics/ATLAS_PhysBriefGuidelines.pdf" target="_top">ATLAS_PhysBriefGuidelines.pdf</a>: Outreach - How to write Physics Briefs
+</li></ul> 
+<p /> <ul>
+<li> <a href="https://twiki.cern.ch/twiki/pub/AtlasProtected/AtlasPhysics/MCI-form.docx" target="_top">MCI-form.docx</a>: MCI request form</verbatim>
+</li></ul>  </div><!-- /patternTopic-->
+<div class="twikiContentFooter"></div><div class="twikiAttachments">
+<div class="twistyPlugin twikiMakeVisibleInline">  <span id="topicattachmentslistshow" class="twistyRememberSetting twistyFirstStartShow twistyTrigger twikiUnvisited twistyHidden twistyInited1"><a href="#"><img src="/twiki/pub/TWiki/TWikiDocGraphics/toggleopen.gif" border="0" alt="" /><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span> <span id="topicattachmentslisthide" class="twistyRememberSetting twistyFirstStartShow twistyTrigger twikiUnvisited twistyInited1"><a href="#"><img src="/twiki/pub/TWiki/TWikiDocGraphics/toggleclose.gif" border="0" alt="" /><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span>  </div><!--/twistyPlugin twikiMakeVisibleInline--> <div class="twistyPlugin"><div id="topicattachmentslisttoggle" class="twistyRememberSetting twistyFirstStartShow twistyContent twistyInited1">
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="twikiAttachmentsTable" rules="rows" summary="Topic attachments"><caption>Topic attachments</caption>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="middle"> <a href="/twiki/bin/view/AtlasProtected/AtlasPhysics?sortcol=0;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">I</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol1" valign="middle"> <a href="/twiki/bin/view/AtlasProtected/AtlasPhysics?sortcol=1;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Attachment</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol2" valign="middle"> <a href="/twiki/bin/view/AtlasProtected/AtlasPhysics?sortcol=2;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">History</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol3" valign="middle"> <a href="/twiki/bin/view/AtlasProtected/AtlasPhysics?sortcol=3;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Action</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol4" valign="middle"> <a href="/twiki/bin/view/AtlasProtected/AtlasPhysics?sortcol=4;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Size</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol5" valign="middle"> <a href="/twiki/bin/view/AtlasProtected/AtlasPhysics?sortcol=5;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Date</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol6" valign="middle"> <a href="/twiki/bin/view/AtlasProtected/AtlasPhysics?sortcol=6;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Who</font></a> </th>
+<th bgcolor="#ffffff" class="twikiTableCol7 twikiLastCol" valign="middle"> <a href="/twiki/bin/view/AtlasProtected/AtlasPhysics?sortcol=7;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#0066cc">Comment</font></a> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" width="16" height="16" alt="PDF" title="PDF" border="0" /><span class="twikiHidden">pdf</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="https://twiki.cern.ch/twiki/pub/AtlasProtected/AtlasPhysics/ATLAS_PhysBriefGuidelines.pdf">ATLAS_PhysBriefGuidelines.pdf</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> r1 </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> <a href="/twiki/bin/attach/AtlasProtected/AtlasPhysics?filename=ATLAS_PhysBriefGuidelines.pdf;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> 80.1&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <span class="twikiNoBreak">2014-10-24 - 20:26</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6" valign="top"> <a class="twikiLink" href="/twiki/bin/view/Main/AndreasHoecker">AndreasHoecker</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol7 twikiLastCol" valign="top"> Outreach - How to write Physics Briefs </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> <img src="/twiki/pub/TWiki/TWikiDocGraphics/else.gif" width="16" height="16" alt="Unknown file format" title="Unknown file format" border="0" /><span class="twikiHidden">docx</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1" valign="top"> <a href="https://twiki.cern.ch/twiki/pub/AtlasProtected/AtlasPhysics/MCI-form.docx">MCI-form.docx</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2" valign="top"> r1 </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3" valign="top"> <a href="/twiki/bin/attach/AtlasProtected/AtlasPhysics?filename=MCI-form.docx;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4" valign="top"> 66.5&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5" valign="top"> <span class="twikiNoBreak">2021-01-31 - 17:08</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6" valign="top"> <a class="twikiLink" href="/twiki/bin/view/Main/StephaneWillocq">StephaneWillocq</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol7 twikiLastCol" valign="top"> MCI request form </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td align="center" bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <img src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" width="16" height="16" alt="PDF" title="PDF" border="0" /><span class="twikiHidden">pdf</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top"> <a href="https://twiki.cern.ch/twiki/pub/AtlasProtected/AtlasPhysics/StatAgreement_AC_final.pdf">StatAgreement_AC_final.pdf</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top"> r1 </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top"> <a href="/twiki/bin/attach/AtlasProtected/AtlasPhysics?filename=StatAgreement_AC_final.pdf;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol4 twikiLast" valign="top"> 42.9&nbsp;K </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol5 twikiLast" valign="top"> <span class="twikiNoBreak">2012-05-08 - 09:40</span> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol6 twikiLast" valign="top"> <a class="twikiLink" href="/twiki/bin/view/Main/RichardHawkings">RichardHawkings</a> </td>
+<td align="left" bgcolor="#ffffff" class="twikiTableCol7 twikiLastCol twikiLast" valign="top"> May 2012 ATLAS+CMS statistics agreement </td>
+</tr></table>
+</div></div> <!--/twistyPlugin--></div><!--//twikiAttachments--></div><!-- /patternContent-->
+<div class="clear"></div>
+<a name="topic-actions"></a><div class="patternTopicActions"><div class="patternTopicAction"><span class="patternActionButtons"><span style=''><span><a href='https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/AtlasPhysics?t=1763376327;nowysiwyg=1' rel='nofollow' title='Edit this topic text' accesskey='e'><img src='/twiki/pub/TWiki/TWikiDocGraphics/uweb-o14.gif' width='14' height='14' border='0' alt='' /> <span class='twikiAccessKey'>E</span>dit</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span></span><span style=''><span><a href='/twiki/bin/attach/AtlasProtected/AtlasPhysics' rel='nofollow' title='Attach an image or document to this topic' accesskey='a'><span class='twikiAccessKey'>A</span>ttach</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span></span><span><a href='/twiki/bin/view/AtlasProtected/AtlasPhysics?cover=print' rel='nofollow' title='Printable version of this topic' accesskey='p'><span class='twikiAccessKey'>P</span>rint version</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span><span><a href='/twiki/bin/oops/AtlasProtected/AtlasPhysics?template=oopshistory' rel='nofollow' title='View total topic history' accesskey='h'><span class='twikiAccessKey'>H</span>istory</a></span>: r654&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/AtlasPhysics?rev1=654;rev2=653" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/AtlasPhysics?rev=653" rel="nofollow">r653</a>&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/AtlasPhysics?rev1=653;rev2=652" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/AtlasPhysics?rev=652" rel="nofollow">r652</a>&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/AtlasPhysics?rev1=652;rev2=651" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/AtlasPhysics?rev=651" rel="nofollow">r651</a>&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/AtlasPhysics?rev1=651;rev2=650" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/AtlasPhysics?rev=650" rel="nofollow">r650</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span><a href='/twiki/bin/oops/AtlasProtected/AtlasPhysics?template=backlinksweb' rel='nofollow' title='Search the AtlasProtected Web for topics that link to here' accesskey='b'><span class='twikiAccessKey'>B</span>acklinks</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span><a href='/twiki/bin/view/AtlasProtected/AtlasPhysics?raw=on' rel='nofollow' title='View raw text without formatting' accesskey='r'><span class='twikiAccessKey'>R</span>aw View</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span style=''><span><a href='https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/AtlasPhysics?t=1763376327;nowysiwyg=0' rel='nofollow' title='WYSIWYG editor' accesskey='w'>WYSIWYG</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span></span><span><a href='/twiki/bin/oops/AtlasProtected/AtlasPhysics?template=oopsmore&amp;param1=654&amp;param2=654' rel='nofollow' title='Delete or rename this topic; set parent topic; view and compare revisions' accesskey='m'><span class='twikiAccessKey'>M</span>ore topic actions</a></span></span></div><!--/patternTopicAction--></div><!--/patternTopicActions-->
+<div class="patternInfo twikiGrayText"><div class="patternRevInfo">Topic revision: r654 - 2025-11-05 <a href="https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/AtlasPhysics?t=1763376327;nowysiwyg=1" target="_top">-</a> <a class="twikiLink" href="/twiki/bin/view/Main/AurelioJuste">AurelioJuste</a></div><!-- /patternRevInfo--></div><!-- /patternInfo-->
+</div><!-- /patternMainContents-->
+</div><!-- /patternMain--><div id="patternLeftBar"><div id="patternClearHeaderLeft"></div>
+<div id="patternLeftBarContents"><div class="patternLoginActions"><span style="padding: 0 0 0 20px; word-wrap:break-word; display:block;"><img src="https://twiki.cern.ch/twiki/pub/TWiki/TWikiDocGraphics/person.gif" style="position:absolute; margin: 0 0 0 -20px;" /> <span class="twikiNewLink"><a href="/twiki/bin/edit/Main/RoySchimmelBrener?topicparent=AtlasProtected.AtlasPhysics;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">RoySchimmelBrener</a></span></span>  <img src="/twiki/pub/TWiki/TWikiDocGraphics/lock.gif" width="16" height="16" alt="Lock" title="Lock" border="0" /> <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/AtlasPhysics?logout=1">Log Out</a></div><div class="patternWebIndicator"> <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="/twiki/bin/view/AtlasProtected/WebHome"><img src="/twiki/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" width="13" height="13" alt="Web background" title="Web background" border="0" /> AtlasProtected</a>
+</li></ul> 
+</div> <ul>
+<li> <strong><a href="https://atlas-collaboration.web.cern.ch" target="_blank"><span style="color: blue">ATLAS Collaboration</span><img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a></strong>
+</li></ul> 
+<hr /> <ul>
+<li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/WebHome"><span style="color: #0000ff"> ATLAS TWiki</span></verbatim></a></strong>
+</li> <li> <strong><a class="twikiCurrentWebHomeLink twikiLink" href="/twiki/bin/view/AtlasProtected/WebHome"><span style="color: #0000ff"> ATLAS Protected</span></verbatim></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasComputing/WebHome"><span style="color: #0000ff"> ATLAS Computing </span></verbatim></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasPublic/WebHome"><span style="color: #0000ff"> Public Results </span></verbatim></a></strong>
+</li></ul> 
+<hr /> <ul>
+<li> <strong><a href="https://its.cern.ch/jira/secure/CreateIssueDetails!init.jspa?pid=22679&amp;issuetype=3&amp;summary=Problem+with+AtlasPhysics+TWiki+topic&amp;description=The+topic+https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/AtlasPhysics+has+an+issue.+Describe+it+below:&amp;reporter=rbrener" target="_blank"><span style="color: #ff0000"> Report outdated page </span></verbatim><img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a></strong>
+</li> <li> <strong><a href="mailto&#58;atlas&#45;twiki&#45;support&#64;cern&#46;ch"><span style="color: #ff0000"> Twiki-Support </span></verbatim></a></strong>
+</li></ul> 
+<hr />
+<p /> <ul>
+ <li>
+ <ul>
+<li> <strong><a href="https://twiki.cern.ch/twiki/bin/view/AtlasPublic" target="_top"><span style="color: navy;"> Public Results </span></a></strong>
+</li> <li> <strong><a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/AtlasPhysics"><span style="color: navy;"> Physics </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/AtlasDetectors"><span style="color: navy;"> Detectors </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/AtlasTrigger"><span style="color: navy;"> Trigger </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasComputing/WebHome"><span style="color: navy;"> Computing </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/DataPreparation"><span style="color: navy;"> Data Preparation </span></a></strong>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/Atlas/DocumentationManagement">Documentation Help</a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/Atlas/AtlasGlossary">Glossary</a>
+</li></ul> 
+</li></ul> 
+<p />
+<div class="twikiLeftBarBase">
+<p />
+<hr /> <ul>
+<li> <strong><a class="twikiCurrentTopicLink twikiLink" href="/twiki/bin/view/AtlasProtected/AtlasPhysics"><span style="color: #0000ff"> Physics Home </span></verbatim></a></strong>
+</li></ul> 
+<p /> <ul>
+<li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasProtected/DataMCForAnalysis"><span style="color: #008000">Data and MC for Analysis</span></verbatim></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/DataPreparation"><span style="color: #008000">Data Preparation</span></verbatim></a></strong>
+</li></ul> 
+<p /> <ul>
+<li> <strong><span style="color: #000080">Physics Analysis</span></verbatim></strong> <ul>
+<li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/PhysicsValidation">Physics Validation</a> <br />
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisSoftwareGroup">Physics Analysis Tools</a> <br />
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/PhysicsAnalysisWorkBook">Physics Analysis Workbook</a><br />
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/StatisticsTools">Statistics Tools in ATLAS</a> <br />
+</li></ul> 
+</li></ul> 
+<p /> <ul>
+<li> <strong><span style="color: #000080">Physics Groups</span></verbatim></strong> <ul>
+<li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/BPhysicsWorkingGroup">B Physics and Light States WG</a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TopWorkingGroup">Top WG</a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/StandardModelWorkingGroup">Standard Model WG</a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/HiggsWorkingGroup">Higgs WG</a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/HiggsAndDiHiggsPhysicsWorkingGroup">Higgs and Di-Higgs WG</a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/HDBSWorkingGroup">HDBS WG</a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/HMBSWorkingGroup">HMBS WG</a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/SUSYWorkingGroup">SUSY WG</a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AtlasProtectedArchive/ExoticsWorkingGroup">Exotics WG</a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/HeavyIonsWorkingGroup">Heavy Ions WG</a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/PhysicsModellingGroup">Physics Modelling WG</a>
+</li></ul> 
+</li></ul> 
+<p /> <ul>
+<li> <strong><span style="color: #000080">Combined Performance</span></verbatim></strong> <ul>
+<li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/ElectronGamma">e/gamma</a>
+</li> <li> <a href="https://ftag.docs.cern.ch/" target="_blank">Flavor Tagging<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/InDetTrackingWG">Inner Tracking</a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/JetEtMiss">Jet/EtMiss</a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/TauWG">Tau</a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/MuonPerformance">Muon</a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/GlobalPerformance">Global Performance</a>
+</li></ul> 
+</li></ul> 
+<p /> <ul>
+<li> <strong><span style="color: #000080">Other Groups</strong> <ul>
+<li> <a class="twikiLink" href="/twiki/bin/view/Atlas/AtlasTrigger">Trigger Alg/Perf/Menu</a>
+</li></ul> 
+</li></ul> 
+<p />
+</div>
+<p />
+<hr />
+<span style="color: #008000"> <img src='https://twiki.cern.ch/twiki/pub/TWiki/TWikiDocGraphics/searchtopic.gif'> <strong><a href="https://search.cern.ch/Pages/TwikiResults.aspx?k=generic2%3AATLAS" target="_blank">TWiki Search<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a></strong> </span></verbatim>
+<hr />
+<p />
+<!-- <ul>
+ <li>
+ <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="/twiki/bin/view/AtlasProtected/WebHome">AtlasProtected Wiki</a>
+</li></ul> 
+</li></ul> 
+-->
+</div><!-- /patternLeftBarContents--></div><!-- /patternLeftBar-->
+</div><!-- /patternFloatWrap-->
+<div class="clear">&nbsp;</div>
+</div><!-- /patternOuter--></div><!-- /patternWrapper--><div id="patternTopBar"><div id="patternTopBarContents"><table border="0" cellpadding="0" cellspacing="0" style="width:100%; margin-top:12px;">
+<tr><td valign="middle"><span id="twikiLogo" class="twikiImage"><a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/WebHome"><img src="/twiki/pub/AtlasPublic/AtlasTWikiLogos/AtlasTwikiProtectedLogo.png" border="0" alt="CERN" style="border:none;" /></a></span></td>
+<td align="right" valign="top" class="patternMetaMenu">
+ <ul>
+<li> <form name="jumpForm" action="/twiki/bin/view/AtlasProtected/AtlasPhysics"><input id="jumpFormField" type="text" class="twikiInputField" name="topic" value="" size="18" /><noscript>&nbsp;<input type="submit" class="twikiButton" size="5" name="submit" value="Jump" />&nbsp;</noscript>   </form>
+</li> <li> <form name="quickSearchForm" action="https://search.cern.ch/Pages/TwikiResults.aspx" target="search" class="cernTWikiSearch">    <ul class="engineList" style="background-image: url('https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/arrow.png');">        <li class="active" id="twikisearch">            <img src="https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/twikisearchicon.gif" alt="TWiki Search Icon" />            <span class="engineDescription">TWiki Search</span>        </li>        <!-- Due to a security incident <a href="https://cern.service-now.com/service-portal?id=outage&amp;n=OTG0156848" target="_blank">OTG0156848<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>, the legacy CERN Search Service has been shut down        <li id="cernsearch">            <img src="https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/cernsearchicon.png" alt="Cern Search Icon" />            <span class="engineDescription">Cern Search</span>        </li>         -->        <li id="googlesearch">            <img class="engine" src="https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/googlesearchicon.png" alt="Google Search Icon" />            <span class="engineDescription">Google Search</span>        </li>    </ul>    <input type="text" class="twikiInputField" id="quickSearchBox" name="k" value="" size="18" /> <br />    <input type="radio" name="scope" value=Atlas checked />     <span class="webScopeDescription">Atlas</span>    <input type="radio" name="scope" value="AllWebs" />    <span class="allWebsScopeDescription">All webs</span>    <input type='hidden' name='autologin' value='1'/>     <noscript>        &nbsp; <input type="submit" size="5" class="twikiButton" name="submit" value="Search"/>&nbsp;    </noscript>
+</li></ul> 
+</form>
+<p />
+<p />
+<!-- <pre> -->
+<script language="javascript">
+<!--
+$(function() {
+    // We use the current web name to form the redirect in the TWiki search
+    var currentWeb = undefined;
+    // If the web starts with alice* atlas* cms* or lhcb* (case-insensitive),
+    // the "Web search" should be altered so that AtlasFoo => Atlas
+    var specialWeb = undefined;
+    // Remembering what the user have entered into the searchbox to after
+    // he has selected a new search engine from the dropdown
+    var searchPhrase = '';
+
+    // --- BEGIN: CONFIGURABLE LIST FOR SUBWEB SEARCH ---
+    // List of webs for which sub-web searching should be enabled
+    var subWebSearchWebs = ['AtlasProtected', 'AtlasComputing', 'Atlas'];
+    // --- END: CONFIGURABLE LIST FOR SUBWEB SEARCH ---
+
+    // --- ORIGINAL WEB DETECTION LOGIC ---
+    // We want to store the current web for later use.
+    var currentWebSearch = window.location.pathname.match(/\/([A-Z][^\/]+)/);
+    if (currentWebSearch != null) {
+        currentWeb = currentWebSearch[1];
+
+        // Do we have a special kind of web? If so, the web search should be altered a little to fetch more broader results.
+        var specialWebSearch = currentWeb.match(/^(alice|atlas|cms|lhcb)/i);
+        if (specialWebSearch != null) {
+            var lowercaseToCorrect = {
+                'alice' : 'Alice',
+                'atlas' : 'Atlas',
+                'cms'   : 'CMS',
+                'lhcb'  : 'LHCb'
+            };
+            specialWeb = lowercaseToCorrect[specialWebSearch[1].toLowerCase()];
+            $('span.webScopeDescription').text(specialWeb);
+        }
+    } else {
+        currentWeb = 'DefaultWeb';
+    }
+
+    // --- BEGIN: SUBWEB LOGIC TO EXTRACT SUBWEB PATH (EXCLUDING TOPIC) ---
+    var subWebSearchWebs = ['AtlasProtected', 'AtlasComputing', 'Atlas'];
+    // Build regex to match web/subweb path and topic
+    var subWebsPattern = new RegExp(
+        '/((' + subWebSearchWebs.join('|') + ')(?=(?:/|$))(?:/[A-Za-z0-9_]+)*)/([A-Za-z0-9_]+)$'
+    );
+    var subWebMatch = window.location.pathname.match(subWebsPattern);
+    if (subWebMatch) {
+        // subWebMatch[1] is the full web/subweb path (e.g. "AtlasComputing/AtlasComputingArchive")
+        // subWebMatch[3] is the topic (e.g. "WebHome")
+        currentWeb = subWebMatch[1];
+        specialWeb = currentWeb;
+        $('span.webScopeDescription').text(specialWeb);
+    }
+    // --- END: SUBWEB LOGIC TO EXTRACT SUBWEB PATH (EXCLUDING TOPIC) ---
+
+    // Do we have a favourite search engine in localStorage? We set Twiki search as default anyways
+    if (window.localStorage) {
+        // var storedEngine = localStorage.getItem('defaultSearchEngine');
+        // console.log('stored engine preference: ' + storedEngine);
+        var storedEngine = 'twikisearch';
+        var storedEngineLi = $('.cernTWikiSearch li#' + storedEngine);
+        if (!storedEngineLi.hasClass('active')) {
+            changeActiveSearchEngine(storedEngineLi);
+        }
+        if (storedEngine == 'twikisearch') {
+            $('input[name=scope][value=AllWebs]').attr('disabled','disabled');
+            $('.allWebsScopeDescription').addClass('disabled');
+        }
+    }
+    
+    // Toggle the searchEngines list on and off on click
+    $('.cernTWikiSearch ul.engineList').click(function(e) {
+        e.stopPropagation();
+        if ($(this).hasClass('open')) {
+            $(this).removeClass('open');
+        } else {
+            $(this).addClass('open');
+        }
+    });
+
+    // Stupid IE8 hack because the click handler on ul.engineList does not work properly there.
+    if ($.browser.msie && document.documentMode && document.documentMode < 9) {
+        $('.cernTWikiSearch #quickSearchBox').focus(function(e) {
+            $('.cernTWikiSearch ul.engineList').removeClass('open');
+        });
+    }
+    
+    // Handle clicks on one of the search engines
+    $('.cernTWikiSearch ul.engineList li').click(function(e) {
+        // If we clicked on a <li> that does not has class 'active', it means this should become active and swap places with this.
+        if (!$(this).hasClass('active')) {
+            changeActiveSearchEngine($(this));
+        }  
+        if ($(this).parent().hasClass('open')) {
+            $('.cernTWikiSearch #quickSearchBox').val(searchPhrase);
+            $('.cernTWikiSearch #quickSearchBox').focus();                          
+        }
+        if ($(this).attr('id') == 'twikisearch') {
+            var allWebsRadio = $('input[name=scope][value=AllWebs]');
+            allWebsRadio.attr('disabled','disabled');
+            allWebsRadio.siblings('input[type=radio]').attr('checked',true)
+            $('.allWebsScopeDescription').addClass('disabled');
+        } else {
+            $('input[name=scope][value=AllWebs]').attr('disabled','');
+            $('.allWebsScopeDescription').removeClass('disabled');
+        }
+    });
+    
+    // Show the engine description text on hover
+    $('.engineList.open li').live('hover',function() {
+        var displayText = $(this).find('span.engineDescription').text();
+        $('.cernTWikiSearch #quickSearchBox').val(displayText);
+    });
+
+
+    // The form is submitted, now let's do the search.
+    $('.cernTWikiSearch').submit(function(e) {
+        e.preventDefault();
+
+        var scope = $('input[name=scope]:checked', $(this)).val();
+        if (scope != 'AllWebs' && specialWeb !== undefined) {
+            scope = specialWeb;
+        }
+        var val = $('.cernTWikiSearch #quickSearchBox').val();
+        var engine = $('.engineList li.active').attr('id')
+        
+        switch (engine) {
+            case 'googlesearch':
+                window.open('https://google.com/search?q=site:' + encodeURIComponent('https://twiki.cern.ch') + (scope != 'AllWebs' ? ' ' + scope : '') + ' ' + val);
+                break;
+            case 'cernsearch':
+                window.open('https://search.cern.ch/Pages/TwikiResults.aspx?k=' + val + (scope != 'AllWebs' ? ' cernscope:' + scope : '') + '&autologin=1');
+                break;
+            case 'twikisearch':
+                window.open(window.location.pathname.replace(/\/[A-Z].+$/,'') + '/' + currentWeb + '/WebSearch?search=' + val + '&scope=all');
+                break;
+        default:
+            break;
+        }
+        
+        // Save the search engine. If the user reloads the page he should get the last one used.
+        if (window.localStorage) { 
+            console.log('store engine preference: ' + engine);
+            localStorage.setItem('defaultSearchEngine',engine);
+        }
+    });
+    
+    // Save the search phrase on every key up
+    $('.cernTWikiSearch #quickSearchBox').keyup(function() {
+        searchPhrase = $(this).val();
+    });
+    
+    // If a user clicks outside the search engine list, the search engine list should be closed.
+    $('html').click(function() {
+        if ($('.engineList').hasClass('open')) {
+            $('.engineList').removeClass('open');
+            $('.cernTWikiSearch #quickSearchBox').val(searchPhrase);
+        }
+    });
+});
+
+// We want to change the active search engine
+function changeActiveSearchEngine(engineLi) {
+    var activeEngine = engineLi.siblings(':first');
+    engineLi.detach().insertBefore(activeEngine);
+    activeEngine.removeClass('active');
+    engineLi.addClass('active');
+    if (engineLi.attr('id') == 'twikiSearch') {
+        deactivateAllWebsOption();
+    }
+}
+
+// The user has chosen twiki search (or the preference was stored in localStorage). 
+// We will then disable the 'All Webs' option since this will time out.
+function deactivateAllWebsOption() {
+}
+
+// Helper method to check input attribute browser compability
+function checkInputAttributeSupport(attribute) {
+    var i = document.createElement("input");
+    return typeof i.placeholder !== 'undefined';
+}
+//-->
+</script>
+<!-- </pre> --> <ul>
+<li> 
+</li></ul> 
+</td></tr></table></div></div><!-- /patternTopBar--><div id="patternBottomBar"><div id="patternBottomBarContents"><div id="patternWebBottomBar"><div class="twikiCopyright"><span class="twikiRight"> <a href="http://twiki.org/"><img src="/twiki/pub/TWiki/TWikiLogos/T-badge-88x31.gif" alt="This site is powered by the TWiki collaboration platform" width="88" height="31" title="This site is powered by the TWiki collaboration platform" border="0" /></a></span><span class="twikiRight" style="padding:0 10px 0 10px"> <a href="http://www.perl.org/"><img src="/twiki/pub/TWiki/TWikiLogos/perl-logo-88x31.gif" alt="Powered by Perl" width="88" height="31" title="Powered by Perl" border="0" /></a></span>Copyright &amp;© 2008-2025 by the contributing authors. All material on this collaboration platform is the property of the contributing authors. <br />  or Ideas, requests, problems regarding TWiki? use <a href="https://discourse.web.cern.ch/c/collaborative-editing/wikis/12">Discourse</a> or <a href='https://twiki.cern.ch/twiki/bin/view/Main/ServiceNow'>Send feedback</a> </div><!--/twikiCopyright--></div><!--/patternWebBottomBar--></div><!-- /patternBottomBarContents--></div><!-- /patternBottomBar-->
+</div><!-- /patternPage-->
+</div><!-- /patternPageShadow-->
+</div><!-- /patternScreen-->
+<p />
+<p />
+<p />
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+	 var u="https://webanalytics.web.cern.ch/";
+	 _paq.push(['setTrackerUrl', u+'matomo.php']);
+	 _paq.push(['setSiteId', '5']);
+	 var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	 g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+<p />
+</body></html>

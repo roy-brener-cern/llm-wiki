@@ -1,0 +1,708 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+<script type="text/javascript" src="/twiki/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="/twiki/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="/twiki/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<link rel="stylesheet" href="https://twiki.cern.ch/twiki/pub/TWiki/ImagePlugin/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="https://twiki.cern.ch/twiki/pub/TWiki/ImageGalleryPlugin/style.css" type="text/css" media="all" />
+<title> PhysicsAnalysisWorkBookRel21ComputingSetup &lt; AtlasProtected &lt; TWiki</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="icon" href="/twiki/pub/AtlasProtected/WebPreferences/favicon_new.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/twiki/pub/AtlasProtected/WebPreferences/favicon_new.ico" type="image/x-icon" />
+<link rel="alternate" href="https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup?t=1763376380" type="application/x-wiki" title="Edit PhysicsAnalysisWorkBookRel21ComputingSetup" />
+<link rel="edit" href="https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup?t=1763376380" title="Edit PhysicsAnalysisWorkBookRel21ComputingSetup" />
+<meta name="SCRIPTURLPATH" content="/twiki/bin" />
+<meta name="SCRIPTSUFFIX" content="" />
+<meta name="TEXT_JUMP" content="Jump" />
+<meta name="TEXT_SEARCH" content="Search" />
+<meta name="TEXT_NUM_TOPICS" content="Number of topics:" />
+<meta name="TEXT_MODIFY_SEARCH" content="Modify search" />
+<meta name="robots" content="noindex" /><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/twiki/bin/view/AtlasProtected/WebRss" />
+<base href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup"></base>
+<!--BEHAVIOURCONTRIB--><script type="text/javascript" src="/twiki/pub/TWiki/BehaviourContrib/behaviour.compressed.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikilib.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiWindow.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiEvent.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiHTML.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiCSS.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiForm.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/PatternSkin/pattern.js"></script>
+<style type="text/css" media="all">
+@import url('/twiki/pub/TWiki/TWikiTemplates/base.css');
+</style>
+<style type="text/css" media="all">
+#patternTopBar,
+#patternClearHeaderCenter,
+#patternClearHeaderLeft,
+#patternClearHeaderRight,
+#patternTopBarContentsOuter,
+#patternTopBarContents {
+	height:64px; /* top bar height; make room for header columns */
+	overflow:hidden;
+}
+#patternOuter {
+	margin-left:14em;
+}
+#patternLeftBar {
+	width:14em;
+	margin-left:-14em;
+}
+</style>
+<style type="text/css" media="all">
+@import url('/twiki/pub/TWiki/PatternSkin/layout.css');
+@import url('/twiki/pub/TWiki/PatternSkin/style.css');
+@import url('/twiki/pub/TWiki/PatternSkin/colors.css');
+</style>
+<style type="text/css" media="all">
+	/* Styles that are set using variables */
+	.patternBookView .twikiTopRow,
+	.patternWebIndicator a img,
+	.patternWebIndicator a:hover img {
+		background-color:#0b048c ;
+	}
+	#patternTopBarContents { background-image:url(/twiki/pub/TWiki/PatternSkin/TWiki_header.gif); background-repeat:no-repeat;}
+	
+	.patternBookView {
+		border-color:#0b048c ;
+	}
+	.patternPreviewPage #patternMain {
+		/* uncomment to set the preview image */
+		/*background-image:url("/twiki/pub/TWiki/PreviewBackground/preview2bg.gif");*/
+	}
+	
+</style><style type="text/css" media="all">
+
+
+
+</style>
+<style type="text/css" media="all">
+	@import url("/twiki/pub/TWiki/PatternSkin/print.css");
+</style>
+<!--[if IE]><style type="text/css" media="screen">
+pre {
+	overflow-x:auto;
+	padding-bottom:expression(this.scrollWidth > this.offsetWidth ? 16 : 0);
+}
+</style>
+<![endif]-->
+<!--[if lte IE 6]> 
+<style type="text/css">
+#patternLeftBar {
+	position:relative; /* IE 5.5 needs this or the contents won't show outside the parent container on print. IE 6.0 needs it only during printable copy! */
+}
+</style><![endif]-->
+<script type="text/javascript" src="/twiki/pub/TWiki/TWikiJavascripts/twikiStyles.js"></script>
+
+<script src="https://twiki.cern.ch/twiki/pub/TWiki/ChecklistPlugin/itemstatechange.js" language="javascript" type="text/javascript"></script><!--GENERATED_HEADERS--><!-- CERNSEARCHBAR_CSS --> <link rel='stylesheet' href='/twiki/pub/TWiki/CernSearchBar/CernSearchBar.css' type='text/css' media='all' /></head>
+<body class="patternViewPage">
+<a name="PageTop"></a>
+<div id="patternScreen">
+<div id="patternPageShadow">
+<div id="patternPage">
+<div id="patternWrapper"><div id="patternOuter">
+<div id="patternFloatWrap">
+<div id="patternMain"><div id="patternClearHeaderCenter"></div>
+<div id="patternMainContents"><div class="patternTop"><span class="patternHomePath twikiLeft"><a class="twikiLink" href="/twiki/bin/view/Main/WebHome">TWiki</a><span class='twikiSeparator'>&gt;</span><img src="/twiki/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" border="0" alt="" width="13" height="13" style="background-color:#0b048c " />&nbsp;<a href="/twiki/bin/view/AtlasProtected/WebHome">AtlasProtected Web</a><span class='twikiSeparator'>&gt;</span><a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AtlasPhysics">AtlasPhysics</a><span class='twikiSeparator'>&gt;</span><a class="twikiLink" href="/twiki/bin/view/AtlasProtected/PhysicsAnalysisWorkBook">PhysicsAnalysisWorkBook</a><span class='twikiSeparator'>&gt;</span><a class="twikiLink" href="/twiki/bin/view/AtlasProtected/PhysicsAnalysisWorkBookRel21">PhysicsAnalysisWorkBookRel21</a><span class='twikiSeparator'>&gt;</span><a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup" title='Topic revision: 12 (2022-02-21 - 09:58:48)'>PhysicsAnalysisWorkBookRel21ComputingSetup</a> <span class='patternRevInfo'>(2022-02-21, <a class="twikiLink" href="/twiki/bin/view/Main/DarioBarberis">DarioBarberis</a>)</span></span><!-- /patternHomePath--><span class="patternToolBar twikiRight"><span><a href='https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup?t=1763376380;nowysiwyg=1' rel='nofollow' title='Edit this topic text' accesskey='e'><img src='/twiki/pub/TWiki/TWikiDocGraphics/uweb-o14.gif' width='14' height='14' border='0' alt='' /> <span class='twikiAccessKey'>E</span>dit</a></span><span><a href='/twiki/bin/attach/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup' rel='nofollow' title='Attach an image or document to this topic' accesskey='a'><span class='twikiAccessKey'>A</span>ttach</a></span><span><a href='/twiki/bin/genpdf/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup' rel='nofollow' title='Create a PDF file for the topic' accesskey='f'><span class='twikiAccessKey'>P</span>DF</a></span></span><!-- /patternToolBar--><br class="twikiClear" /></div><!--/patternTop--><div class="twikiContentHeader"></div><div class="patternContent"><div class="patternTopic"> 
+<h1><a name="Computing_Setup"></a>  Computing Setup </h1>
+Complete: <img src="https://twiki.cern.ch/twiki/pub/Atlas/WebPreferences/complete5.png" alt="5" />
+<div class="twikiToc"> <ul>
+<li> <a href="?sortcol=2;table=1;up=0#Introduction">Introduction</a>
+</li> <li> <a href="?sortcol=2;table=1;up=0#Basic_computing_account_setup">Basic computing account setup</a>
+</li> <li> <a href="?sortcol=2;table=1;up=0#The_Analysis_Release"> The Analysis Release</a> <ul>
+<li> <a href="?sortcol=2;table=1;up=0#First_time_setup_steps_for_Relea"> First time setup steps for Release 21</a>
+</li> <li> <a href="?sortcol=2;table=1;up=0#Every_login_setup_steps_for_Rele"> Every login setup steps for Release 21 </a>
+</li></ul> 
+</li> <li> <a href="?sortcol=2;table=1;up=0#Setting_up_Standalone_ROOT">Setting up Standalone ROOT</a> <ul>
+<li> <a href="?sortcol=2;table=1;up=0#Standalone_ROOT_privately">  Standalone ROOT privately</a>
+</li></ul> 
+</li> <li> <a href="?sortcol=2;table=1;up=0#Setting_up_to_use_the_Grid">Setting up to use the Grid</a> <ul>
+<li> <a href="?sortcol=2;table=1;up=0#Getting_Grid_related_help"> Getting Grid-related help</a>
+</li></ul> 
+</li></ul> 
+</div>
+<p />
+<p />
+<p />
+<h1><a name="Introduction"></a> Introduction </h1>
+So you hope to start doing a physics analysis - great! One of the first questions you will ask yourself is <strong>where</strong> you will build your analysis code and how you will access the input data files. There are several good ways to do this, each with benefits and drawbacks, some are listed below:  
+<p />
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table1" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top"> <a href="/twiki/bin/view/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup?sortcol=0;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Where?</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol1" valign="top"> <a href="/twiki/bin/view/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup?sortcol=1;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Pros</font></a> </th>
+<th bgcolor="#334455" class="twikiTableCol2 twikiSortedAscendingCol twikiSortedCol twikiLastCol" valign="top"> <a href="/twiki/bin/view/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup?sortcol=2;table=1;up=1#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Cons</font></a><a name="sorted_table"><!-- --></a><span class="tableSortIcon tableSortUp"><img alt="Sorted ascending" border="0" height="13" src="/twiki/pub/TWiki/TWikiDocGraphics/tablesortup.gif" title="Sorted ascending" width="11" /></span> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="1" valign="top"> AFS-mounted desktop/laptop </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="1" valign="top"> can use LXPLUS setup (access to ATLAS software) </td>
+<td bgcolor="#f1f7fc" class="twikiTableCol2 twikiSortedAscendingCol twikiSortedCol twikiLastCol" rowspan="1" valign="top"> AFS connection can be slow </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiFirstCol" rowspan="1"> LXPLUS </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" rowspan="1" valign="top"> ideal for testing </td>
+<td bgcolor="#ddebf6" class="twikiTableCol2 twikiSortedAscendingCol twikiSortedCol twikiLastCol" rowspan="1" valign="top"> delays with lxplus batch submission system (lxbatch) </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiFirstCol" rowspan="1"> the Grid </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="1" valign="top"> &nbsp; </td>
+<td bgcolor="#f1f7fc" class="twikiTableCol2 twikiSortedAscendingCol twikiSortedCol twikiLastCol" rowspan="1" valign="top"> if problems: debugging can be slow </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" rowspan="1" valign="top"> the Grid </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" rowspan="1" valign="top"> can access all ATLAS data, without storage issues </td>
+<td bgcolor="#ddebf6" class="twikiTableCol2 twikiSortedAscendingCol twikiSortedCol twikiLastCol" rowspan="1" valign="top"> machine you submit from must have ATLAS software, and the Grid setup </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="1" valign="top"> personal laptop/desktop </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="1" valign="top"> lots of disk space </td>
+<td bgcolor="#f1f7fc" class="twikiTableCol2 twikiSortedAscendingCol twikiSortedCol twikiLastCol" rowspan="1" valign="top"> maybe not enough disk to store all data/MC </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" rowspan="1" valign="top"> institute </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" rowspan="1" valign="top"> lots of disk space </td>
+<td bgcolor="#ddebf6" class="twikiTableCol2 twikiSortedAscendingCol twikiSortedCol twikiLastCol" rowspan="1" valign="top"> maybe not enough disk to store all data/MC </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="1" valign="top"> &nbsp; </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="1" valign="top"> &nbsp; </td>
+<td bgcolor="#f1f7fc" class="twikiTableCol2 twikiSortedAscendingCol twikiSortedCol twikiLastCol" rowspan="1" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" rowspan="1" valign="top"> &nbsp; </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" rowspan="1" valign="top"> &nbsp; </td>
+<td bgcolor="#ddebf6" class="twikiTableCol2 twikiSortedAscendingCol twikiSortedCol twikiLastCol" rowspan="1" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="1" valign="top"> &nbsp; </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="1" valign="top"> &nbsp; </td>
+<td bgcolor="#f1f7fc" class="twikiTableCol2 twikiSortedAscendingCol twikiSortedCol twikiLastCol" rowspan="1" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" rowspan="1" valign="top"> &nbsp; </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" rowspan="1" valign="top"> &nbsp; </td>
+<td bgcolor="#ddebf6" class="twikiTableCol2 twikiSortedAscendingCol twikiSortedCol twikiLastCol" rowspan="1" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiFirstCol" rowspan="1"> AFS-mounted desktop/laptop </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="1" valign="top"> lots of disk-space </td>
+<td bgcolor="#f1f7fc" class="twikiTableCol2 twikiSortedAscendingCol twikiSortedCol twikiLastCol" rowspan="1" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" rowspan="1" valign="top"> &nbsp; </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" rowspan="1" valign="top"> &nbsp; </td>
+<td bgcolor="#ddebf6" class="twikiTableCol2 twikiSortedAscendingCol twikiSortedCol twikiLastCol" rowspan="1" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiFirstCol" rowspan="1"> Tier3 </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="1" valign="top"> lots of disk-space and computing </td>
+<td bgcolor="#f1f7fc" class="twikiTableCol2 twikiSortedAscendingCol twikiSortedCol twikiLastCol" rowspan="1" valign="top"> &nbsp; </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiFirstCol" rowspan="1"> institute </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" rowspan="1" valign="top"> more control over system </td>
+<td bgcolor="#ddebf6" class="twikiTableCol2 twikiSortedAscendingCol twikiSortedCol twikiLastCol" rowspan="1" valign="top"> need to transfer data  locally </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiFirstCol" rowspan="1"> personal laptop/desktop </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="1" valign="top"> &nbsp; </td>
+<td bgcolor="#f1f7fc" class="twikiTableCol2 twikiSortedAscendingCol twikiSortedCol twikiLastCol" rowspan="1" valign="top"> need to transfer data locally </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiFirstCol" rowspan="1"> institute </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" rowspan="1" valign="top"> possibly support from institute computing specialists </td>
+<td bgcolor="#ddebf6" class="twikiTableCol2 twikiSortedAscendingCol twikiSortedCol twikiLastCol" rowspan="1" valign="top"> need to transfer data locally </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="1" valign="top"> Tier3 </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="1" valign="top"> access to ATLAS data </td>
+<td bgcolor="#f1f7fc" class="twikiTableCol2 twikiSortedAscendingCol twikiSortedCol twikiLastCol" rowspan="1" valign="top"> needs someone to setup, maintain, and pay for software <a href="https://twiki.cern.ch/twiki/bin/viewauth/Atlas/AtlasTier3" target="_top">Tier3</a>,<a href="https://twiki.atlas-canada.ca/bin/view/AtlasCanada/ATLASLocalRootBase" target="_blank">Setup Tier3<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiFirstCol" rowspan="1"> institute </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1" rowspan="1" valign="top"> wider group of people using common computing and data </td>
+<td bgcolor="#ddebf6" class="twikiTableCol2 twikiSortedAscendingCol twikiSortedCol twikiLastCol" rowspan="1" valign="top"> someone still needs to setup and maintain software </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" rowspan="1" valign="top"> LXPLUS </td>
+<td bgcolor="#ffffff" class="twikiTableCol1" rowspan="1" valign="top"> everything is setup for you </td>
+<td bgcolor="#f1f7fc" class="twikiTableCol2 twikiSortedAscendingCol twikiSortedCol twikiLastCol" rowspan="1" valign="top"> very little storage quota </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiFirstCol twikiLast" rowspan="1"> personal laptop/desktop </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLast" rowspan="1" valign="top"> full control over system </td>
+<td bgcolor="#ddebf6" class="twikiTableCol2 twikiSortedAscendingCol twikiSortedCol twikiLastCol twikiLast" rowspan="1" valign="top"> you have to setup and maintain </td>
+</tr></table>
+<p />
+<p />
+<p />
+This section will show you how to quickly get your preferred computing environment up and running.
+<p />
+The next question you might ask yourself is <strong>how</strong> you will do your analysis. All ATLAS software is heavily dependent on the ROOT toolkit, so you will need to be familiar with this software at the very least. ATLAS has developed several frameworks on top of ROOT: <ul>
+<li> The ATLAS software used for reconstruction runs in a framework called Athena; it is one framework you might choose to do your analysis in, making use of pre-existing tools and code that have been developed for the ATLAS-specific environment. The software composing Athena is broken down into packages, and specific versions of those packages are assembled into an Athena 'release'. As of Release 21 the Athena framework is compiled using the CMake compilation system 
+</li> <li> An alternative framework is <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/EventLoop">EventLoop</a>, which was developed in recent years by the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisSoftwareGroup">Analysis Software Group</a>, to be used outside of Athena, with standalone ROOT. As of Release 21 this is also compiled with CMake.
+</li> <li> You can also perform analysis without any framework at all. But you will probably want to make use of either the <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasComputing/SoftwareTutorialCMake?topicparent=AtlasProtected.PhysicsAnalysisWorkBookRel21ComputingSetup;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">CMake</a></span> build system to manage the compilation of your analysis code if it goes anything beyond a simple script (very likely).
+</li></ul> 
+<p />
+<a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisRelease">Analysis Releases</a> have been developed which include the necessary libraries to work with the xAOD format (classes and tools). If you are working with an xAOD input you really must use this Analysis Release. You can choose between using <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AthAnalysisBase">AthAnalysis</a> (using ROOT+Athena) or <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisBase">Analysis</a> (standalone ROOT+EventLoop). The setup instructions for each are described below.
+<p />
+<p />
+<!--This wiki will show you how to get a computing account, access the cern lxplus computing facility, get the ATLAS software package Athena setup and ready for use, how to setup ROOT, and finally how to get a Grid certificate to work on the grid.-->
+<p />
+<p />
+<h1><a name="Basic_computing_account_setup"></a> Basic computing account setup </h1>
+Regardless of which computing setup you will be using, you should have an ATLAS computing account at CERN: <br/>
+<a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasComputing/WorkBookGetAccount#Getting_an_ATLAS_Account_at_CERN" target="_top">Getting an account at ATLAS account CERN</a>. 
+<p />
+If you are coming from another CERN experiment you may need to follow these instructions: <br/>
+<a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasComputing/WorkBookGetAccount#Switching_existing_account_to_AT" target="_top">Switching an existing CERN account to ATLAS</a>.
+<p />
+Once your account has been created you will be able to login into the CERN public login system called <strong>lxplus</strong>. Many examples and tutorials are done using lxplus because it already has all the ATLAS computing systems up and ready, common for all users. It is a good place if you are debugging code or want to test the latest ATLAS software that may not be accessible from your private computer or home institute. It's main limitation is that as a user you have very limited storage. 
+<p />
+On lxplus you have a home area and a storage area. Your home area might be something like:
+<pre style="background: #e0ebf6;">
+/afs/cern.ch/user/&#60;initial&#62;/&#60;username&#62;
+</pre>
+You can increase your quota by going to <a href="https://resources.web.cern.ch/resources/" target="_blank">https://resources.web.cern.ch/resources/<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> and select "List Services" (top). In the search box type "afs". Click on the link. Select "Settings" in the left menu, and you should find that you are able to increase your quota for your home area. 
+<p />
+Your storage area is provided in EOS. To activate it the first time, log in to cernbox.cern.ch with your credentials; your EOS area will be created and will be available after a few hours. Your EOS area will be accessible from lxplus under:
+<pre style="background: #e0ebf6;">
+/eos/user/&#60;initial&#62;/&#60;username&#62;
+</pre>
+Note that CERNbox provides a web interface to your EOS space. From CERNbox you can set the access rights to the files or directories you wish to share with other people.
+<p />
+Tips for working on lxplus: <br/>
+When logging into lxplus type: 
+<pre style="background: #e0ebf6;">
+ssh -Y -l &#60;username&#62; lxplus.cern.ch
+</pre>
+and enter your password at the prompt. Then if you type:
+<pre style="background: #e0ebf6;">
+setupATLAS
+</pre>
+you will have access to all the ATLAS software (this <code>setupATLAS</code> alias is already defined for you on lxplus). You should see a long list of <code>lsetup*</code> things which are aliases to setup the different software pieces you might need. Note that it is useful to note down which lxplus node (e.g. lxplus402.cern.ch) you have been logged into in case you are logged out and need to return to the same machine. 
+<p />
+<h1><a name="The_Analysis_Release"></a> The Analysis Release </h1>
+<p />
+Before you can set up an athena software release, first ensure that you have done:
+<pre style="background: #e0ebf6;">
+setupATLAS
+</pre>
+<p />
+<p />
+For a <strong>physics analysis</strong> (the topic of this workbook) it is recommended to use one of the <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/AnalysisRelease" target="_top">Analysis Releases</a>, either:  <ul>
+<li> in Athena: <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/AthAnalysisBase" target="_top">AthAnalysis</a>.  This is the lightest type of athena release there is. This Analysis Release basically only contains the packages necessary to do a physics analysis on an xAOD. 
+</li> <li> outside of Athena: <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/AnalysisBase" target="_top">AnalysisBase</a>
+</li></ul> 
+<p />
+You can find out what releases are available (after having done <code>setupATLAS</code> as we instructed earlier) by typing:
+<pre style="background: #e0ebf6;">
+showVersions &#124; grep AthAnalysis
+</pre>
+to get a list of available AthAnalysis releases, or 
+<pre style="background: #e0ebf6;">
+showVersions &#124; grep AnalysisBase
+</pre>
+for the AnalysisBase.
+<p />
+<p />
+For each release there is a three digit number, with a numbering scheme described as follows:
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table2" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> AthAnalysisBase-2.0.X,AnalysisBase-2.0.X </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol" valign="top"> For use with ROOT5 and DC14 (Release 19 samples) </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> AthAnalysisBase,AnalysisBase-2.2.X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLastCol" valign="top"> For use with ROOT5 and Release 20.1 samples </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> AthAnalysisBase,AnalysisBase-2.3.X </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol" valign="top"> For use with ROOT6 and Release 20.1 samples </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> AthAnalysisBase,AnalysisBase-2.4.X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLastCol" valign="top"> For use with ROOT6 (all ROOT6 going forward) and Release 20.7 samples </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol" valign="top"> AthAnalysisBase,AnalysisBase-2.5.X </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol" valign="top"> For use with Release 21 samples, compiled using cmt/RootCore and stored in svn (depreciated ~spring 2017) </td>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+<td bgcolor="#edf4f9" class="twikiTableCol0 twikiFirstCol" valign="top"> AthAnalysisBase,AnalysisBase-2.6.X </td>
+<td bgcolor="#edf4f9" class="twikiTableCol1 twikiLastCol" valign="top"> For use with Release 21 samples, compiled using cmake and stored in svn (to be depreciated ~summer 2017) </td>
+</tr>
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> AthAnalysis,AnalysisBase-21.X.Y </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLastCol twikiLast" valign="top"> For use with Release 21 samples, compiled using cmake and stored in git (recommended for Rel21 analyses) </td>
+</tr></table>
+<p />
+Find the one that best matches your analysis type, and then use the highest numbered release in that last digit. 
+<p />
+<p />
+<p />
+<p />
+<p />
+<h2><a name="First_time_setup_steps_for_Relea"></a> First time setup steps for Release 21 </h2>
+<p />
+If you are working in <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AnalysisBase">AnalysisBase</a>-21.X.Y you will need to follow the following steps to setup a few directories and files before setting up the analysis release (there are similar instructions for <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AthAnalysis">AthAnalysis</a>-21.X.Y)
+<p />
+<a href="https://atlassoftwaredocs.web.cern.ch/ABtutorial/release_setup/" target="_blank">Software Tutorial: How to setup the Analysis Release<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<p />
+A very good starting tutorial for new users can be found at <a href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasComputing/SoftwareTutorialxAODAnalysisInCMake" target="_top">https://twiki.cern.ch/twiki/bin/viewauth/AtlasComputing/SoftwareTutorialxAODAnalysisInCMake</a>
+<p />
+<h2><a name="Every_login_setup_steps_for_Rele"></a> Every login setup steps for Release 21 </h2>
+In subsequent sessions when you log out and back in again, navigate back to your working area and follow these instructions:
+<p />
+<a href="https://atlassoftwaredocs.web.cern.ch/ABtutorial/on_every_login/" target="_blank">Software Tutorial: On every login<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<p />
+<p />
+<p />
+<h1><a name="Setting_up_Standalone_ROOT"></a> Setting up Standalone ROOT </h1>
+If you are working with xAODs or ROOT ntuples you can do your analysis with <a href="http://root.cern.ch/drupal/" target="_blank">ROOT<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>. If you setup any of the analysis releases you will get a version of ROOT automatically, which you can check with the <code>$ROOTVERS</code> environment variable:<br>
+<code>echo $ROOTVERS</code> <br>
+<p />
+Alternatively, If you have access to cvmfs (for example on Tier3's, local clusters, or lxplus) you can setup Standalone ROOT by following these steps:
+<pre style="background: #e0ebf6;">
+lsetup root
+</pre>
+This will setup the most recent version of ROOT. You can see the list of available root setup options by typing:
+<pre style="background: #e0ebf6;">
+lsetup &#39;root --help&#39;
+</pre>
+To see the available ROOT releases you can <code>ls</code> the directory: 
+<pre style="background: #e0ebf6;">
+ls /cvmfs/atlas.cern.ch/repo/ATLASLocalRootBase/x86&#95;64/root/
+</pre>
+To setup a particular ROOT version type =lsetup 'root  --rootVersion=STRING=', like: 
+<pre style="background: #e0ebf6;">
+lsetup &#39;root --rootVersion&#61;6.02.02-x86&#95;64-slc6-gcc48-opt&#39;
+</pre>
+<p />
+<h2><a name="Standalone_ROOT_privately"></a> Standalone ROOT privately </h2>
+If you didn't setup Athena, are not on lxplus, and don't have cvmfs access then you will need to setup ROOT according to the instructions of your local system. If necessary you can download ROOT from ROOT's main page (<a href="http://root.cern.ch/drupal/content/downloading-root" target="_blank">http://root.cern.ch/drupal/content/downloading-root<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>); it is supported for several operating systems.  
+<p />
+Once you have a local version of ROOT the setup usually involves something like:
+<pre style="background: #e0ebf6;">
+source /opt/root/root&#95;5.27.06/bin/thisroot.sh
+</pre>
+Or you can manually set <code>ROOTSYS</code>, <code>LD_LIBRARY_PATH</code>, and <code>PATH</code> to point to your local ROOT installation, e.g.:
+<pre style="background: #e0ebf6;">
+export ROOTSYS&#61;/opt/root/root&#95;5.27.06
+export LD&#95;LIBRARY&#95;PATH&#61;${ROOTSYS}/lib:$LD&#95;LIBRARY&#95;PATH
+export PATH&#61;$ROOTSYS/bin:$PATH
+</pre>
+<p />
+<p />
+<p />
+<h1><a name="Setting_up_to_use_the_Grid"></a> Setting up to use the Grid </h1>
+The Grid is a network of interconnected computers distributed all over the world. There are typically clusters of computers located at distinct <strong>sites</strong>. These computers are used for many purposes, including to generating MC, reconstructing data, running user analysis jobs (what we're interested in!), store outputs of these jobs. The encouraged analysis model is that instead of downloading massive datasets from a Grid site to your local working area, you submit your analysis job to the Grid and it will seamlessly distribute your job to the appropriate site where your data of interest is located and run the job there, after which you can download the output of your job locally.
+<p />
+To be able to run on the Grid there are several steps your need to follow. You need to have a valid Grid certificate, which basically identifies you as an authorized ATLAS member to be able to use the Grid computing facilities. These Grid certificates expire every year, you should receive notification when your certificate will expire, with instructions on how to renew it. These instructions do depend on which country is issuing the certificate.
+<p /> <ul>
+<li> Getting a Grid certificate, joining a Virtual Organization (VO), installing it in your web browser: <a href="https://twiki.cern.ch/twiki/bin/view/AtlasComputing/WorkBookStartingGrid" target="_top">Computing Workbook: Starting on the Grid</a>
+</li> <li> Installing the Grid certificate in your working directory and testing it: <a href="https://twiki.cern.ch/twiki/bin/view/AtlasComputing/SoftwareTutorialSoftwareBasics#Grid_Certificates" target="_top">Software Tutorial: Grid certificates</a> 
+</li> <li> Registering with AMI: <a href="https://twiki.cern.ch/twiki/bin/view/AtlasComputing/SoftwareTutorialSoftwareBasics#Registering_with_AMI" target="_top">Software Tutorial: Registering with AMI</a>
+</li></ul> 
+<p />
+<h2><a name="Getting_Grid_related_help"></a> Getting Grid-related help </h2> <ul>
+<li> Distributed analysis support (DAST) mailing list: <a href="mailto&#58;hn&#45;atlas&#45;dist&#45;analysis&#45;help&#64;cern&#46;ch">hn-atlas-dist-analysis-help&#64;cern.ch</a>
+</li></ul> 
+<p />
+<p />
+<p />
+<p />
+<p />
+<!-- <strong>*********************************************************</strong> -->
+<!-- Do NOT remove the remaining lines, but add requested info as appropriate -->
+<!-- <strong>*********************************************************</strong> -->
+<p />
+<hr />
+<p />
+<!-- For significant updates to the topic, consider adding your 'signature' (beneath this editing box) -->
+<strong>Major updates</strong>:<br />
+-- <a class="twikiLink" href="/twiki/bin/view/Main/LouiseHeelan">LouiseHeelan</a> - 2017-06-06
+<p />
+<!-- Person responsible for the page: 
+Either leave as is - the creator's name will be inserted; 
+Or replace the complete REVINFO tag (including percentages symbols) with a name in the form <a class="twikiLink" href="/twiki/bin/view/Main/TwikiUsersName">TwikiUsersName</a> -->
+Responsible: <a class="twikiLink" href="/twiki/bin/view/Main/LouiseHeelan">LouiseHeelan</a> <br />
+<!-- Once this page has been reviewed, please add the name and the date e.g. <a class="twikiLink" href="/twiki/bin/view/Main/StephenHaywood">StephenHaywood</a> - 31 Oct 2006 -->
+Last reviewed by: <strong>Never reviewed</strong> </div><!-- /patternTopic-->
+<div class="twikiContentFooter"></div></div><!-- /patternContent-->
+<div class="clear"></div>
+<a name="topic-actions"></a><div class="patternTopicActions"><div class="patternTopicAction"><span class="patternActionButtons"><span style=''><span><a href='https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup?t=1763376380;nowysiwyg=1' rel='nofollow' title='Edit this topic text' accesskey='e'><img src='/twiki/pub/TWiki/TWikiDocGraphics/uweb-o14.gif' width='14' height='14' border='0' alt='' /> <span class='twikiAccessKey'>E</span>dit</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span></span><span style=''><span><a href='/twiki/bin/attach/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup' rel='nofollow' title='Attach an image or document to this topic' accesskey='a'><span class='twikiAccessKey'>A</span>ttach</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span></span><span><a href='/twiki/bin/view/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup?cover=print;sortcol=2;table=1;up=0' rel='nofollow' title='Printable version of this topic' accesskey='p'><span class='twikiAccessKey'>P</span>rint version</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span><span><a href='/twiki/bin/oops/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup?template=oopshistory' rel='nofollow' title='View total topic history' accesskey='h'><span class='twikiAccessKey'>H</span>istory</a></span>: r12&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup?rev1=12;rev2=11" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup?rev=11" rel="nofollow">r11</a>&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup?rev1=11;rev2=10" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup?rev=10" rel="nofollow">r10</a>&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup?rev1=10;rev2=9" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup?rev=9" rel="nofollow">r9</a>&nbsp;<a href="/twiki/bin/rdiff/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup?rev1=9;rev2=8" rel="nofollow">&lt;</a>&nbsp;<a href="/twiki/bin/view/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup?rev=8" rel="nofollow">r8</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span><a href='/twiki/bin/oops/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup?template=backlinksweb' rel='nofollow' title='Search the AtlasProtected Web for topics that link to here' accesskey='b'><span class='twikiAccessKey'>B</span>acklinks</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span><a href='/twiki/bin/view/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup?raw=on' rel='nofollow' title='View raw text without formatting' accesskey='r'><span class='twikiAccessKey'>R</span>aw View</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span style=''><span><a href='https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup?t=1763376380;nowysiwyg=0' rel='nofollow' title='WYSIWYG editor' accesskey='w'>WYSIWYG</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span></span><span><a href='/twiki/bin/oops/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup?template=oopsmore&amp;param1=12&amp;param2=12' rel='nofollow' title='Delete or rename this topic; set parent topic; view and compare revisions' accesskey='m'><span class='twikiAccessKey'>M</span>ore topic actions</a></span></span></div><!--/patternTopicAction--></div><!--/patternTopicActions-->
+<div class="patternInfo twikiGrayText"><div class="patternRevInfo">Topic revision: r12 - 2022-02-21 <a href="https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup?t=1763376380;nowysiwyg=1" target="_top">-</a> <a class="twikiLink" href="/twiki/bin/view/Main/DarioBarberis">DarioBarberis</a></div><!-- /patternRevInfo--></div><!-- /patternInfo-->
+</div><!-- /patternMainContents-->
+</div><!-- /patternMain--><div id="patternLeftBar"><div id="patternClearHeaderLeft"></div>
+<div id="patternLeftBarContents"><div class="patternLoginActions"><span style="padding: 0 0 0 20px; word-wrap:break-word; display:block;"><img src="https://twiki.cern.ch/twiki/pub/TWiki/TWikiDocGraphics/person.gif" style="position:absolute; margin: 0 0 0 -20px;" /> <span class="twikiNewLink"><a href="/twiki/bin/edit/Main/RoySchimmelBrener?topicparent=AtlasProtected.PhysicsAnalysisWorkBookRel21ComputingSetup;nowysiwyg=1"    rel="nofollow" title="this topic does not yet exist; you can create it.">RoySchimmelBrener</a></span></span>  <img src="/twiki/pub/TWiki/TWikiDocGraphics/lock.gif" width="16" height="16" alt="Lock" title="Lock" border="0" /> <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup?logout=1">Log Out</a></div><div class="patternWebIndicator"> <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="/twiki/bin/view/AtlasProtected/WebHome"><img src="/twiki/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" width="13" height="13" alt="Web background" title="Web background" border="0" /> AtlasProtected</a>
+</li></ul> 
+</div> <ul>
+<li> <strong><a href="https://atlas-collaboration.web.cern.ch" target="_blank"><span style="color: blue">ATLAS Collaboration</span><img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a></strong>
+</li></ul> 
+<hr /> <ul>
+<li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/WebHome"><span style="color: #0000ff"> ATLAS TWiki</span></verbatim></a></strong>
+</li> <li> <strong><a class="twikiCurrentWebHomeLink twikiLink" href="/twiki/bin/view/AtlasProtected/WebHome"><span style="color: #0000ff"> ATLAS Protected</span></verbatim></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasComputing/WebHome"><span style="color: #0000ff"> ATLAS Computing </span></verbatim></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasPublic/WebHome"><span style="color: #0000ff"> Public Results </span></verbatim></a></strong>
+</li></ul> 
+<hr /> <ul>
+<li> <strong><a href="https://its.cern.ch/jira/secure/CreateIssueDetails!init.jspa?pid=22679&amp;issuetype=3&amp;summary=Problem+with+PhysicsAnalysisWorkBookRel21ComputingSetup+TWiki+topic&amp;description=The+topic+https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup+has+an+issue.+Describe+it+below:&amp;reporter=rbrener" target="_blank"><span style="color: #ff0000"> Report outdated page </span></verbatim><img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a></strong>
+</li> <li> <strong><a href="mailto&#58;atlas&#45;twiki&#45;support&#64;cern&#46;ch"><span style="color: #ff0000"> Twiki-Support </span></verbatim></a></strong>
+</li></ul> 
+<hr />
+<p /> <ul>
+ <li>
+ <ul>
+<li> <strong><a href="https://twiki.cern.ch/twiki/bin/view/AtlasPublic" target="_top"><span style="color: navy;"> Public Results </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AtlasPhysics"><span style="color: navy;"> Physics </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/AtlasDetectors"><span style="color: navy;"> Detectors </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/AtlasTrigger"><span style="color: navy;"> Trigger </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/AtlasComputing/WebHome"><span style="color: navy;"> Computing </span></a></strong>
+</li> <li> <strong><a class="twikiLink" href="/twiki/bin/view/Atlas/DataPreparation"><span style="color: navy;"> Data Preparation </span></a></strong>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/Atlas/DocumentationManagement">Documentation Help</a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/Atlas/AtlasGlossary">Glossary</a>
+</li></ul> 
+</li></ul> 
+<p />
+<div class="twikiLeftBarBase">
+  <a href="/twiki/bin/edit/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetupLeftBar?templatetopic=AtlasProtected.WebLeftBarTemplate">Create</a> a LeftBar for this page
+</div>
+<p />
+<hr />
+<span style="color: #008000"> <img src='https://twiki.cern.ch/twiki/pub/TWiki/TWikiDocGraphics/searchtopic.gif'> <strong><a href="https://search.cern.ch/Pages/TwikiResults.aspx?k=generic2%3AATLAS" target="_blank">TWiki Search<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a></strong> </span></verbatim>
+<hr />
+<p />
+<!-- <ul>
+ <li>
+ <ul>
+<li> <a class="twikiCurrentWebHomeLink twikiLink" href="/twiki/bin/view/AtlasProtected/WebHome">AtlasProtected Wiki</a>
+</li></ul> 
+</li></ul> 
+-->
+</div><!-- /patternLeftBarContents--></div><!-- /patternLeftBar-->
+</div><!-- /patternFloatWrap-->
+<div class="clear">&nbsp;</div>
+</div><!-- /patternOuter--></div><!-- /patternWrapper--><div id="patternTopBar"><div id="patternTopBarContents"><table border="0" cellpadding="0" cellspacing="0" style="width:100%; margin-top:12px;">
+<tr><td valign="middle"><span id="twikiLogo" class="twikiImage"><a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/WebHome"><img src="/twiki/pub/AtlasPublic/AtlasTWikiLogos/AtlasTwikiProtectedLogo.png" border="0" alt="CERN" style="border:none;" /></a></span></td>
+<td align="right" valign="top" class="patternMetaMenu">
+ <ul>
+<li> <form name="jumpForm" action="/twiki/bin/view/AtlasProtected/PhysicsAnalysisWorkBookRel21ComputingSetup"><input id="jumpFormField" type="text" class="twikiInputField" name="topic" value="" size="18" /><noscript>&nbsp;<input type="submit" class="twikiButton" size="5" name="submit" value="Jump" />&nbsp;</noscript>   </form>
+</li> <li> <form name="quickSearchForm" action="https://search.cern.ch/Pages/TwikiResults.aspx" target="search" class="cernTWikiSearch">    <ul class="engineList" style="background-image: url('https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/arrow.png');">        <li class="active" id="twikisearch">            <img src="https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/twikisearchicon.gif" alt="TWiki Search Icon" />            <span class="engineDescription">TWiki Search</span>        </li>        <!-- Due to a security incident <a href="https://cern.service-now.com/service-portal?id=outage&amp;n=OTG0156848" target="_blank">OTG0156848<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>, the legacy CERN Search Service has been shut down        <li id="cernsearch">            <img src="https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/cernsearchicon.png" alt="Cern Search Icon" />            <span class="engineDescription">Cern Search</span>        </li>         -->        <li id="googlesearch">            <img class="engine" src="https://twiki.cern.ch/twiki/pub/TWiki/CernSearchBar/googlesearchicon.png" alt="Google Search Icon" />            <span class="engineDescription">Google Search</span>        </li>    </ul>    <input type="text" class="twikiInputField" id="quickSearchBox" name="k" value="" size="18" /> <br />    <input type="radio" name="scope" value=Atlas checked />     <span class="webScopeDescription">Atlas</span>    <input type="radio" name="scope" value="AllWebs" />    <span class="allWebsScopeDescription">All webs</span>    <input type='hidden' name='autologin' value='1'/>     <noscript>        &nbsp; <input type="submit" size="5" class="twikiButton" name="submit" value="Search"/>&nbsp;    </noscript>
+</li></ul> 
+</form>
+<p />
+<p />
+<!-- <pre> -->
+<script language="javascript">
+<!--
+$(function() {
+    // We use the current web name to form the redirect in the TWiki search
+    var currentWeb = undefined;
+    // If the web starts with alice* atlas* cms* or lhcb* (case-insensitive),
+    // the "Web search" should be altered so that AtlasFoo => Atlas
+    var specialWeb = undefined;
+    // Remembering what the user have entered into the searchbox to after
+    // he has selected a new search engine from the dropdown
+    var searchPhrase = '';
+
+    // --- BEGIN: CONFIGURABLE LIST FOR SUBWEB SEARCH ---
+    // List of webs for which sub-web searching should be enabled
+    var subWebSearchWebs = ['AtlasProtected', 'AtlasComputing', 'Atlas'];
+    // --- END: CONFIGURABLE LIST FOR SUBWEB SEARCH ---
+
+    // --- ORIGINAL WEB DETECTION LOGIC ---
+    // We want to store the current web for later use.
+    var currentWebSearch = window.location.pathname.match(/\/([A-Z][^\/]+)/);
+    if (currentWebSearch != null) {
+        currentWeb = currentWebSearch[1];
+
+        // Do we have a special kind of web? If so, the web search should be altered a little to fetch more broader results.
+        var specialWebSearch = currentWeb.match(/^(alice|atlas|cms|lhcb)/i);
+        if (specialWebSearch != null) {
+            var lowercaseToCorrect = {
+                'alice' : 'Alice',
+                'atlas' : 'Atlas',
+                'cms'   : 'CMS',
+                'lhcb'  : 'LHCb'
+            };
+            specialWeb = lowercaseToCorrect[specialWebSearch[1].toLowerCase()];
+            $('span.webScopeDescription').text(specialWeb);
+        }
+    } else {
+        currentWeb = 'DefaultWeb';
+    }
+
+    // --- BEGIN: SUBWEB LOGIC TO EXTRACT SUBWEB PATH (EXCLUDING TOPIC) ---
+    var subWebSearchWebs = ['AtlasProtected', 'AtlasComputing', 'Atlas'];
+    // Build regex to match web/subweb path and topic
+    var subWebsPattern = new RegExp(
+        '/((' + subWebSearchWebs.join('|') + ')(?=(?:/|$))(?:/[A-Za-z0-9_]+)*)/([A-Za-z0-9_]+)$'
+    );
+    var subWebMatch = window.location.pathname.match(subWebsPattern);
+    if (subWebMatch) {
+        // subWebMatch[1] is the full web/subweb path (e.g. "AtlasComputing/AtlasComputingArchive")
+        // subWebMatch[3] is the topic (e.g. "WebHome")
+        currentWeb = subWebMatch[1];
+        specialWeb = currentWeb;
+        $('span.webScopeDescription').text(specialWeb);
+    }
+    // --- END: SUBWEB LOGIC TO EXTRACT SUBWEB PATH (EXCLUDING TOPIC) ---
+
+    // Do we have a favourite search engine in localStorage? We set Twiki search as default anyways
+    if (window.localStorage) {
+        // var storedEngine = localStorage.getItem('defaultSearchEngine');
+        // console.log('stored engine preference: ' + storedEngine);
+        var storedEngine = 'twikisearch';
+        var storedEngineLi = $('.cernTWikiSearch li#' + storedEngine);
+        if (!storedEngineLi.hasClass('active')) {
+            changeActiveSearchEngine(storedEngineLi);
+        }
+        if (storedEngine == 'twikisearch') {
+            $('input[name=scope][value=AllWebs]').attr('disabled','disabled');
+            $('.allWebsScopeDescription').addClass('disabled');
+        }
+    }
+    
+    // Toggle the searchEngines list on and off on click
+    $('.cernTWikiSearch ul.engineList').click(function(e) {
+        e.stopPropagation();
+        if ($(this).hasClass('open')) {
+            $(this).removeClass('open');
+        } else {
+            $(this).addClass('open');
+        }
+    });
+
+    // Stupid IE8 hack because the click handler on ul.engineList does not work properly there.
+    if ($.browser.msie && document.documentMode && document.documentMode < 9) {
+        $('.cernTWikiSearch #quickSearchBox').focus(function(e) {
+            $('.cernTWikiSearch ul.engineList').removeClass('open');
+        });
+    }
+    
+    // Handle clicks on one of the search engines
+    $('.cernTWikiSearch ul.engineList li').click(function(e) {
+        // If we clicked on a <li> that does not has class 'active', it means this should become active and swap places with this.
+        if (!$(this).hasClass('active')) {
+            changeActiveSearchEngine($(this));
+        }  
+        if ($(this).parent().hasClass('open')) {
+            $('.cernTWikiSearch #quickSearchBox').val(searchPhrase);
+            $('.cernTWikiSearch #quickSearchBox').focus();                          
+        }
+        if ($(this).attr('id') == 'twikisearch') {
+            var allWebsRadio = $('input[name=scope][value=AllWebs]');
+            allWebsRadio.attr('disabled','disabled');
+            allWebsRadio.siblings('input[type=radio]').attr('checked',true)
+            $('.allWebsScopeDescription').addClass('disabled');
+        } else {
+            $('input[name=scope][value=AllWebs]').attr('disabled','');
+            $('.allWebsScopeDescription').removeClass('disabled');
+        }
+    });
+    
+    // Show the engine description text on hover
+    $('.engineList.open li').live('hover',function() {
+        var displayText = $(this).find('span.engineDescription').text();
+        $('.cernTWikiSearch #quickSearchBox').val(displayText);
+    });
+
+
+    // The form is submitted, now let's do the search.
+    $('.cernTWikiSearch').submit(function(e) {
+        e.preventDefault();
+
+        var scope = $('input[name=scope]:checked', $(this)).val();
+        if (scope != 'AllWebs' && specialWeb !== undefined) {
+            scope = specialWeb;
+        }
+        var val = $('.cernTWikiSearch #quickSearchBox').val();
+        var engine = $('.engineList li.active').attr('id')
+        
+        switch (engine) {
+            case 'googlesearch':
+                window.open('https://google.com/search?q=site:' + encodeURIComponent('https://twiki.cern.ch') + (scope != 'AllWebs' ? ' ' + scope : '') + ' ' + val);
+                break;
+            case 'cernsearch':
+                window.open('https://search.cern.ch/Pages/TwikiResults.aspx?k=' + val + (scope != 'AllWebs' ? ' cernscope:' + scope : '') + '&autologin=1');
+                break;
+            case 'twikisearch':
+                window.open(window.location.pathname.replace(/\/[A-Z].+$/,'') + '/' + currentWeb + '/WebSearch?search=' + val + '&scope=all');
+                break;
+        default:
+            break;
+        }
+        
+        // Save the search engine. If the user reloads the page he should get the last one used.
+        if (window.localStorage) { 
+            console.log('store engine preference: ' + engine);
+            localStorage.setItem('defaultSearchEngine',engine);
+        }
+    });
+    
+    // Save the search phrase on every key up
+    $('.cernTWikiSearch #quickSearchBox').keyup(function() {
+        searchPhrase = $(this).val();
+    });
+    
+    // If a user clicks outside the search engine list, the search engine list should be closed.
+    $('html').click(function() {
+        if ($('.engineList').hasClass('open')) {
+            $('.engineList').removeClass('open');
+            $('.cernTWikiSearch #quickSearchBox').val(searchPhrase);
+        }
+    });
+});
+
+// We want to change the active search engine
+function changeActiveSearchEngine(engineLi) {
+    var activeEngine = engineLi.siblings(':first');
+    engineLi.detach().insertBefore(activeEngine);
+    activeEngine.removeClass('active');
+    engineLi.addClass('active');
+    if (engineLi.attr('id') == 'twikiSearch') {
+        deactivateAllWebsOption();
+    }
+}
+
+// The user has chosen twiki search (or the preference was stored in localStorage). 
+// We will then disable the 'All Webs' option since this will time out.
+function deactivateAllWebsOption() {
+}
+
+// Helper method to check input attribute browser compability
+function checkInputAttributeSupport(attribute) {
+    var i = document.createElement("input");
+    return typeof i.placeholder !== 'undefined';
+}
+//-->
+</script>
+<!-- </pre> --> <ul>
+<li> 
+</li></ul> 
+</td></tr></table></div></div><!-- /patternTopBar--><div id="patternBottomBar"><div id="patternBottomBarContents"><div id="patternWebBottomBar"><div class="twikiCopyright"><span class="twikiRight"> <a href="http://twiki.org/"><img src="/twiki/pub/TWiki/TWikiLogos/T-badge-88x31.gif" alt="This site is powered by the TWiki collaboration platform" width="88" height="31" title="This site is powered by the TWiki collaboration platform" border="0" /></a></span><span class="twikiRight" style="padding:0 10px 0 10px"> <a href="http://www.perl.org/"><img src="/twiki/pub/TWiki/TWikiLogos/perl-logo-88x31.gif" alt="Powered by Perl" width="88" height="31" title="Powered by Perl" border="0" /></a></span>Copyright &amp;© 2008-2025 by the contributing authors. All material on this collaboration platform is the property of the contributing authors. <br />  or Ideas, requests, problems regarding TWiki? use <a href="https://discourse.web.cern.ch/c/collaborative-editing/wikis/12">Discourse</a> or <a href='https://twiki.cern.ch/twiki/bin/view/Main/ServiceNow'>Send feedback</a> </div><!--/twikiCopyright--></div><!--/patternWebBottomBar--></div><!-- /patternBottomBarContents--></div><!-- /patternBottomBar-->
+</div><!-- /patternPage-->
+</div><!-- /patternPageShadow-->
+</div><!-- /patternScreen-->
+<p />
+<p />
+<p />
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+	 var u="https://webanalytics.web.cern.ch/";
+	 _paq.push(['setTrackerUrl', u+'matomo.php']);
+	 _paq.push(['setSiteId', '5']);
+	 var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	 g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+<p />
+</body></html>

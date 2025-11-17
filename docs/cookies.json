@@ -1,0 +1,14 @@
+[
+    {
+        "domain": "twiki.cern.ch",
+        "hostOnly": true,
+        "httpOnly": true,
+        "name": "mod_auth_openidc_session",
+        "path": "/",
+        "sameSite": "no_restriction",
+        "secure": true,
+        "session": true,
+        "storeId": null,
+        "value": "aa68b47c-61c4-48b0-9850-e55d5e636cbb"
+    }
+]

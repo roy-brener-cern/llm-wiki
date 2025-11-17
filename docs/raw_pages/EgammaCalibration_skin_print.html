@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+<script type="text/javascript" src="/twiki/pub/TWiki/JQueryPlugin/jquery.js"></script>
+<script type="text/javascript" src="/twiki/pub/TWiki/JQueryPlugin/jquery-migrate.js"></script>
+<link rel="stylesheet" href="/twiki/pub/TWiki/JQueryPlugin/jquery-all.css" type="text/css" media="all" />
+<script type="text/javascript" src="/twiki/pub/TWiki/JQueryPlugin/jquery-all.js"></script>
+<link rel="stylesheet" href="https://twiki.cern.ch/twiki/pub/TWiki/ImagePlugin/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="https://twiki.cern.ch/twiki/pub/TWiki/ImageGalleryPlugin/style.css" type="text/css" media="all" />
+<title> EgammaCalibration &lt; AtlasProtected &lt; TWiki</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> <meta name="robots" content="noindex" /> <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/twiki/bin/view/AtlasProtected/WebRss" />
+<meta name="scripturl" content="https://twiki.cern.ch/twiki/bin" />
+<meta name="scriptsuffix" content="" />
+<link rel="icon" href="/twiki/pub/AtlasProtected/WebPreferences/favicon_new.ico" type="image/x-icon" /> <link rel="shortcut icon" href="/twiki/pub/AtlasProtected/WebPreferences/favicon_new.ico" type="image/x-icon" />
+<link rel="alternate" href="https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/EgammaCalibration?t=1763377215" type="application/x-wiki" title="edit EgammaCalibration" />
+<link rel="edit" href="https://twiki.cern.ch/twiki/bin/edit/AtlasProtected/EgammaCalibration?t=1763377215" title="edit EgammaCalibration" />
+<meta name="description" content="EgammaCalibration" />
+<base href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/EgammaCalibration"></base>
+
+
+
+
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+	 var u="https://webanalytics.web.cern.ch/";
+	 _paq.push(['setTrackerUrl', u+'matomo.php']);
+	 _paq.push(['setSiteId', '5']);
+	 var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	 g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+
+<style type="text/css" media="all">
+@import url('/twiki/pub/TWiki/TWikiTemplates/base.css');
+</style>
+<style type="text/css" media="all">
+@import url('/twiki/pub/TWiki/TWikiTemplates/default.css');
+</style>
+<!--[if IE]><style type="text/css" media="screen">
+pre {
+	overflow-x:auto;
+	padding-bottom:expression(this.scrollWidth > this.offsetWidth ? 16 : 0);
+}
+</style>
+<![endif]-->
+
+
+<script src="https://twiki.cern.ch/twiki/pub/TWiki/ChecklistPlugin/itemstatechange.js" language="javascript" type="text/javascript"></script></head>
+<body class=""><div class="twikiPage">
+<a name="PageTop"></a> 
+<div class="twikiMiddleContainer"><div class="twikiMain">
+<p />
+<h1></h1>
+<p />
+<h1><a name="EGamma_Calibration"></a>  EGamma Calibration </h1>
+<p />
+<br /><div class="twikiToc"> <ul>
+<li> <a href="?skin=print#Mandate"> Mandate</a>
+</li> <li> <a href="?skin=print#Meetings"> Meetings</a>
+</li> <li> <a href="?skin=print#Calibration_for_Physics_analysis"> Calibration for Physics analysis</a>
+</li> <li> <a href="?skin=print#Open_tasks"> Open tasks</a>
+</li> <li> <a href="?skin=print#Calibration_recommendations"> Calibration recommendations</a> <ul>
+<li> <a href="?skin=print#Run3"> Run3</a> <ul>
+<li> <a href="?skin=print#Consolidated_recommendation_2022"> <img src="/twiki/pub/TWiki/TWikiDocGraphics/new.gif" width="30" height="16" alt="NEW" title="NEW" border="0" /> Consolidated recommendation (2022-2024)</a>
+</li> <li> <a href="?skin=print#Pre_recommendation"> Pre recommendation</a>
+</li></ul> 
+</li> <li> <a href="?skin=print#Run2"> Run2</a> <ul>
+<li> <a href="?skin=print#Release_22_recommentation"> <img src="/twiki/pub/TWiki/TWikiDocGraphics/new.gif" width="30" height="16" alt="NEW" title="NEW" border="0" /> Release 22 recommentation</a>
+</li> <li> <a href="?skin=print#Release_21_precision_recommentat"> Release 21 precision recommentation</a>
+</li> <li> <a href="?skin=print#First_rull_run_2_release_21_reco"> First rull run 2 release 21 recommendation (used by most full run 2 release 21 analyses)</a>
+</li> <li> <a href="?skin=print#Last_recommendation_for_2015_201"> Last recommendation for 2015+2016 data with release 20.7</a>
+</li></ul> 
+</li> <li> <a href="?skin=print#Run1_2011_and_2012_analyses"> Run1 (2011 and 2012 analyses)</a>
+</li> <li> <a href="?skin=print#Previous_recommendations_obsolet"> Previous recommendations (obsolete)</a>
+</li></ul> 
+</li> <li> <a href="?skin=print#Useful_Jira_tickets"> Useful Jira tickets</a>
+</li> <li> <a href="?skin=print#Documentation"> Documentation</a> <ul>
+<li> <a href="?skin=print#Full_Run_2_release_21_precision"> Full Run 2 release 21 precision recommendation</a>
+</li> <li> <a href="?skin=print#First_full_Run_2_release_21_docu"> First full Run 2 release 21 (documentation based on 2015-2017 dataset)</a>
+</li> <li> <a href="?skin=print#Run2_20_7"> Run2 20.7</a>
+</li> <li> <a href="?skin=print#Run2_prerecommendation"> Run2 prerecommendation</a>
+</li> <li> <a href="?skin=print#Run1_relative_to_2011_and_2012_G"> Run1 (relative to 2011 and 2012 GEO-21 recommendation)</a>
+</li> <li> <a href="?skin=print#Run1_relative_to_2010_data"> Run1 (relative to 2010 data)</a>
+</li> <li> <a href="?skin=print#Useful_definitions"> Useful definitions</a>
+</li></ul> 
+</li> <li> <a href="?skin=print#Calibration_resources"> Calibration resources</a>
+</li> <li> <a href="?skin=print#Useful_samples"> Useful samples</a> <ul>
+<li> <a href="?skin=print#Single_particle"> Single particle</a>
+</li> <li> <a href="?skin=print#Zee_calibration_nTuples"> Zee calibration nTuples</a>
+</li></ul> 
+</li> <li> <a href="?skin=print#CMS_results"> CMS results</a>
+</li></ul> 
+</div><br />
+<p />
+<h2><a name="Mandate"></a> Mandate </h2>
+<p />
+The calibration studies cover the optimization of the cluster level corrections applied for the energy measurement of electron and photons, the studies with data of the input variables used in the energy measurement, the derivation of the data driven energy scale and resolution corrections, their checks with different physics samples and the estimation of the systematic uncertainties on energy scale and resolution for electrons and photons.
+<p />
+<h2><a name="Meetings"></a> Meetings </h2>
+<p />
+Meetings are held on Thursdays at 10.00. The agendas are available in <a href="https://indico.cern.ch/category/490/" target="_blank">indico<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<p />
+Summary of recent meetings available <a href="http://jdevivi.web.cern.ch/EGCalibMeetings.html" target="_blank">here<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<p />
+<h2><a name="Calibration_for_Physics_analysis"></a> Calibration for Physics analysis </h2>
+<p />
+Details on the calibration tools (including setup instructions) can be found on the <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/ElectronPhotonFourMomentumCorrection">ElectronPhotonFourMomentumCorrection</a> twiki page. The twiki page <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EGammaCalibrationRun2" target="_top">https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EGammaCalibrationRun2</a> contains the list of all released run recommendations (including some for special runs). The most recent recommendations for standard pp analyses are listed below.
+<p />
+<h2><a name="Open_tasks"></a> Open tasks </h2>
+<p />
+See the page on egamma: <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EGammaOpenTasks#Calibration" target="_top">https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EGammaOpenTasks#Calibration</a>
+<p />
+<h2><a name="Calibration_recommendations"></a> Calibration recommendations </h2>
+<p />
+<h3><a name="Run3"></a> <em>Run3</em> </h3>
+<h4><a name="Consolidated_recommendation_2022"></a> <img src="/twiki/pub/TWiki/TWikiDocGraphics/new.gif" width="30" height="16" alt="NEW" title="NEW" border="0" /> Consolidated recommendation (2022-2024) </h4>
+<p />
+See <a href="https://atlas-egamma-calibration.docs.cern.ch/recommendations/run3/#consolidated-recommendation" target="_blank">https://atlas-egamma-calibration.docs.cern.ch/recommendations/run3/#consolidated-recommendation<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+<h4><a name="Pre_recommendation"></a> Pre recommendation </h4>
+<p />
+See <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EGammaCalibrationRun2#Pre_recommendations_for_Run_3" target="_top">https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EGammaCalibrationRun2#Pre_recommendations_for_Run_3</a>
+<p />
+<h3><a name="Run2"></a> <em>Run2</em> </h3>
+<h4><a name="Release_22_recommentation"></a> <img src="/twiki/pub/TWiki/TWikiDocGraphics/new.gif" width="30" height="16" alt="NEW" title="NEW" border="0" /> Release 22 recommentation </h4>
+<p />
+See <a class="twikiAnchorLink" href="/twiki/bin/view/AtlasProtected/EGammaCalibrationRun2#Run_2_release_22_recommendations">https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EGammaCalibrationRun2#Run_2_release_22_recommendations</a>
+<p />
+<h4><a name="Release_21_precision_recommentat"></a> Release 21 precision recommentation </h4>
+<p />
+See <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EGammaCalibrationRun2#Run_2_release_21_precision_recom" target="_top">https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EGammaCalibrationRun2#Run_2_release_21_precision_recom</a>
+<p />
+<h4><a name="First_rull_run_2_release_21_reco"></a> First rull run 2 release 21 recommendation (used by most full run 2 release 21 analyses) </h4>
+<p />
+See <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EGammaCalibrationRun2#Recommendation_for_run_2_data_in" target="_top">https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EGammaCalibrationRun2#Recommendation_for_run_2_data_in</a>
+<p />
+<h4><a name="Last_recommendation_for_2015_201"></a> Last recommendation for 2015+2016 data with release 20.7 </h4>
+<p />
+See <a href="https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EGammaCalibrationRun2#Recommendations_for_data15_data1" target="_top">https://twiki.cern.ch/twiki/bin/view/AtlasProtected/EGammaCalibrationRun2#Recommendations_for_data15_data1</a>
+<p />
+<h3><a name="Run1_2011_and_2012_analyses"></a> <em>Run1 (2011 and 2012 analyses)</em> </h3>
+<p /> <ul>
+<li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/EGammaCalibrationGEO21">Calibration using GEO-21 and MVA-based calibration</a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/EGammaCalibrationGEO20">Calibration using GEO-20 and Calibration Hits-based calibration</a>
+</li></ul> 
+<p />
+<h3><a name="Previous_recommendations_obsolet"></a> <em>Previous recommendations (obsolete)</em> </h3>
+<p /> <ul>
+<li> Past calibration recommendations (now obsolete) can be found <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/EGammaCalibrationGEO20History">here</a>
+</li></ul> 
+<p />
+<h2><a name="Useful_Jira_tickets"></a> Useful Jira tickets </h2> <ul>
+<li> Run 2 Rel. 22: <a href="https://its.cern.ch/jira/browse/ATLASEG-184" target="_blank">https://its.cern.ch/jira/browse/ATLASEG-184<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> Run 3 Rel. 23: <a href="https://its.cern.ch/jira/browse/ATLASEG-280" target="_blank">https://its.cern.ch/jira/browse/ATLASEG-280<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li></ul> 
+<p />
+<h2><a name="Documentation"></a> Documentation </h2>
+<p />
+<h3><a name="Full_Run_2_release_21_precision"></a> Full Run 2 release 21 precision recommendation </h3> <ul>
+<li> Glance entry (with internal note links) <a href="https://atlas-glance.cern.ch/atlas/analysis/papers/details.php?ref_code=EGAM-2021-02" target="_blank">https://atlas-glance.cern.ch/atlas/analysis/papers/details.php?ref_code=EGAM-2021-02<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> Paper <a href="https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/EGAM-2021-02/" target="_blank">https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/EGAM-2021-02/<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li></ul> 
+<p />
+<h3><a name="First_full_Run_2_release_21_docu"></a> First full Run 2 release 21 (documentation based on 2015-2017 dataset) </h3> <ul>
+<li> Glance entry (with internal notes link) <a href="https://atlas-glance.cern.ch/atlas/analysis/papers/details.php?ref_code=EGAM-2018-01" target="_blank">https://atlas-glance.cern.ch/atlas/analysis/papers/details.php?ref_code=EGAM-2018-01<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> Paper <a href="https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/EGAM-2018-01/" target="_blank">https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/EGAM-2018-01/<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li></ul> 
+<p />
+<h3><a name="Run2_20_7"></a> Run2 20.7 </h3> <ul>
+<li> Run2 final 2017 <ul>
+<li> Paper link <a href="https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/EGAM-2018-01/" target="_blank">https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/EGAM-2018-01/<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> Internal notes: <ul>
+<li> MVA: <a href="https://cds.cern.ch/record/2268813" target="_blank">https://cds.cern.ch/record/2268813<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> Layers: <a href="https://cds.cern.ch/record/2268812" target="_blank">https://cds.cern.ch/record/2268812<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> Material: <a href="https://cds.cern.ch/record/2268804" target="_blank">https://cds.cern.ch/record/2268804<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> Linearity: <a href="https://cds.cern.ch/record/2268802" target="_blank">https://cds.cern.ch/record/2268802<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> Scales: <a href="https://cds.cern.ch/record/2268800" target="_blank">https://cds.cern.ch/record/2268800<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> Crosschecks: <a href="https://cds.cern.ch/record/2268797" target="_blank">https://cds.cern.ch/record/2268797<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> Summary: <a href="https://cds.cern.ch/record/2268796" target="_blank">https://cds.cern.ch/record/2268796<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li></ul> 
+</li></ul> 
+</li> <li> Run2 PUB note for ICHEP: <a href="https://cds.cern.ch/record/2203514" target="_blank">https://cds.cern.ch/record/2203514<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> Crack calibration internal note: <a href="https://cds.cern.ch/record/2111199/" target="_blank">https://cds.cern.ch/record/2111199/<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> Zee scale factor internal note: <a href="https://cds.cern.ch/record/2195318/" target="_blank">https://cds.cern.ch/record/2195318/<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> Photon scale factor with radiative Z internal note: <a href="https://cds.cern.ch/record/2132288" target="_blank">https://cds.cern.ch/record/2132288<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li></ul> 
+<p />
+<h3><a name="Run2_prerecommendation"></a> Run2 prerecommendation </h3> <ul>
+<li> <a href="https://cds.cern.ch/record/2060328" target="_blank">https://cds.cern.ch/record/2060328<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> (svn: <a href="https://svnweb.cern.ch/trac/atlasperf/browser/CombPerf/EGamma/notesRun2/Prerecommendations2015/Calibration2015Prerecommendations" target="_blank">https://svnweb.cern.ch/trac/atlasperf/browser/CombPerf/EGamma/notesRun2/Prerecommendations2015/Calibration2015Prerecommendations<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>)
+</li></ul> 
+<h3><a name="Run1_relative_to_2011_and_2012_G"></a> Run1 (relative to 2011 and 2012 GEO-21 recommendation) </h3> <ul>
+<li> PERF-2013-05 in <a href="https://twiki.cern.ch/twiki/pub/AtlasProtected/EgammaCalibration/../PubComRefs/ATLAS.bib" target="_top">ATLAS.bib</a>. <a href="http://inspirehep.net/record/1306905" target="_blank">http://inspirehep.net/record/1306905<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/CalibrationPaper2012">List of supporting notes</a>
+</li></ul> 
+<p />
+<h3><a name="Run1_relative_to_2010_data"></a> Run1 (relative to 2010 data) </h3> <ul>
+<li> PERF-2010-04 in <a href="https://twiki.cern.ch/twiki/pub/AtlasProtected/EgammaCalibration/../PubComRefs/ATLAS.bib" target="_top">ATLAS.bib</a>. <a href="http://inspirehep.net/record/940010" target="_blank">http://inspirehep.net/record/940010<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a href="https://cds.cern.ch/record/1335395" target="_blank">2011 supporting note<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li></ul> 
+<p />
+<h3><a name="Useful_definitions"></a> Useful definitions </h3> <ul>
+<li> <a class="twikiAnchorLink" href="/twiki/bin/view/AtlasProtected/EGammaD3PDtoxAOD#Note_on_pseudorapidity_definitio">Pseudorapidity definitions for EGamma</a>
+</li></ul> 
+<p />
+<h2><a name="Calibration_resources"></a> Calibration resources </h2> <ul>
+<li> <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/EGammaCalibrationTools">Calibration tools</a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/AtlasComputing/CalorimeterCalibration">Calorimeter calibration twiki page</a>
+</li></ul> 
+<p />
+<h2><a name="Useful_samples"></a> Useful samples </h2>
+<p />
+All the sample can be found starting from <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/EGammaMC">EGammaMC</a>
+<p />
+<h3><a name="Single_particle"></a> Single particle </h3>
+<p />
+Single particle ntuples, usually used to train MVA calibration, are ofter available on eos: /eos/atlas/atlascerngroupdisk/perf-egamma/calibration/ntuples_mccalib (mc16 / mc20 / mc23).
+<p />
+The ntuples are produced with <a href="https://gitlab.cern.ch/ATLAS-EGamma/Software/Calibration/MVACalibUtils" target="_blank">https://gitlab.cern.ch/ATLAS-EGamma/Software/Calibration/MVACalibUtils<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a> where more information is available.
+<p />
+<h3><a name="Zee_calibration_nTuples"></a> Zee calibration nTuples </h3>
+<p />
+Zee selection nTuples for scale and smearing extraction are available on eos : <ul>
+<li> /eos/atlas/atlascerngroupdisk/perf-egamma/calibration/ntuples/Zee_Central_Selection/FinalRunII/EGAM1_v1
+</li></ul> 
+<p />
+Computed with <a href="https://gitlab.cern.ch/ATLAS-EGamma/Software/Calibration/InSituCalibration/-/tree/master/CalibrationSelection" target="_blank">Calibration framework<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>.
+<p />
+<h2><a name="CMS_results"></a> CMS results </h2> <ul>
+<li> <a href="https://cms-results.web.cern.ch/cms-results/public-results/publications/EGM-18-002/index.html" target="_blank">Run 2 CMS ECAL performance paper<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a href="https://cms-results.web.cern.ch/cms-results/public-results/publications/EGM-17-001/index.html" target="_blank">Run 2 CMS e/gamma paper<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a href="https://cds.cern.ch/record/1988091" target="_blank">"Performance of electron reconstruction and selection with the CMS detector in proton-proton collisions at &radic;s = 8 TeV"<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a href="https://cds.cern.ch/record/1988093" target="_blank">"Performance of photon reconstruction and identification with the CMS detector in proton-proton collisions at &radic;s = 8 TeV"<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/CMSPublic/Hig13002PubTWiki">Measurement of the properties of a Higgs boson in the four-lepton final state</a>
+</li> <li> <a href="http://arxiv.org/pdf/1306.2016.pdf" target="_blank">"Energy calibration and resolution of the CMS electromagnetic calorimeter in pp collisions at &radic;s = 7 TeV" (5 fb)<img alt="" border="0" height="12" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" width="13" /></a>
+</li> <li> <a class="twikiLink" href="/twiki/bin/view/CMSPublic/EcalDPGResultsPASEGM10003">"Electromagnetic calorimeter calibration with 7 TeV data" (250 nb)</a>
+</li></ul> 
+<p />
+<strong>Major updates</strong>:<br /> -- <a class="twikiLink" href="/twiki/bin/view/Main/RuggeroTurra">RuggeroTurra</a> - 22 May 2015
+<p />
+<br />Responsible: -- <a class="twikiLink" href="/twiki/bin/view/Main/RuggeroTurra">RuggeroTurra</a> <a class="twikiLink" href="/twiki/bin/view/Main/ThibaultGuillemin">ThibaultGuillemin</a> <br /> <br />Last reviewed by: <strong>Never reviewed</strong>
+<p />
+<br />
+<a name="TopicEnd"></a>
+<div class="twikiAttachments">
+<table border="1" cellpadding="0" cellspacing="0" class="twikiTable" id="table1" rules="all">
+<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<th bgcolor="#687684" class="twikiTableCol0 twikiFirstCol" valign="top"> <a href="/twiki/bin/viewauth/AtlasProtected/EgammaCalibration?skin=print;sortcol=0;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">I</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol1" valign="top"> <a href="/twiki/bin/viewauth/AtlasProtected/EgammaCalibration?skin=print;sortcol=1;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Attachment</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol2" valign="top"> <a href="/twiki/bin/viewauth/AtlasProtected/EgammaCalibration?skin=print;sortcol=2;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">History</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol3" valign="top"> <a href="/twiki/bin/viewauth/AtlasProtected/EgammaCalibration?skin=print;sortcol=3;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Action</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol4" valign="top"> <a href="/twiki/bin/viewauth/AtlasProtected/EgammaCalibration?skin=print;sortcol=4;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Size</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol5" valign="top"> <a href="/twiki/bin/viewauth/AtlasProtected/EgammaCalibration?skin=print;sortcol=5;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Date</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol6" valign="top"> <a href="/twiki/bin/viewauth/AtlasProtected/EgammaCalibration?skin=print;sortcol=6;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Who</font></a> </th>
+<th bgcolor="#687684" class="twikiTableCol7 twikiLastCol" valign="top"> <a href="/twiki/bin/viewauth/AtlasProtected/EgammaCalibration?skin=print;sortcol=7;table=1;up=0#sorted_table" rel="nofollow" title="Sort by this column"><font color="#ffffff">Comment</font></a> </th>
+</tr>
+<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+<td bgcolor="#ffffff" class="twikiTableCol0 twikiFirstCol twikiLast" valign="top"> <img src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" width="16" height="16" alt="PDF" title="PDF" border="0" /><span class="twikiHidden">pdf</span> </td>
+<td bgcolor="#ffffff" class="twikiTableCol1 twikiLast" valign="top"> <a href="https://twiki.cern.ch/twiki/pub/AtlasProtected/EgammaCalibration/summary_systematics.pdf">summary_systematics.pdf</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol2 twikiLast" valign="top"> r1 </td>
+<td bgcolor="#ffffff" class="twikiTableCol3 twikiLast" valign="top"> <a href="/twiki/bin/attach/AtlasProtected/EgammaCalibration?filename=summary_systematics.pdf;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+<td align="right" bgcolor="#ffffff" class="twikiTableCol4 twikiLast" valign="top"> 1036.4&nbsp;K </td>
+<td bgcolor="#ffffff" class="twikiTableCol5 twikiLast" valign="top"> <span class="twikiNoBreak">2016-11-28 - 15:43</span> </td>
+<td bgcolor="#ffffff" class="twikiTableCol6 twikiLast" valign="top"> <a class="twikiLink" href="/twiki/bin/view/Main/RuggeroTurra">RuggeroTurra</a> </td>
+<td bgcolor="#ffffff" class="twikiTableCol7 twikiLastCol twikiLast" valign="top"> Scale systematics </td>
+</tr></table>
+</div>
+<hr />
+This topic: AtlasProtected<span class='twikiSeparator'>&nbsp;&gt;&nbsp;</span><a class="twikiCurrentWebHomeLink twikiLink" href="/twiki/bin/view/AtlasProtected/WebHome">WebHome</a> &gt; <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/AtlasPhysics">AtlasPhysics</a> &gt; <a class="twikiLink" href="/twiki/bin/view/AtlasProtected/ElectronGamma">ElectronGamma</a><span class='twikiSeparator'>&nbsp;&gt;&nbsp;</span>EgammaCalibration</span> <br />
+Topic revision: r96 - 2025-06-16 - LinghuaGuo
+<hr />
+<a name="PageBottom"></a>
+<div class="twikiCopyright"><span class="twikiRight"> <a href="http://twiki.org/"><img src="/twiki/pub/TWiki/TWikiLogos/T-badge-88x31.gif" alt="This site is powered by the TWiki collaboration platform" width="88" height="31" title="This site is powered by the TWiki collaboration platform" border="0" /></a></span><span class="twikiRight" style="padding:0 10px 0 10px"> <a href="http://www.perl.org/"><img src="/twiki/pub/TWiki/TWikiLogos/perl-logo-88x31.gif" alt="Powered by Perl" width="88" height="31" title="Powered by Perl" border="0" /></a></span>Copyright &amp;© 2008-2025 by the contributing authors. All material on this collaboration platform is the property of the contributing authors. <br />  or Ideas, requests, problems regarding TWiki? use <a href="https://discourse.web.cern.ch/c/collaborative-editing/wikis/12">Discourse</a> or <a href='https://twiki.cern.ch/twiki/bin/view/Main/ServiceNow'>Send feedback</a> </div></div></div>
+</div><!--/twikiPage--></body></html>
+<p />
