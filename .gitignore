@@ -1,3 +1,6 @@
 docs/embeddings/*.json
 docs/embeddings/
 *.json
+*cookies.*txt
+scripts/pages
+scripts/twiki_*/
