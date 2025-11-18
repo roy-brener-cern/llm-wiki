@@ -3,5 +3,4 @@ docs/embeddings/
 *.json
 *cookies.*txt
 scripts/pages
-scripts/twiki_data
-scripts/twiki_datalinks
+scripts/twiki_*/
